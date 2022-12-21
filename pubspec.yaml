@@ -47,6 +47,12 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  flutter_bloc: ^8.0.1
+  equatable: ^2.0.3
+  shared_preferences: ^2.0.15
+  observer: ^0.0.1
+  go_router: ^5.2.4
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -89,3 +95,19 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+  - family: Athihi
+    fonts: 
+    - asset: fonts/Athiti-Medium.ttf
+  - family: Australia Custom
+    fonts:
+    - asset: fonts/Australia Custom.ttf
+  - family: Pacifico
+    fonts:
+    - asset: fonts/Pacifico.ttf
+  - family: ostrich
+    fonts:
+    - asset: fonts/ostrich-regular.ttf
+  - family: Antonio
+    fonts:
+    - asset: fonts/Antonio-Bold.ttf
