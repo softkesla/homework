@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:homework_flutter/main.dart';
 
-/// The screen of the first page.
-class Page1Screen extends StatelessWidget {
-  /// Creates a [Page1Screen].
-  const Page1Screen({Key? key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -25,7 +23,7 @@ class Page1Screen extends StatelessWidget {
                 height: 50,
               ),
               OutlinedButton(
-                onPressed: () => context.go('/page2'),
+                onPressed: () => context.go('/setting'),
                 child: const Text('setting'),
                 style: OutlinedButton.styleFrom(
                     minimumSize: Size(150, 50),
@@ -38,7 +36,7 @@ class Page1Screen extends StatelessWidget {
                 height: 20,
               ),
               OutlinedButton(
-                onPressed: () => context.go('/page3'),
+                onPressed: () => context.go('/help'),
                 child: const Text('Help'),
                 style: OutlinedButton.styleFrom(
                     minimumSize: Size(150, 50),

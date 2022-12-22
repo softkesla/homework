@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'package:flutter/rendering.dart';
@@ -8,16 +6,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:homework_flutter/main.dart';
 
-/// The screen of the second page.
-class Page2Screen extends StatefulWidget {
-  /// Creates a [Page2Screen].
-  const Page2Screen({Key? key}) : super(key: key);
+class SettingPage extends StatefulWidget {
+  const SettingPage({Key? key}) : super(key: key);
 
   @override
-  State<Page2Screen> createState() => _Page2ScreenState();
+  State<SettingPage> createState() => _SettingPageState();
 }
 
-class _Page2ScreenState extends State<Page2Screen> {
+class _SettingPageState extends State<SettingPage> {
   bool isChecked1 = false;
   bool isChecked2 = false;
   bool isChecked3 = false;
@@ -26,46 +22,22 @@ class _Page2ScreenState extends State<Page2Screen> {
   bool isChecked6 = false;
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(title: const Text(App.title)),
+        appBar: AppBar(title: const Text('Setting')),
         body: ListView(
           children: [
-            SizedBox(
-              height: 20,
+            Padding(
+              padding: EdgeInsets.fromLTRB(
+                  15, 20, 0, 0), //apply padding to all four sides
+              child: Text('Profile',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 17, 251, 255),
+                    fontSize: 16,
+                    fontFamily: 'Athihi',
+                  )),
             ),
-            Text('   Profile',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 17, 251, 255),
-                  fontSize: 15,
-                  fontFamily: 'Athihi',
-                )),
             ListTile(
               title: Text(
-                '   Narisara',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontFamily: 'Athihi',
-                ),
-              ),
-              trailing: Icon(Icons.arrow_forward_ios_rounded),
-            ),
-            Divider(
-              height: 0,
-              color: Color.fromARGB(255, 46, 255, 213),
-              indent: 20,
-              endIndent: 20,
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Text('   Change Languege',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 17, 251, 255),
-                  fontSize: 15,
-                  fontFamily: 'Athihi',
-                )),
-            ListTile(
-              title: Text(
-                '     English',
+                'Narisara',
                 style: TextStyle(
                   fontFamily: 'Athihi',
                 ),
@@ -75,15 +47,40 @@ class _Page2ScreenState extends State<Page2Screen> {
             Divider(
               height: 0,
               color: Color.fromARGB(255, 46, 255, 213),
-              indent: 20,
-              endIndent: 20,
+              indent: 15,
+              endIndent: 25,
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(
+                  15, 10, 0, 0), //apply padding to all four sides
+              child: Text('Change Languege',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 17, 251, 255),
+                    fontSize: 16,
+                    fontFamily: 'Athihi',
+                  )),
+            ),
+            ListTile(
+              title: Text(
+                'English',
+                style: TextStyle(
+                  fontFamily: 'Athihi',
+                ),
+              ),
+              trailing: Icon(Icons.arrow_forward_ios_rounded),
+            ),
+            Divider(
+              height: 0,
+              color: Color.fromARGB(255, 46, 255, 213),
+              indent: 15,
+              endIndent: 15,
             ),
             SizedBox(
               height: 10,
             ),
             SwitchListTile(
                 value: isChecked1,
-                title: Text('    Channel notification',
+                title: Text('Channel notification',
                     style: TextStyle(
                       fontFamily: 'Athihi',
                     )),
@@ -95,12 +92,12 @@ class _Page2ScreenState extends State<Page2Screen> {
             Divider(
               height: 0,
               color: Color.fromARGB(255, 46, 255, 213),
-              indent: 20,
-              endIndent: 20,
+              indent: 15,
+              endIndent: 15,
             ),
             SwitchListTile(
                 value: isChecked2,
-                title: Text('    Marketing notification',
+                title: Text('Marketing notification',
                     style: TextStyle(
                       fontFamily: 'Athihi',
                     )),
@@ -112,12 +109,12 @@ class _Page2ScreenState extends State<Page2Screen> {
             Divider(
               height: 0,
               color: Color.fromARGB(255, 46, 255, 213),
-              indent: 20,
-              endIndent: 20,
+              indent: 15,
+              endIndent: 15,
             ),
             SwitchListTile(
                 value: isChecked3,
-                title: Text('    Background Audio Mode',
+                title: Text('Background Audio Mode',
                     style: TextStyle(
                       fontFamily: 'Athihi',
                     )),
@@ -129,12 +126,12 @@ class _Page2ScreenState extends State<Page2Screen> {
             Divider(
               height: 0,
               color: Color.fromARGB(255, 46, 255, 213),
-              indent: 20,
-              endIndent: 20,
+              indent: 15,
+              endIndent: 15,
             ),
             SwitchListTile(
                 value: isChecked4,
-                title: Text('    Enable Cellular Data',
+                title: Text('Enable Cellular Data',
                     style: TextStyle(
                       fontFamily: 'Athihi',
                     )),
@@ -146,12 +143,12 @@ class _Page2ScreenState extends State<Page2Screen> {
             Divider(
               height: 0,
               color: Color.fromARGB(255, 46, 255, 213),
-              indent: 20,
-              endIndent: 20,
+              indent: 15,
+              endIndent: 15,
             ),
             SwitchListTile(
                 value: isChecked5,
-                title: Text('    Auto Play',
+                title: Text('Auto Play',
                     style: TextStyle(
                       fontFamily: 'Athihi',
                     )),
@@ -163,12 +160,12 @@ class _Page2ScreenState extends State<Page2Screen> {
             Divider(
               height: 0,
               color: Color.fromARGB(255, 46, 255, 213),
-              indent: 20,
-              endIndent: 20,
+              indent: 15,
+              endIndent: 15,
             ),
             SwitchListTile(
                 value: isChecked6,
-                title: Text('    Debug',
+                title: Text('Debug',
                     style: TextStyle(
                       fontFamily: 'Athihi',
                     )),
@@ -180,11 +177,11 @@ class _Page2ScreenState extends State<Page2Screen> {
             Divider(
               height: 0,
               color: Color.fromARGB(255, 46, 255, 213),
-              indent: 20,
-              endIndent: 20,
+              indent: 15,
+              endIndent: 15,
             ),
             ListTile(
-              title: Text('    Clear data',
+              title: Text('Clear data',
                   style: TextStyle(
                     fontFamily: 'Athihi',
                   )),
@@ -202,11 +199,11 @@ class _Page2ScreenState extends State<Page2Screen> {
             Divider(
               height: 0,
               color: Color.fromARGB(255, 46, 255, 213),
-              indent: 20,
-              endIndent: 20,
+              indent: 15,
+              endIndent: 15,
             ),
             ListTile(
-              title: Text('    Version Dev 1.18.1',
+              title: Text('Version Dev 1.18.1',
                   style: TextStyle(
                     fontFamily: 'Athihi',
                   )),
@@ -214,8 +211,8 @@ class _Page2ScreenState extends State<Page2Screen> {
             Divider(
               height: 0,
               color: Color.fromARGB(255, 46, 255, 213),
-              indent: 20,
-              endIndent: 20,
+              indent: 15,
+              endIndent: 15,
             ),
             SizedBox(
               height: 10,
