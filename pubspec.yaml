@@ -74,6 +74,23 @@ flutter:
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
 
+  fonts:
+  - family: Athihi
+    fonts: 
+    - asset: fonts/Athiti-Medium.ttf
+  - family: Australia Custom
+    fonts:
+    - asset: fonts/Australia Custom.ttf
+  - family: Pacifico
+    fonts:
+    - asset: fonts/Pacifico.ttf
+  - family: ostrich
+    fonts:
+    - asset: fonts/ostrich-regular.ttf
+  - family: Antonio
+    fonts:
+    - asset: fonts/Antonio-Bold.ttf
+
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
@@ -93,19 +110,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-  fonts:
-  - family: Athihi
-    fonts: 
-    - asset: fonts/Athiti-Medium.ttf
-  - family: Australia Custom
-    fonts:
-    - asset: fonts/Australia Custom.ttf
-  - family: Pacifico
-    fonts:
-    - asset: fonts/Pacifico.ttf
-  - family: ostrich
-    fonts:
-    - asset: fonts/ostrich-regular.ttf
-  - family: Antonio
-    fonts:
-    - asset: fonts/Antonio-Bold.ttf
+  
