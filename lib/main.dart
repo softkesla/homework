@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:bloc/bloc.dart';
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:homework_flutter/page/livenowpage.dart';
 import 'package:homework_flutter/page/setting.dart';
 import 'package:homework_flutter/page/help.dart';
 import 'package:homework_flutter/page/homepage.dart';
+import 'package:homework_flutter/page/promo.dart';
+import 'package:homework_flutter/page/error.dart';
+import 'package:promo_repository/repositories.dart';
 
 void main() {
   runApp(const MyApp());
@@ -55,6 +56,11 @@ class App extends StatelessWidget {
             builder: (BuildContext context, GoRouterState state) =>
                 const HelpPage(),
           ),
+          GoRoute(
+            path: 'promo',
+            builder: (BuildContext context, GoRouterState state) =>
+                const PromoPage(),
+          ),
         ],
         path: '/',
         builder: (BuildContext context, GoRouterState state) =>
@@ -62,21 +68,4 @@ class App extends StatelessWidget {
       ),
     ],
   );
-}
-
-class ErrorScreen extends StatelessWidget {
-  final Exception? error;
-  const ErrorScreen({Key? key, required this.error}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Error"),
-      ),
-      body: Center(
-        child: Text(error.toString()),
-      ),
-    );
-  }
 }
