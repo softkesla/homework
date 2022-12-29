@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:homework_flutter/page/homepromo.dart';
 import 'package:homework_flutter/page/livenowpage.dart';
+import 'package:homework_flutter/page/postpage.dart';
 import 'package:homework_flutter/page/setting.dart';
 import 'package:homework_flutter/page/help.dart';
 import 'package:homework_flutter/page/homepage.dart';
 import 'package:homework_flutter/page/promo.dart';
 import 'package:homework_flutter/page/error.dart';
 import 'package:homework_flutter/page/channel.dart';
+import 'package:homework_flutter/page/videopage.dart';
+import 'package:promo_repository/repositories.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,6 +46,14 @@ class App extends StatelessWidget {
       GoRoute(
         routes: <GoRoute>[
           GoRoute(
+            path: 'videopage',
+            builder: (BuildContext context, GoRouterState state) =>
+                const VideoPage(),
+            path: 'postpage',
+            builder: (BuildContext context, GoRouterState state) =>
+                const PostPage(),
+          ),
+          GoRoute(
             path: 'livenowpage',
             builder: (BuildContext context, GoRouterState state) =>
                 const LiveNowPage(),
@@ -50,6 +62,11 @@ class App extends StatelessWidget {
             path: 'channel',
             builder: (BuildContext context, GoRouterState state) =>
                 const ChannelPage(),
+
+            path: 'homepromo',
+            builder: (BuildContext context, GoRouterState state) =>
+                const HomePromoPage(),
+
           ),
           GoRoute(
             path: 'setting',

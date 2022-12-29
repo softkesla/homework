@@ -24,14 +24,53 @@ class HomePage extends StatelessWidget {
               height: 50,
             ),
             OutlinedButton(
+              onPressed: () => context.go('/videopage'),
+              child: const Text('Video'),
+              style: OutlinedButton.styleFrom(
+                  minimumSize: Size(150, 50),
+                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
+                  primary: Color.fromARGB(255, 255, 161, 84),
+                  side: BorderSide(
+                      width: 2, color: Color.fromARGB(255, 49, 192, 202))),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            OutlinedButton(
+              onPressed: () => context.go('/postpage'),
+              child: const Text('Post'),
+              style: OutlinedButton.styleFrom(
+                  minimumSize: Size(150, 50),
+                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
+                  primary: Color.fromARGB(255, 214, 9, 26),
+                  side: BorderSide(
+                      width: 2, color: Color.fromARGB(255, 2, 22, 206))),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            OutlinedButton(
               onPressed: () => context.go('/livenowpage'),
               child: const Text('Live Now'),
               style: OutlinedButton.styleFrom(
                   minimumSize: Size(150, 50),
                   textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Colors.white,
+                  primary: Color.fromARGB(255, 95, 84, 255),
                   side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 27, 255, 217))),
+                      width: 2, color: Color.fromARGB(255, 202, 187, 49))),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            OutlinedButton(
+              onPressed: () => context.go('/homepromo'),
+              child: const Text('Home Promo'),
+              style: OutlinedButton.styleFrom(
+                  minimumSize: Size(150, 50),
+                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
+                  primary: Color.fromARGB(255, 224, 255, 84),
+                  side: BorderSide(
+                      width: 2, color: Color.fromARGB(255, 49, 202, 82))),
             ),
             SizedBox(
               height: 20,

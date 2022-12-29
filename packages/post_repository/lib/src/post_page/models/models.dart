@@ -1,0 +1,1 @@
+export 'postpage.model.dart';
