@@ -57,6 +57,10 @@ dependencies:
     path:
       packages/promo_repository
 
+  channels:
+    path:
+      packages/channels
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
