@@ -6,7 +6,7 @@ import 'package:homework_flutter/page/help.dart';
 import 'package:homework_flutter/page/homepage.dart';
 import 'package:homework_flutter/page/promo.dart';
 import 'package:homework_flutter/page/error.dart';
-import 'package:promo_repository/repositories.dart';
+import 'package:homework_flutter/page/channel.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,6 +45,11 @@ class App extends StatelessWidget {
             path: 'livenowpage',
             builder: (BuildContext context, GoRouterState state) =>
                 const LiveNowPage(),
+          ),
+          GoRoute(
+            path: 'channel',
+            builder: (BuildContext context, GoRouterState state) =>
+                const ChannelPage(),
           ),
           GoRoute(
             path: 'setting',
