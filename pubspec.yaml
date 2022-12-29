@@ -57,6 +57,10 @@ dependencies:
     path:
       packages/promo_repository
 
+  post_repository:
+    path: 
+      packages/post_repository
+
   channels:
     path:
       packages/channels
