@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:homework_flutter/page/livenowpage.dart';
+import 'package:homework_flutter/page/postpage.dart';
 import 'package:homework_flutter/page/setting.dart';
 import 'package:homework_flutter/page/help.dart';
 import 'package:homework_flutter/page/homepage.dart';
@@ -41,6 +42,11 @@ class App extends StatelessWidget {
     routes: <GoRoute>[
       GoRoute(
         routes: <GoRoute>[
+          GoRoute(
+            path: 'postpage',
+            builder: (BuildContext context, GoRouterState state) =>
+                const PostPage(),
+          ),
           GoRoute(
             path: 'livenowpage',
             builder: (BuildContext context, GoRouterState state) =>
