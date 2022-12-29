@@ -124,6 +124,19 @@ class HomePage extends StatelessWidget {
                   side: BorderSide(
                       width: 2, color: Color.fromARGB(255, 27, 255, 217))),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            OutlinedButton(
+              onPressed: () => context.go('/trending'),
+              child: const Text('Trending Tag'),
+              style: OutlinedButton.styleFrom(
+                  minimumSize: Size(150, 50),
+                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
+                  primary: Colors.white,
+                  side: BorderSide(
+                      width: 2, color: Color.fromARGB(255, 27, 255, 217))),
+            ),
           ],
         ),
       ),
