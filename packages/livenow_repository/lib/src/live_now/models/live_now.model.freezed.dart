@@ -48,6 +48,7 @@ mixin _$LiveNow {
   DateTime? get createdAt => throw _privateConstructorUsedError;
   DateTime? get updatedAt => throw _privateConstructorUsedError;
   int? get daily_likes_amount => throw _privateConstructorUsedError;
+  FileStorage? get thumbnail => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -87,7 +88,10 @@ abstract class $LiveNowCopyWith<$Res> {
       String? description,
       DateTime? createdAt,
       DateTime? updatedAt,
-      int? daily_likes_amount});
+      int? daily_likes_amount,
+      FileStorage? thumbnail});
+
+  $FileStorageCopyWith<$Res>? get thumbnail;
 }
 
 /// @nodoc
@@ -131,6 +135,7 @@ class _$LiveNowCopyWithImpl<$Res, $Val extends LiveNow>
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
     Object? daily_likes_amount = freezed,
+    Object? thumbnail = freezed,
   }) {
     return _then(_value.copyWith(
       status: freezed == status
@@ -245,7 +250,23 @@ class _$LiveNowCopyWithImpl<$Res, $Val extends LiveNow>
           ? _value.daily_likes_amount
           : daily_likes_amount // ignore: cast_nullable_to_non_nullable
               as int?,
+      thumbnail: freezed == thumbnail
+          ? _value.thumbnail
+          : thumbnail // ignore: cast_nullable_to_non_nullable
+              as FileStorage?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FileStorageCopyWith<$Res>? get thumbnail {
+    if (_value.thumbnail == null) {
+      return null;
+    }
+
+    return $FileStorageCopyWith<$Res>(_value.thumbnail!, (value) {
+      return _then(_value.copyWith(thumbnail: value) as $Val);
+    });
   }
 }
 
@@ -284,7 +305,11 @@ abstract class _$$_LiveNowCopyWith<$Res> implements $LiveNowCopyWith<$Res> {
       String? description,
       DateTime? createdAt,
       DateTime? updatedAt,
-      int? daily_likes_amount});
+      int? daily_likes_amount,
+      FileStorage? thumbnail});
+
+  @override
+  $FileStorageCopyWith<$Res>? get thumbnail;
 }
 
 /// @nodoc
@@ -325,6 +350,7 @@ class __$$_LiveNowCopyWithImpl<$Res>
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
     Object? daily_likes_amount = freezed,
+    Object? thumbnail = freezed,
   }) {
     return _then(_$_LiveNow(
       status: freezed == status
@@ -439,6 +465,10 @@ class __$$_LiveNowCopyWithImpl<$Res>
           ? _value.daily_likes_amount
           : daily_likes_amount // ignore: cast_nullable_to_non_nullable
               as int?,
+      thumbnail: freezed == thumbnail
+          ? _value.thumbnail
+          : thumbnail // ignore: cast_nullable_to_non_nullable
+              as FileStorage?,
     ));
   }
 }
@@ -474,7 +504,8 @@ class _$_LiveNow with DiagnosticableTreeMixin implements _LiveNow {
       this.description,
       this.createdAt,
       this.updatedAt,
-      this.daily_likes_amount});
+      this.daily_likes_amount,
+      this.thumbnail});
 
   factory _$_LiveNow.fromJson(Map<String, dynamic> json) =>
       _$$_LiveNowFromJson(json);
@@ -535,10 +566,12 @@ class _$_LiveNow with DiagnosticableTreeMixin implements _LiveNow {
   final DateTime? updatedAt;
   @override
   final int? daily_likes_amount;
+  @override
+  final FileStorage? thumbnail;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LiveNow(status: $status, type: $type, player_type: $player_type, is_premium: $is_premium, is_ads_enabled: $is_ads_enabled, likes_amount: $likes_amount, comments_amount: $comments_amount, daily_views_amount: $daily_views_amount, views_amount: $views_amount, hearts_amount: $hearts_amount, chat_messages_amount: $chat_messages_amount, unique_viewers_amount: $unique_viewers_amount, max_viewers_amount: $max_viewers_amount, is_comments_enabled: $is_comments_enabled, only_fanclub_members: $only_fanclub_members, daily_rank: $daily_rank, auto_record_concert: $auto_record_concert, auto_publish: $auto_publish, orientation: $orientation, is_approved: $is_approved, max_screen: $max_screen, is_schedule_notified: $is_schedule_notified, latency_mode: $latency_mode, title: $title, description: $description, createdAt: $createdAt, updatedAt: $updatedAt, daily_likes_amount: $daily_likes_amount)';
+    return 'LiveNow(status: $status, type: $type, player_type: $player_type, is_premium: $is_premium, is_ads_enabled: $is_ads_enabled, likes_amount: $likes_amount, comments_amount: $comments_amount, daily_views_amount: $daily_views_amount, views_amount: $views_amount, hearts_amount: $hearts_amount, chat_messages_amount: $chat_messages_amount, unique_viewers_amount: $unique_viewers_amount, max_viewers_amount: $max_viewers_amount, is_comments_enabled: $is_comments_enabled, only_fanclub_members: $only_fanclub_members, daily_rank: $daily_rank, auto_record_concert: $auto_record_concert, auto_publish: $auto_publish, orientation: $orientation, is_approved: $is_approved, max_screen: $max_screen, is_schedule_notified: $is_schedule_notified, latency_mode: $latency_mode, title: $title, description: $description, createdAt: $createdAt, updatedAt: $updatedAt, daily_likes_amount: $daily_likes_amount, thumbnail: $thumbnail)';
   }
 
   @override
@@ -573,7 +606,8 @@ class _$_LiveNow with DiagnosticableTreeMixin implements _LiveNow {
       ..add(DiagnosticsProperty('description', description))
       ..add(DiagnosticsProperty('createdAt', createdAt))
       ..add(DiagnosticsProperty('updatedAt', updatedAt))
-      ..add(DiagnosticsProperty('daily_likes_amount', daily_likes_amount));
+      ..add(DiagnosticsProperty('daily_likes_amount', daily_likes_amount))
+      ..add(DiagnosticsProperty('thumbnail', thumbnail));
   }
 
   @override
@@ -633,7 +667,9 @@ class _$_LiveNow with DiagnosticableTreeMixin implements _LiveNow {
             (identical(other.updatedAt, updatedAt) ||
                 other.updatedAt == updatedAt) &&
             (identical(other.daily_likes_amount, daily_likes_amount) ||
-                other.daily_likes_amount == daily_likes_amount));
+                other.daily_likes_amount == daily_likes_amount) &&
+            (identical(other.thumbnail, thumbnail) ||
+                other.thumbnail == thumbnail));
   }
 
   @JsonKey(ignore: true)
@@ -667,7 +703,8 @@ class _$_LiveNow with DiagnosticableTreeMixin implements _LiveNow {
         description,
         createdAt,
         updatedAt,
-        daily_likes_amount
+        daily_likes_amount,
+        thumbnail
       ]);
 
   @JsonKey(ignore: true)
@@ -713,7 +750,8 @@ abstract class _LiveNow implements LiveNow {
       final String? description,
       final DateTime? createdAt,
       final DateTime? updatedAt,
-      final int? daily_likes_amount}) = _$_LiveNow;
+      final int? daily_likes_amount,
+      final FileStorage? thumbnail}) = _$_LiveNow;
 
   factory _LiveNow.fromJson(Map<String, dynamic> json) = _$_LiveNow.fromJson;
 
@@ -773,6 +811,8 @@ abstract class _LiveNow implements LiveNow {
   DateTime? get updatedAt;
   @override
   int? get daily_likes_amount;
+  @override
+  FileStorage? get thumbnail;
   @override
   @JsonKey(ignore: true)
   _$$_LiveNowCopyWith<_$_LiveNow> get copyWith =>

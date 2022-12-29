@@ -49,6 +49,8 @@ class App extends StatelessWidget {
             path: 'videopage',
             builder: (BuildContext context, GoRouterState state) =>
                 const VideoPage(),
+          ),
+          GoRoute(
             path: 'postpage',
             builder: (BuildContext context, GoRouterState state) =>
                 const PostPage(),
@@ -62,11 +64,11 @@ class App extends StatelessWidget {
             path: 'channel',
             builder: (BuildContext context, GoRouterState state) =>
                 const ChannelPage(),
-
+          ),
+          GoRoute(
             path: 'homepromo',
             builder: (BuildContext context, GoRouterState state) =>
                 const HomePromoPage(),
-
           ),
           GoRoute(
             path: 'setting',

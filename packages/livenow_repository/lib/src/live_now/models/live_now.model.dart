@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:livenow_repository/src/live_now/models/file_storage.model.dart';
 
 part 'live_now.model.freezed.dart';
 part 'live_now.model.g.dart';
@@ -35,6 +36,7 @@ class LiveNow with _$LiveNow {
     DateTime? createdAt,
     DateTime? updatedAt,
     int? daily_likes_amount,
+    FileStorage? thumbnail,
   }) = _LiveNow;
 
   factory LiveNow.fromJson(Map<String, dynamic> json) =>

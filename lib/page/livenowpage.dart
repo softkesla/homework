@@ -34,6 +34,7 @@ class _LiveNowPageState extends State<LiveNowPage> {
               }
               if (state is LiveNowLoadedState) {
                 List<LiveNow> LiveNowList = state.livenow;
+
                 return ListView.builder(
                     itemCount: LiveNowList.length,
                     itemBuilder: (_, index) {
@@ -41,6 +42,14 @@ class _LiveNowPageState extends State<LiveNowPage> {
                         color: Colors.amber,
                         elevation: 4,
                         child: ListTile(
+                          leading: CircleAvatar(
+                              backgroundImage: NetworkImage(
+                                  LiveNowList[index].thumbnail?.url ?? '')),
+                          trailing: Image.network(LiveNowList[index]
+                                  .thumbnail
+                                  ?.formats?['small']
+                                  ?.url ??
+                              ''),
                           title: Text(
                             LiveNowList[index].title.toString(),
                             style: TextStyle(color: Colors.white),
