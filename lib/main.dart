@@ -8,6 +8,7 @@ import 'package:homework_flutter/page/help.dart';
 import 'package:homework_flutter/page/homepage.dart';
 import 'package:homework_flutter/page/promo.dart';
 import 'package:homework_flutter/page/error.dart';
+import 'package:homework_flutter/page/videopage.dart';
 import 'package:promo_repository/repositories.dart';
 
 void main() {
@@ -44,6 +45,9 @@ class App extends StatelessWidget {
       GoRoute(
         routes: <GoRoute>[
           GoRoute(
+            path: 'videopage',
+            builder: (BuildContext context, GoRouterState state) =>
+                const VideoPage(),
             path: 'postpage',
             builder: (BuildContext context, GoRouterState state) =>
                 const PostPage(),

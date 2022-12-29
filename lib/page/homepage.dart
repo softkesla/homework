@@ -24,6 +24,19 @@ class HomePage extends StatelessWidget {
               height: 50,
             ),
             OutlinedButton(
+              onPressed: () => context.go('/videopage'),
+              child: const Text('Video'),
+              style: OutlinedButton.styleFrom(
+                  minimumSize: Size(150, 50),
+                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
+                  primary: Color.fromARGB(255, 255, 161, 84),
+                  side: BorderSide(
+                      width: 2, color: Color.fromARGB(255, 49, 192, 202))),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            OutlinedButton(
               onPressed: () => context.go('/postpage'),
               child: const Text('Post'),
               style: OutlinedButton.styleFrom(
