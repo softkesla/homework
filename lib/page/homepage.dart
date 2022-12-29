@@ -68,9 +68,22 @@ class HomePage extends StatelessWidget {
               style: OutlinedButton.styleFrom(
                   minimumSize: Size(150, 50),
                   textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Color.fromARGB(255, 255, 84, 164),
+                  primary: Color.fromARGB(255, 62, 104, 255),
                   side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 166, 49, 202))),
+                      width: 2, color: Color.fromARGB(255, 205, 40, 255))),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            OutlinedButton(
+              onPressed: () => context.go('/promo'),
+              child: const Text('Promo'),
+              style: OutlinedButton.styleFrom(
+                  minimumSize: Size(150, 50),
+                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
+                  primary: Color.fromARGB(255, 93, 214, 255),
+                  side: BorderSide(
+                      width: 2, color: Color.fromARGB(255, 27, 255, 217))),
             ),
           ],
         ),
