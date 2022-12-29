@@ -35,6 +35,10 @@ dependencies:
     path:
       packages/livenow_repository
 
+  homepromo_repository:
+    path: 
+      packages/homepromo_repository
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -56,6 +60,10 @@ dependencies:
   post_repository:
     path: 
       packages/post_repository
+
+  channels:
+    path:
+      packages/channels
 
 dev_dependencies:
   flutter_test:
