@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:homework_flutter/page/homepromo.dart';
 import 'package:homework_flutter/page/livenowpage.dart';
 import 'package:homework_flutter/page/setting.dart';
 import 'package:homework_flutter/page/help.dart';
@@ -45,6 +46,11 @@ class App extends StatelessWidget {
             path: 'livenowpage',
             builder: (BuildContext context, GoRouterState state) =>
                 const LiveNowPage(),
+          ),
+          GoRoute(
+            path: 'homepromo',
+            builder: (BuildContext context, GoRouterState state) =>
+                const HomePromoPage(),
           ),
           GoRoute(
             path: 'setting',
