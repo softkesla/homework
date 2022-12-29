@@ -45,11 +45,8 @@ class _LiveNowPageState extends State<LiveNowPage> {
                           leading: CircleAvatar(
                               backgroundImage: NetworkImage(
                                   LiveNowList[index].thumbnail?.url ?? '')),
-                          trailing: Image.network(LiveNowList[index]
-                                  .thumbnail
-                                  ?.formats?['small']
-                                  ?.url ??
-                              ''),
+                          trailing: Image.network(
+                              LiveNowList[index].channel?.thumbnail?.url ?? ''),
                           title: Text(
                             LiveNowList[index].title.toString(),
                             style: TextStyle(color: Colors.white),
