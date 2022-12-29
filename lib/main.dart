@@ -8,6 +8,7 @@ import 'package:homework_flutter/page/help.dart';
 import 'package:homework_flutter/page/homepage.dart';
 import 'package:homework_flutter/page/promo.dart';
 import 'package:homework_flutter/page/error.dart';
+import 'package:homework_flutter/page/channel.dart';
 import 'package:homework_flutter/page/videopage.dart';
 import 'package:promo_repository/repositories.dart';
 
@@ -58,9 +59,14 @@ class App extends StatelessWidget {
                 const LiveNowPage(),
           ),
           GoRoute(
+            path: 'channel',
+            builder: (BuildContext context, GoRouterState state) =>
+                const ChannelPage(),
+
             path: 'homepromo',
             builder: (BuildContext context, GoRouterState state) =>
                 const HomePromoPage(),
+
           ),
           GoRoute(
             path: 'setting',

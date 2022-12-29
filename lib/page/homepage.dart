@@ -81,9 +81,9 @@ class HomePage extends StatelessWidget {
               style: OutlinedButton.styleFrom(
                   minimumSize: Size(150, 50),
                   textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Color.fromARGB(255, 31, 240, 255),
+                  primary: Colors.white,
                   side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 68, 31, 254))),
+                      width: 2, color: Color.fromARGB(255, 27, 255, 217))),
             ),
             SizedBox(
               height: 20,
@@ -94,9 +94,9 @@ class HomePage extends StatelessWidget {
               style: OutlinedButton.styleFrom(
                   minimumSize: Size(150, 50),
                   textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Color.fromARGB(255, 62, 104, 255),
+                  primary: Colors.white,
                   side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 205, 40, 255))),
+                      width: 2, color: Color.fromARGB(255, 27, 255, 217))),
             ),
             SizedBox(
               height: 20,
@@ -107,7 +107,20 @@ class HomePage extends StatelessWidget {
               style: OutlinedButton.styleFrom(
                   minimumSize: Size(150, 50),
                   textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Color.fromARGB(255, 93, 214, 255),
+                  primary: Colors.white,
+                  side: BorderSide(
+                      width: 2, color: Color.fromARGB(255, 27, 255, 217))),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            OutlinedButton(
+              onPressed: () => context.go('/channel'),
+              child: const Text('Channel'),
+              style: OutlinedButton.styleFrom(
+                  minimumSize: Size(150, 50),
+                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
+                  primary: Colors.white,
                   side: BorderSide(
                       width: 2, color: Color.fromARGB(255, 27, 255, 217))),
             ),
