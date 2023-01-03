@@ -22,36 +22,63 @@ VideoPageModel _$VideoPageModelFromJson(Map<String, dynamic> json) {
 mixin _$VideoPageModel {
   String? get status => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
-  String? get player_type => throw _privateConstructorUsedError;
-  bool get is_premium => throw _privateConstructorUsedError;
-  bool get is_ads_enabled => throw _privateConstructorUsedError;
-  int? get likes_amount => throw _privateConstructorUsedError;
-  int? get daily_likes_amount => throw _privateConstructorUsedError;
-  int? get comments_amount => throw _privateConstructorUsedError;
-  int? get daily_comments_amount => throw _privateConstructorUsedError;
-  int? get daily_views_amount => throw _privateConstructorUsedError;
-  int? get views_amount => throw _privateConstructorUsedError;
-  int? get hearts_amount => throw _privateConstructorUsedError;
-  int? get chat_messages_amount => throw _privateConstructorUsedError;
-  int? get unique_viewers_amount => throw _privateConstructorUsedError;
-  int? get max_viewers_amount => throw _privateConstructorUsedError;
-  bool get is_comments_enabled => throw _privateConstructorUsedError;
-  bool get only_fanclub_members => throw _privateConstructorUsedError;
-  int? get daily_rank => throw _privateConstructorUsedError;
-  bool get auto_record_concert => throw _privateConstructorUsedError;
-  bool get auto_publish => throw _privateConstructorUsedError;
-  bool get is_approved => throw _privateConstructorUsedError;
-  int? get max_screen => throw _privateConstructorUsedError;
-  bool get is_schedule_notified => throw _privateConstructorUsedError;
-  String? get latency_mode => throw _privateConstructorUsedError;
-  String? get gcorelabs_stream_id => throw _privateConstructorUsedError;
-  String? get source_stream_id => throw _privateConstructorUsedError;
-  String? get playback_id => throw _privateConstructorUsedError;
-  String? get hls_url => throw _privateConstructorUsedError;
+  @JsonKey(name: 'player_type')
+  String? get playerType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_premium')
+  bool get isPremium => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_ads_enabled')
+  bool get isAdsEnabled => throw _privateConstructorUsedError;
+  @JsonKey(name: 'likes_amount')
+  int? get likesAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'daily_likes_amount')
+  int? get dailyLikesAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'comments_amount')
+  int? get commentsAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'daily_comments_amount')
+  int? get dailyCommentsAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'daily_views_amount')
+  int? get dailyViewsAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'views_amount')
+  int? get viewsAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'hearts_amount')
+  int? get heartsAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chat_messages_amount')
+  int? get chatMessagesAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'unique_viewers_amount')
+  int? get uniqueViewersAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'max_viewers_amount')
+  int? get maxViewersAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_comments_enabled')
+  bool get isCommentsEnabled => throw _privateConstructorUsedError;
+  @JsonKey(name: 'only_fanclub_members')
+  bool get onlyFanclubMembers => throw _privateConstructorUsedError;
+  @JsonKey(name: 'daily_rank')
+  int? get dailyRank => throw _privateConstructorUsedError;
+  @JsonKey(name: 'auto_record_concert')
+  bool get autoRecordConcert => throw _privateConstructorUsedError;
+  @JsonKey(name: 'auto_publish')
+  bool get autoPublish => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_approved')
+  bool get isApproved => throw _privateConstructorUsedError;
+  @JsonKey(name: 'max_screen')
+  int? get maxScreen => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_schedule_notified')
+  bool get isScheduleNotified => throw _privateConstructorUsedError;
+  @JsonKey(name: 'latency_mode')
+  String? get latencyMode => throw _privateConstructorUsedError;
+  @JsonKey(name: 'gcorelabs_stream_id')
+  String? get gcorelabsStreamId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'source_stream_id')
+  String? get sourceStreamId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'playback_id')
+  String? get playbackId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'hls_url')
+  String? get hlsUrl => throw _privateConstructorUsedError;
   int? get duration => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
-  String? get stream_provider_settings => throw _privateConstructorUsedError;
+  @JsonKey(name: 'stream_provider_settings')
+  String? get streamProviderSettings => throw _privateConstructorUsedError;
   String? get author => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
   DateTime? get updatedAt => throw _privateConstructorUsedError;
@@ -72,36 +99,36 @@ abstract class $VideoPageModelCopyWith<$Res> {
   $Res call(
       {String? status,
       String? type,
-      String? player_type,
-      bool is_premium,
-      bool is_ads_enabled,
-      int? likes_amount,
-      int? daily_likes_amount,
-      int? comments_amount,
-      int? daily_comments_amount,
-      int? daily_views_amount,
-      int? views_amount,
-      int? hearts_amount,
-      int? chat_messages_amount,
-      int? unique_viewers_amount,
-      int? max_viewers_amount,
-      bool is_comments_enabled,
-      bool only_fanclub_members,
-      int? daily_rank,
-      bool auto_record_concert,
-      bool auto_publish,
-      bool is_approved,
-      int? max_screen,
-      bool is_schedule_notified,
-      String? latency_mode,
-      String? gcorelabs_stream_id,
-      String? source_stream_id,
-      String? playback_id,
-      String? hls_url,
+      @JsonKey(name: 'player_type') String? playerType,
+      @JsonKey(name: 'is_premium') bool isPremium,
+      @JsonKey(name: 'is_ads_enabled') bool isAdsEnabled,
+      @JsonKey(name: 'likes_amount') int? likesAmount,
+      @JsonKey(name: 'daily_likes_amount') int? dailyLikesAmount,
+      @JsonKey(name: 'comments_amount') int? commentsAmount,
+      @JsonKey(name: 'daily_comments_amount') int? dailyCommentsAmount,
+      @JsonKey(name: 'daily_views_amount') int? dailyViewsAmount,
+      @JsonKey(name: 'views_amount') int? viewsAmount,
+      @JsonKey(name: 'hearts_amount') int? heartsAmount,
+      @JsonKey(name: 'chat_messages_amount') int? chatMessagesAmount,
+      @JsonKey(name: 'unique_viewers_amount') int? uniqueViewersAmount,
+      @JsonKey(name: 'max_viewers_amount') int? maxViewersAmount,
+      @JsonKey(name: 'is_comments_enabled') bool isCommentsEnabled,
+      @JsonKey(name: 'only_fanclub_members') bool onlyFanclubMembers,
+      @JsonKey(name: 'daily_rank') int? dailyRank,
+      @JsonKey(name: 'auto_record_concert') bool autoRecordConcert,
+      @JsonKey(name: 'auto_publish') bool autoPublish,
+      @JsonKey(name: 'is_approved') bool isApproved,
+      @JsonKey(name: 'max_screen') int? maxScreen,
+      @JsonKey(name: 'is_schedule_notified') bool isScheduleNotified,
+      @JsonKey(name: 'latency_mode') String? latencyMode,
+      @JsonKey(name: 'gcorelabs_stream_id') String? gcorelabsStreamId,
+      @JsonKey(name: 'source_stream_id') String? sourceStreamId,
+      @JsonKey(name: 'playback_id') String? playbackId,
+      @JsonKey(name: 'hls_url') String? hlsUrl,
       int? duration,
       String? description,
       String? title,
-      String? stream_provider_settings,
+      @JsonKey(name: 'stream_provider_settings') String? streamProviderSettings,
       String? author,
       DateTime? createdAt,
       DateTime? updatedAt,
@@ -123,36 +150,36 @@ class _$VideoPageModelCopyWithImpl<$Res, $Val extends VideoPageModel>
   $Res call({
     Object? status = freezed,
     Object? type = freezed,
-    Object? player_type = freezed,
-    Object? is_premium = null,
-    Object? is_ads_enabled = null,
-    Object? likes_amount = freezed,
-    Object? daily_likes_amount = freezed,
-    Object? comments_amount = freezed,
-    Object? daily_comments_amount = freezed,
-    Object? daily_views_amount = freezed,
-    Object? views_amount = freezed,
-    Object? hearts_amount = freezed,
-    Object? chat_messages_amount = freezed,
-    Object? unique_viewers_amount = freezed,
-    Object? max_viewers_amount = freezed,
-    Object? is_comments_enabled = null,
-    Object? only_fanclub_members = null,
-    Object? daily_rank = freezed,
-    Object? auto_record_concert = null,
-    Object? auto_publish = null,
-    Object? is_approved = null,
-    Object? max_screen = freezed,
-    Object? is_schedule_notified = null,
-    Object? latency_mode = freezed,
-    Object? gcorelabs_stream_id = freezed,
-    Object? source_stream_id = freezed,
-    Object? playback_id = freezed,
-    Object? hls_url = freezed,
+    Object? playerType = freezed,
+    Object? isPremium = null,
+    Object? isAdsEnabled = null,
+    Object? likesAmount = freezed,
+    Object? dailyLikesAmount = freezed,
+    Object? commentsAmount = freezed,
+    Object? dailyCommentsAmount = freezed,
+    Object? dailyViewsAmount = freezed,
+    Object? viewsAmount = freezed,
+    Object? heartsAmount = freezed,
+    Object? chatMessagesAmount = freezed,
+    Object? uniqueViewersAmount = freezed,
+    Object? maxViewersAmount = freezed,
+    Object? isCommentsEnabled = null,
+    Object? onlyFanclubMembers = null,
+    Object? dailyRank = freezed,
+    Object? autoRecordConcert = null,
+    Object? autoPublish = null,
+    Object? isApproved = null,
+    Object? maxScreen = freezed,
+    Object? isScheduleNotified = null,
+    Object? latencyMode = freezed,
+    Object? gcorelabsStreamId = freezed,
+    Object? sourceStreamId = freezed,
+    Object? playbackId = freezed,
+    Object? hlsUrl = freezed,
     Object? duration = freezed,
     Object? description = freezed,
     Object? title = freezed,
-    Object? stream_provider_settings = freezed,
+    Object? streamProviderSettings = freezed,
     Object? author = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
@@ -167,109 +194,109 @@ class _$VideoPageModelCopyWithImpl<$Res, $Val extends VideoPageModel>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String?,
-      player_type: freezed == player_type
-          ? _value.player_type
-          : player_type // ignore: cast_nullable_to_non_nullable
+      playerType: freezed == playerType
+          ? _value.playerType
+          : playerType // ignore: cast_nullable_to_non_nullable
               as String?,
-      is_premium: null == is_premium
-          ? _value.is_premium
-          : is_premium // ignore: cast_nullable_to_non_nullable
+      isPremium: null == isPremium
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
-      is_ads_enabled: null == is_ads_enabled
-          ? _value.is_ads_enabled
-          : is_ads_enabled // ignore: cast_nullable_to_non_nullable
+      isAdsEnabled: null == isAdsEnabled
+          ? _value.isAdsEnabled
+          : isAdsEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      likes_amount: freezed == likes_amount
-          ? _value.likes_amount
-          : likes_amount // ignore: cast_nullable_to_non_nullable
+      likesAmount: freezed == likesAmount
+          ? _value.likesAmount
+          : likesAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      daily_likes_amount: freezed == daily_likes_amount
-          ? _value.daily_likes_amount
-          : daily_likes_amount // ignore: cast_nullable_to_non_nullable
+      dailyLikesAmount: freezed == dailyLikesAmount
+          ? _value.dailyLikesAmount
+          : dailyLikesAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      comments_amount: freezed == comments_amount
-          ? _value.comments_amount
-          : comments_amount // ignore: cast_nullable_to_non_nullable
+      commentsAmount: freezed == commentsAmount
+          ? _value.commentsAmount
+          : commentsAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      daily_comments_amount: freezed == daily_comments_amount
-          ? _value.daily_comments_amount
-          : daily_comments_amount // ignore: cast_nullable_to_non_nullable
+      dailyCommentsAmount: freezed == dailyCommentsAmount
+          ? _value.dailyCommentsAmount
+          : dailyCommentsAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      daily_views_amount: freezed == daily_views_amount
-          ? _value.daily_views_amount
-          : daily_views_amount // ignore: cast_nullable_to_non_nullable
+      dailyViewsAmount: freezed == dailyViewsAmount
+          ? _value.dailyViewsAmount
+          : dailyViewsAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      views_amount: freezed == views_amount
-          ? _value.views_amount
-          : views_amount // ignore: cast_nullable_to_non_nullable
+      viewsAmount: freezed == viewsAmount
+          ? _value.viewsAmount
+          : viewsAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      hearts_amount: freezed == hearts_amount
-          ? _value.hearts_amount
-          : hearts_amount // ignore: cast_nullable_to_non_nullable
+      heartsAmount: freezed == heartsAmount
+          ? _value.heartsAmount
+          : heartsAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      chat_messages_amount: freezed == chat_messages_amount
-          ? _value.chat_messages_amount
-          : chat_messages_amount // ignore: cast_nullable_to_non_nullable
+      chatMessagesAmount: freezed == chatMessagesAmount
+          ? _value.chatMessagesAmount
+          : chatMessagesAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      unique_viewers_amount: freezed == unique_viewers_amount
-          ? _value.unique_viewers_amount
-          : unique_viewers_amount // ignore: cast_nullable_to_non_nullable
+      uniqueViewersAmount: freezed == uniqueViewersAmount
+          ? _value.uniqueViewersAmount
+          : uniqueViewersAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      max_viewers_amount: freezed == max_viewers_amount
-          ? _value.max_viewers_amount
-          : max_viewers_amount // ignore: cast_nullable_to_non_nullable
+      maxViewersAmount: freezed == maxViewersAmount
+          ? _value.maxViewersAmount
+          : maxViewersAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      is_comments_enabled: null == is_comments_enabled
-          ? _value.is_comments_enabled
-          : is_comments_enabled // ignore: cast_nullable_to_non_nullable
+      isCommentsEnabled: null == isCommentsEnabled
+          ? _value.isCommentsEnabled
+          : isCommentsEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      only_fanclub_members: null == only_fanclub_members
-          ? _value.only_fanclub_members
-          : only_fanclub_members // ignore: cast_nullable_to_non_nullable
+      onlyFanclubMembers: null == onlyFanclubMembers
+          ? _value.onlyFanclubMembers
+          : onlyFanclubMembers // ignore: cast_nullable_to_non_nullable
               as bool,
-      daily_rank: freezed == daily_rank
-          ? _value.daily_rank
-          : daily_rank // ignore: cast_nullable_to_non_nullable
+      dailyRank: freezed == dailyRank
+          ? _value.dailyRank
+          : dailyRank // ignore: cast_nullable_to_non_nullable
               as int?,
-      auto_record_concert: null == auto_record_concert
-          ? _value.auto_record_concert
-          : auto_record_concert // ignore: cast_nullable_to_non_nullable
+      autoRecordConcert: null == autoRecordConcert
+          ? _value.autoRecordConcert
+          : autoRecordConcert // ignore: cast_nullable_to_non_nullable
               as bool,
-      auto_publish: null == auto_publish
-          ? _value.auto_publish
-          : auto_publish // ignore: cast_nullable_to_non_nullable
+      autoPublish: null == autoPublish
+          ? _value.autoPublish
+          : autoPublish // ignore: cast_nullable_to_non_nullable
               as bool,
-      is_approved: null == is_approved
-          ? _value.is_approved
-          : is_approved // ignore: cast_nullable_to_non_nullable
+      isApproved: null == isApproved
+          ? _value.isApproved
+          : isApproved // ignore: cast_nullable_to_non_nullable
               as bool,
-      max_screen: freezed == max_screen
-          ? _value.max_screen
-          : max_screen // ignore: cast_nullable_to_non_nullable
+      maxScreen: freezed == maxScreen
+          ? _value.maxScreen
+          : maxScreen // ignore: cast_nullable_to_non_nullable
               as int?,
-      is_schedule_notified: null == is_schedule_notified
-          ? _value.is_schedule_notified
-          : is_schedule_notified // ignore: cast_nullable_to_non_nullable
+      isScheduleNotified: null == isScheduleNotified
+          ? _value.isScheduleNotified
+          : isScheduleNotified // ignore: cast_nullable_to_non_nullable
               as bool,
-      latency_mode: freezed == latency_mode
-          ? _value.latency_mode
-          : latency_mode // ignore: cast_nullable_to_non_nullable
+      latencyMode: freezed == latencyMode
+          ? _value.latencyMode
+          : latencyMode // ignore: cast_nullable_to_non_nullable
               as String?,
-      gcorelabs_stream_id: freezed == gcorelabs_stream_id
-          ? _value.gcorelabs_stream_id
-          : gcorelabs_stream_id // ignore: cast_nullable_to_non_nullable
+      gcorelabsStreamId: freezed == gcorelabsStreamId
+          ? _value.gcorelabsStreamId
+          : gcorelabsStreamId // ignore: cast_nullable_to_non_nullable
               as String?,
-      source_stream_id: freezed == source_stream_id
-          ? _value.source_stream_id
-          : source_stream_id // ignore: cast_nullable_to_non_nullable
+      sourceStreamId: freezed == sourceStreamId
+          ? _value.sourceStreamId
+          : sourceStreamId // ignore: cast_nullable_to_non_nullable
               as String?,
-      playback_id: freezed == playback_id
-          ? _value.playback_id
-          : playback_id // ignore: cast_nullable_to_non_nullable
+      playbackId: freezed == playbackId
+          ? _value.playbackId
+          : playbackId // ignore: cast_nullable_to_non_nullable
               as String?,
-      hls_url: freezed == hls_url
-          ? _value.hls_url
-          : hls_url // ignore: cast_nullable_to_non_nullable
+      hlsUrl: freezed == hlsUrl
+          ? _value.hlsUrl
+          : hlsUrl // ignore: cast_nullable_to_non_nullable
               as String?,
       duration: freezed == duration
           ? _value.duration
@@ -283,9 +310,9 @@ class _$VideoPageModelCopyWithImpl<$Res, $Val extends VideoPageModel>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      stream_provider_settings: freezed == stream_provider_settings
-          ? _value.stream_provider_settings
-          : stream_provider_settings // ignore: cast_nullable_to_non_nullable
+      streamProviderSettings: freezed == streamProviderSettings
+          ? _value.streamProviderSettings
+          : streamProviderSettings // ignore: cast_nullable_to_non_nullable
               as String?,
       author: freezed == author
           ? _value.author
@@ -318,36 +345,36 @@ abstract class _$$_VideoPageModelCopyWith<$Res>
   $Res call(
       {String? status,
       String? type,
-      String? player_type,
-      bool is_premium,
-      bool is_ads_enabled,
-      int? likes_amount,
-      int? daily_likes_amount,
-      int? comments_amount,
-      int? daily_comments_amount,
-      int? daily_views_amount,
-      int? views_amount,
-      int? hearts_amount,
-      int? chat_messages_amount,
-      int? unique_viewers_amount,
-      int? max_viewers_amount,
-      bool is_comments_enabled,
-      bool only_fanclub_members,
-      int? daily_rank,
-      bool auto_record_concert,
-      bool auto_publish,
-      bool is_approved,
-      int? max_screen,
-      bool is_schedule_notified,
-      String? latency_mode,
-      String? gcorelabs_stream_id,
-      String? source_stream_id,
-      String? playback_id,
-      String? hls_url,
+      @JsonKey(name: 'player_type') String? playerType,
+      @JsonKey(name: 'is_premium') bool isPremium,
+      @JsonKey(name: 'is_ads_enabled') bool isAdsEnabled,
+      @JsonKey(name: 'likes_amount') int? likesAmount,
+      @JsonKey(name: 'daily_likes_amount') int? dailyLikesAmount,
+      @JsonKey(name: 'comments_amount') int? commentsAmount,
+      @JsonKey(name: 'daily_comments_amount') int? dailyCommentsAmount,
+      @JsonKey(name: 'daily_views_amount') int? dailyViewsAmount,
+      @JsonKey(name: 'views_amount') int? viewsAmount,
+      @JsonKey(name: 'hearts_amount') int? heartsAmount,
+      @JsonKey(name: 'chat_messages_amount') int? chatMessagesAmount,
+      @JsonKey(name: 'unique_viewers_amount') int? uniqueViewersAmount,
+      @JsonKey(name: 'max_viewers_amount') int? maxViewersAmount,
+      @JsonKey(name: 'is_comments_enabled') bool isCommentsEnabled,
+      @JsonKey(name: 'only_fanclub_members') bool onlyFanclubMembers,
+      @JsonKey(name: 'daily_rank') int? dailyRank,
+      @JsonKey(name: 'auto_record_concert') bool autoRecordConcert,
+      @JsonKey(name: 'auto_publish') bool autoPublish,
+      @JsonKey(name: 'is_approved') bool isApproved,
+      @JsonKey(name: 'max_screen') int? maxScreen,
+      @JsonKey(name: 'is_schedule_notified') bool isScheduleNotified,
+      @JsonKey(name: 'latency_mode') String? latencyMode,
+      @JsonKey(name: 'gcorelabs_stream_id') String? gcorelabsStreamId,
+      @JsonKey(name: 'source_stream_id') String? sourceStreamId,
+      @JsonKey(name: 'playback_id') String? playbackId,
+      @JsonKey(name: 'hls_url') String? hlsUrl,
       int? duration,
       String? description,
       String? title,
-      String? stream_provider_settings,
+      @JsonKey(name: 'stream_provider_settings') String? streamProviderSettings,
       String? author,
       DateTime? createdAt,
       DateTime? updatedAt,
@@ -367,36 +394,36 @@ class __$$_VideoPageModelCopyWithImpl<$Res>
   $Res call({
     Object? status = freezed,
     Object? type = freezed,
-    Object? player_type = freezed,
-    Object? is_premium = null,
-    Object? is_ads_enabled = null,
-    Object? likes_amount = freezed,
-    Object? daily_likes_amount = freezed,
-    Object? comments_amount = freezed,
-    Object? daily_comments_amount = freezed,
-    Object? daily_views_amount = freezed,
-    Object? views_amount = freezed,
-    Object? hearts_amount = freezed,
-    Object? chat_messages_amount = freezed,
-    Object? unique_viewers_amount = freezed,
-    Object? max_viewers_amount = freezed,
-    Object? is_comments_enabled = null,
-    Object? only_fanclub_members = null,
-    Object? daily_rank = freezed,
-    Object? auto_record_concert = null,
-    Object? auto_publish = null,
-    Object? is_approved = null,
-    Object? max_screen = freezed,
-    Object? is_schedule_notified = null,
-    Object? latency_mode = freezed,
-    Object? gcorelabs_stream_id = freezed,
-    Object? source_stream_id = freezed,
-    Object? playback_id = freezed,
-    Object? hls_url = freezed,
+    Object? playerType = freezed,
+    Object? isPremium = null,
+    Object? isAdsEnabled = null,
+    Object? likesAmount = freezed,
+    Object? dailyLikesAmount = freezed,
+    Object? commentsAmount = freezed,
+    Object? dailyCommentsAmount = freezed,
+    Object? dailyViewsAmount = freezed,
+    Object? viewsAmount = freezed,
+    Object? heartsAmount = freezed,
+    Object? chatMessagesAmount = freezed,
+    Object? uniqueViewersAmount = freezed,
+    Object? maxViewersAmount = freezed,
+    Object? isCommentsEnabled = null,
+    Object? onlyFanclubMembers = null,
+    Object? dailyRank = freezed,
+    Object? autoRecordConcert = null,
+    Object? autoPublish = null,
+    Object? isApproved = null,
+    Object? maxScreen = freezed,
+    Object? isScheduleNotified = null,
+    Object? latencyMode = freezed,
+    Object? gcorelabsStreamId = freezed,
+    Object? sourceStreamId = freezed,
+    Object? playbackId = freezed,
+    Object? hlsUrl = freezed,
     Object? duration = freezed,
     Object? description = freezed,
     Object? title = freezed,
-    Object? stream_provider_settings = freezed,
+    Object? streamProviderSettings = freezed,
     Object? author = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
@@ -411,109 +438,109 @@ class __$$_VideoPageModelCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String?,
-      player_type: freezed == player_type
-          ? _value.player_type
-          : player_type // ignore: cast_nullable_to_non_nullable
+      playerType: freezed == playerType
+          ? _value.playerType
+          : playerType // ignore: cast_nullable_to_non_nullable
               as String?,
-      is_premium: null == is_premium
-          ? _value.is_premium
-          : is_premium // ignore: cast_nullable_to_non_nullable
+      isPremium: null == isPremium
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
-      is_ads_enabled: null == is_ads_enabled
-          ? _value.is_ads_enabled
-          : is_ads_enabled // ignore: cast_nullable_to_non_nullable
+      isAdsEnabled: null == isAdsEnabled
+          ? _value.isAdsEnabled
+          : isAdsEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      likes_amount: freezed == likes_amount
-          ? _value.likes_amount
-          : likes_amount // ignore: cast_nullable_to_non_nullable
+      likesAmount: freezed == likesAmount
+          ? _value.likesAmount
+          : likesAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      daily_likes_amount: freezed == daily_likes_amount
-          ? _value.daily_likes_amount
-          : daily_likes_amount // ignore: cast_nullable_to_non_nullable
+      dailyLikesAmount: freezed == dailyLikesAmount
+          ? _value.dailyLikesAmount
+          : dailyLikesAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      comments_amount: freezed == comments_amount
-          ? _value.comments_amount
-          : comments_amount // ignore: cast_nullable_to_non_nullable
+      commentsAmount: freezed == commentsAmount
+          ? _value.commentsAmount
+          : commentsAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      daily_comments_amount: freezed == daily_comments_amount
-          ? _value.daily_comments_amount
-          : daily_comments_amount // ignore: cast_nullable_to_non_nullable
+      dailyCommentsAmount: freezed == dailyCommentsAmount
+          ? _value.dailyCommentsAmount
+          : dailyCommentsAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      daily_views_amount: freezed == daily_views_amount
-          ? _value.daily_views_amount
-          : daily_views_amount // ignore: cast_nullable_to_non_nullable
+      dailyViewsAmount: freezed == dailyViewsAmount
+          ? _value.dailyViewsAmount
+          : dailyViewsAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      views_amount: freezed == views_amount
-          ? _value.views_amount
-          : views_amount // ignore: cast_nullable_to_non_nullable
+      viewsAmount: freezed == viewsAmount
+          ? _value.viewsAmount
+          : viewsAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      hearts_amount: freezed == hearts_amount
-          ? _value.hearts_amount
-          : hearts_amount // ignore: cast_nullable_to_non_nullable
+      heartsAmount: freezed == heartsAmount
+          ? _value.heartsAmount
+          : heartsAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      chat_messages_amount: freezed == chat_messages_amount
-          ? _value.chat_messages_amount
-          : chat_messages_amount // ignore: cast_nullable_to_non_nullable
+      chatMessagesAmount: freezed == chatMessagesAmount
+          ? _value.chatMessagesAmount
+          : chatMessagesAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      unique_viewers_amount: freezed == unique_viewers_amount
-          ? _value.unique_viewers_amount
-          : unique_viewers_amount // ignore: cast_nullable_to_non_nullable
+      uniqueViewersAmount: freezed == uniqueViewersAmount
+          ? _value.uniqueViewersAmount
+          : uniqueViewersAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      max_viewers_amount: freezed == max_viewers_amount
-          ? _value.max_viewers_amount
-          : max_viewers_amount // ignore: cast_nullable_to_non_nullable
+      maxViewersAmount: freezed == maxViewersAmount
+          ? _value.maxViewersAmount
+          : maxViewersAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      is_comments_enabled: null == is_comments_enabled
-          ? _value.is_comments_enabled
-          : is_comments_enabled // ignore: cast_nullable_to_non_nullable
+      isCommentsEnabled: null == isCommentsEnabled
+          ? _value.isCommentsEnabled
+          : isCommentsEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      only_fanclub_members: null == only_fanclub_members
-          ? _value.only_fanclub_members
-          : only_fanclub_members // ignore: cast_nullable_to_non_nullable
+      onlyFanclubMembers: null == onlyFanclubMembers
+          ? _value.onlyFanclubMembers
+          : onlyFanclubMembers // ignore: cast_nullable_to_non_nullable
               as bool,
-      daily_rank: freezed == daily_rank
-          ? _value.daily_rank
-          : daily_rank // ignore: cast_nullable_to_non_nullable
+      dailyRank: freezed == dailyRank
+          ? _value.dailyRank
+          : dailyRank // ignore: cast_nullable_to_non_nullable
               as int?,
-      auto_record_concert: null == auto_record_concert
-          ? _value.auto_record_concert
-          : auto_record_concert // ignore: cast_nullable_to_non_nullable
+      autoRecordConcert: null == autoRecordConcert
+          ? _value.autoRecordConcert
+          : autoRecordConcert // ignore: cast_nullable_to_non_nullable
               as bool,
-      auto_publish: null == auto_publish
-          ? _value.auto_publish
-          : auto_publish // ignore: cast_nullable_to_non_nullable
+      autoPublish: null == autoPublish
+          ? _value.autoPublish
+          : autoPublish // ignore: cast_nullable_to_non_nullable
               as bool,
-      is_approved: null == is_approved
-          ? _value.is_approved
-          : is_approved // ignore: cast_nullable_to_non_nullable
+      isApproved: null == isApproved
+          ? _value.isApproved
+          : isApproved // ignore: cast_nullable_to_non_nullable
               as bool,
-      max_screen: freezed == max_screen
-          ? _value.max_screen
-          : max_screen // ignore: cast_nullable_to_non_nullable
+      maxScreen: freezed == maxScreen
+          ? _value.maxScreen
+          : maxScreen // ignore: cast_nullable_to_non_nullable
               as int?,
-      is_schedule_notified: null == is_schedule_notified
-          ? _value.is_schedule_notified
-          : is_schedule_notified // ignore: cast_nullable_to_non_nullable
+      isScheduleNotified: null == isScheduleNotified
+          ? _value.isScheduleNotified
+          : isScheduleNotified // ignore: cast_nullable_to_non_nullable
               as bool,
-      latency_mode: freezed == latency_mode
-          ? _value.latency_mode
-          : latency_mode // ignore: cast_nullable_to_non_nullable
+      latencyMode: freezed == latencyMode
+          ? _value.latencyMode
+          : latencyMode // ignore: cast_nullable_to_non_nullable
               as String?,
-      gcorelabs_stream_id: freezed == gcorelabs_stream_id
-          ? _value.gcorelabs_stream_id
-          : gcorelabs_stream_id // ignore: cast_nullable_to_non_nullable
+      gcorelabsStreamId: freezed == gcorelabsStreamId
+          ? _value.gcorelabsStreamId
+          : gcorelabsStreamId // ignore: cast_nullable_to_non_nullable
               as String?,
-      source_stream_id: freezed == source_stream_id
-          ? _value.source_stream_id
-          : source_stream_id // ignore: cast_nullable_to_non_nullable
+      sourceStreamId: freezed == sourceStreamId
+          ? _value.sourceStreamId
+          : sourceStreamId // ignore: cast_nullable_to_non_nullable
               as String?,
-      playback_id: freezed == playback_id
-          ? _value.playback_id
-          : playback_id // ignore: cast_nullable_to_non_nullable
+      playbackId: freezed == playbackId
+          ? _value.playbackId
+          : playbackId // ignore: cast_nullable_to_non_nullable
               as String?,
-      hls_url: freezed == hls_url
-          ? _value.hls_url
-          : hls_url // ignore: cast_nullable_to_non_nullable
+      hlsUrl: freezed == hlsUrl
+          ? _value.hlsUrl
+          : hlsUrl // ignore: cast_nullable_to_non_nullable
               as String?,
       duration: freezed == duration
           ? _value.duration
@@ -527,9 +554,9 @@ class __$$_VideoPageModelCopyWithImpl<$Res>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      stream_provider_settings: freezed == stream_provider_settings
-          ? _value.stream_provider_settings
-          : stream_provider_settings // ignore: cast_nullable_to_non_nullable
+      streamProviderSettings: freezed == streamProviderSettings
+          ? _value.streamProviderSettings
+          : streamProviderSettings // ignore: cast_nullable_to_non_nullable
               as String?,
       author: freezed == author
           ? _value.author
@@ -557,36 +584,36 @@ class _$_VideoPageModel implements _VideoPageModel {
   const _$_VideoPageModel(
       {this.status,
       this.type,
-      this.player_type,
-      this.is_premium = false,
-      this.is_ads_enabled = false,
-      this.likes_amount,
-      this.daily_likes_amount,
-      this.comments_amount,
-      this.daily_comments_amount,
-      this.daily_views_amount,
-      this.views_amount,
-      this.hearts_amount,
-      this.chat_messages_amount,
-      this.unique_viewers_amount,
-      this.max_viewers_amount,
-      this.is_comments_enabled = false,
-      this.only_fanclub_members = false,
-      this.daily_rank,
-      this.auto_record_concert = false,
-      this.auto_publish = false,
-      this.is_approved = false,
-      this.max_screen,
-      this.is_schedule_notified = false,
-      this.latency_mode,
-      this.gcorelabs_stream_id,
-      this.source_stream_id,
-      this.playback_id,
-      this.hls_url,
+      @JsonKey(name: 'player_type') this.playerType,
+      @JsonKey(name: 'is_premium') this.isPremium = false,
+      @JsonKey(name: 'is_ads_enabled') this.isAdsEnabled = false,
+      @JsonKey(name: 'likes_amount') this.likesAmount,
+      @JsonKey(name: 'daily_likes_amount') this.dailyLikesAmount,
+      @JsonKey(name: 'comments_amount') this.commentsAmount,
+      @JsonKey(name: 'daily_comments_amount') this.dailyCommentsAmount,
+      @JsonKey(name: 'daily_views_amount') this.dailyViewsAmount,
+      @JsonKey(name: 'views_amount') this.viewsAmount,
+      @JsonKey(name: 'hearts_amount') this.heartsAmount,
+      @JsonKey(name: 'chat_messages_amount') this.chatMessagesAmount,
+      @JsonKey(name: 'unique_viewers_amount') this.uniqueViewersAmount,
+      @JsonKey(name: 'max_viewers_amount') this.maxViewersAmount,
+      @JsonKey(name: 'is_comments_enabled') this.isCommentsEnabled = false,
+      @JsonKey(name: 'only_fanclub_members') this.onlyFanclubMembers = false,
+      @JsonKey(name: 'daily_rank') this.dailyRank,
+      @JsonKey(name: 'auto_record_concert') this.autoRecordConcert = false,
+      @JsonKey(name: 'auto_publish') this.autoPublish = false,
+      @JsonKey(name: 'is_approved') this.isApproved = false,
+      @JsonKey(name: 'max_screen') this.maxScreen,
+      @JsonKey(name: 'is_schedule_notified') this.isScheduleNotified = false,
+      @JsonKey(name: 'latency_mode') this.latencyMode,
+      @JsonKey(name: 'gcorelabs_stream_id') this.gcorelabsStreamId,
+      @JsonKey(name: 'source_stream_id') this.sourceStreamId,
+      @JsonKey(name: 'playback_id') this.playbackId,
+      @JsonKey(name: 'hls_url') this.hlsUrl,
       this.duration,
       this.description,
       this.title,
-      this.stream_provider_settings,
+      @JsonKey(name: 'stream_provider_settings') this.streamProviderSettings,
       this.author,
       this.createdAt,
       this.updatedAt,
@@ -600,65 +627,83 @@ class _$_VideoPageModel implements _VideoPageModel {
   @override
   final String? type;
   @override
-  final String? player_type;
+  @JsonKey(name: 'player_type')
+  final String? playerType;
   @override
-  @JsonKey()
-  final bool is_premium;
+  @JsonKey(name: 'is_premium')
+  final bool isPremium;
   @override
-  @JsonKey()
-  final bool is_ads_enabled;
+  @JsonKey(name: 'is_ads_enabled')
+  final bool isAdsEnabled;
   @override
-  final int? likes_amount;
+  @JsonKey(name: 'likes_amount')
+  final int? likesAmount;
   @override
-  final int? daily_likes_amount;
+  @JsonKey(name: 'daily_likes_amount')
+  final int? dailyLikesAmount;
   @override
-  final int? comments_amount;
+  @JsonKey(name: 'comments_amount')
+  final int? commentsAmount;
   @override
-  final int? daily_comments_amount;
+  @JsonKey(name: 'daily_comments_amount')
+  final int? dailyCommentsAmount;
   @override
-  final int? daily_views_amount;
+  @JsonKey(name: 'daily_views_amount')
+  final int? dailyViewsAmount;
   @override
-  final int? views_amount;
+  @JsonKey(name: 'views_amount')
+  final int? viewsAmount;
   @override
-  final int? hearts_amount;
+  @JsonKey(name: 'hearts_amount')
+  final int? heartsAmount;
   @override
-  final int? chat_messages_amount;
+  @JsonKey(name: 'chat_messages_amount')
+  final int? chatMessagesAmount;
   @override
-  final int? unique_viewers_amount;
+  @JsonKey(name: 'unique_viewers_amount')
+  final int? uniqueViewersAmount;
   @override
-  final int? max_viewers_amount;
+  @JsonKey(name: 'max_viewers_amount')
+  final int? maxViewersAmount;
   @override
-  @JsonKey()
-  final bool is_comments_enabled;
+  @JsonKey(name: 'is_comments_enabled')
+  final bool isCommentsEnabled;
   @override
-  @JsonKey()
-  final bool only_fanclub_members;
+  @JsonKey(name: 'only_fanclub_members')
+  final bool onlyFanclubMembers;
   @override
-  final int? daily_rank;
+  @JsonKey(name: 'daily_rank')
+  final int? dailyRank;
   @override
-  @JsonKey()
-  final bool auto_record_concert;
+  @JsonKey(name: 'auto_record_concert')
+  final bool autoRecordConcert;
   @override
-  @JsonKey()
-  final bool auto_publish;
+  @JsonKey(name: 'auto_publish')
+  final bool autoPublish;
   @override
-  @JsonKey()
-  final bool is_approved;
+  @JsonKey(name: 'is_approved')
+  final bool isApproved;
   @override
-  final int? max_screen;
+  @JsonKey(name: 'max_screen')
+  final int? maxScreen;
   @override
-  @JsonKey()
-  final bool is_schedule_notified;
+  @JsonKey(name: 'is_schedule_notified')
+  final bool isScheduleNotified;
   @override
-  final String? latency_mode;
+  @JsonKey(name: 'latency_mode')
+  final String? latencyMode;
   @override
-  final String? gcorelabs_stream_id;
+  @JsonKey(name: 'gcorelabs_stream_id')
+  final String? gcorelabsStreamId;
   @override
-  final String? source_stream_id;
+  @JsonKey(name: 'source_stream_id')
+  final String? sourceStreamId;
   @override
-  final String? playback_id;
+  @JsonKey(name: 'playback_id')
+  final String? playbackId;
   @override
-  final String? hls_url;
+  @JsonKey(name: 'hls_url')
+  final String? hlsUrl;
   @override
   final int? duration;
   @override
@@ -666,7 +711,8 @@ class _$_VideoPageModel implements _VideoPageModel {
   @override
   final String? title;
   @override
-  final String? stream_provider_settings;
+  @JsonKey(name: 'stream_provider_settings')
+  final String? streamProviderSettings;
   @override
   final String? author;
   @override
@@ -678,7 +724,7 @@ class _$_VideoPageModel implements _VideoPageModel {
 
   @override
   String toString() {
-    return 'VideoPageModel(status: $status, type: $type, player_type: $player_type, is_premium: $is_premium, is_ads_enabled: $is_ads_enabled, likes_amount: $likes_amount, daily_likes_amount: $daily_likes_amount, comments_amount: $comments_amount, daily_comments_amount: $daily_comments_amount, daily_views_amount: $daily_views_amount, views_amount: $views_amount, hearts_amount: $hearts_amount, chat_messages_amount: $chat_messages_amount, unique_viewers_amount: $unique_viewers_amount, max_viewers_amount: $max_viewers_amount, is_comments_enabled: $is_comments_enabled, only_fanclub_members: $only_fanclub_members, daily_rank: $daily_rank, auto_record_concert: $auto_record_concert, auto_publish: $auto_publish, is_approved: $is_approved, max_screen: $max_screen, is_schedule_notified: $is_schedule_notified, latency_mode: $latency_mode, gcorelabs_stream_id: $gcorelabs_stream_id, source_stream_id: $source_stream_id, playback_id: $playback_id, hls_url: $hls_url, duration: $duration, description: $description, title: $title, stream_provider_settings: $stream_provider_settings, author: $author, createdAt: $createdAt, updatedAt: $updatedAt, orientation: $orientation)';
+    return 'VideoPageModel(status: $status, type: $type, playerType: $playerType, isPremium: $isPremium, isAdsEnabled: $isAdsEnabled, likesAmount: $likesAmount, dailyLikesAmount: $dailyLikesAmount, commentsAmount: $commentsAmount, dailyCommentsAmount: $dailyCommentsAmount, dailyViewsAmount: $dailyViewsAmount, viewsAmount: $viewsAmount, heartsAmount: $heartsAmount, chatMessagesAmount: $chatMessagesAmount, uniqueViewersAmount: $uniqueViewersAmount, maxViewersAmount: $maxViewersAmount, isCommentsEnabled: $isCommentsEnabled, onlyFanclubMembers: $onlyFanclubMembers, dailyRank: $dailyRank, autoRecordConcert: $autoRecordConcert, autoPublish: $autoPublish, isApproved: $isApproved, maxScreen: $maxScreen, isScheduleNotified: $isScheduleNotified, latencyMode: $latencyMode, gcorelabsStreamId: $gcorelabsStreamId, sourceStreamId: $sourceStreamId, playbackId: $playbackId, hlsUrl: $hlsUrl, duration: $duration, description: $description, title: $title, streamProviderSettings: $streamProviderSettings, author: $author, createdAt: $createdAt, updatedAt: $updatedAt, orientation: $orientation)';
   }
 
   @override
@@ -688,65 +734,64 @@ class _$_VideoPageModel implements _VideoPageModel {
             other is _$_VideoPageModel &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.type, type) || other.type == type) &&
-            (identical(other.player_type, player_type) ||
-                other.player_type == player_type) &&
-            (identical(other.is_premium, is_premium) ||
-                other.is_premium == is_premium) &&
-            (identical(other.is_ads_enabled, is_ads_enabled) ||
-                other.is_ads_enabled == is_ads_enabled) &&
-            (identical(other.likes_amount, likes_amount) ||
-                other.likes_amount == likes_amount) &&
-            (identical(other.daily_likes_amount, daily_likes_amount) ||
-                other.daily_likes_amount == daily_likes_amount) &&
-            (identical(other.comments_amount, comments_amount) ||
-                other.comments_amount == comments_amount) &&
-            (identical(other.daily_comments_amount, daily_comments_amount) ||
-                other.daily_comments_amount == daily_comments_amount) &&
-            (identical(other.daily_views_amount, daily_views_amount) ||
-                other.daily_views_amount == daily_views_amount) &&
-            (identical(other.views_amount, views_amount) ||
-                other.views_amount == views_amount) &&
-            (identical(other.hearts_amount, hearts_amount) ||
-                other.hearts_amount == hearts_amount) &&
-            (identical(other.chat_messages_amount, chat_messages_amount) ||
-                other.chat_messages_amount == chat_messages_amount) &&
-            (identical(other.unique_viewers_amount, unique_viewers_amount) ||
-                other.unique_viewers_amount == unique_viewers_amount) &&
-            (identical(other.max_viewers_amount, max_viewers_amount) ||
-                other.max_viewers_amount == max_viewers_amount) &&
-            (identical(other.is_comments_enabled, is_comments_enabled) ||
-                other.is_comments_enabled == is_comments_enabled) &&
-            (identical(other.only_fanclub_members, only_fanclub_members) ||
-                other.only_fanclub_members == only_fanclub_members) &&
-            (identical(other.daily_rank, daily_rank) ||
-                other.daily_rank == daily_rank) &&
-            (identical(other.auto_record_concert, auto_record_concert) ||
-                other.auto_record_concert == auto_record_concert) &&
-            (identical(other.auto_publish, auto_publish) ||
-                other.auto_publish == auto_publish) &&
-            (identical(other.is_approved, is_approved) ||
-                other.is_approved == is_approved) &&
-            (identical(other.max_screen, max_screen) ||
-                other.max_screen == max_screen) &&
-            (identical(other.is_schedule_notified, is_schedule_notified) ||
-                other.is_schedule_notified == is_schedule_notified) &&
-            (identical(other.latency_mode, latency_mode) ||
-                other.latency_mode == latency_mode) &&
-            (identical(other.gcorelabs_stream_id, gcorelabs_stream_id) ||
-                other.gcorelabs_stream_id == gcorelabs_stream_id) &&
-            (identical(other.source_stream_id, source_stream_id) ||
-                other.source_stream_id == source_stream_id) &&
-            (identical(other.playback_id, playback_id) ||
-                other.playback_id == playback_id) &&
-            (identical(other.hls_url, hls_url) || other.hls_url == hls_url) &&
+            (identical(other.playerType, playerType) ||
+                other.playerType == playerType) &&
+            (identical(other.isPremium, isPremium) ||
+                other.isPremium == isPremium) &&
+            (identical(other.isAdsEnabled, isAdsEnabled) ||
+                other.isAdsEnabled == isAdsEnabled) &&
+            (identical(other.likesAmount, likesAmount) ||
+                other.likesAmount == likesAmount) &&
+            (identical(other.dailyLikesAmount, dailyLikesAmount) ||
+                other.dailyLikesAmount == dailyLikesAmount) &&
+            (identical(other.commentsAmount, commentsAmount) ||
+                other.commentsAmount == commentsAmount) &&
+            (identical(other.dailyCommentsAmount, dailyCommentsAmount) ||
+                other.dailyCommentsAmount == dailyCommentsAmount) &&
+            (identical(other.dailyViewsAmount, dailyViewsAmount) ||
+                other.dailyViewsAmount == dailyViewsAmount) &&
+            (identical(other.viewsAmount, viewsAmount) ||
+                other.viewsAmount == viewsAmount) &&
+            (identical(other.heartsAmount, heartsAmount) ||
+                other.heartsAmount == heartsAmount) &&
+            (identical(other.chatMessagesAmount, chatMessagesAmount) ||
+                other.chatMessagesAmount == chatMessagesAmount) &&
+            (identical(other.uniqueViewersAmount, uniqueViewersAmount) ||
+                other.uniqueViewersAmount == uniqueViewersAmount) &&
+            (identical(other.maxViewersAmount, maxViewersAmount) ||
+                other.maxViewersAmount == maxViewersAmount) &&
+            (identical(other.isCommentsEnabled, isCommentsEnabled) ||
+                other.isCommentsEnabled == isCommentsEnabled) &&
+            (identical(other.onlyFanclubMembers, onlyFanclubMembers) ||
+                other.onlyFanclubMembers == onlyFanclubMembers) &&
+            (identical(other.dailyRank, dailyRank) ||
+                other.dailyRank == dailyRank) &&
+            (identical(other.autoRecordConcert, autoRecordConcert) ||
+                other.autoRecordConcert == autoRecordConcert) &&
+            (identical(other.autoPublish, autoPublish) ||
+                other.autoPublish == autoPublish) &&
+            (identical(other.isApproved, isApproved) ||
+                other.isApproved == isApproved) &&
+            (identical(other.maxScreen, maxScreen) ||
+                other.maxScreen == maxScreen) &&
+            (identical(other.isScheduleNotified, isScheduleNotified) ||
+                other.isScheduleNotified == isScheduleNotified) &&
+            (identical(other.latencyMode, latencyMode) ||
+                other.latencyMode == latencyMode) &&
+            (identical(other.gcorelabsStreamId, gcorelabsStreamId) ||
+                other.gcorelabsStreamId == gcorelabsStreamId) &&
+            (identical(other.sourceStreamId, sourceStreamId) ||
+                other.sourceStreamId == sourceStreamId) &&
+            (identical(other.playbackId, playbackId) ||
+                other.playbackId == playbackId) &&
+            (identical(other.hlsUrl, hlsUrl) || other.hlsUrl == hlsUrl) &&
             (identical(other.duration, duration) ||
                 other.duration == duration) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(
-                    other.stream_provider_settings, stream_provider_settings) ||
-                other.stream_provider_settings == stream_provider_settings) &&
+            (identical(other.streamProviderSettings, streamProviderSettings) ||
+                other.streamProviderSettings == streamProviderSettings) &&
             (identical(other.author, author) || other.author == author) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
@@ -762,36 +807,36 @@ class _$_VideoPageModel implements _VideoPageModel {
         runtimeType,
         status,
         type,
-        player_type,
-        is_premium,
-        is_ads_enabled,
-        likes_amount,
-        daily_likes_amount,
-        comments_amount,
-        daily_comments_amount,
-        daily_views_amount,
-        views_amount,
-        hearts_amount,
-        chat_messages_amount,
-        unique_viewers_amount,
-        max_viewers_amount,
-        is_comments_enabled,
-        only_fanclub_members,
-        daily_rank,
-        auto_record_concert,
-        auto_publish,
-        is_approved,
-        max_screen,
-        is_schedule_notified,
-        latency_mode,
-        gcorelabs_stream_id,
-        source_stream_id,
-        playback_id,
-        hls_url,
+        playerType,
+        isPremium,
+        isAdsEnabled,
+        likesAmount,
+        dailyLikesAmount,
+        commentsAmount,
+        dailyCommentsAmount,
+        dailyViewsAmount,
+        viewsAmount,
+        heartsAmount,
+        chatMessagesAmount,
+        uniqueViewersAmount,
+        maxViewersAmount,
+        isCommentsEnabled,
+        onlyFanclubMembers,
+        dailyRank,
+        autoRecordConcert,
+        autoPublish,
+        isApproved,
+        maxScreen,
+        isScheduleNotified,
+        latencyMode,
+        gcorelabsStreamId,
+        sourceStreamId,
+        playbackId,
+        hlsUrl,
         duration,
         description,
         title,
-        stream_provider_settings,
+        streamProviderSettings,
         author,
         createdAt,
         updatedAt,
@@ -816,36 +861,63 @@ abstract class _VideoPageModel implements VideoPageModel {
   const factory _VideoPageModel(
       {final String? status,
       final String? type,
-      final String? player_type,
-      final bool is_premium,
-      final bool is_ads_enabled,
-      final int? likes_amount,
-      final int? daily_likes_amount,
-      final int? comments_amount,
-      final int? daily_comments_amount,
-      final int? daily_views_amount,
-      final int? views_amount,
-      final int? hearts_amount,
-      final int? chat_messages_amount,
-      final int? unique_viewers_amount,
-      final int? max_viewers_amount,
-      final bool is_comments_enabled,
-      final bool only_fanclub_members,
-      final int? daily_rank,
-      final bool auto_record_concert,
-      final bool auto_publish,
-      final bool is_approved,
-      final int? max_screen,
-      final bool is_schedule_notified,
-      final String? latency_mode,
-      final String? gcorelabs_stream_id,
-      final String? source_stream_id,
-      final String? playback_id,
-      final String? hls_url,
+      @JsonKey(name: 'player_type')
+          final String? playerType,
+      @JsonKey(name: 'is_premium')
+          final bool isPremium,
+      @JsonKey(name: 'is_ads_enabled')
+          final bool isAdsEnabled,
+      @JsonKey(name: 'likes_amount')
+          final int? likesAmount,
+      @JsonKey(name: 'daily_likes_amount')
+          final int? dailyLikesAmount,
+      @JsonKey(name: 'comments_amount')
+          final int? commentsAmount,
+      @JsonKey(name: 'daily_comments_amount')
+          final int? dailyCommentsAmount,
+      @JsonKey(name: 'daily_views_amount')
+          final int? dailyViewsAmount,
+      @JsonKey(name: 'views_amount')
+          final int? viewsAmount,
+      @JsonKey(name: 'hearts_amount')
+          final int? heartsAmount,
+      @JsonKey(name: 'chat_messages_amount')
+          final int? chatMessagesAmount,
+      @JsonKey(name: 'unique_viewers_amount')
+          final int? uniqueViewersAmount,
+      @JsonKey(name: 'max_viewers_amount')
+          final int? maxViewersAmount,
+      @JsonKey(name: 'is_comments_enabled')
+          final bool isCommentsEnabled,
+      @JsonKey(name: 'only_fanclub_members')
+          final bool onlyFanclubMembers,
+      @JsonKey(name: 'daily_rank')
+          final int? dailyRank,
+      @JsonKey(name: 'auto_record_concert')
+          final bool autoRecordConcert,
+      @JsonKey(name: 'auto_publish')
+          final bool autoPublish,
+      @JsonKey(name: 'is_approved')
+          final bool isApproved,
+      @JsonKey(name: 'max_screen')
+          final int? maxScreen,
+      @JsonKey(name: 'is_schedule_notified')
+          final bool isScheduleNotified,
+      @JsonKey(name: 'latency_mode')
+          final String? latencyMode,
+      @JsonKey(name: 'gcorelabs_stream_id')
+          final String? gcorelabsStreamId,
+      @JsonKey(name: 'source_stream_id')
+          final String? sourceStreamId,
+      @JsonKey(name: 'playback_id')
+          final String? playbackId,
+      @JsonKey(name: 'hls_url')
+          final String? hlsUrl,
       final int? duration,
       final String? description,
       final String? title,
-      final String? stream_provider_settings,
+      @JsonKey(name: 'stream_provider_settings')
+          final String? streamProviderSettings,
       final String? author,
       final DateTime? createdAt,
       final DateTime? updatedAt,
@@ -859,57 +931,83 @@ abstract class _VideoPageModel implements VideoPageModel {
   @override
   String? get type;
   @override
-  String? get player_type;
+  @JsonKey(name: 'player_type')
+  String? get playerType;
   @override
-  bool get is_premium;
+  @JsonKey(name: 'is_premium')
+  bool get isPremium;
   @override
-  bool get is_ads_enabled;
+  @JsonKey(name: 'is_ads_enabled')
+  bool get isAdsEnabled;
   @override
-  int? get likes_amount;
+  @JsonKey(name: 'likes_amount')
+  int? get likesAmount;
   @override
-  int? get daily_likes_amount;
+  @JsonKey(name: 'daily_likes_amount')
+  int? get dailyLikesAmount;
   @override
-  int? get comments_amount;
+  @JsonKey(name: 'comments_amount')
+  int? get commentsAmount;
   @override
-  int? get daily_comments_amount;
+  @JsonKey(name: 'daily_comments_amount')
+  int? get dailyCommentsAmount;
   @override
-  int? get daily_views_amount;
+  @JsonKey(name: 'daily_views_amount')
+  int? get dailyViewsAmount;
   @override
-  int? get views_amount;
+  @JsonKey(name: 'views_amount')
+  int? get viewsAmount;
   @override
-  int? get hearts_amount;
+  @JsonKey(name: 'hearts_amount')
+  int? get heartsAmount;
   @override
-  int? get chat_messages_amount;
+  @JsonKey(name: 'chat_messages_amount')
+  int? get chatMessagesAmount;
   @override
-  int? get unique_viewers_amount;
+  @JsonKey(name: 'unique_viewers_amount')
+  int? get uniqueViewersAmount;
   @override
-  int? get max_viewers_amount;
+  @JsonKey(name: 'max_viewers_amount')
+  int? get maxViewersAmount;
   @override
-  bool get is_comments_enabled;
+  @JsonKey(name: 'is_comments_enabled')
+  bool get isCommentsEnabled;
   @override
-  bool get only_fanclub_members;
+  @JsonKey(name: 'only_fanclub_members')
+  bool get onlyFanclubMembers;
   @override
-  int? get daily_rank;
+  @JsonKey(name: 'daily_rank')
+  int? get dailyRank;
   @override
-  bool get auto_record_concert;
+  @JsonKey(name: 'auto_record_concert')
+  bool get autoRecordConcert;
   @override
-  bool get auto_publish;
+  @JsonKey(name: 'auto_publish')
+  bool get autoPublish;
   @override
-  bool get is_approved;
+  @JsonKey(name: 'is_approved')
+  bool get isApproved;
   @override
-  int? get max_screen;
+  @JsonKey(name: 'max_screen')
+  int? get maxScreen;
   @override
-  bool get is_schedule_notified;
+  @JsonKey(name: 'is_schedule_notified')
+  bool get isScheduleNotified;
   @override
-  String? get latency_mode;
+  @JsonKey(name: 'latency_mode')
+  String? get latencyMode;
   @override
-  String? get gcorelabs_stream_id;
+  @JsonKey(name: 'gcorelabs_stream_id')
+  String? get gcorelabsStreamId;
   @override
-  String? get source_stream_id;
+  @JsonKey(name: 'source_stream_id')
+  String? get sourceStreamId;
   @override
-  String? get playback_id;
+  @JsonKey(name: 'playback_id')
+  String? get playbackId;
   @override
-  String? get hls_url;
+  @JsonKey(name: 'hls_url')
+  String? get hlsUrl;
   @override
   int? get duration;
   @override
@@ -917,7 +1015,8 @@ abstract class _VideoPageModel implements VideoPageModel {
   @override
   String? get title;
   @override
-  String? get stream_provider_settings;
+  @JsonKey(name: 'stream_provider_settings')
+  String? get streamProviderSettings;
   @override
   String? get author;
   @override
