@@ -42,6 +42,9 @@ _$_LiveNow _$$_LiveNowFromJson(Map<String, dynamic> json) => _$_LiveNow(
       thumbnail: json['thumbnail'] == null
           ? null
           : FileStorage.fromJson(json['thumbnail'] as Map<String, dynamic>),
+      channel: json['channel'] == null
+          ? null
+          : ChannelModel.fromJson(json['channel'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_LiveNowToJson(_$_LiveNow instance) =>
@@ -75,4 +78,5 @@ Map<String, dynamic> _$$_LiveNowToJson(_$_LiveNow instance) =>
       'updatedAt': instance.updatedAt?.toIso8601String(),
       'daily_likes_amount': instance.daily_likes_amount,
       'thumbnail': instance.thumbnail,
+      'channel': instance.channel,
     };
