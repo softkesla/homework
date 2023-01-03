@@ -7,8 +7,10 @@ part 'postpage.model.g.dart';
 class PostPageModel with _$PostPageModel {
   const factory PostPageModel({
     String? status,
-    @Default(false) bool is_comments_enabled,
-    @Default(false) bool is_premium,
+    @JsonKey(name: 'is_comments_enabled')
+    @Default(false)
+        bool isCommentsEnabled,
+    @JsonKey(name: 'is_premium') @Default(false) bool isPremium,
     int? likes_amount,
     int? comments_amount,
     String? title,
