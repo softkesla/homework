@@ -53,6 +53,19 @@ dependencies:
   trending_tag:
     path:
       packages/trending_tag
+  
+  smo_localizations:
+    git:
+      url: git@github.com:makeitgames/smo-localizations.git
+      ref: dev
+  smo_framework_application:
+    git:
+      url: git@github.com:makeitgames/smo-framework-application.git
+      ref: dev
+  flutter_material:
+    git:
+      url: git@github.com:makeitgames/flutter-material.git
+      ref: dev
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -63,7 +76,7 @@ dependencies:
   equatable: ^2.0.3
   shared_preferences: ^2.0.15
   observer: ^0.0.1
-  go_router: ^6.0.0
+  go_router: ^5.1.6
   freezed: ^2.3.2
   build_runner: ^2.3.3
   json_serializable: ^6.5.4
