@@ -21,9 +21,9 @@ ChannelModel _$ChannelModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ChannelModel {
   String get name => throw _privateConstructorUsedError;
-  String get status =>
-      throw _privateConstructorUsedError; //int? followers_amount,
-//int? daily_rank,
+  String get status => throw _privateConstructorUsedError;
+  int? get followersamount => throw _privateConstructorUsedError;
+  int? get dailyrank => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   dynamic get isActive => throw _privateConstructorUsedError;
   dynamic get isAutoFollowed => throw _privateConstructorUsedError;
@@ -43,6 +43,8 @@ abstract class $ChannelModelCopyWith<$Res> {
   $Res call(
       {String name,
       String status,
+      int? followersamount,
+      int? dailyrank,
       String? description,
       dynamic isActive,
       dynamic isAutoFollowed});
@@ -63,6 +65,8 @@ class _$ChannelModelCopyWithImpl<$Res, $Val extends ChannelModel>
   $Res call({
     Object? name = null,
     Object? status = null,
+    Object? followersamount = freezed,
+    Object? dailyrank = freezed,
     Object? description = freezed,
     Object? isActive = freezed,
     Object? isAutoFollowed = freezed,
@@ -76,6 +80,14 @@ class _$ChannelModelCopyWithImpl<$Res, $Val extends ChannelModel>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String,
+      followersamount: freezed == followersamount
+          ? _value.followersamount
+          : followersamount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dailyrank: freezed == dailyrank
+          ? _value.dailyrank
+          : dailyrank // ignore: cast_nullable_to_non_nullable
+              as int?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -103,6 +115,8 @@ abstract class _$$_ChannelModelCopyWith<$Res>
   $Res call(
       {String name,
       String status,
+      int? followersamount,
+      int? dailyrank,
       String? description,
       dynamic isActive,
       dynamic isAutoFollowed});
@@ -121,6 +135,8 @@ class __$$_ChannelModelCopyWithImpl<$Res>
   $Res call({
     Object? name = null,
     Object? status = null,
+    Object? followersamount = freezed,
+    Object? dailyrank = freezed,
     Object? description = freezed,
     Object? isActive = freezed,
     Object? isAutoFollowed = freezed,
@@ -134,6 +150,14 @@ class __$$_ChannelModelCopyWithImpl<$Res>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String,
+      followersamount: freezed == followersamount
+          ? _value.followersamount
+          : followersamount // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dailyrank: freezed == dailyrank
+          ? _value.dailyrank
+          : dailyrank // ignore: cast_nullable_to_non_nullable
+              as int?,
       description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -151,6 +175,8 @@ class _$_ChannelModel implements _ChannelModel {
   const _$_ChannelModel(
       {required this.name,
       required this.status,
+      this.followersamount,
+      this.dailyrank,
       this.description,
       this.isActive = false,
       this.isAutoFollowed = false});
@@ -162,8 +188,10 @@ class _$_ChannelModel implements _ChannelModel {
   final String name;
   @override
   final String status;
-//int? followers_amount,
-//int? daily_rank,
+  @override
+  final int? followersamount;
+  @override
+  final int? dailyrank;
   @override
   final String? description;
   @override
@@ -175,7 +203,7 @@ class _$_ChannelModel implements _ChannelModel {
 
   @override
   String toString() {
-    return 'ChannelModel(name: $name, status: $status, description: $description, isActive: $isActive, isAutoFollowed: $isAutoFollowed)';
+    return 'ChannelModel(name: $name, status: $status, followersamount: $followersamount, dailyrank: $dailyrank, description: $description, isActive: $isActive, isAutoFollowed: $isAutoFollowed)';
   }
 
   @override
@@ -185,6 +213,10 @@ class _$_ChannelModel implements _ChannelModel {
             other is _$_ChannelModel &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.status, status) || other.status == status) &&
+            (identical(other.followersamount, followersamount) ||
+                other.followersamount == followersamount) &&
+            (identical(other.dailyrank, dailyrank) ||
+                other.dailyrank == dailyrank) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             const DeepCollectionEquality().equals(other.isActive, isActive) &&
@@ -198,6 +230,8 @@ class _$_ChannelModel implements _ChannelModel {
       runtimeType,
       name,
       status,
+      followersamount,
+      dailyrank,
       description,
       const DeepCollectionEquality().hash(isActive),
       const DeepCollectionEquality().hash(isAutoFollowed));
@@ -220,6 +254,8 @@ abstract class _ChannelModel implements ChannelModel {
   const factory _ChannelModel(
       {required final String name,
       required final String status,
+      final int? followersamount,
+      final int? dailyrank,
       final String? description,
       final dynamic isActive,
       final dynamic isAutoFollowed}) = _$_ChannelModel;
@@ -231,8 +267,11 @@ abstract class _ChannelModel implements ChannelModel {
   String get name;
   @override
   String get status;
-  @override //int? followers_amount,
-//int? daily_rank,
+  @override
+  int? get followersamount;
+  @override
+  int? get dailyrank;
+  @override
   String? get description;
   @override
   dynamic get isActive;
