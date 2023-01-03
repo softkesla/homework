@@ -22,8 +22,10 @@ ChannelModel _$ChannelModelFromJson(Map<String, dynamic> json) {
 mixin _$ChannelModel {
   String get name => throw _privateConstructorUsedError;
   String get status => throw _privateConstructorUsedError;
-  int? get followersamount => throw _privateConstructorUsedError;
-  int? get dailyrank => throw _privateConstructorUsedError;
+  @JsonKey(name: "followers_amount")
+  int? get followersAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: "daily_rank")
+  int? get dailyRank => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   dynamic get isActive => throw _privateConstructorUsedError;
   dynamic get isAutoFollowed => throw _privateConstructorUsedError;
@@ -43,8 +45,8 @@ abstract class $ChannelModelCopyWith<$Res> {
   $Res call(
       {String name,
       String status,
-      int? followersamount,
-      int? dailyrank,
+      @JsonKey(name: "followers_amount") int? followersAmount,
+      @JsonKey(name: "daily_rank") int? dailyRank,
       String? description,
       dynamic isActive,
       dynamic isAutoFollowed});
@@ -65,8 +67,8 @@ class _$ChannelModelCopyWithImpl<$Res, $Val extends ChannelModel>
   $Res call({
     Object? name = null,
     Object? status = null,
-    Object? followersamount = freezed,
-    Object? dailyrank = freezed,
+    Object? followersAmount = freezed,
+    Object? dailyRank = freezed,
     Object? description = freezed,
     Object? isActive = freezed,
     Object? isAutoFollowed = freezed,
@@ -80,13 +82,13 @@ class _$ChannelModelCopyWithImpl<$Res, $Val extends ChannelModel>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String,
-      followersamount: freezed == followersamount
-          ? _value.followersamount
-          : followersamount // ignore: cast_nullable_to_non_nullable
+      followersAmount: freezed == followersAmount
+          ? _value.followersAmount
+          : followersAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      dailyrank: freezed == dailyrank
-          ? _value.dailyrank
-          : dailyrank // ignore: cast_nullable_to_non_nullable
+      dailyRank: freezed == dailyRank
+          ? _value.dailyRank
+          : dailyRank // ignore: cast_nullable_to_non_nullable
               as int?,
       description: freezed == description
           ? _value.description
@@ -115,8 +117,8 @@ abstract class _$$_ChannelModelCopyWith<$Res>
   $Res call(
       {String name,
       String status,
-      int? followersamount,
-      int? dailyrank,
+      @JsonKey(name: "followers_amount") int? followersAmount,
+      @JsonKey(name: "daily_rank") int? dailyRank,
       String? description,
       dynamic isActive,
       dynamic isAutoFollowed});
@@ -135,8 +137,8 @@ class __$$_ChannelModelCopyWithImpl<$Res>
   $Res call({
     Object? name = null,
     Object? status = null,
-    Object? followersamount = freezed,
-    Object? dailyrank = freezed,
+    Object? followersAmount = freezed,
+    Object? dailyRank = freezed,
     Object? description = freezed,
     Object? isActive = freezed,
     Object? isAutoFollowed = freezed,
@@ -150,13 +152,13 @@ class __$$_ChannelModelCopyWithImpl<$Res>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String,
-      followersamount: freezed == followersamount
-          ? _value.followersamount
-          : followersamount // ignore: cast_nullable_to_non_nullable
+      followersAmount: freezed == followersAmount
+          ? _value.followersAmount
+          : followersAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      dailyrank: freezed == dailyrank
-          ? _value.dailyrank
-          : dailyrank // ignore: cast_nullable_to_non_nullable
+      dailyRank: freezed == dailyRank
+          ? _value.dailyRank
+          : dailyRank // ignore: cast_nullable_to_non_nullable
               as int?,
       description: freezed == description
           ? _value.description
@@ -175,8 +177,8 @@ class _$_ChannelModel implements _ChannelModel {
   const _$_ChannelModel(
       {required this.name,
       required this.status,
-      this.followersamount,
-      this.dailyrank,
+      @JsonKey(name: "followers_amount") this.followersAmount,
+      @JsonKey(name: "daily_rank") this.dailyRank,
       this.description,
       this.isActive = false,
       this.isAutoFollowed = false});
@@ -189,9 +191,11 @@ class _$_ChannelModel implements _ChannelModel {
   @override
   final String status;
   @override
-  final int? followersamount;
+  @JsonKey(name: "followers_amount")
+  final int? followersAmount;
   @override
-  final int? dailyrank;
+  @JsonKey(name: "daily_rank")
+  final int? dailyRank;
   @override
   final String? description;
   @override
@@ -203,7 +207,7 @@ class _$_ChannelModel implements _ChannelModel {
 
   @override
   String toString() {
-    return 'ChannelModel(name: $name, status: $status, followersamount: $followersamount, dailyrank: $dailyrank, description: $description, isActive: $isActive, isAutoFollowed: $isAutoFollowed)';
+    return 'ChannelModel(name: $name, status: $status, followersAmount: $followersAmount, dailyRank: $dailyRank, description: $description, isActive: $isActive, isAutoFollowed: $isAutoFollowed)';
   }
 
   @override
@@ -213,10 +217,10 @@ class _$_ChannelModel implements _ChannelModel {
             other is _$_ChannelModel &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.status, status) || other.status == status) &&
-            (identical(other.followersamount, followersamount) ||
-                other.followersamount == followersamount) &&
-            (identical(other.dailyrank, dailyrank) ||
-                other.dailyrank == dailyrank) &&
+            (identical(other.followersAmount, followersAmount) ||
+                other.followersAmount == followersAmount) &&
+            (identical(other.dailyRank, dailyRank) ||
+                other.dailyRank == dailyRank) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             const DeepCollectionEquality().equals(other.isActive, isActive) &&
@@ -230,8 +234,8 @@ class _$_ChannelModel implements _ChannelModel {
       runtimeType,
       name,
       status,
-      followersamount,
-      dailyrank,
+      followersAmount,
+      dailyRank,
       description,
       const DeepCollectionEquality().hash(isActive),
       const DeepCollectionEquality().hash(isAutoFollowed));
@@ -254,8 +258,8 @@ abstract class _ChannelModel implements ChannelModel {
   const factory _ChannelModel(
       {required final String name,
       required final String status,
-      final int? followersamount,
-      final int? dailyrank,
+      @JsonKey(name: "followers_amount") final int? followersAmount,
+      @JsonKey(name: "daily_rank") final int? dailyRank,
       final String? description,
       final dynamic isActive,
       final dynamic isAutoFollowed}) = _$_ChannelModel;
@@ -268,9 +272,11 @@ abstract class _ChannelModel implements ChannelModel {
   @override
   String get status;
   @override
-  int? get followersamount;
+  @JsonKey(name: "followers_amount")
+  int? get followersAmount;
   @override
-  int? get dailyrank;
+  @JsonKey(name: "daily_rank")
+  int? get dailyRank;
   @override
   String? get description;
   @override

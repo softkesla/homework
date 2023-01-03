@@ -50,7 +50,7 @@ class _VideoPageState extends State<VideoPage> {
                             style: TextStyle(color: Colors.white),
                           ),
                           trailing: Text(
-                            LiveNowList[index].likes_amount.toString(),
+                            LiveNowList[index].likesAmount.toString(),
                             style: TextStyle(color: Colors.white),
                           ),
                           leading: Text(
