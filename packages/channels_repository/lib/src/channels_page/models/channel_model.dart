@@ -8,8 +8,8 @@ class ChannelModel with _$ChannelModel {
   const factory ChannelModel({
     required String name,
     required String status,
-    //int? followers_amount,
-    //int? daily_rank,
+    int? followersamount,
+    int? dailyrank,
     String? description,
     @Default(false) isActive,
     @Default(false) isAutoFollowed,
