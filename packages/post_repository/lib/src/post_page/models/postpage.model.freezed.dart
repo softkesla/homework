@@ -21,8 +21,10 @@ PostPageModel _$PostPageModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PostPageModel {
   String? get status => throw _privateConstructorUsedError;
-  bool get is_comments_enabled => throw _privateConstructorUsedError;
-  bool get is_premium => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_comments_enabled')
+  bool get isCommentsEnabled => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_premium')
+  bool get isPremium => throw _privateConstructorUsedError;
   int? get likes_amount => throw _privateConstructorUsedError;
   int? get comments_amount => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
@@ -43,8 +45,8 @@ abstract class $PostPageModelCopyWith<$Res> {
   @useResult
   $Res call(
       {String? status,
-      bool is_comments_enabled,
-      bool is_premium,
+      @JsonKey(name: 'is_comments_enabled') bool isCommentsEnabled,
+      @JsonKey(name: 'is_premium') bool isPremium,
       int? likes_amount,
       int? comments_amount,
       String? title,
@@ -66,8 +68,8 @@ class _$PostPageModelCopyWithImpl<$Res, $Val extends PostPageModel>
   @override
   $Res call({
     Object? status = freezed,
-    Object? is_comments_enabled = null,
-    Object? is_premium = null,
+    Object? isCommentsEnabled = null,
+    Object? isPremium = null,
     Object? likes_amount = freezed,
     Object? comments_amount = freezed,
     Object? title = freezed,
@@ -79,13 +81,13 @@ class _$PostPageModelCopyWithImpl<$Res, $Val extends PostPageModel>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String?,
-      is_comments_enabled: null == is_comments_enabled
-          ? _value.is_comments_enabled
-          : is_comments_enabled // ignore: cast_nullable_to_non_nullable
+      isCommentsEnabled: null == isCommentsEnabled
+          ? _value.isCommentsEnabled
+          : isCommentsEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      is_premium: null == is_premium
-          ? _value.is_premium
-          : is_premium // ignore: cast_nullable_to_non_nullable
+      isPremium: null == isPremium
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
       likes_amount: freezed == likes_amount
           ? _value.likes_amount
@@ -121,8 +123,8 @@ abstract class _$$_PostPageModelCopyWith<$Res>
   @useResult
   $Res call(
       {String? status,
-      bool is_comments_enabled,
-      bool is_premium,
+      @JsonKey(name: 'is_comments_enabled') bool isCommentsEnabled,
+      @JsonKey(name: 'is_premium') bool isPremium,
       int? likes_amount,
       int? comments_amount,
       String? title,
@@ -142,8 +144,8 @@ class __$$_PostPageModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? status = freezed,
-    Object? is_comments_enabled = null,
-    Object? is_premium = null,
+    Object? isCommentsEnabled = null,
+    Object? isPremium = null,
     Object? likes_amount = freezed,
     Object? comments_amount = freezed,
     Object? title = freezed,
@@ -155,13 +157,13 @@ class __$$_PostPageModelCopyWithImpl<$Res>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String?,
-      is_comments_enabled: null == is_comments_enabled
-          ? _value.is_comments_enabled
-          : is_comments_enabled // ignore: cast_nullable_to_non_nullable
+      isCommentsEnabled: null == isCommentsEnabled
+          ? _value.isCommentsEnabled
+          : isCommentsEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      is_premium: null == is_premium
-          ? _value.is_premium
-          : is_premium // ignore: cast_nullable_to_non_nullable
+      isPremium: null == isPremium
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
       likes_amount: freezed == likes_amount
           ? _value.likes_amount
@@ -192,8 +194,8 @@ class __$$_PostPageModelCopyWithImpl<$Res>
 class _$_PostPageModel implements _PostPageModel {
   const _$_PostPageModel(
       {this.status,
-      this.is_comments_enabled = false,
-      this.is_premium = false,
+      @JsonKey(name: 'is_comments_enabled') this.isCommentsEnabled = false,
+      @JsonKey(name: 'is_premium') this.isPremium = false,
       this.likes_amount,
       this.comments_amount,
       this.title,
@@ -206,11 +208,11 @@ class _$_PostPageModel implements _PostPageModel {
   @override
   final String? status;
   @override
-  @JsonKey()
-  final bool is_comments_enabled;
+  @JsonKey(name: 'is_comments_enabled')
+  final bool isCommentsEnabled;
   @override
-  @JsonKey()
-  final bool is_premium;
+  @JsonKey(name: 'is_premium')
+  final bool isPremium;
   @override
   final int? likes_amount;
   @override
@@ -224,7 +226,7 @@ class _$_PostPageModel implements _PostPageModel {
 
   @override
   String toString() {
-    return 'PostPageModel(status: $status, is_comments_enabled: $is_comments_enabled, is_premium: $is_premium, likes_amount: $likes_amount, comments_amount: $comments_amount, title: $title, createdAt: $createdAt, id: $id)';
+    return 'PostPageModel(status: $status, isCommentsEnabled: $isCommentsEnabled, isPremium: $isPremium, likes_amount: $likes_amount, comments_amount: $comments_amount, title: $title, createdAt: $createdAt, id: $id)';
   }
 
   @override
@@ -233,10 +235,10 @@ class _$_PostPageModel implements _PostPageModel {
         (other.runtimeType == runtimeType &&
             other is _$_PostPageModel &&
             (identical(other.status, status) || other.status == status) &&
-            (identical(other.is_comments_enabled, is_comments_enabled) ||
-                other.is_comments_enabled == is_comments_enabled) &&
-            (identical(other.is_premium, is_premium) ||
-                other.is_premium == is_premium) &&
+            (identical(other.isCommentsEnabled, isCommentsEnabled) ||
+                other.isCommentsEnabled == isCommentsEnabled) &&
+            (identical(other.isPremium, isPremium) ||
+                other.isPremium == isPremium) &&
             (identical(other.likes_amount, likes_amount) ||
                 other.likes_amount == likes_amount) &&
             (identical(other.comments_amount, comments_amount) ||
@@ -249,8 +251,8 @@ class _$_PostPageModel implements _PostPageModel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, status, is_comments_enabled,
-      is_premium, likes_amount, comments_amount, title, createdAt, id);
+  int get hashCode => Object.hash(runtimeType, status, isCommentsEnabled,
+      isPremium, likes_amount, comments_amount, title, createdAt, id);
 
   @JsonKey(ignore: true)
   @override
@@ -269,8 +271,8 @@ class _$_PostPageModel implements _PostPageModel {
 abstract class _PostPageModel implements PostPageModel {
   const factory _PostPageModel(
       {final String? status,
-      final bool is_comments_enabled,
-      final bool is_premium,
+      @JsonKey(name: 'is_comments_enabled') final bool isCommentsEnabled,
+      @JsonKey(name: 'is_premium') final bool isPremium,
       final int? likes_amount,
       final int? comments_amount,
       final String? title,
@@ -283,9 +285,11 @@ abstract class _PostPageModel implements PostPageModel {
   @override
   String? get status;
   @override
-  bool get is_comments_enabled;
+  @JsonKey(name: 'is_comments_enabled')
+  bool get isCommentsEnabled;
   @override
-  bool get is_premium;
+  @JsonKey(name: 'is_premium')
+  bool get isPremium;
   @override
   int? get likes_amount;
   @override
