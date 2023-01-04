@@ -18,7 +18,14 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Localization.ensureInitialized();
 
-  runApp(const MyApp());
+  runApp(Localization(
+      supportedLocales: const [
+        Locale('th'),
+        Locale('en', 'US'),
+      ],
+      path: 'assets/translations',
+      fallbackLocale: const Locale('en', 'US'),
+      child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -26,6 +33,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    context.setLocale(const Locale('th'));
     return MaterialApp(
       title: 'Flutter App',
       home: App(),
@@ -35,15 +43,19 @@ class MyApp extends StatelessWidget {
 
 class App extends StatelessWidget {
   App({Key? key}) : super(key: key);
-  bool _enable = false;
   static const String title = 'Basic Menu';
   @override
-  Widget build(BuildContext context) => MaterialApp.router(
-        theme: ThemeData.dark(),
-        routerDelegate: _router.routerDelegate,
-        routeInformationParser: _router.routeInformationParser,
-        routeInformationProvider: _router.routeInformationProvider,
-      );
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
+      title: title,
+      localizationsDelegates: context.localizationDelegates,
+      theme: ThemeData.dark(),
+      locale: context.locale,
+      routerDelegate: _router.routerDelegate,
+      routeInformationParser: _router.routeInformationParser,
+      routeInformationProvider: _router.routeInformationProvider,
+    );
+  }
 
   final GoRouter _router = GoRouter(
     errorBuilder: (context, state) => ErrorScreen(error: state.error),

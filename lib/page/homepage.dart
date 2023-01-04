@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_material/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:homework_flutter/main.dart';
+import 'package:homework_flutter/translations/locale_keys.g.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -75,29 +77,27 @@ class HomePage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            OutlinedButton(
+            MaterialBtn.primary(
+              context,
+              labelText: LocaleKeys.Settings,
               onPressed: () => context.go('/setting'),
-              child: const Text('setting'),
-              style: OutlinedButton.styleFrom(
-                  minimumSize: Size(150, 50),
-                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Colors.white,
-                  side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 27, 255, 217))),
             ),
             SizedBox(
               height: 20,
             ),
-            OutlinedButton(
-              onPressed: () => context.go('/help'),
-              child: const Text('Help'),
-              style: OutlinedButton.styleFrom(
-                  minimumSize: Size(150, 50),
-                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Colors.white,
-                  side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 27, 255, 217))),
-            ),
+            // OutlinedButton(
+            //   onPressed: () => context.go('/help'),
+            //   child: const Text('Help'),
+            //   style: OutlinedButton.styleFrom(
+            //       minimumSize: Size(150, 50),
+            //       textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
+            //       primary: Colors.white,
+            //       side: BorderSide(
+            //           width: 2, color: Color.fromARGB(255, 27, 255, 217))),
+            // ),
+            MaterialBtn.primary(context,
+                onPressed: () => context.go('/help'),
+                labelText: LocaleKeys.Help),
             SizedBox(
               height: 20,
             ),
