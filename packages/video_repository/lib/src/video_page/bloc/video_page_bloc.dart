@@ -9,6 +9,7 @@ part 'video_page_state.dart';
 
 class VideoPageBloc extends Bloc<VideoPageEvent, VideoState> {
   final VideoRepository _videoRepository;
+
   VideoPageBloc(this._videoRepository) : super(VideoLoadingState()) {
     on<VideoPageEvent>((event, emit) async {
       emit(VideoLoadingState());
