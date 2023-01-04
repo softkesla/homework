@@ -19,5 +19,9 @@ samples, guidance on mobile development, and a full API reference.
 ```
 flutter pub run easy_localization:generate -S "assets/translations" -s "en-US.json" -o "locale_keys.g.dart" -f keys -O "lib/translations"
 
+// For Mac
 sed -i '' "s/ = '/ = '@@/g" lib/translations/locale_keys.g.dart
+
+// For Windows
+(get-content lib/translations/locale_keys.g.dart) -replace " = '"," = '@@" | Out-File -encoding ASCII lib/translations/locale_keys.g.dart
 ```
