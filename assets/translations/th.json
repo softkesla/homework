@@ -85,5 +85,6 @@
   "InvalidUsername": "ชื่อผู้ใช้ไม่ถูกต้อง",
   "InvalidPassword":"รหัสผ่านไม่ถูกต้อง",
   "AuthenticationFailure": "ล้มเหลวในการตรวจสอบ",
-  "ProcessingDot": "กำลังประมวลผล..."
+  "ProcessingDot": "กำลังประมวลผล...",
+  "HomePromo": "บ้าน Promo"
 }

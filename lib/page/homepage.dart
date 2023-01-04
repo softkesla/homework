@@ -64,15 +64,22 @@ class HomePage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            OutlinedButton(
-              onPressed: () => context.go('/homepromo'),
-              child: const Text('Home Promo'),
-              style: OutlinedButton.styleFrom(
-                  minimumSize: Size(150, 50),
-                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Color.fromARGB(255, 224, 255, 84),
-                  side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 49, 202, 82))),
+            // OutlinedButton(
+            //   onPressed: () => context.go('/homepromo'),
+            //   child: const Text('Home Promo'),
+            //   style: OutlinedButton.styleFrom(
+            //       minimumSize: Size(150, 50),
+            //       textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
+            //       primary: Color.fromARGB(255, 224, 255, 84),
+            //       side: BorderSide(
+            //           width: 2, color: Color.fromARGB(255, 49, 202, 82))),
+            // ),
+            MaterialBtn.primary(
+              context,
+              labelText: LocaleKeys.HomePromo,
+              onPressed: () {
+                context.go('/homepromo');
+              },
             ),
             SizedBox(
               height: 20,

@@ -82,5 +82,6 @@
   "InvalidUsername": "Invalid username",
   "InvalidPassword":"Invalid password",
   "AuthenticationFailure": "Authentication Failure",
-  "ProcessingDot": "Processing..."
+  "ProcessingDot": "Processing...",
+  "HomePromo": "Home Promo"
 }
