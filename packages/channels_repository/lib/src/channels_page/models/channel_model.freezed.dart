@@ -20,6 +20,7 @@ ChannelModel _$ChannelModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ChannelModel {
+  String get sId => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get status => throw _privateConstructorUsedError;
   @JsonKey(name: "followers_amount")
@@ -29,6 +30,8 @@ mixin _$ChannelModel {
   String? get description => throw _privateConstructorUsedError;
   dynamic get isActive => throw _privateConstructorUsedError;
   dynamic get isAutoFollowed => throw _privateConstructorUsedError;
+  List<Banner>? get banner => throw _privateConstructorUsedError;
+  Thumbnail? get thumbnail => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,13 +46,18 @@ abstract class $ChannelModelCopyWith<$Res> {
       _$ChannelModelCopyWithImpl<$Res, ChannelModel>;
   @useResult
   $Res call(
-      {String name,
+      {String sId,
+      String name,
       String status,
       @JsonKey(name: "followers_amount") int? followersAmount,
       @JsonKey(name: "daily_rank") int? dailyRank,
       String? description,
       dynamic isActive,
-      dynamic isAutoFollowed});
+      dynamic isAutoFollowed,
+      List<Banner>? banner,
+      Thumbnail? thumbnail});
+
+  $ThumbnailCopyWith<$Res>? get thumbnail;
 }
 
 /// @nodoc
@@ -65,6 +73,7 @@ class _$ChannelModelCopyWithImpl<$Res, $Val extends ChannelModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? sId = null,
     Object? name = null,
     Object? status = null,
     Object? followersAmount = freezed,
@@ -72,8 +81,14 @@ class _$ChannelModelCopyWithImpl<$Res, $Val extends ChannelModel>
     Object? description = freezed,
     Object? isActive = freezed,
     Object? isAutoFollowed = freezed,
+    Object? banner = freezed,
+    Object? thumbnail = freezed,
   }) {
     return _then(_value.copyWith(
+      sId: null == sId
+          ? _value.sId
+          : sId // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -102,7 +117,27 @@ class _$ChannelModelCopyWithImpl<$Res, $Val extends ChannelModel>
           ? _value.isAutoFollowed
           : isAutoFollowed // ignore: cast_nullable_to_non_nullable
               as dynamic,
+      banner: freezed == banner
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as List<Banner>?,
+      thumbnail: freezed == thumbnail
+          ? _value.thumbnail
+          : thumbnail // ignore: cast_nullable_to_non_nullable
+              as Thumbnail?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ThumbnailCopyWith<$Res>? get thumbnail {
+    if (_value.thumbnail == null) {
+      return null;
+    }
+
+    return $ThumbnailCopyWith<$Res>(_value.thumbnail!, (value) {
+      return _then(_value.copyWith(thumbnail: value) as $Val);
+    });
   }
 }
 
@@ -115,13 +150,19 @@ abstract class _$$_ChannelModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String name,
+      {String sId,
+      String name,
       String status,
       @JsonKey(name: "followers_amount") int? followersAmount,
       @JsonKey(name: "daily_rank") int? dailyRank,
       String? description,
       dynamic isActive,
-      dynamic isAutoFollowed});
+      dynamic isAutoFollowed,
+      List<Banner>? banner,
+      Thumbnail? thumbnail});
+
+  @override
+  $ThumbnailCopyWith<$Res>? get thumbnail;
 }
 
 /// @nodoc
@@ -135,6 +176,7 @@ class __$$_ChannelModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? sId = null,
     Object? name = null,
     Object? status = null,
     Object? followersAmount = freezed,
@@ -142,8 +184,14 @@ class __$$_ChannelModelCopyWithImpl<$Res>
     Object? description = freezed,
     Object? isActive = freezed,
     Object? isAutoFollowed = freezed,
+    Object? banner = freezed,
+    Object? thumbnail = freezed,
   }) {
     return _then(_$_ChannelModel(
+      sId: null == sId
+          ? _value.sId
+          : sId // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -167,6 +215,14 @@ class __$$_ChannelModelCopyWithImpl<$Res>
       isActive: freezed == isActive ? _value.isActive! : isActive,
       isAutoFollowed:
           freezed == isAutoFollowed ? _value.isAutoFollowed! : isAutoFollowed,
+      banner: freezed == banner
+          ? _value._banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as List<Banner>?,
+      thumbnail: freezed == thumbnail
+          ? _value.thumbnail
+          : thumbnail // ignore: cast_nullable_to_non_nullable
+              as Thumbnail?,
     ));
   }
 }
@@ -175,17 +231,23 @@ class __$$_ChannelModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ChannelModel implements _ChannelModel {
   const _$_ChannelModel(
-      {required this.name,
+      {required this.sId,
+      required this.name,
       required this.status,
       @JsonKey(name: "followers_amount") this.followersAmount,
       @JsonKey(name: "daily_rank") this.dailyRank,
       this.description,
       this.isActive = false,
-      this.isAutoFollowed = false});
+      this.isAutoFollowed = false,
+      final List<Banner>? banner,
+      this.thumbnail})
+      : _banner = banner;
 
   factory _$_ChannelModel.fromJson(Map<String, dynamic> json) =>
       _$$_ChannelModelFromJson(json);
 
+  @override
+  final String sId;
   @override
   final String name;
   @override
@@ -204,10 +266,22 @@ class _$_ChannelModel implements _ChannelModel {
   @override
   @JsonKey()
   final dynamic isAutoFollowed;
+  final List<Banner>? _banner;
+  @override
+  List<Banner>? get banner {
+    final value = _banner;
+    if (value == null) return null;
+    if (_banner is EqualUnmodifiableListView) return _banner;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Thumbnail? thumbnail;
 
   @override
   String toString() {
-    return 'ChannelModel(name: $name, status: $status, followersAmount: $followersAmount, dailyRank: $dailyRank, description: $description, isActive: $isActive, isAutoFollowed: $isAutoFollowed)';
+    return 'ChannelModel(sId: $sId, name: $name, status: $status, followersAmount: $followersAmount, dailyRank: $dailyRank, description: $description, isActive: $isActive, isAutoFollowed: $isAutoFollowed, banner: $banner, thumbnail: $thumbnail)';
   }
 
   @override
@@ -215,6 +289,7 @@ class _$_ChannelModel implements _ChannelModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ChannelModel &&
+            (identical(other.sId, sId) || other.sId == sId) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.followersAmount, followersAmount) ||
@@ -225,20 +300,26 @@ class _$_ChannelModel implements _ChannelModel {
                 other.description == description) &&
             const DeepCollectionEquality().equals(other.isActive, isActive) &&
             const DeepCollectionEquality()
-                .equals(other.isAutoFollowed, isAutoFollowed));
+                .equals(other.isAutoFollowed, isAutoFollowed) &&
+            const DeepCollectionEquality().equals(other._banner, _banner) &&
+            (identical(other.thumbnail, thumbnail) ||
+                other.thumbnail == thumbnail));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      sId,
       name,
       status,
       followersAmount,
       dailyRank,
       description,
       const DeepCollectionEquality().hash(isActive),
-      const DeepCollectionEquality().hash(isAutoFollowed));
+      const DeepCollectionEquality().hash(isAutoFollowed),
+      const DeepCollectionEquality().hash(_banner),
+      thumbnail);
 
   @JsonKey(ignore: true)
   @override
@@ -256,17 +337,22 @@ class _$_ChannelModel implements _ChannelModel {
 
 abstract class _ChannelModel implements ChannelModel {
   const factory _ChannelModel(
-      {required final String name,
+      {required final String sId,
+      required final String name,
       required final String status,
       @JsonKey(name: "followers_amount") final int? followersAmount,
       @JsonKey(name: "daily_rank") final int? dailyRank,
       final String? description,
       final dynamic isActive,
-      final dynamic isAutoFollowed}) = _$_ChannelModel;
+      final dynamic isAutoFollowed,
+      final List<Banner>? banner,
+      final Thumbnail? thumbnail}) = _$_ChannelModel;
 
   factory _ChannelModel.fromJson(Map<String, dynamic> json) =
       _$_ChannelModel.fromJson;
 
+  @override
+  String get sId;
   @override
   String get name;
   @override
@@ -283,6 +369,10 @@ abstract class _ChannelModel implements ChannelModel {
   dynamic get isActive;
   @override
   dynamic get isAutoFollowed;
+  @override
+  List<Banner>? get banner;
+  @override
+  Thumbnail? get thumbnail;
   @override
   @JsonKey(ignore: true)
   _$$_ChannelModelCopyWith<_$_ChannelModel> get copyWith =>
