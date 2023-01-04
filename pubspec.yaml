@@ -53,6 +53,10 @@ dependencies:
   trending_tag:
     path:
       packages/trending_tag
+
+  setting_repository:
+    path: 
+      packages/setting_repository
   
   smo_localizations:
     git:

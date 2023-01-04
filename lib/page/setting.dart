@@ -5,6 +5,9 @@ import 'package:homework_flutter/page/homepage.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:homework_flutter/main.dart';
+import 'package:setting_repository/repositories.dart';
+import 'package:setting_repository/setting_repository.dart';
+import 'package:flutter_material/material.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({Key? key}) : super(key: key);
@@ -22,225 +25,206 @@ class _SettingPageState extends State<SettingPage> {
   bool isChecked6 = false;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Setting')),
-      body: ListView(
-        children: [
-          Padding(
-            padding: EdgeInsets.fromLTRB(
-                15, 20, 0, 0), //apply padding to all four sides
-            child: Text('Profile',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 17, 251, 255),
-                  fontSize: 16,
-                  fontFamily: 'Athihi',
-                )),
+    return RepositoryProvider(
+      create: (context) => SettingRepository(),
+      child: BlocProvider(
+        create: (context) => SettingpageBloc(
+          RepositoryProvider.of<SettingRepository>(context),
+        )..add(LoadSetting()),
+        child: Scaffold(
+          appBar: AppBar(title: const Text('Setting')),
+          body: BlocBuilder<SettingpageBloc, SettingpageState>(
+            builder: (context, state) {
+              if (state is SettingLoadingState) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+              if (state is SettingLoadedState) {
+                SettingModel ListSetting = state.settings;
+                return ListView(
+                  children: [
+                    Padding(
+                      padding: PaddingSize.standard.toEdgeInsets(),
+                      child: MaterialText.title(
+                        context,
+                        'Profile',
+                        color: ThemeColors.onBackground,
+                      ),
+                    ),
+                    ListTile(
+                      title: MaterialText.body(
+                        context,
+                        'Narisara',
+                      ),
+                      trailing: Icon(Icons.arrow_forward_ios_rounded),
+                    ),
+                    MaterialLayout.dividerHorizontal(context,
+                        color: ThemeColors.success),
+                    Padding(
+                      padding: PaddingSize.standard.toEdgeInsets(),
+                      child: MaterialText.title(context, 'Change Languege',
+                          color: ThemeColors.onSuccess),
+                    ),
+                    ListTile(
+                      title: MaterialText.body(
+                        context,
+                        'English',
+                      ),
+                      trailing: Icon(Icons.arrow_forward_ios_rounded),
+                    ),
+                    MaterialLayout.dividerHorizontal(context,
+                        color: ThemeColors.success),
+                    SizedBox(
+                      height: PaddingSize.smallest.toPaddingValue(),
+                    ),
+                    SwitchListTile(
+                        value: isChecked1,
+                        title: MaterialText.body(
+                          context,
+                          'Show Chat',
+                        ),
+                        onChanged: (bool value) {
+                          setState(() {
+                            isChecked1 = value;
+                          });
+                        }),
+                    // Text(ListSetting.showChat.toString()),
+                    MaterialLayout.dividerHorizontal(context,
+                        color: ThemeColors.success),
+                    SwitchListTile(
+                      value: isChecked2,
+                      title: MaterialText.body(
+                        context,
+                        'Marketing notification',
+                      ),
+                      onChanged: (bool value) {
+                        setState(() => isChecked2 = value);
+                      },
+                      // onChanged: (bool value) {
+                      //   setState(() {
+                      //     isChecked2 = value;
+                      //   });
+                      // },
+                    ),
+                    MaterialLayout.dividerHorizontal(context,
+                        color: ThemeColors.success),
+                    SwitchListTile(
+                        value: isChecked3,
+                        title: MaterialText.body(
+                          context,
+                          'Background Audio Mode',
+                        ),
+                        onChanged: (bool value) {
+                          setState(() {
+                            isChecked3 = value;
+                          });
+                        }),
+                    MaterialLayout.dividerHorizontal(context,
+                        color: ThemeColors.success),
+                    SwitchListTile(
+                        value: isChecked4,
+                        title: MaterialText.body(
+                          context,
+                          'Enable Cellular Data',
+                        ),
+                        onChanged: (bool value) {
+                          setState(() {
+                            isChecked4 = value;
+                          });
+                        }),
+                    MaterialLayout.dividerHorizontal(context,
+                        color: ThemeColors.success),
+                    SwitchListTile(
+                        value: isChecked5,
+                        title: MaterialText.body(
+                          context,
+                          'Auto Play',
+                        ),
+                        onChanged: (bool value) {
+                          setState(() {
+                            isChecked5 = value;
+                          });
+                        }),
+                    MaterialLayout.dividerHorizontal(context,
+                        color: ThemeColors.success),
+                    SwitchListTile(
+                        value: isChecked6,
+                        title: MaterialText.body(
+                          context,
+                          'Debug',
+                        ),
+                        onChanged: (bool value) {
+                          setState(() {
+                            isChecked6 = value;
+                          });
+                        }),
+                    MaterialLayout.dividerHorizontal(context,
+                        color: ThemeColors.success),
+                    ListTile(
+                      title: MaterialText.body(
+                        context,
+                        'Clear data',
+                      ),
+                      trailing: OutlinedButton(
+                        onPressed: () => context.go('/'),
+                        child: MaterialText.body(context, 'Clear Data'),
+                        style: OutlinedButton.styleFrom(
+                            minimumSize: Size(100, 40),
+                            textStyle:
+                                TextStyle(fontSize: 30, fontFamily: 'ostrich'),
+                            primary: Color.fromARGB(255, 46, 255, 213),
+                            side: BorderSide(
+                                width: 2,
+                                color: Color.fromARGB(255, 46, 255, 213))),
+                      ),
+                    ),
+                    MaterialLayout.dividerHorizontal(context,
+                        color: ThemeColors.success),
+                    ListTile(
+                      title: MaterialText.body(
+                        context,
+                        'Version Dev 1.18.1',
+                      ),
+                    ),
+                    MaterialLayout.dividerHorizontal(context,
+                        color: ThemeColors.success),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ListTile(
+                      leading: OutlinedButton(
+                        onPressed: () => context.go('/'),
+                        child: MaterialText.body(context, 'Delete Account'),
+                        style: OutlinedButton.styleFrom(
+                            minimumSize: Size(240, 50),
+                            textStyle:
+                                TextStyle(fontSize: 30, fontFamily: 'ostrich'),
+                            primary: Color.fromARGB(255, 46, 255, 213),
+                            side: BorderSide(
+                                width: 2,
+                                color: Color.fromARGB(255, 46, 255, 213))),
+                      ),
+                      trailing: OutlinedButton(
+                        onPressed: () => context.go('/'),
+                        child: MaterialText.body(context, 'Sign out'),
+                        style: OutlinedButton.styleFrom(
+                            minimumSize: Size(240, 50),
+                            textStyle:
+                                TextStyle(fontSize: 30, fontFamily: 'ostrich'),
+                            primary: Color.fromARGB(255, 46, 255, 213),
+                            side: BorderSide(
+                                width: 2,
+                                color: Color.fromARGB(255, 46, 255, 213))),
+                      ),
+                    ),
+                  ],
+                );
+              }
+              return Container();
+            },
           ),
-          ListTile(
-            title: Text(
-              'Narisara',
-              style: TextStyle(
-                fontFamily: 'Athihi',
-              ),
-            ),
-            trailing: Icon(Icons.arrow_forward_ios_rounded),
-          ),
-          Divider(
-            height: 0,
-            color: Color.fromARGB(255, 46, 255, 213),
-            indent: 15,
-            endIndent: 25,
-          ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(
-                15, 10, 0, 0), //apply padding to all four sides
-            child: Text('Change Languege',
-                style: TextStyle(
-                  color: Color.fromARGB(255, 17, 251, 255),
-                  fontSize: 16,
-                  fontFamily: 'Athihi',
-                )),
-          ),
-          ListTile(
-            title: Text(
-              'English',
-              style: TextStyle(
-                fontFamily: 'Athihi',
-              ),
-            ),
-            trailing: Icon(Icons.arrow_forward_ios_rounded),
-          ),
-          Divider(
-            height: 0,
-            color: Color.fromARGB(255, 46, 255, 213),
-            indent: 15,
-            endIndent: 15,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          SwitchListTile(
-              value: isChecked1,
-              title: Text('Channel notification',
-                  style: TextStyle(
-                    fontFamily: 'Athihi',
-                  )),
-              onChanged: (bool value) {
-                setState(() {
-                  isChecked1 = value;
-                });
-              }),
-          Divider(
-            height: 0,
-            color: Color.fromARGB(255, 46, 255, 213),
-            indent: 15,
-            endIndent: 15,
-          ),
-          SwitchListTile(
-              value: isChecked2,
-              title: Text('Marketing notification',
-                  style: TextStyle(
-                    fontFamily: 'Athihi',
-                  )),
-              onChanged: (bool value) {
-                setState(() {
-                  isChecked2 = value;
-                });
-              }),
-          Divider(
-            height: 0,
-            color: Color.fromARGB(255, 46, 255, 213),
-            indent: 15,
-            endIndent: 15,
-          ),
-          SwitchListTile(
-              value: isChecked3,
-              title: Text('Background Audio Mode',
-                  style: TextStyle(
-                    fontFamily: 'Athihi',
-                  )),
-              onChanged: (bool value) {
-                setState(() {
-                  isChecked3 = value;
-                });
-              }),
-          Divider(
-            height: 0,
-            color: Color.fromARGB(255, 46, 255, 213),
-            indent: 15,
-            endIndent: 15,
-          ),
-          SwitchListTile(
-              value: isChecked4,
-              title: Text('Enable Cellular Data',
-                  style: TextStyle(
-                    fontFamily: 'Athihi',
-                  )),
-              onChanged: (bool value) {
-                setState(() {
-                  isChecked4 = value;
-                });
-              }),
-          Divider(
-            height: 0,
-            color: Color.fromARGB(255, 46, 255, 213),
-            indent: 15,
-            endIndent: 15,
-          ),
-          SwitchListTile(
-              value: isChecked5,
-              title: Text('Auto Play',
-                  style: TextStyle(
-                    fontFamily: 'Athihi',
-                  )),
-              onChanged: (bool value) {
-                setState(() {
-                  isChecked5 = value;
-                });
-              }),
-          Divider(
-            height: 0,
-            color: Color.fromARGB(255, 46, 255, 213),
-            indent: 15,
-            endIndent: 15,
-          ),
-          SwitchListTile(
-              value: isChecked6,
-              title: Text('Debug',
-                  style: TextStyle(
-                    fontFamily: 'Athihi',
-                  )),
-              onChanged: (bool value) {
-                setState(() {
-                  isChecked6 = value;
-                });
-              }),
-          Divider(
-            height: 0,
-            color: Color.fromARGB(255, 46, 255, 213),
-            indent: 15,
-            endIndent: 15,
-          ),
-          ListTile(
-            title: Text('Clear data',
-                style: TextStyle(
-                  fontFamily: 'Athihi',
-                )),
-            trailing: OutlinedButton(
-              onPressed: () => context.go('/'),
-              child: const Text('Clear Data'),
-              style: OutlinedButton.styleFrom(
-                  minimumSize: Size(100, 40),
-                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Color.fromARGB(255, 46, 255, 213),
-                  side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 46, 255, 213))),
-            ),
-          ),
-          Divider(
-            height: 0,
-            color: Color.fromARGB(255, 46, 255, 213),
-            indent: 15,
-            endIndent: 15,
-          ),
-          ListTile(
-            title: Text('Version Dev 1.18.1',
-                style: TextStyle(
-                  fontFamily: 'Athihi',
-                )),
-          ),
-          Divider(
-            height: 0,
-            color: Color.fromARGB(255, 46, 255, 213),
-            indent: 15,
-            endIndent: 15,
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          ListTile(
-            leading: OutlinedButton(
-              onPressed: () => context.go('/'),
-              child: const Text('Delete Account'),
-              style: OutlinedButton.styleFrom(
-                  minimumSize: Size(240, 50),
-                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Color.fromARGB(255, 46, 255, 213),
-                  side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 46, 255, 213))),
-            ),
-            trailing: OutlinedButton(
-              onPressed: () => context.go('/'),
-              child: const Text('Sign out'),
-              style: OutlinedButton.styleFrom(
-                  minimumSize: Size(240, 50),
-                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Color.fromARGB(255, 46, 255, 213),
-                  side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 46, 255, 213))),
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
