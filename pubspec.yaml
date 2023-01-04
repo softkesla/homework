@@ -80,15 +80,13 @@ dependencies:
   freezed: ^2.3.2
   build_runner: ^2.3.3
   json_serializable: ^6.5.4
-
+  easy_localization: ^3.0.1
+  easy_localization_loader: ^1.0.1+1
 
   post_repository:
     path: 
       packages/post_repository
 
-  channels:
-    path:
-      packages/channels
 
 dev_dependencies:
   flutter_test:
@@ -106,7 +104,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  assets:
+    - assets/translations/
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

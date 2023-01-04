@@ -1,11 +1,11 @@
+import 'package:channels_repository/channels_repository.dart';
+import 'package:channels_repository/repositories.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:homework_flutter/main.dart';
 import 'package:flutter/material.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:channels/channels.dart';
-import 'package:channels/repositories.dart';
 
 class ChannelPage extends StatelessWidget {
   const ChannelPage({super.key});

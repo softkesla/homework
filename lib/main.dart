@@ -12,8 +12,12 @@ import 'package:homework_flutter/page/trending_tag.dart';
 import 'package:homework_flutter/page/channel.dart';
 import 'package:homework_flutter/page/videopage.dart';
 import 'package:promo_repository/repositories.dart';
+import 'package:smo_localizations/localizations.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Localization.ensureInitialized();
+
   runApp(const MyApp());
 }
 
