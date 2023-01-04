@@ -9,6 +9,7 @@ class VideoDailyRankRepository {
     Response response = await get(Uri.parse(endpoint));
     if (response.statusCode == 200) {
       final List result = jsonDecode(response.body);
+      print(response.body);
       return result.map(((e) => VideoDailyRank.fromJson(e))).toList();
     } else {
       throw Exception(response.reasonPhrase);

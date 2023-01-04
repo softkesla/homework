@@ -53,6 +53,10 @@ dependencies:
   trending_tag:
     path:
       packages/trending_tag
+
+  video_daily_rank_repository:
+    path: 
+      packages/video_daily_rank_repository
   
   smo_localizations:
     git:
