@@ -11,10 +11,6 @@ abstract class  LocaleKeys {
   static const Username = '@@Username';
   static const Welcome = '@@Welcome';
   static const Channel = '@@Channel';
-  static const Video = '@@Video';
-  static const PostPage = '@@PostPage';
-  static const Trending = '@@Trending';
-  static const LiveNowPage = '@@LiveNowPage';
   static const Test = '@@Test';
   static const MobileNumberOrEMail = '@@MobileNumberOrEMail';
   static const LogIn = '@@LogIn';
