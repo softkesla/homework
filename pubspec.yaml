@@ -54,6 +54,11 @@ dependencies:
     path:
       packages/trending_tag
 
+  video_daily_rank_repository:
+    path: 
+      packages/video_daily_rank_repository
+  
+
   setting_repository:
     path: 
       packages/setting_repository

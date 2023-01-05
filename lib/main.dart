@@ -10,6 +10,7 @@ import 'package:homework_flutter/page/promo.dart';
 import 'package:homework_flutter/page/error.dart';
 import 'package:homework_flutter/page/trending_tag.dart';
 import 'package:homework_flutter/page/channel.dart';
+import 'package:homework_flutter/page/videodailyrank.dart';
 import 'package:homework_flutter/page/videopage.dart';
 import 'package:promo_repository/repositories.dart';
 import 'package:smo_localizations/localizations.dart';
@@ -62,6 +63,11 @@ class App extends StatelessWidget {
     routes: <GoRoute>[
       GoRoute(
         routes: <GoRoute>[
+          GoRoute(
+            path: 'videodailyrank',
+            builder: (BuildContext context, GoRouterState state) =>
+                const VideoDailyRankPage(),
+          ),
           GoRoute(
             path: 'videopage',
             builder: (BuildContext context, GoRouterState state) =>
