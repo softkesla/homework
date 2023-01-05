@@ -6,8 +6,8 @@ part of 'format_thumbnail_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FormatThumbnail _$$_FormatThumbnailFromJson(Map<String, dynamic> json) =>
-    _$_FormatThumbnail(
+_$_FormatsThumbnail _$$_FormatsThumbnailFromJson(Map<String, dynamic> json) =>
+    _$_FormatsThumbnail(
       json['name'] as String?,
       json['hash'] as String?,
       json['ext'] as String?,
@@ -19,7 +19,7 @@ _$_FormatThumbnail _$$_FormatThumbnailFromJson(Map<String, dynamic> json) =>
       json['url'] as String?,
     );
 
-Map<String, dynamic> _$$_FormatThumbnailToJson(_$_FormatThumbnail instance) =>
+Map<String, dynamic> _$$_FormatsThumbnailToJson(_$_FormatsThumbnail instance) =>
     <String, dynamic>{
       'name': instance.name,
       'hash': instance.hash,

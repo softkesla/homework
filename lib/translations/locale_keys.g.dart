@@ -7,7 +7,14 @@ abstract class  LocaleKeys {
   static const Store = '@@Store';
   static const Profile = '@@Profile';
   static const Discover = '@@Discover';
+  static const Channel = '@@Channel';
   static const Password = '@@Password';
+  static const VideoPage = '@@VideoPage';
+  static const PostPage = '@@PostPage';
+  static const LiveNowPage = '@@LiveNowPage';
+  static const Promo = '@@Promo';
+  static const TrendingTag = '@@TrendingTag';
+  static const ChannelDailyRank = '@@ChannelDailyRank';
   static const Username = '@@Username';
   static const Welcome = '@@Welcome';
   static const Test = '@@Test';

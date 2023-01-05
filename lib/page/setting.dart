@@ -80,16 +80,19 @@ class _SettingPageState extends State<SettingPage> {
             height: 10,
           ),
           SwitchListTile(
-              value: isChecked1,
-              title: Text('Channel notification',
-                  style: TextStyle(
-                    fontFamily: 'Athihi',
-                  )),
-              onChanged: (bool value) {
-                setState(() {
-                  isChecked1 = value;
-                });
-              }),
+            value: isChecked1,
+            title: Text('Channel notification',
+                style: TextStyle(
+                  fontFamily: 'Athihi',
+                )),
+            onChanged: (bool value) {
+              // setState(
+              //   () {
+              //     isChecked1 = value;
+              //   },
+              // );
+            },
+          ),
           Divider(
             height: 0,
             color: Color.fromARGB(255, 46, 255, 213),

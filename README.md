@@ -25,3 +25,9 @@ sed -i '' "s/ = '/ = '@@/g" lib/translations/locale_keys.g.dart
 // For Windows
 (get-content lib/translations/locale_keys.g.dart) -replace " = '"," = '@@" | Out-File -encoding ASCII lib/translations/locale_keys.g.dart
 ```
+
+## Command to run html
+```
+
+flutter run --web-renderer html
+```

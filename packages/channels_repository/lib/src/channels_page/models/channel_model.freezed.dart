@@ -20,18 +20,15 @@ ChannelModel _$ChannelModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ChannelModel {
-  String get sId => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String get status => throw _privateConstructorUsedError;
-  @JsonKey(name: "followers_amount")
+  String? get status => throw _privateConstructorUsedError;
   int? get followersAmount => throw _privateConstructorUsedError;
-  @JsonKey(name: "daily_rank")
+  bool? get isLive => throw _privateConstructorUsedError;
   int? get dailyRank => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  dynamic get isActive => throw _privateConstructorUsedError;
-  dynamic get isAutoFollowed => throw _privateConstructorUsedError;
-  List<Banner>? get banner => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  List<List<Banner>?>? get banner => throw _privateConstructorUsedError;
   Thumbnail? get thumbnail => throw _privateConstructorUsedError;
+  bool? get isAutoFollowed => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,16 +43,15 @@ abstract class $ChannelModelCopyWith<$Res> {
       _$ChannelModelCopyWithImpl<$Res, ChannelModel>;
   @useResult
   $Res call(
-      {String sId,
-      String name,
-      String status,
-      @JsonKey(name: "followers_amount") int? followersAmount,
-      @JsonKey(name: "daily_rank") int? dailyRank,
+      {String? status,
+      int? followersAmount,
+      bool? isLive,
+      int? dailyRank,
       String? description,
-      dynamic isActive,
-      dynamic isAutoFollowed,
-      List<Banner>? banner,
-      Thumbnail? thumbnail});
+      String? name,
+      List<List<Banner>?>? banner,
+      Thumbnail? thumbnail,
+      bool? isAutoFollowed});
 
   $ThumbnailCopyWith<$Res>? get thumbnail;
 }
@@ -73,34 +69,29 @@ class _$ChannelModelCopyWithImpl<$Res, $Val extends ChannelModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sId = null,
-    Object? name = null,
-    Object? status = null,
+    Object? status = freezed,
     Object? followersAmount = freezed,
+    Object? isLive = freezed,
     Object? dailyRank = freezed,
     Object? description = freezed,
-    Object? isActive = freezed,
-    Object? isAutoFollowed = freezed,
+    Object? name = freezed,
     Object? banner = freezed,
     Object? thumbnail = freezed,
+    Object? isAutoFollowed = freezed,
   }) {
     return _then(_value.copyWith(
-      sId: null == sId
-          ? _value.sId
-          : sId // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       followersAmount: freezed == followersAmount
           ? _value.followersAmount
           : followersAmount // ignore: cast_nullable_to_non_nullable
               as int?,
+      isLive: freezed == isLive
+          ? _value.isLive
+          : isLive // ignore: cast_nullable_to_non_nullable
+              as bool?,
       dailyRank: freezed == dailyRank
           ? _value.dailyRank
           : dailyRank // ignore: cast_nullable_to_non_nullable
@@ -109,22 +100,22 @@ class _$ChannelModelCopyWithImpl<$Res, $Val extends ChannelModel>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      isActive: freezed == isActive
-          ? _value.isActive
-          : isActive // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      isAutoFollowed: freezed == isAutoFollowed
-          ? _value.isAutoFollowed
-          : isAutoFollowed // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
       banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
-              as List<Banner>?,
+              as List<List<Banner>?>?,
       thumbnail: freezed == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as Thumbnail?,
+      isAutoFollowed: freezed == isAutoFollowed
+          ? _value.isAutoFollowed
+          : isAutoFollowed // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 
@@ -150,16 +141,15 @@ abstract class _$$_ChannelModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String sId,
-      String name,
-      String status,
-      @JsonKey(name: "followers_amount") int? followersAmount,
-      @JsonKey(name: "daily_rank") int? dailyRank,
+      {String? status,
+      int? followersAmount,
+      bool? isLive,
+      int? dailyRank,
       String? description,
-      dynamic isActive,
-      dynamic isAutoFollowed,
-      List<Banner>? banner,
-      Thumbnail? thumbnail});
+      String? name,
+      List<List<Banner>?>? banner,
+      Thumbnail? thumbnail,
+      bool? isAutoFollowed});
 
   @override
   $ThumbnailCopyWith<$Res>? get thumbnail;
@@ -176,53 +166,53 @@ class __$$_ChannelModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sId = null,
-    Object? name = null,
-    Object? status = null,
+    Object? status = freezed,
     Object? followersAmount = freezed,
+    Object? isLive = freezed,
     Object? dailyRank = freezed,
     Object? description = freezed,
-    Object? isActive = freezed,
-    Object? isAutoFollowed = freezed,
+    Object? name = freezed,
     Object? banner = freezed,
     Object? thumbnail = freezed,
+    Object? isAutoFollowed = freezed,
   }) {
     return _then(_$_ChannelModel(
-      sId: null == sId
-          ? _value.sId
-          : sId // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      status: null == status
+      freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as String,
-      followersAmount: freezed == followersAmount
+              as String?,
+      freezed == followersAmount
           ? _value.followersAmount
           : followersAmount // ignore: cast_nullable_to_non_nullable
               as int?,
-      dailyRank: freezed == dailyRank
+      freezed == isLive
+          ? _value.isLive
+          : isLive // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      freezed == dailyRank
           ? _value.dailyRank
           : dailyRank // ignore: cast_nullable_to_non_nullable
               as int?,
-      description: freezed == description
+      freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      isActive: freezed == isActive ? _value.isActive! : isActive,
-      isAutoFollowed:
-          freezed == isAutoFollowed ? _value.isAutoFollowed! : isAutoFollowed,
-      banner: freezed == banner
+      freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      freezed == banner
           ? _value._banner
           : banner // ignore: cast_nullable_to_non_nullable
-              as List<Banner>?,
-      thumbnail: freezed == thumbnail
+              as List<List<Banner>?>?,
+      freezed == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as Thumbnail?,
+      freezed == isAutoFollowed
+          ? _value.isAutoFollowed
+          : isAutoFollowed // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -231,44 +221,35 @@ class __$$_ChannelModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ChannelModel implements _ChannelModel {
   const _$_ChannelModel(
-      {required this.sId,
-      required this.name,
-      required this.status,
-      @JsonKey(name: "followers_amount") this.followersAmount,
-      @JsonKey(name: "daily_rank") this.dailyRank,
+      this.status,
+      this.followersAmount,
+      this.isLive,
+      this.dailyRank,
       this.description,
-      this.isActive = false,
-      this.isAutoFollowed = false,
-      final List<Banner>? banner,
-      this.thumbnail})
+      this.name,
+      final List<List<Banner>?>? banner,
+      this.thumbnail,
+      this.isAutoFollowed)
       : _banner = banner;
 
   factory _$_ChannelModel.fromJson(Map<String, dynamic> json) =>
       _$$_ChannelModelFromJson(json);
 
   @override
-  final String sId;
+  final String? status;
   @override
-  final String name;
-  @override
-  final String status;
-  @override
-  @JsonKey(name: "followers_amount")
   final int? followersAmount;
   @override
-  @JsonKey(name: "daily_rank")
+  final bool? isLive;
+  @override
   final int? dailyRank;
   @override
   final String? description;
   @override
-  @JsonKey()
-  final dynamic isActive;
+  final String? name;
+  final List<List<Banner>?>? _banner;
   @override
-  @JsonKey()
-  final dynamic isAutoFollowed;
-  final List<Banner>? _banner;
-  @override
-  List<Banner>? get banner {
+  List<List<Banner>?>? get banner {
     final value = _banner;
     if (value == null) return null;
     if (_banner is EqualUnmodifiableListView) return _banner;
@@ -278,10 +259,12 @@ class _$_ChannelModel implements _ChannelModel {
 
   @override
   final Thumbnail? thumbnail;
+  @override
+  final bool? isAutoFollowed;
 
   @override
   String toString() {
-    return 'ChannelModel(sId: $sId, name: $name, status: $status, followersAmount: $followersAmount, dailyRank: $dailyRank, description: $description, isActive: $isActive, isAutoFollowed: $isAutoFollowed, banner: $banner, thumbnail: $thumbnail)';
+    return 'ChannelModel(status: $status, followersAmount: $followersAmount, isLive: $isLive, dailyRank: $dailyRank, description: $description, name: $name, banner: $banner, thumbnail: $thumbnail, isAutoFollowed: $isAutoFollowed)';
   }
 
   @override
@@ -289,37 +272,35 @@ class _$_ChannelModel implements _ChannelModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ChannelModel &&
-            (identical(other.sId, sId) || other.sId == sId) &&
-            (identical(other.name, name) || other.name == name) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.followersAmount, followersAmount) ||
                 other.followersAmount == followersAmount) &&
+            (identical(other.isLive, isLive) || other.isLive == isLive) &&
             (identical(other.dailyRank, dailyRank) ||
                 other.dailyRank == dailyRank) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            const DeepCollectionEquality().equals(other.isActive, isActive) &&
-            const DeepCollectionEquality()
-                .equals(other.isAutoFollowed, isAutoFollowed) &&
+            (identical(other.name, name) || other.name == name) &&
             const DeepCollectionEquality().equals(other._banner, _banner) &&
             (identical(other.thumbnail, thumbnail) ||
-                other.thumbnail == thumbnail));
+                other.thumbnail == thumbnail) &&
+            (identical(other.isAutoFollowed, isAutoFollowed) ||
+                other.isAutoFollowed == isAutoFollowed));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      sId,
-      name,
       status,
       followersAmount,
+      isLive,
       dailyRank,
       description,
-      const DeepCollectionEquality().hash(isActive),
-      const DeepCollectionEquality().hash(isAutoFollowed),
+      name,
       const DeepCollectionEquality().hash(_banner),
-      thumbnail);
+      thumbnail,
+      isAutoFollowed);
 
   @JsonKey(ignore: true)
   @override
@@ -337,42 +318,37 @@ class _$_ChannelModel implements _ChannelModel {
 
 abstract class _ChannelModel implements ChannelModel {
   const factory _ChannelModel(
-      {required final String sId,
-      required final String name,
-      required final String status,
-      @JsonKey(name: "followers_amount") final int? followersAmount,
-      @JsonKey(name: "daily_rank") final int? dailyRank,
+      final String? status,
+      final int? followersAmount,
+      final bool? isLive,
+      final int? dailyRank,
       final String? description,
-      final dynamic isActive,
-      final dynamic isAutoFollowed,
-      final List<Banner>? banner,
-      final Thumbnail? thumbnail}) = _$_ChannelModel;
+      final String? name,
+      final List<List<Banner>?>? banner,
+      final Thumbnail? thumbnail,
+      final bool? isAutoFollowed) = _$_ChannelModel;
 
   factory _ChannelModel.fromJson(Map<String, dynamic> json) =
       _$_ChannelModel.fromJson;
 
   @override
-  String get sId;
+  String? get status;
   @override
-  String get name;
-  @override
-  String get status;
-  @override
-  @JsonKey(name: "followers_amount")
   int? get followersAmount;
   @override
-  @JsonKey(name: "daily_rank")
+  bool? get isLive;
+  @override
   int? get dailyRank;
   @override
   String? get description;
   @override
-  dynamic get isActive;
+  String? get name;
   @override
-  dynamic get isAutoFollowed;
-  @override
-  List<Banner>? get banner;
+  List<List<Banner>?>? get banner;
   @override
   Thumbnail? get thumbnail;
+  @override
+  bool? get isAutoFollowed;
   @override
   @JsonKey(ignore: true)
   _$$_ChannelModelCopyWith<_$_ChannelModel> get copyWith =>

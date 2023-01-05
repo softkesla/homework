@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-FormatThumbnail _$FormatThumbnailFromJson(Map<String, dynamic> json) {
-  return _FormatThumbnail.fromJson(json);
+FormatsThumbnail _$FormatsThumbnailFromJson(Map<String, dynamic> json) {
+  return _FormatsThumbnail.fromJson(json);
 }
 
 /// @nodoc
-mixin _$FormatThumbnail {
+mixin _$FormatsThumbnail {
   String? get name => throw _privateConstructorUsedError;
   String? get hash => throw _privateConstructorUsedError;
   String? get ext => throw _privateConstructorUsedError;
@@ -32,15 +32,15 @@ mixin _$FormatThumbnail {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $FormatThumbnailCopyWith<FormatThumbnail> get copyWith =>
+  $FormatsThumbnailCopyWith<FormatsThumbnail> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FormatThumbnailCopyWith<$Res> {
-  factory $FormatThumbnailCopyWith(
-          FormatThumbnail value, $Res Function(FormatThumbnail) then) =
-      _$FormatThumbnailCopyWithImpl<$Res, FormatThumbnail>;
+abstract class $FormatsThumbnailCopyWith<$Res> {
+  factory $FormatsThumbnailCopyWith(
+          FormatsThumbnail value, $Res Function(FormatsThumbnail) then) =
+      _$FormatsThumbnailCopyWithImpl<$Res, FormatsThumbnail>;
   @useResult
   $Res call(
       {String? name,
@@ -55,9 +55,9 @@ abstract class $FormatThumbnailCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FormatThumbnailCopyWithImpl<$Res, $Val extends FormatThumbnail>
-    implements $FormatThumbnailCopyWith<$Res> {
-  _$FormatThumbnailCopyWithImpl(this._value, this._then);
+class _$FormatsThumbnailCopyWithImpl<$Res, $Val extends FormatsThumbnail>
+    implements $FormatsThumbnailCopyWith<$Res> {
+  _$FormatsThumbnailCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -119,11 +119,11 @@ class _$FormatThumbnailCopyWithImpl<$Res, $Val extends FormatThumbnail>
 }
 
 /// @nodoc
-abstract class _$$_FormatThumbnailCopyWith<$Res>
-    implements $FormatThumbnailCopyWith<$Res> {
-  factory _$$_FormatThumbnailCopyWith(
-          _$_FormatThumbnail value, $Res Function(_$_FormatThumbnail) then) =
-      __$$_FormatThumbnailCopyWithImpl<$Res>;
+abstract class _$$_FormatsThumbnailCopyWith<$Res>
+    implements $FormatsThumbnailCopyWith<$Res> {
+  factory _$$_FormatsThumbnailCopyWith(
+          _$_FormatsThumbnail value, $Res Function(_$_FormatsThumbnail) then) =
+      __$$_FormatsThumbnailCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -139,11 +139,11 @@ abstract class _$$_FormatThumbnailCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FormatThumbnailCopyWithImpl<$Res>
-    extends _$FormatThumbnailCopyWithImpl<$Res, _$_FormatThumbnail>
-    implements _$$_FormatThumbnailCopyWith<$Res> {
-  __$$_FormatThumbnailCopyWithImpl(
-      _$_FormatThumbnail _value, $Res Function(_$_FormatThumbnail) _then)
+class __$$_FormatsThumbnailCopyWithImpl<$Res>
+    extends _$FormatsThumbnailCopyWithImpl<$Res, _$_FormatsThumbnail>
+    implements _$$_FormatsThumbnailCopyWith<$Res> {
+  __$$_FormatsThumbnailCopyWithImpl(
+      _$_FormatsThumbnail _value, $Res Function(_$_FormatsThumbnail) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -159,7 +159,7 @@ class __$$_FormatThumbnailCopyWithImpl<$Res>
     Object? path = freezed,
     Object? url = freezed,
   }) {
-    return _then(_$_FormatThumbnail(
+    return _then(_$_FormatsThumbnail(
       freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -202,12 +202,12 @@ class __$$_FormatThumbnailCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FormatThumbnail implements _FormatThumbnail {
-  const _$_FormatThumbnail(this.name, this.hash, this.ext, this.mime,
+class _$_FormatsThumbnail implements _FormatsThumbnail {
+  const _$_FormatsThumbnail(this.name, this.hash, this.ext, this.mime,
       this.width, this.height, this.size, this.path, this.url);
 
-  factory _$_FormatThumbnail.fromJson(Map<String, dynamic> json) =>
-      _$$_FormatThumbnailFromJson(json);
+  factory _$_FormatsThumbnail.fromJson(Map<String, dynamic> json) =>
+      _$$_FormatsThumbnailFromJson(json);
 
   @override
   final String? name;
@@ -230,14 +230,14 @@ class _$_FormatThumbnail implements _FormatThumbnail {
 
   @override
   String toString() {
-    return 'FormatThumbnail(name: $name, hash: $hash, ext: $ext, mime: $mime, width: $width, height: $height, size: $size, path: $path, url: $url)';
+    return 'FormatsThumbnail(name: $name, hash: $hash, ext: $ext, mime: $mime, width: $width, height: $height, size: $size, path: $path, url: $url)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FormatThumbnail &&
+            other is _$_FormatsThumbnail &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.hash, hash) || other.hash == hash) &&
             (identical(other.ext, ext) || other.ext == ext) &&
@@ -257,19 +257,19 @@ class _$_FormatThumbnail implements _FormatThumbnail {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FormatThumbnailCopyWith<_$_FormatThumbnail> get copyWith =>
-      __$$_FormatThumbnailCopyWithImpl<_$_FormatThumbnail>(this, _$identity);
+  _$$_FormatsThumbnailCopyWith<_$_FormatsThumbnail> get copyWith =>
+      __$$_FormatsThumbnailCopyWithImpl<_$_FormatsThumbnail>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FormatThumbnailToJson(
+    return _$$_FormatsThumbnailToJson(
       this,
     );
   }
 }
 
-abstract class _FormatThumbnail implements FormatThumbnail {
-  const factory _FormatThumbnail(
+abstract class _FormatsThumbnail implements FormatsThumbnail {
+  const factory _FormatsThumbnail(
       final String? name,
       final String? hash,
       final String? ext,
@@ -278,10 +278,10 @@ abstract class _FormatThumbnail implements FormatThumbnail {
       final int? height,
       final double? size,
       final String? path,
-      final String? url) = _$_FormatThumbnail;
+      final String? url) = _$_FormatsThumbnail;
 
-  factory _FormatThumbnail.fromJson(Map<String, dynamic> json) =
-      _$_FormatThumbnail.fromJson;
+  factory _FormatsThumbnail.fromJson(Map<String, dynamic> json) =
+      _$_FormatsThumbnail.fromJson;
 
   @override
   String? get name;
@@ -303,6 +303,6 @@ abstract class _FormatThumbnail implements FormatThumbnail {
   String? get url;
   @override
   @JsonKey(ignore: true)
-  _$$_FormatThumbnailCopyWith<_$_FormatThumbnail> get copyWith =>
+  _$$_FormatsThumbnailCopyWith<_$_FormatsThumbnail> get copyWith =>
       throw _privateConstructorUsedError;
 }

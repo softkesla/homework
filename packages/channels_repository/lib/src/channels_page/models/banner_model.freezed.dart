@@ -20,7 +20,6 @@ Banner _$BannerFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Banner {
-  String? get sId => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get alternativeText => throw _privateConstructorUsedError;
   String? get caption => throw _privateConstructorUsedError;
@@ -29,13 +28,13 @@ mixin _$Banner {
   String? get mime => throw _privateConstructorUsedError;
   double? get size => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  FileStoreFormat? get formats => throw _privateConstructorUsedError;
+  BannerFormats? get formats => throw _privateConstructorUsedError;
   String? get provider => throw _privateConstructorUsedError;
   int? get width => throw _privateConstructorUsedError;
   int? get height => throw _privateConstructorUsedError;
   List<String>? get related => throw _privateConstructorUsedError;
-  String? get createdAt => throw _privateConstructorUsedError;
-  String? get updatedAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
   int? get iV => throw _privateConstructorUsedError;
   String? get createdBy => throw _privateConstructorUsedError;
   String? get updatedBy => throw _privateConstructorUsedError;
@@ -52,8 +51,7 @@ abstract class $BannerCopyWith<$Res> {
       _$BannerCopyWithImpl<$Res, Banner>;
   @useResult
   $Res call(
-      {String? sId,
-      String? name,
+      {String? name,
       String? alternativeText,
       String? caption,
       String? hash,
@@ -61,19 +59,19 @@ abstract class $BannerCopyWith<$Res> {
       String? mime,
       double? size,
       String? url,
-      FileStoreFormat? formats,
+      BannerFormats? formats,
       String? provider,
       int? width,
       int? height,
       List<String>? related,
-      String? createdAt,
-      String? updatedAt,
+      DateTime? createdAt,
+      DateTime? updatedAt,
       int? iV,
       String? createdBy,
       String? updatedBy,
       String? id});
 
-  $FileStoreFormatCopyWith<$Res>? get formats;
+  $BannerFormatsCopyWith<$Res>? get formats;
 }
 
 /// @nodoc
@@ -89,7 +87,6 @@ class _$BannerCopyWithImpl<$Res, $Val extends Banner>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sId = freezed,
     Object? name = freezed,
     Object? alternativeText = freezed,
     Object? caption = freezed,
@@ -111,10 +108,6 @@ class _$BannerCopyWithImpl<$Res, $Val extends Banner>
     Object? id = freezed,
   }) {
     return _then(_value.copyWith(
-      sId: freezed == sId
-          ? _value.sId
-          : sId // ignore: cast_nullable_to_non_nullable
-              as String?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -150,7 +143,7 @@ class _$BannerCopyWithImpl<$Res, $Val extends Banner>
       formats: freezed == formats
           ? _value.formats
           : formats // ignore: cast_nullable_to_non_nullable
-              as FileStoreFormat?,
+              as BannerFormats?,
       provider: freezed == provider
           ? _value.provider
           : provider // ignore: cast_nullable_to_non_nullable
@@ -170,11 +163,11 @@ class _$BannerCopyWithImpl<$Res, $Val extends Banner>
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       updatedAt: freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       iV: freezed == iV
           ? _value.iV
           : iV // ignore: cast_nullable_to_non_nullable
@@ -196,12 +189,12 @@ class _$BannerCopyWithImpl<$Res, $Val extends Banner>
 
   @override
   @pragma('vm:prefer-inline')
-  $FileStoreFormatCopyWith<$Res>? get formats {
+  $BannerFormatsCopyWith<$Res>? get formats {
     if (_value.formats == null) {
       return null;
     }
 
-    return $FileStoreFormatCopyWith<$Res>(_value.formats!, (value) {
+    return $BannerFormatsCopyWith<$Res>(_value.formats!, (value) {
       return _then(_value.copyWith(formats: value) as $Val);
     });
   }
@@ -214,8 +207,7 @@ abstract class _$$_BannerCopyWith<$Res> implements $BannerCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String? sId,
-      String? name,
+      {String? name,
       String? alternativeText,
       String? caption,
       String? hash,
@@ -223,20 +215,20 @@ abstract class _$$_BannerCopyWith<$Res> implements $BannerCopyWith<$Res> {
       String? mime,
       double? size,
       String? url,
-      FileStoreFormat? formats,
+      BannerFormats? formats,
       String? provider,
       int? width,
       int? height,
       List<String>? related,
-      String? createdAt,
-      String? updatedAt,
+      DateTime? createdAt,
+      DateTime? updatedAt,
       int? iV,
       String? createdBy,
       String? updatedBy,
       String? id});
 
   @override
-  $FileStoreFormatCopyWith<$Res>? get formats;
+  $BannerFormatsCopyWith<$Res>? get formats;
 }
 
 /// @nodoc
@@ -249,7 +241,6 @@ class __$$_BannerCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sId = freezed,
     Object? name = freezed,
     Object? alternativeText = freezed,
     Object? caption = freezed,
@@ -271,10 +262,6 @@ class __$$_BannerCopyWithImpl<$Res>
     Object? id = freezed,
   }) {
     return _then(_$_Banner(
-      freezed == sId
-          ? _value.sId
-          : sId // ignore: cast_nullable_to_non_nullable
-              as String?,
       freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -310,7 +297,7 @@ class __$$_BannerCopyWithImpl<$Res>
       freezed == formats
           ? _value.formats
           : formats // ignore: cast_nullable_to_non_nullable
-              as FileStoreFormat?,
+              as BannerFormats?,
       freezed == provider
           ? _value.provider
           : provider // ignore: cast_nullable_to_non_nullable
@@ -330,11 +317,11 @@ class __$$_BannerCopyWithImpl<$Res>
       freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       freezed == iV
           ? _value.iV
           : iV // ignore: cast_nullable_to_non_nullable
@@ -359,7 +346,6 @@ class __$$_BannerCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Banner implements _Banner {
   const _$_Banner(
-      this.sId,
       this.name,
       this.alternativeText,
       this.caption,
@@ -385,8 +371,6 @@ class _$_Banner implements _Banner {
       _$$_BannerFromJson(json);
 
   @override
-  final String? sId;
-  @override
   final String? name;
   @override
   final String? alternativeText;
@@ -403,7 +387,7 @@ class _$_Banner implements _Banner {
   @override
   final String? url;
   @override
-  final FileStoreFormat? formats;
+  final BannerFormats? formats;
   @override
   final String? provider;
   @override
@@ -421,9 +405,9 @@ class _$_Banner implements _Banner {
   }
 
   @override
-  final String? createdAt;
+  final DateTime? createdAt;
   @override
-  final String? updatedAt;
+  final DateTime? updatedAt;
   @override
   final int? iV;
   @override
@@ -435,7 +419,7 @@ class _$_Banner implements _Banner {
 
   @override
   String toString() {
-    return 'Banner(sId: $sId, name: $name, alternativeText: $alternativeText, caption: $caption, hash: $hash, ext: $ext, mime: $mime, size: $size, url: $url, formats: $formats, provider: $provider, width: $width, height: $height, related: $related, createdAt: $createdAt, updatedAt: $updatedAt, iV: $iV, createdBy: $createdBy, updatedBy: $updatedBy, id: $id)';
+    return 'Banner(name: $name, alternativeText: $alternativeText, caption: $caption, hash: $hash, ext: $ext, mime: $mime, size: $size, url: $url, formats: $formats, provider: $provider, width: $width, height: $height, related: $related, createdAt: $createdAt, updatedAt: $updatedAt, iV: $iV, createdBy: $createdBy, updatedBy: $updatedBy, id: $id)';
   }
 
   @override
@@ -443,7 +427,6 @@ class _$_Banner implements _Banner {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Banner &&
-            (identical(other.sId, sId) || other.sId == sId) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.alternativeText, alternativeText) ||
                 other.alternativeText == alternativeText) &&
@@ -475,7 +458,6 @@ class _$_Banner implements _Banner {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        sId,
         name,
         alternativeText,
         caption,
@@ -513,7 +495,6 @@ class _$_Banner implements _Banner {
 
 abstract class _Banner implements Banner {
   const factory _Banner(
-      final String? sId,
       final String? name,
       final String? alternativeText,
       final String? caption,
@@ -522,13 +503,13 @@ abstract class _Banner implements Banner {
       final String? mime,
       final double? size,
       final String? url,
-      final FileStoreFormat? formats,
+      final BannerFormats? formats,
       final String? provider,
       final int? width,
       final int? height,
       final List<String>? related,
-      final String? createdAt,
-      final String? updatedAt,
+      final DateTime? createdAt,
+      final DateTime? updatedAt,
       final int? iV,
       final String? createdBy,
       final String? updatedBy,
@@ -536,8 +517,6 @@ abstract class _Banner implements Banner {
 
   factory _Banner.fromJson(Map<String, dynamic> json) = _$_Banner.fromJson;
 
-  @override
-  String? get sId;
   @override
   String? get name;
   @override
@@ -555,7 +534,7 @@ abstract class _Banner implements Banner {
   @override
   String? get url;
   @override
-  FileStoreFormat? get formats;
+  BannerFormats? get formats;
   @override
   String? get provider;
   @override
@@ -565,9 +544,9 @@ abstract class _Banner implements Banner {
   @override
   List<String>? get related;
   @override
-  String? get createdAt;
+  DateTime? get createdAt;
   @override
-  String? get updatedAt;
+  DateTime? get updatedAt;
   @override
   int? get iV;
   @override

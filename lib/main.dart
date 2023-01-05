@@ -12,6 +12,7 @@ import 'package:homework_flutter/page/trending_tag.dart';
 import 'package:homework_flutter/page/channel.dart';
 import 'package:homework_flutter/page/videopage.dart';
 import 'package:promo_repository/repositories.dart';
+import 'page/channel_dailyrank_page.dart';
 import 'package:smo_localizations/localizations.dart';
 
 void main() async {
@@ -106,6 +107,11 @@ class App extends StatelessWidget {
             path: 'trending',
             builder: (BuildContext context, GoRouterState state) =>
                 const TrendingTagPage(),
+          ),
+          GoRoute(
+            path: 'channeldailyrank',
+            builder: (BuildContext context, GoRouterState state) =>
+                const ChannelDailyRankPage(),
           ),
         ],
         path: '/',

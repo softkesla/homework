@@ -1,9 +1,11 @@
 import 'package:channels_repository/repositories.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_material/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:channels_repository/channels_repository.dart';
 import 'package:channels_repository/repositories.dart';
+import 'package:intl/intl.dart';
 
 class ChannelPage extends StatefulWidget {
   const ChannelPage({super.key});
@@ -33,23 +35,52 @@ class _ChannelPageState extends State<ChannelPage> {
                 );
               }
               if (state is ChannelLoadedState) {
-                List<ChannelModel> channelist = state.channels;
-                return ListView.builder(
-                    itemCount: channelist.length,
-                    itemBuilder: (_, index) {
-                      return Card(
-                        color: Colors.amber,
-                        elevation: 4,
-                        child: ListTile(
-                          title: Text(
-                            channelist[index].name,
-                            style: TextStyle(color: Colors.white),
+                List<ChannelModel> channelList = state.channels;
+                // DateTime now = DateTime.now();
+                // String formattedDate =
+                //     DateFormat('kk:mm:ss \n EEE d MMM').format(now);
+                // Text(
+                //   formattedDate,
+                //   textAlign: TextAlign.center,
+                //   style: new TextStyle(
+                //       fontWeight: FontWeight.bold, fontSize: 25.0),
+                // );
+
+                return GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: 200,
+                      childAspectRatio: 70 / 60,
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10),
+                  itemCount: channelList.length,
+                  itemBuilder: (BuildContext ctx, index) {
+                    return Container(
+                      padding: PaddingSize.small.toEdgeInsets(),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                      child: Column(
+                        children: <Widget>[
+                          CircleAvatar(
+                            maxRadius: 30,
+                            backgroundImage: NetworkImage(
+                                channelList[index].thumbnail?.url ?? ''),
                           ),
-                          subtitle: Text(channelist[index].description ?? "",
-                              style: TextStyle(color: Colors.white)),
-                        ),
-                      );
-                    });
+                          MaterialText.subTitle(
+                            context,
+                            channelList[index].name.toString(),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: const Icon(Icons.add_circle_outline),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                );
               }
               if (state is ChannelErrorState) {
                 return Center(

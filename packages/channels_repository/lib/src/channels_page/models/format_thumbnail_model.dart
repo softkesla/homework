@@ -4,8 +4,8 @@ part 'format_thumbnail_model.freezed.dart';
 part 'format_thumbnail_model.g.dart';
 
 @freezed
-class FormatThumbnail with _$FormatThumbnail {
-  const factory FormatThumbnail(
+class FormatsThumbnail with _$FormatsThumbnail {
+  const factory FormatsThumbnail(
     String? name,
     String? hash,
     String? ext,
@@ -15,7 +15,7 @@ class FormatThumbnail with _$FormatThumbnail {
     double? size,
     String? path,
     String? url,
-  ) = _FormatThumbnail;
-  factory FormatThumbnail.fromJson(Map<String, dynamic> json) =>
-      _$FormatThumbnailFromJson(json);
+  ) = _FormatsThumbnail;
+  factory FormatsThumbnail.fromJson(Map<String, dynamic> json) =>
+      _$FormatsThumbnailFromJson(json);
 }

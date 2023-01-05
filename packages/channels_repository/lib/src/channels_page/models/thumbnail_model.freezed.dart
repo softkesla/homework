@@ -20,7 +20,6 @@ Thumbnail _$ThumbnailFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Thumbnail {
-  String? get sId => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get alternativeText => throw _privateConstructorUsedError;
   String? get caption => throw _privateConstructorUsedError;
@@ -29,13 +28,13 @@ mixin _$Thumbnail {
   String? get mime => throw _privateConstructorUsedError;
   double? get size => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  FileStoreFormat? get formats => throw _privateConstructorUsedError;
+  Formats? get formats => throw _privateConstructorUsedError;
   String? get provider => throw _privateConstructorUsedError;
   int? get width => throw _privateConstructorUsedError;
   int? get height => throw _privateConstructorUsedError;
   List<String>? get related => throw _privateConstructorUsedError;
-  String? get createdAt => throw _privateConstructorUsedError;
-  String? get updatedAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
   int? get iV => throw _privateConstructorUsedError;
   String? get createdBy => throw _privateConstructorUsedError;
   String? get updatedBy => throw _privateConstructorUsedError;
@@ -53,8 +52,7 @@ abstract class $ThumbnailCopyWith<$Res> {
       _$ThumbnailCopyWithImpl<$Res, Thumbnail>;
   @useResult
   $Res call(
-      {String? sId,
-      String? name,
+      {String? name,
       String? alternativeText,
       String? caption,
       String? hash,
@@ -62,19 +60,19 @@ abstract class $ThumbnailCopyWith<$Res> {
       String? mime,
       double? size,
       String? url,
-      FileStoreFormat? formats,
+      Formats? formats,
       String? provider,
       int? width,
       int? height,
       List<String>? related,
-      String? createdAt,
-      String? updatedAt,
+      DateTime? createdAt,
+      DateTime? updatedAt,
       int? iV,
       String? createdBy,
       String? updatedBy,
       String? id});
 
-  $FileStoreFormatCopyWith<$Res>? get formats;
+  $FormatsCopyWith<$Res>? get formats;
 }
 
 /// @nodoc
@@ -90,7 +88,6 @@ class _$ThumbnailCopyWithImpl<$Res, $Val extends Thumbnail>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sId = freezed,
     Object? name = freezed,
     Object? alternativeText = freezed,
     Object? caption = freezed,
@@ -112,10 +109,6 @@ class _$ThumbnailCopyWithImpl<$Res, $Val extends Thumbnail>
     Object? id = freezed,
   }) {
     return _then(_value.copyWith(
-      sId: freezed == sId
-          ? _value.sId
-          : sId // ignore: cast_nullable_to_non_nullable
-              as String?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -151,7 +144,7 @@ class _$ThumbnailCopyWithImpl<$Res, $Val extends Thumbnail>
       formats: freezed == formats
           ? _value.formats
           : formats // ignore: cast_nullable_to_non_nullable
-              as FileStoreFormat?,
+              as Formats?,
       provider: freezed == provider
           ? _value.provider
           : provider // ignore: cast_nullable_to_non_nullable
@@ -171,11 +164,11 @@ class _$ThumbnailCopyWithImpl<$Res, $Val extends Thumbnail>
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       updatedAt: freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       iV: freezed == iV
           ? _value.iV
           : iV // ignore: cast_nullable_to_non_nullable
@@ -197,12 +190,12 @@ class _$ThumbnailCopyWithImpl<$Res, $Val extends Thumbnail>
 
   @override
   @pragma('vm:prefer-inline')
-  $FileStoreFormatCopyWith<$Res>? get formats {
+  $FormatsCopyWith<$Res>? get formats {
     if (_value.formats == null) {
       return null;
     }
 
-    return $FileStoreFormatCopyWith<$Res>(_value.formats!, (value) {
+    return $FormatsCopyWith<$Res>(_value.formats!, (value) {
       return _then(_value.copyWith(formats: value) as $Val);
     });
   }
@@ -216,8 +209,7 @@ abstract class _$$_ThumbnailCopyWith<$Res> implements $ThumbnailCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String? sId,
-      String? name,
+      {String? name,
       String? alternativeText,
       String? caption,
       String? hash,
@@ -225,20 +217,20 @@ abstract class _$$_ThumbnailCopyWith<$Res> implements $ThumbnailCopyWith<$Res> {
       String? mime,
       double? size,
       String? url,
-      FileStoreFormat? formats,
+      Formats? formats,
       String? provider,
       int? width,
       int? height,
       List<String>? related,
-      String? createdAt,
-      String? updatedAt,
+      DateTime? createdAt,
+      DateTime? updatedAt,
       int? iV,
       String? createdBy,
       String? updatedBy,
       String? id});
 
   @override
-  $FileStoreFormatCopyWith<$Res>? get formats;
+  $FormatsCopyWith<$Res>? get formats;
 }
 
 /// @nodoc
@@ -252,7 +244,6 @@ class __$$_ThumbnailCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? sId = freezed,
     Object? name = freezed,
     Object? alternativeText = freezed,
     Object? caption = freezed,
@@ -274,10 +265,6 @@ class __$$_ThumbnailCopyWithImpl<$Res>
     Object? id = freezed,
   }) {
     return _then(_$_Thumbnail(
-      freezed == sId
-          ? _value.sId
-          : sId // ignore: cast_nullable_to_non_nullable
-              as String?,
       freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -313,7 +300,7 @@ class __$$_ThumbnailCopyWithImpl<$Res>
       freezed == formats
           ? _value.formats
           : formats // ignore: cast_nullable_to_non_nullable
-              as FileStoreFormat?,
+              as Formats?,
       freezed == provider
           ? _value.provider
           : provider // ignore: cast_nullable_to_non_nullable
@@ -333,11 +320,11 @@ class __$$_ThumbnailCopyWithImpl<$Res>
       freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       freezed == iV
           ? _value.iV
           : iV // ignore: cast_nullable_to_non_nullable
@@ -362,7 +349,6 @@ class __$$_ThumbnailCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Thumbnail implements _Thumbnail {
   const _$_Thumbnail(
-      this.sId,
       this.name,
       this.alternativeText,
       this.caption,
@@ -388,8 +374,6 @@ class _$_Thumbnail implements _Thumbnail {
       _$$_ThumbnailFromJson(json);
 
   @override
-  final String? sId;
-  @override
   final String? name;
   @override
   final String? alternativeText;
@@ -406,7 +390,7 @@ class _$_Thumbnail implements _Thumbnail {
   @override
   final String? url;
   @override
-  final FileStoreFormat? formats;
+  final Formats? formats;
   @override
   final String? provider;
   @override
@@ -424,9 +408,9 @@ class _$_Thumbnail implements _Thumbnail {
   }
 
   @override
-  final String? createdAt;
+  final DateTime? createdAt;
   @override
-  final String? updatedAt;
+  final DateTime? updatedAt;
   @override
   final int? iV;
   @override
@@ -438,7 +422,7 @@ class _$_Thumbnail implements _Thumbnail {
 
   @override
   String toString() {
-    return 'Thumbnail(sId: $sId, name: $name, alternativeText: $alternativeText, caption: $caption, hash: $hash, ext: $ext, mime: $mime, size: $size, url: $url, formats: $formats, provider: $provider, width: $width, height: $height, related: $related, createdAt: $createdAt, updatedAt: $updatedAt, iV: $iV, createdBy: $createdBy, updatedBy: $updatedBy, id: $id)';
+    return 'Thumbnail(name: $name, alternativeText: $alternativeText, caption: $caption, hash: $hash, ext: $ext, mime: $mime, size: $size, url: $url, formats: $formats, provider: $provider, width: $width, height: $height, related: $related, createdAt: $createdAt, updatedAt: $updatedAt, iV: $iV, createdBy: $createdBy, updatedBy: $updatedBy, id: $id)';
   }
 
   @override
@@ -446,7 +430,6 @@ class _$_Thumbnail implements _Thumbnail {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Thumbnail &&
-            (identical(other.sId, sId) || other.sId == sId) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.alternativeText, alternativeText) ||
                 other.alternativeText == alternativeText) &&
@@ -478,7 +461,6 @@ class _$_Thumbnail implements _Thumbnail {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        sId,
         name,
         alternativeText,
         caption,
@@ -516,7 +498,6 @@ class _$_Thumbnail implements _Thumbnail {
 
 abstract class _Thumbnail implements Thumbnail {
   const factory _Thumbnail(
-      final String? sId,
       final String? name,
       final String? alternativeText,
       final String? caption,
@@ -525,13 +506,13 @@ abstract class _Thumbnail implements Thumbnail {
       final String? mime,
       final double? size,
       final String? url,
-      final FileStoreFormat? formats,
+      final Formats? formats,
       final String? provider,
       final int? width,
       final int? height,
       final List<String>? related,
-      final String? createdAt,
-      final String? updatedAt,
+      final DateTime? createdAt,
+      final DateTime? updatedAt,
       final int? iV,
       final String? createdBy,
       final String? updatedBy,
@@ -540,8 +521,6 @@ abstract class _Thumbnail implements Thumbnail {
   factory _Thumbnail.fromJson(Map<String, dynamic> json) =
       _$_Thumbnail.fromJson;
 
-  @override
-  String? get sId;
   @override
   String? get name;
   @override
@@ -559,7 +538,7 @@ abstract class _Thumbnail implements Thumbnail {
   @override
   String? get url;
   @override
-  FileStoreFormat? get formats;
+  Formats? get formats;
   @override
   String? get provider;
   @override
@@ -569,9 +548,9 @@ abstract class _Thumbnail implements Thumbnail {
   @override
   List<String>? get related;
   @override
-  String? get createdAt;
+  DateTime? get createdAt;
   @override
-  String? get updatedAt;
+  DateTime? get updatedAt;
   @override
   int? get iV;
   @override
