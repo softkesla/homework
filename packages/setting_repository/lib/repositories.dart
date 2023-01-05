@@ -8,7 +8,7 @@ class SettingRepository {
     Response response = await get(Uri.parse(endpoint));
     if (response.statusCode == 200) {
       final Map<String, dynamic> result = jsonDecode(response.body);
-      // print(response.body);
+      print(response.body);
       return SettingModel.fromJson(result);
     } else {
       throw Exception(response.reasonPhrase);

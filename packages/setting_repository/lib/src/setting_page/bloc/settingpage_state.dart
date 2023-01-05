@@ -1,23 +1,28 @@
 part of 'settingpage_bloc.dart';
 
 @immutable
-abstract class SettingpageState extends Equatable {}
-
-class SettingLoadingState extends SettingpageState {
-  @override
-  List<Object?> get props => [];
-}
-
-class SettingLoadedState extends SettingpageState {
-  SettingLoadedState(this.settings);
+abstract class SettingState extends Equatable {
+  const SettingState({required this.settings});
   final SettingModel settings;
 
   @override
   List<Object?> get props => [settings];
 }
 
-class SettingErrorState extends SettingpageState {
-  SettingErrorState(this.error);
+class SettingLoadingState extends SettingState {
+  const SettingLoadingState() : super(settings: const SettingModel());
+}
+
+class SettingLoadedState extends SettingState {
+  const SettingLoadedState(SettingModel settings) : super(settings: settings);
+}
+
+class SettingChangedState extends SettingState {
+  const SettingChangedState(SettingModel settings) : super(settings: settings);
+}
+
+class SettingErrorState extends SettingState {
+  const SettingErrorState(this.error) : super(settings: const SettingModel());
   final String error;
 
   @override

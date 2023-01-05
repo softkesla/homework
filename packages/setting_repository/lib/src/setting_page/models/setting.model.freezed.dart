@@ -24,27 +24,46 @@ mixin _$SettingModel {
   bool? get showChat => throw _privateConstructorUsedError;
   @JsonKey(name: 'show_discover')
   bool get showDiscover => throw _privateConstructorUsedError;
+  @JsonKey(name: 'show_discover_search')
   bool? get showDiscoverSearch => throw _privateConstructorUsedError;
+  @JsonKey(name: 'show_discover_calendar')
   bool? get showDiscoverCalendar => throw _privateConstructorUsedError;
+  @JsonKey(name: 'show_store')
   bool? get showStore => throw _privateConstructorUsedError;
+  @JsonKey(name: 'show_home_search')
   bool? get showHomeSearch => throw _privateConstructorUsedError;
+  @JsonKey(name: 'show_home_calendar')
   bool? get showHomeCalendar => throw _privateConstructorUsedError;
+  @JsonKey(name: 'show_channel_search')
   bool? get showChannelSearch => throw _privateConstructorUsedError;
+  @JsonKey(name: 'show_channel_calendar')
   bool? get showChannelCalendar => throw _privateConstructorUsedError;
+  @JsonKey(name: 'show_store_specials')
   bool? get showStoreSpecials => throw _privateConstructorUsedError;
+  @JsonKey(name: 'show_store_fanclubs')
   bool? get showStoreFanclubs => throw _privateConstructorUsedError;
+  @JsonKey(name: 'show_store_liveconcerts')
   bool? get showStoreLiveconcerts => throw _privateConstructorUsedError;
+  @JsonKey(name: 'show_store_search')
   bool? get showStoreSearch => throw _privateConstructorUsedError;
+  @JsonKey(name: 'random_ads')
   bool? get randomAds => throw _privateConstructorUsedError;
+  @JsonKey(name: 'show_redeem')
   bool? get showRedeem => throw _privateConstructorUsedError;
+  @JsonKey(name: 'admob')
   bool? get admob => throw _privateConstructorUsedError;
+  @JsonKey(name: 'fuzzy_search_result')
   bool? get fuzzySearchResult => throw _privateConstructorUsedError;
+  @JsonKey(name: 'experimental')
   bool? get experimental => throw _privateConstructorUsedError;
+  @JsonKey(name: 'appsflyer')
   bool? get appsflyer => throw _privateConstructorUsedError;
+  @JsonKey(name: 'default_maximum_upload_video_size')
   int? get defaultMaximumUploadVideoSize => throw _privateConstructorUsedError;
+  @JsonKey(name: 'stream_metric')
   bool? get streamMetric => throw _privateConstructorUsedError;
-  String? get createdAt => throw _privateConstructorUsedError;
-  String? get updatedAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
   String? get adsUrl => throw _privateConstructorUsedError;
   String? get id => throw _privateConstructorUsedError;
 
@@ -61,29 +80,50 @@ abstract class $SettingModelCopyWith<$Res> {
       _$SettingModelCopyWithImpl<$Res, SettingModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: "show_chat") bool? showChat,
-      @JsonKey(name: 'show_discover') bool showDiscover,
-      bool? showDiscoverSearch,
-      bool? showDiscoverCalendar,
-      bool? showStore,
-      bool? showHomeSearch,
-      bool? showHomeCalendar,
-      bool? showChannelSearch,
-      bool? showChannelCalendar,
-      bool? showStoreSpecials,
-      bool? showStoreFanclubs,
-      bool? showStoreLiveconcerts,
-      bool? showStoreSearch,
-      bool? randomAds,
-      bool? showRedeem,
-      bool? admob,
-      bool? fuzzySearchResult,
-      bool? experimental,
-      bool? appsflyer,
-      int? defaultMaximumUploadVideoSize,
-      bool? streamMetric,
-      String? createdAt,
-      String? updatedAt,
+      {@JsonKey(name: "show_chat")
+          bool? showChat,
+      @JsonKey(name: 'show_discover')
+          bool showDiscover,
+      @JsonKey(name: 'show_discover_search')
+          bool? showDiscoverSearch,
+      @JsonKey(name: 'show_discover_calendar')
+          bool? showDiscoverCalendar,
+      @JsonKey(name: 'show_store')
+          bool? showStore,
+      @JsonKey(name: 'show_home_search')
+          bool? showHomeSearch,
+      @JsonKey(name: 'show_home_calendar')
+          bool? showHomeCalendar,
+      @JsonKey(name: 'show_channel_search')
+          bool? showChannelSearch,
+      @JsonKey(name: 'show_channel_calendar')
+          bool? showChannelCalendar,
+      @JsonKey(name: 'show_store_specials')
+          bool? showStoreSpecials,
+      @JsonKey(name: 'show_store_fanclubs')
+          bool? showStoreFanclubs,
+      @JsonKey(name: 'show_store_liveconcerts')
+          bool? showStoreLiveconcerts,
+      @JsonKey(name: 'show_store_search')
+          bool? showStoreSearch,
+      @JsonKey(name: 'random_ads')
+          bool? randomAds,
+      @JsonKey(name: 'show_redeem')
+          bool? showRedeem,
+      @JsonKey(name: 'admob')
+          bool? admob,
+      @JsonKey(name: 'fuzzy_search_result')
+          bool? fuzzySearchResult,
+      @JsonKey(name: 'experimental')
+          bool? experimental,
+      @JsonKey(name: 'appsflyer')
+          bool? appsflyer,
+      @JsonKey(name: 'default_maximum_upload_video_size')
+          int? defaultMaximumUploadVideoSize,
+      @JsonKey(name: 'stream_metric')
+          bool? streamMetric,
+      DateTime? createdAt,
+      DateTime? updatedAt,
       String? adsUrl,
       String? id});
 }
@@ -215,11 +255,11 @@ class _$SettingModelCopyWithImpl<$Res, $Val extends SettingModel>
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       updatedAt: freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       adsUrl: freezed == adsUrl
           ? _value.adsUrl
           : adsUrl // ignore: cast_nullable_to_non_nullable
@@ -241,29 +281,50 @@ abstract class _$$_SettingModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "show_chat") bool? showChat,
-      @JsonKey(name: 'show_discover') bool showDiscover,
-      bool? showDiscoverSearch,
-      bool? showDiscoverCalendar,
-      bool? showStore,
-      bool? showHomeSearch,
-      bool? showHomeCalendar,
-      bool? showChannelSearch,
-      bool? showChannelCalendar,
-      bool? showStoreSpecials,
-      bool? showStoreFanclubs,
-      bool? showStoreLiveconcerts,
-      bool? showStoreSearch,
-      bool? randomAds,
-      bool? showRedeem,
-      bool? admob,
-      bool? fuzzySearchResult,
-      bool? experimental,
-      bool? appsflyer,
-      int? defaultMaximumUploadVideoSize,
-      bool? streamMetric,
-      String? createdAt,
-      String? updatedAt,
+      {@JsonKey(name: "show_chat")
+          bool? showChat,
+      @JsonKey(name: 'show_discover')
+          bool showDiscover,
+      @JsonKey(name: 'show_discover_search')
+          bool? showDiscoverSearch,
+      @JsonKey(name: 'show_discover_calendar')
+          bool? showDiscoverCalendar,
+      @JsonKey(name: 'show_store')
+          bool? showStore,
+      @JsonKey(name: 'show_home_search')
+          bool? showHomeSearch,
+      @JsonKey(name: 'show_home_calendar')
+          bool? showHomeCalendar,
+      @JsonKey(name: 'show_channel_search')
+          bool? showChannelSearch,
+      @JsonKey(name: 'show_channel_calendar')
+          bool? showChannelCalendar,
+      @JsonKey(name: 'show_store_specials')
+          bool? showStoreSpecials,
+      @JsonKey(name: 'show_store_fanclubs')
+          bool? showStoreFanclubs,
+      @JsonKey(name: 'show_store_liveconcerts')
+          bool? showStoreLiveconcerts,
+      @JsonKey(name: 'show_store_search')
+          bool? showStoreSearch,
+      @JsonKey(name: 'random_ads')
+          bool? randomAds,
+      @JsonKey(name: 'show_redeem')
+          bool? showRedeem,
+      @JsonKey(name: 'admob')
+          bool? admob,
+      @JsonKey(name: 'fuzzy_search_result')
+          bool? fuzzySearchResult,
+      @JsonKey(name: 'experimental')
+          bool? experimental,
+      @JsonKey(name: 'appsflyer')
+          bool? appsflyer,
+      @JsonKey(name: 'default_maximum_upload_video_size')
+          int? defaultMaximumUploadVideoSize,
+      @JsonKey(name: 'stream_metric')
+          bool? streamMetric,
+      DateTime? createdAt,
+      DateTime? updatedAt,
       String? adsUrl,
       String? id});
 }
@@ -393,11 +454,11 @@ class __$$_SettingModelCopyWithImpl<$Res>
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       updatedAt: freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       adsUrl: freezed == adsUrl
           ? _value.adsUrl
           : adsUrl // ignore: cast_nullable_to_non_nullable
@@ -414,27 +475,48 @@ class __$$_SettingModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SettingModel implements _SettingModel {
   const _$_SettingModel(
-      {@JsonKey(name: "show_chat") this.showChat = false,
-      @JsonKey(name: 'show_discover') this.showDiscover = false,
-      this.showDiscoverSearch = false,
-      this.showDiscoverCalendar = false,
-      this.showStore = false,
-      this.showHomeSearch = false,
-      this.showHomeCalendar = false,
-      this.showChannelSearch = false,
-      this.showChannelCalendar = false,
-      this.showStoreSpecials = false,
-      this.showStoreFanclubs = false,
-      this.showStoreLiveconcerts = false,
-      this.showStoreSearch = false,
-      this.randomAds = false,
-      this.showRedeem = false,
-      this.admob = false,
-      this.fuzzySearchResult = false,
-      this.experimental = false,
-      this.appsflyer = false,
-      this.defaultMaximumUploadVideoSize,
-      this.streamMetric = false,
+      {@JsonKey(name: "show_chat")
+          this.showChat = false,
+      @JsonKey(name: 'show_discover')
+          this.showDiscover = false,
+      @JsonKey(name: 'show_discover_search')
+          this.showDiscoverSearch = false,
+      @JsonKey(name: 'show_discover_calendar')
+          this.showDiscoverCalendar = false,
+      @JsonKey(name: 'show_store')
+          this.showStore = false,
+      @JsonKey(name: 'show_home_search')
+          this.showHomeSearch = false,
+      @JsonKey(name: 'show_home_calendar')
+          this.showHomeCalendar = false,
+      @JsonKey(name: 'show_channel_search')
+          this.showChannelSearch = false,
+      @JsonKey(name: 'show_channel_calendar')
+          this.showChannelCalendar = false,
+      @JsonKey(name: 'show_store_specials')
+          this.showStoreSpecials = false,
+      @JsonKey(name: 'show_store_fanclubs')
+          this.showStoreFanclubs = false,
+      @JsonKey(name: 'show_store_liveconcerts')
+          this.showStoreLiveconcerts = false,
+      @JsonKey(name: 'show_store_search')
+          this.showStoreSearch = false,
+      @JsonKey(name: 'random_ads')
+          this.randomAds = false,
+      @JsonKey(name: 'show_redeem')
+          this.showRedeem = false,
+      @JsonKey(name: 'admob')
+          this.admob = false,
+      @JsonKey(name: 'fuzzy_search_result')
+          this.fuzzySearchResult = false,
+      @JsonKey(name: 'experimental')
+          this.experimental = false,
+      @JsonKey(name: 'appsflyer')
+          this.appsflyer = false,
+      @JsonKey(name: 'default_maximum_upload_video_size')
+          this.defaultMaximumUploadVideoSize,
+      @JsonKey(name: 'stream_metric')
+          this.streamMetric = false,
       this.createdAt,
       this.updatedAt,
       this.adsUrl,
@@ -450,65 +532,66 @@ class _$_SettingModel implements _SettingModel {
   @JsonKey(name: 'show_discover')
   final bool showDiscover;
   @override
-  @JsonKey()
+  @JsonKey(name: 'show_discover_search')
   final bool? showDiscoverSearch;
   @override
-  @JsonKey()
+  @JsonKey(name: 'show_discover_calendar')
   final bool? showDiscoverCalendar;
   @override
-  @JsonKey()
+  @JsonKey(name: 'show_store')
   final bool? showStore;
   @override
-  @JsonKey()
+  @JsonKey(name: 'show_home_search')
   final bool? showHomeSearch;
   @override
-  @JsonKey()
+  @JsonKey(name: 'show_home_calendar')
   final bool? showHomeCalendar;
   @override
-  @JsonKey()
+  @JsonKey(name: 'show_channel_search')
   final bool? showChannelSearch;
   @override
-  @JsonKey()
+  @JsonKey(name: 'show_channel_calendar')
   final bool? showChannelCalendar;
   @override
-  @JsonKey()
+  @JsonKey(name: 'show_store_specials')
   final bool? showStoreSpecials;
   @override
-  @JsonKey()
+  @JsonKey(name: 'show_store_fanclubs')
   final bool? showStoreFanclubs;
   @override
-  @JsonKey()
+  @JsonKey(name: 'show_store_liveconcerts')
   final bool? showStoreLiveconcerts;
   @override
-  @JsonKey()
+  @JsonKey(name: 'show_store_search')
   final bool? showStoreSearch;
   @override
-  @JsonKey()
+  @JsonKey(name: 'random_ads')
   final bool? randomAds;
   @override
-  @JsonKey()
+  @JsonKey(name: 'show_redeem')
   final bool? showRedeem;
   @override
-  @JsonKey()
+  @JsonKey(name: 'admob')
   final bool? admob;
   @override
-  @JsonKey()
+  @JsonKey(name: 'fuzzy_search_result')
   final bool? fuzzySearchResult;
   @override
-  @JsonKey()
+  @JsonKey(name: 'experimental')
   final bool? experimental;
   @override
-  @JsonKey()
+  @JsonKey(name: 'appsflyer')
   final bool? appsflyer;
   @override
+  @JsonKey(name: 'default_maximum_upload_video_size')
   final int? defaultMaximumUploadVideoSize;
   @override
-  @JsonKey()
+  @JsonKey(name: 'stream_metric')
   final bool? streamMetric;
   @override
-  final String? createdAt;
+  final DateTime? createdAt;
   @override
-  final String? updatedAt;
+  final DateTime? updatedAt;
   @override
   final String? adsUrl;
   @override
@@ -622,29 +705,50 @@ class _$_SettingModel implements _SettingModel {
 
 abstract class _SettingModel implements SettingModel {
   const factory _SettingModel(
-      {@JsonKey(name: "show_chat") final bool? showChat,
-      @JsonKey(name: 'show_discover') final bool showDiscover,
-      final bool? showDiscoverSearch,
-      final bool? showDiscoverCalendar,
-      final bool? showStore,
-      final bool? showHomeSearch,
-      final bool? showHomeCalendar,
-      final bool? showChannelSearch,
-      final bool? showChannelCalendar,
-      final bool? showStoreSpecials,
-      final bool? showStoreFanclubs,
-      final bool? showStoreLiveconcerts,
-      final bool? showStoreSearch,
-      final bool? randomAds,
-      final bool? showRedeem,
-      final bool? admob,
-      final bool? fuzzySearchResult,
-      final bool? experimental,
-      final bool? appsflyer,
-      final int? defaultMaximumUploadVideoSize,
-      final bool? streamMetric,
-      final String? createdAt,
-      final String? updatedAt,
+      {@JsonKey(name: "show_chat")
+          final bool? showChat,
+      @JsonKey(name: 'show_discover')
+          final bool showDiscover,
+      @JsonKey(name: 'show_discover_search')
+          final bool? showDiscoverSearch,
+      @JsonKey(name: 'show_discover_calendar')
+          final bool? showDiscoverCalendar,
+      @JsonKey(name: 'show_store')
+          final bool? showStore,
+      @JsonKey(name: 'show_home_search')
+          final bool? showHomeSearch,
+      @JsonKey(name: 'show_home_calendar')
+          final bool? showHomeCalendar,
+      @JsonKey(name: 'show_channel_search')
+          final bool? showChannelSearch,
+      @JsonKey(name: 'show_channel_calendar')
+          final bool? showChannelCalendar,
+      @JsonKey(name: 'show_store_specials')
+          final bool? showStoreSpecials,
+      @JsonKey(name: 'show_store_fanclubs')
+          final bool? showStoreFanclubs,
+      @JsonKey(name: 'show_store_liveconcerts')
+          final bool? showStoreLiveconcerts,
+      @JsonKey(name: 'show_store_search')
+          final bool? showStoreSearch,
+      @JsonKey(name: 'random_ads')
+          final bool? randomAds,
+      @JsonKey(name: 'show_redeem')
+          final bool? showRedeem,
+      @JsonKey(name: 'admob')
+          final bool? admob,
+      @JsonKey(name: 'fuzzy_search_result')
+          final bool? fuzzySearchResult,
+      @JsonKey(name: 'experimental')
+          final bool? experimental,
+      @JsonKey(name: 'appsflyer')
+          final bool? appsflyer,
+      @JsonKey(name: 'default_maximum_upload_video_size')
+          final int? defaultMaximumUploadVideoSize,
+      @JsonKey(name: 'stream_metric')
+          final bool? streamMetric,
+      final DateTime? createdAt,
+      final DateTime? updatedAt,
       final String? adsUrl,
       final String? id}) = _$_SettingModel;
 
@@ -658,47 +762,66 @@ abstract class _SettingModel implements SettingModel {
   @JsonKey(name: 'show_discover')
   bool get showDiscover;
   @override
+  @JsonKey(name: 'show_discover_search')
   bool? get showDiscoverSearch;
   @override
+  @JsonKey(name: 'show_discover_calendar')
   bool? get showDiscoverCalendar;
   @override
+  @JsonKey(name: 'show_store')
   bool? get showStore;
   @override
+  @JsonKey(name: 'show_home_search')
   bool? get showHomeSearch;
   @override
+  @JsonKey(name: 'show_home_calendar')
   bool? get showHomeCalendar;
   @override
+  @JsonKey(name: 'show_channel_search')
   bool? get showChannelSearch;
   @override
+  @JsonKey(name: 'show_channel_calendar')
   bool? get showChannelCalendar;
   @override
+  @JsonKey(name: 'show_store_specials')
   bool? get showStoreSpecials;
   @override
+  @JsonKey(name: 'show_store_fanclubs')
   bool? get showStoreFanclubs;
   @override
+  @JsonKey(name: 'show_store_liveconcerts')
   bool? get showStoreLiveconcerts;
   @override
+  @JsonKey(name: 'show_store_search')
   bool? get showStoreSearch;
   @override
+  @JsonKey(name: 'random_ads')
   bool? get randomAds;
   @override
+  @JsonKey(name: 'show_redeem')
   bool? get showRedeem;
   @override
+  @JsonKey(name: 'admob')
   bool? get admob;
   @override
+  @JsonKey(name: 'fuzzy_search_result')
   bool? get fuzzySearchResult;
   @override
+  @JsonKey(name: 'experimental')
   bool? get experimental;
   @override
+  @JsonKey(name: 'appsflyer')
   bool? get appsflyer;
   @override
+  @JsonKey(name: 'default_maximum_upload_video_size')
   int? get defaultMaximumUploadVideoSize;
   @override
+  @JsonKey(name: 'stream_metric')
   bool? get streamMetric;
   @override
-  String? get createdAt;
+  DateTime? get createdAt;
   @override
-  String? get updatedAt;
+  DateTime? get updatedAt;
   @override
   String? get adsUrl;
   @override

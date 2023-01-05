@@ -1,13 +1,17 @@
 part of 'settingpage_bloc.dart';
 
-abstract class SettingpageEvent extends Equatable {
-  const SettingpageEvent();
+abstract class SettingEvent extends Equatable {
+  SettingEvent(this.settings);
+  final SettingModel settings;
 
   @override
-  List<Object> get props => [];
+  List<Object?> get props => [settings];
 }
 
-class LoadSetting extends SettingpageEvent {
-  @override
-  List<Object> get props => [];
+class SettingLoaded extends SettingEvent {
+  SettingLoaded() : super(const SettingModel());
+}
+
+class SettingChanged extends SettingEvent {
+  SettingChanged(settings) : super(settings);
 }
