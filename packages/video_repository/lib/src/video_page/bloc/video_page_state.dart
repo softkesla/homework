@@ -10,7 +10,7 @@ class VideoLoadingState extends VideoState {
 
 class VideoLoadedState extends VideoState {
   VideoLoadedState(this.video);
-  final List<VideoPageModel> video;
+  final List<VideoModel> video;
 
   @override
   List<Object?> get props => [video];
