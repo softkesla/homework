@@ -58,6 +58,11 @@ dependencies:
     path: 
       packages/video_daily_rank_repository
   
+
+  setting_repository:
+    path: 
+      packages/setting_repository
+  
   smo_localizations:
     git:
       url: git@github.com:makeitgames/smo-localizations.git
