@@ -34,7 +34,7 @@ class _VideoPageState extends State<VideoPage> {
                 );
               }
               if (state is VideoLoadedState) {
-                List<VideoModel> LiveNowList = state.video;
+                List<Video> LiveNowList = state.video;
                 return ListView.builder(
                     itemCount: LiveNowList.length,
                     itemBuilder: (_, index) {

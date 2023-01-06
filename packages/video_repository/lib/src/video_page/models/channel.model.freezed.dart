@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'channel.dart';
+part of 'channel.model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -20,13 +20,11 @@ Channel _$ChannelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Channel {
-  @JsonKey(name: '_id')
-  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_live')
   bool? get isLive => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
-  Thumbnail? get thumbnail => throw _privateConstructorUsedError;
-  Banner? get banner => throw _privateConstructorUsedError;
+  FileStorage? get thumbnail => throw _privateConstructorUsedError;
+  FileStorage? get banner => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,14 +37,13 @@ abstract class $ChannelCopyWith<$Res> {
       _$ChannelCopyWithImpl<$Res, Channel>;
   @useResult
   $Res call(
-      {@JsonKey(name: '_id') String? id,
-      @JsonKey(name: 'is_live') bool? isLive,
+      {@JsonKey(name: 'is_live') bool? isLive,
       String? name,
-      Thumbnail? thumbnail,
-      Banner? banner});
+      FileStorage? thumbnail,
+      FileStorage? banner});
 
-  $ThumbnailCopyWith<$Res>? get thumbnail;
-  $BannerCopyWith<$Res>? get banner;
+  $FileStorageCopyWith<$Res>? get thumbnail;
+  $FileStorageCopyWith<$Res>? get banner;
 }
 
 /// @nodoc
@@ -62,17 +59,12 @@ class _$ChannelCopyWithImpl<$Res, $Val extends Channel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
     Object? isLive = freezed,
     Object? name = freezed,
     Object? thumbnail = freezed,
     Object? banner = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
       isLive: freezed == isLive
           ? _value.isLive
           : isLive // ignore: cast_nullable_to_non_nullable
@@ -84,34 +76,34 @@ class _$ChannelCopyWithImpl<$Res, $Val extends Channel>
       thumbnail: freezed == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as Thumbnail?,
+              as FileStorage?,
       banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
-              as Banner?,
+              as FileStorage?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ThumbnailCopyWith<$Res>? get thumbnail {
+  $FileStorageCopyWith<$Res>? get thumbnail {
     if (_value.thumbnail == null) {
       return null;
     }
 
-    return $ThumbnailCopyWith<$Res>(_value.thumbnail!, (value) {
+    return $FileStorageCopyWith<$Res>(_value.thumbnail!, (value) {
       return _then(_value.copyWith(thumbnail: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $BannerCopyWith<$Res>? get banner {
+  $FileStorageCopyWith<$Res>? get banner {
     if (_value.banner == null) {
       return null;
     }
 
-    return $BannerCopyWith<$Res>(_value.banner!, (value) {
+    return $FileStorageCopyWith<$Res>(_value.banner!, (value) {
       return _then(_value.copyWith(banner: value) as $Val);
     });
   }
@@ -125,16 +117,15 @@ abstract class _$$_ChannelCopyWith<$Res> implements $ChannelCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: '_id') String? id,
-      @JsonKey(name: 'is_live') bool? isLive,
+      {@JsonKey(name: 'is_live') bool? isLive,
       String? name,
-      Thumbnail? thumbnail,
-      Banner? banner});
+      FileStorage? thumbnail,
+      FileStorage? banner});
 
   @override
-  $ThumbnailCopyWith<$Res>? get thumbnail;
+  $FileStorageCopyWith<$Res>? get thumbnail;
   @override
-  $BannerCopyWith<$Res>? get banner;
+  $FileStorageCopyWith<$Res>? get banner;
 }
 
 /// @nodoc
@@ -147,17 +138,12 @@ class __$$_ChannelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
     Object? isLive = freezed,
     Object? name = freezed,
     Object? thumbnail = freezed,
     Object? banner = freezed,
   }) {
     return _then(_$_Channel(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
       isLive: freezed == isLive
           ? _value.isLive
           : isLive // ignore: cast_nullable_to_non_nullable
@@ -169,11 +155,11 @@ class __$$_ChannelCopyWithImpl<$Res>
       thumbnail: freezed == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as Thumbnail?,
+              as FileStorage?,
       banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
-              as Banner?,
+              as FileStorage?,
     ));
   }
 }
@@ -182,8 +168,7 @@ class __$$_ChannelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Channel implements _Channel {
   _$_Channel(
-      {@JsonKey(name: '_id') this.id,
-      @JsonKey(name: 'is_live') this.isLive,
+      {@JsonKey(name: 'is_live') this.isLive,
       this.name,
       this.thumbnail,
       this.banner});
@@ -192,21 +177,18 @@ class _$_Channel implements _Channel {
       _$$_ChannelFromJson(json);
 
   @override
-  @JsonKey(name: '_id')
-  final String? id;
-  @override
   @JsonKey(name: 'is_live')
   final bool? isLive;
   @override
   final String? name;
   @override
-  final Thumbnail? thumbnail;
+  final FileStorage? thumbnail;
   @override
-  final Banner? banner;
+  final FileStorage? banner;
 
   @override
   String toString() {
-    return 'Channel(id: $id, isLive: $isLive, name: $name, thumbnail: $thumbnail, banner: $banner)';
+    return 'Channel(isLive: $isLive, name: $name, thumbnail: $thumbnail, banner: $banner)';
   }
 
   @override
@@ -214,7 +196,6 @@ class _$_Channel implements _Channel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Channel &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.isLive, isLive) || other.isLive == isLive) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.thumbnail, thumbnail) ||
@@ -224,8 +205,7 @@ class _$_Channel implements _Channel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, isLive, name, thumbnail, banner);
+  int get hashCode => Object.hash(runtimeType, isLive, name, thumbnail, banner);
 
   @JsonKey(ignore: true)
   @override
@@ -243,26 +223,22 @@ class _$_Channel implements _Channel {
 
 abstract class _Channel implements Channel {
   factory _Channel(
-      {@JsonKey(name: '_id') final String? id,
-      @JsonKey(name: 'is_live') final bool? isLive,
+      {@JsonKey(name: 'is_live') final bool? isLive,
       final String? name,
-      final Thumbnail? thumbnail,
-      final Banner? banner}) = _$_Channel;
+      final FileStorage? thumbnail,
+      final FileStorage? banner}) = _$_Channel;
 
   factory _Channel.fromJson(Map<String, dynamic> json) = _$_Channel.fromJson;
 
-  @override
-  @JsonKey(name: '_id')
-  String? get id;
   @override
   @JsonKey(name: 'is_live')
   bool? get isLive;
   @override
   String? get name;
   @override
-  Thumbnail? get thumbnail;
+  FileStorage? get thumbnail;
   @override
-  Banner? get banner;
+  FileStorage? get banner;
   @override
   @JsonKey(ignore: true)
   _$$_ChannelCopyWith<_$_Channel> get copyWith =>
