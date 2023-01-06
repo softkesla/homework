@@ -25,124 +25,95 @@ class HomePage extends StatelessWidget {
             SizedBox(
               height: 50,
             ),
-            OutlinedButton(
-              onPressed: () => context.go('/videopage'),
-              child: const Text('Video'),
-              style: OutlinedButton.styleFrom(
-                  minimumSize: Size(150, 50),
-                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Color.fromARGB(255, 255, 161, 84),
-                  side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 49, 192, 202))),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MaterialBtn.primary(
+                  context,
+                  labelText: LocaleKeys.VideoPage,
+                  onPressed: () {
+                    context.go('/videopage');
+                  },
+                ),
+                SizedBox(width: 20),
+                MaterialBtn.primary(
+                  context,
+                  labelText: LocaleKeys.PostPage,
+                  onPressed: () {
+                    context.go('/postpage');
+                  },
+                ),
+              ],
             ),
             SizedBox(
               height: 20,
             ),
-            OutlinedButton(
-              onPressed: () => context.go('/postpage'),
-              child: const Text('Post'),
-              style: OutlinedButton.styleFrom(
-                  minimumSize: Size(150, 50),
-                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Color.fromARGB(255, 214, 9, 26),
-                  side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 2, 22, 206))),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MaterialBtn.primary(
+                  context,
+                  labelText: LocaleKeys.LiveNowPage,
+                  onPressed: () {
+                    context.go('/livenowpage');
+                  },
+                ),
+                SizedBox(width: 20),
+                MaterialBtn.primary(
+                  context,
+                  labelText: LocaleKeys.HomePromo,
+                  onPressed: () {
+                    context.go('/homepromo');
+                  },
+                ),
+              ],
             ),
             SizedBox(
               height: 20,
             ),
-            OutlinedButton(
-              onPressed: () => context.go('/livenowpage'),
-              child: const Text('Live Now'),
-              style: OutlinedButton.styleFrom(
-                  minimumSize: Size(150, 50),
-                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Color.fromARGB(255, 95, 84, 255),
-                  side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 202, 187, 49))),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MaterialBtn.primary(
+                  context,
+                  labelText: LocaleKeys.Settings,
+                  onPressed: () => context.go('/setting'),
+                ),
+                SizedBox(width: 20),
+                MaterialBtn.primary(context,
+                    onPressed: () => context.go('/help'),
+                    labelText: LocaleKeys.Help),
+              ],
             ),
             SizedBox(
               height: 20,
             ),
-            // OutlinedButton(
-            //   onPressed: () => context.go('/homepromo'),
-            //   child: const Text('Home Promo'),
-            //   style: OutlinedButton.styleFrom(
-            //       minimumSize: Size(150, 50),
-            //       textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-            //       primary: Color.fromARGB(255, 224, 255, 84),
-            //       side: BorderSide(
-            //           width: 2, color: Color.fromARGB(255, 49, 202, 82))),
-            // ),
-            MaterialBtn.primary(
-              context,
-              labelText: LocaleKeys.HomePromo,
-              onPressed: () {
-                context.go('/homepromo');
-              },
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MaterialBtn.primary(context,
+                    onPressed: () => context.go('/promo'),
+                    labelText: LocaleKeys.Promo),
+                SizedBox(width: 20),
+                MaterialBtn.primary(context,
+                    onPressed: () => context.go('/channel'),
+                    labelText: LocaleKeys.Channel),
+              ],
             ),
             SizedBox(
               height: 20,
             ),
-            MaterialBtn.primary(
-              context,
-              labelText: LocaleKeys.Settings,
-              onPressed: () => context.go('/setting'),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            // OutlinedButton(
-            //   onPressed: () => context.go('/help'),
-            //   child: const Text('Help'),
-            //   style: OutlinedButton.styleFrom(
-            //       minimumSize: Size(150, 50),
-            //       textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-            //       primary: Colors.white,
-            //       side: BorderSide(
-            //           width: 2, color: Color.fromARGB(255, 27, 255, 217))),
-            // ),
-            MaterialBtn.primary(context,
-                onPressed: () => context.go('/help'),
-                labelText: LocaleKeys.Help),
-            SizedBox(
-              height: 20,
-            ),
-            OutlinedButton(
-              onPressed: () => context.go('/promo'),
-              child: const Text('Promo'),
-              style: OutlinedButton.styleFrom(
-                  minimumSize: Size(150, 50),
-                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Colors.white,
-                  side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 27, 255, 217))),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            OutlinedButton(
-              onPressed: () => context.go('/channel'),
-              child: const Text('Channel'),
-              style: OutlinedButton.styleFrom(
-                  minimumSize: Size(150, 50),
-                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Colors.white,
-                  side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 27, 255, 217))),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            OutlinedButton(
-              onPressed: () => context.go('/trending'),
-              child: const Text('Trending Tag'),
-              style: OutlinedButton.styleFrom(
-                  minimumSize: Size(150, 50),
-                  textStyle: TextStyle(fontSize: 30, fontFamily: 'ostrich'),
-                  primary: Colors.white,
-                  side: BorderSide(
-                      width: 2, color: Color.fromARGB(255, 27, 255, 217))),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MaterialBtn.primary(context,
+                    onPressed: () => context.go('/trending'),
+                    labelText: LocaleKeys.TrendingTag),
+                SizedBox(width: 20),
+                MaterialBtn.primary(context,
+                    onPressed: () => context.go('/channeldailyrank'),
+                    labelText: LocaleKeys.ChannelDailyRank),
+              ],
             ),
           ],
         ),

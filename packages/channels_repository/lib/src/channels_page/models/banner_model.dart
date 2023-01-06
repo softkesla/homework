@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'format_model.dart';
+import 'banner_formats_model.dart';
 
 part 'banner_model.freezed.dart';
 part 'banner_model.g.dart';
@@ -7,7 +7,6 @@ part 'banner_model.g.dart';
 @freezed
 class Banner with _$Banner {
   const factory Banner(
-    String? sId,
     String? name,
     String? alternativeText,
     String? caption,
@@ -16,13 +15,13 @@ class Banner with _$Banner {
     String? mime,
     double? size,
     String? url,
-    FileStoreFormat? formats,
+    BannerFormats? formats,
     String? provider,
     int? width,
     int? height,
     List<String>? related,
-    String? createdAt,
-    String? updatedAt,
+    DateTime? createdAt,
+    DateTime? updatedAt,
     int? iV,
     String? createdBy,
     String? updatedBy,
