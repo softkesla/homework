@@ -23,9 +23,8 @@ mixin _$VideoChannel {
   @JsonKey(name: "is_live")
   bool? get isLive => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
-  Map<String, VideoThumbnail>? get thumbnail =>
-      throw _privateConstructorUsedError;
-  Map<String, VideoBanner>? get banner => throw _privateConstructorUsedError;
+  VideoThumbnail? get thumbnail => throw _privateConstructorUsedError;
+  VideoBanner? get banner => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,8 +41,11 @@ abstract class $VideoChannelCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: "is_live") bool? isLive,
       String? name,
-      Map<String, VideoThumbnail>? thumbnail,
-      Map<String, VideoBanner>? banner});
+      VideoThumbnail? thumbnail,
+      VideoBanner? banner});
+
+  $VideoThumbnailCopyWith<$Res>? get thumbnail;
+  $VideoBannerCopyWith<$Res>? get banner;
 }
 
 /// @nodoc
@@ -76,12 +78,36 @@ class _$VideoChannelCopyWithImpl<$Res, $Val extends VideoChannel>
       thumbnail: freezed == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as Map<String, VideoThumbnail>?,
+              as VideoThumbnail?,
       banner: freezed == banner
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
-              as Map<String, VideoBanner>?,
+              as VideoBanner?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $VideoThumbnailCopyWith<$Res>? get thumbnail {
+    if (_value.thumbnail == null) {
+      return null;
+    }
+
+    return $VideoThumbnailCopyWith<$Res>(_value.thumbnail!, (value) {
+      return _then(_value.copyWith(thumbnail: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $VideoBannerCopyWith<$Res>? get banner {
+    if (_value.banner == null) {
+      return null;
+    }
+
+    return $VideoBannerCopyWith<$Res>(_value.banner!, (value) {
+      return _then(_value.copyWith(banner: value) as $Val);
+    });
   }
 }
 
@@ -96,8 +122,13 @@ abstract class _$$_VideoChannelCopyWith<$Res>
   $Res call(
       {@JsonKey(name: "is_live") bool? isLive,
       String? name,
-      Map<String, VideoThumbnail>? thumbnail,
-      Map<String, VideoBanner>? banner});
+      VideoThumbnail? thumbnail,
+      VideoBanner? banner});
+
+  @override
+  $VideoThumbnailCopyWith<$Res>? get thumbnail;
+  @override
+  $VideoBannerCopyWith<$Res>? get banner;
 }
 
 /// @nodoc
@@ -126,13 +157,13 @@ class __$$_VideoChannelCopyWithImpl<$Res>
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
       thumbnail: freezed == thumbnail
-          ? _value._thumbnail
+          ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as Map<String, VideoThumbnail>?,
+              as VideoThumbnail?,
       banner: freezed == banner
-          ? _value._banner
+          ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
-              as Map<String, VideoBanner>?,
+              as VideoBanner?,
     ));
   }
 }
@@ -143,10 +174,8 @@ class _$_VideoChannel implements _VideoChannel {
   const _$_VideoChannel(
       {@JsonKey(name: "is_live") this.isLive = false,
       this.name,
-      final Map<String, VideoThumbnail>? thumbnail,
-      final Map<String, VideoBanner>? banner})
-      : _thumbnail = thumbnail,
-        _banner = banner;
+      this.thumbnail,
+      this.banner});
 
   factory _$_VideoChannel.fromJson(Map<String, dynamic> json) =>
       _$$_VideoChannelFromJson(json);
@@ -156,25 +185,10 @@ class _$_VideoChannel implements _VideoChannel {
   final bool? isLive;
   @override
   final String? name;
-  final Map<String, VideoThumbnail>? _thumbnail;
   @override
-  Map<String, VideoThumbnail>? get thumbnail {
-    final value = _thumbnail;
-    if (value == null) return null;
-    if (_thumbnail is EqualUnmodifiableMapView) return _thumbnail;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
-
-  final Map<String, VideoBanner>? _banner;
+  final VideoThumbnail? thumbnail;
   @override
-  Map<String, VideoBanner>? get banner {
-    final value = _banner;
-    if (value == null) return null;
-    if (_banner is EqualUnmodifiableMapView) return _banner;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
+  final VideoBanner? banner;
 
   @override
   String toString() {
@@ -188,19 +202,14 @@ class _$_VideoChannel implements _VideoChannel {
             other is _$_VideoChannel &&
             (identical(other.isLive, isLive) || other.isLive == isLive) &&
             (identical(other.name, name) || other.name == name) &&
-            const DeepCollectionEquality()
-                .equals(other._thumbnail, _thumbnail) &&
-            const DeepCollectionEquality().equals(other._banner, _banner));
+            (identical(other.thumbnail, thumbnail) ||
+                other.thumbnail == thumbnail) &&
+            (identical(other.banner, banner) || other.banner == banner));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      isLive,
-      name,
-      const DeepCollectionEquality().hash(_thumbnail),
-      const DeepCollectionEquality().hash(_banner));
+  int get hashCode => Object.hash(runtimeType, isLive, name, thumbnail, banner);
 
   @JsonKey(ignore: true)
   @override
@@ -220,8 +229,8 @@ abstract class _VideoChannel implements VideoChannel {
   const factory _VideoChannel(
       {@JsonKey(name: "is_live") final bool? isLive,
       final String? name,
-      final Map<String, VideoThumbnail>? thumbnail,
-      final Map<String, VideoBanner>? banner}) = _$_VideoChannel;
+      final VideoThumbnail? thumbnail,
+      final VideoBanner? banner}) = _$_VideoChannel;
 
   factory _VideoChannel.fromJson(Map<String, dynamic> json) =
       _$_VideoChannel.fromJson;
@@ -232,9 +241,9 @@ abstract class _VideoChannel implements VideoChannel {
   @override
   String? get name;
   @override
-  Map<String, VideoThumbnail>? get thumbnail;
+  VideoThumbnail? get thumbnail;
   @override
-  Map<String, VideoBanner>? get banner;
+  VideoBanner? get banner;
   @override
   @JsonKey(ignore: true)
   _$$_VideoChannelCopyWith<_$_VideoChannel> get copyWith =>

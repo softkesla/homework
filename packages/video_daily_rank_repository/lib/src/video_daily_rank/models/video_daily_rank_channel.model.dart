@@ -11,8 +11,8 @@ class VideoChannel with _$VideoChannel {
   const factory VideoChannel({
     @JsonKey(name: "is_live") @Default(false) bool? isLive,
     String? name,
-    Map<String, VideoThumbnail>? thumbnail,
-    Map<String, VideoBanner>? banner,
+    VideoThumbnail? thumbnail,
+    VideoBanner? banner,
   }) = _VideoChannel;
   factory VideoChannel.fromJson(Map<String, dynamic> json) =>
       _$VideoChannelFromJson(json);
