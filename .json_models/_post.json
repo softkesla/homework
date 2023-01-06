@@ -1,0 +1,109 @@
+{
+    "__className": "post_model",
+    "__path": "/packages/post_repository/lib/src/post_page/model",
+    "status": "active",
+    "is_comments_enabled": true,
+    "is_premium": false,
+    "likes_amount": 0,
+    "comments_amount": 1,
+    "title": " 💕💕",
+    "tags": [
+
+    ],
+    "channel": {
+        "_id": "61bc346efcbf2b00220de526",
+        "followers_amount": 27,
+        "is_live": false,
+        "name": "JKME",
+        "thumbnail": [{
+            "size": 338.01,
+            "ext": ".jpeg",
+            "width": 500,
+            "caption": "",
+            "height": 500,
+            "related": [
+
+            ],
+            "name": "f64779e6ae",
+            "hash": "f64779e6ae_163f183a1d",
+            "updatedAt": "2022-10-17T00:43:08.513Z",
+            "url": "https://dev.static.smo.live/dev/media/2022-10-17/f64779e6ae_163f183a1d.jpeg",
+            "provider": "google-cloud-storage",
+            "mime": "image/png",
+            "__v": 0,
+            "_id": "634ca51c8863fd0020746f82",
+            "alternativeText": "",
+            "createdAt": "2022-10-17T00:43:08.513Z",
+            "formats": {
+                "thumbnail": {
+                    "size": 52.71,
+                    "ext": ".jpeg",
+                    "path": "media/2022-10-17",
+                    "width": 156,
+                    "height": 156,
+                    "name": "thumbnail_f64779e6ae",
+                    "hash": "thumbnail_f64779e6ae_163f183a1d",
+                    "url": "https://dev.static.smo.live/dev/media/2022-10-17/thumbnail_f64779e6ae_163f183a1d.jpeg",
+                    "mime": "image/png"
+                }
+            }
+        }]
+    },
+    "createdAt": "2022-12-26T08:49:42.478Z",
+    "media": [{
+        "_id": "63a960272d69f10020226336",
+        "name": "e727e0ba8e",
+        "alternativeText": "",
+        "caption": "",
+        "hash": "e727e0ba8e_dc7b2e59c2",
+        "ext": "",
+        "mime": "image/jpeg",
+        "size": 135.18,
+        "url": "https://dev.static.smo.live/dev/media/2022-12-26/e727e0ba8e_dc7b2e59c2",
+        "formats": {
+            "thumbnail": {
+                "name": "thumbnail_e727e0ba8e",
+                "hash": "thumbnail_e727e0ba8e_dc7b2e59c2",
+                "ext": "",
+                "mime": "image/jpeg",
+                "width": 117,
+                "height": 156,
+                "size": 6.07,
+                "path": "media/2022-12-26",
+                "url": "https://dev.static.smo.live/dev/media/2022-12-26/thumbnail_e727e0ba8e_dc7b2e59c2"
+            },
+            "medium": {
+                "name": "medium_e727e0ba8e",
+                "hash": "medium_e727e0ba8e_dc7b2e59c2",
+                "ext": "",
+                "mime": "image/jpeg",
+                "width": 563,
+                "height": 750,
+                "size": 71.95,
+                "path": "media/2022-12-26",
+                "url": "https://dev.static.smo.live/dev/media/2022-12-26/medium_e727e0ba8e_dc7b2e59c2"
+            },
+            "small": {
+                "name": "small_e727e0ba8e",
+                "hash": "small_e727e0ba8e_dc7b2e59c2",
+                "ext": "",
+                "mime": "image/jpeg",
+                "width": 375,
+                "height": 500,
+                "size": 39.42,
+                "path": "media/2022-12-26",
+                "url": "https://dev.static.smo.live/dev/media/2022-12-26/small_e727e0ba8e_dc7b2e59c2"
+            }
+        },
+        "provider": "google-cloud-storage",
+        "width": 600,
+        "height": 800,
+        "related": [
+
+        ],
+        "createdAt": "2022-12-26T08:49:43.043Z",
+        "updatedAt": "2022-12-26T08:49:43.043Z",
+        "__v": 0
+    }],
+    "id": "63a960262d69f10020226332"
+}
