@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_material/material.dart';
 import 'package:video_repository/repositories.dart';
 import 'package:video_repository/video_repository.dart';
 import 'package:video_repository/src/video_page/bloc/bloc.dart';
@@ -33,30 +34,62 @@ class _VideoPageState extends State<VideoPage> {
                 );
               }
               if (state is VideoLoadedState) {
-                List<VideoPageModel> LiveNowList = state.video;
+                List<VideoModel> LiveNowList = state.video;
                 return ListView.builder(
                     itemCount: LiveNowList.length,
                     itemBuilder: (_, index) {
-                      return Card(
-                        color: Colors.blue,
-                        elevation: 4,
-                        child: ListTile(
-                          title: Text(
-                            LiveNowList[index].title.toString(),
-                            style: TextStyle(color: Colors.white),
+                      return Container(
+                        width: 500,
+                        height: 350,
+                        child: Card(
+                          color: Colors.transparent,
+                          elevation: 4,
+                          child: Column(
+                            children: [
+                              ListTile(
+                                title: Container(
+                                  width: 200,
+                                  height: 235,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: NetworkImage(
+                                        LiveNowList[index].thumbnail?.url ?? '',
+                                      ),
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              ListTile(
+                                title: MaterialText.title(
+                                  context,
+                                  LiveNowList[index].title.toString(),
+                                  size: TextSize.standard,
+                                ),
+                                subtitle: MaterialText.body(context,
+                                    LiveNowList[index].description.toString(),
+                                    color: ThemeColors.primary),
+                                trailing: Wrap(
+                                  spacing: 4,
+                                  children: <Widget>[
+                                    const Icon(Icons.favorite),
+                                    MaterialText.body(
+                                      context,
+                                      LiveNowList[index].likesAmount.toString(),
+                                    ),
+                                    const Icon(Icons.comment),
+                                    MaterialText.body(
+                                      context,
+                                      LiveNowList[index]
+                                          .commentsAmount
+                                          .toString(),
+                                    ),
+                                  ],
+                                ),
+                                isThreeLine: true,
+                              ),
+                            ],
                           ),
-                          subtitle: Text(
-                            LiveNowList[index].description.toString(),
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          trailing: Text(
-                            LiveNowList[index].likesAmount.toString(),
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          leading: Text(
-                            LiveNowList[index].type.toString(),
-                          ),
-                          isThreeLine: true,
                         ),
                       );
                     });

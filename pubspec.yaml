@@ -95,6 +95,7 @@ dependencies:
   json_serializable: ^6.5.4
   easy_localization: ^3.0.1
   easy_localization_loader: ^1.0.1+1
+  freezed_annotation: ^2.2.0
 
   post_repository:
     path: 
