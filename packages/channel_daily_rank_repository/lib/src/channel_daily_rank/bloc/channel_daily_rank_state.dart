@@ -9,7 +9,7 @@ class ChannelDailyRankLoadingState extends ChannelDailyRankState {
 
 class ChannelDailyRankLoadedState extends ChannelDailyRankState {
   ChannelDailyRankLoadedState(this.channeldailyrank);
-  final List<ChannelDailyRank> channeldailyrank;
+  final List<ChannelDailyRankModel> channeldailyrank;
   @override
   List<Object?> get props => [channeldailyrank];
 }

@@ -1,26 +1,30 @@
+import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'banner_model.dart';
-import 'store_banner_model.dart';
-import 'thumbnail_model.dart';
+
+import 'banner.dart';
+import 'storebanner.dart';
+import 'thumbnail.dart';
 
 part 'channel_daily_rank_model.freezed.dart';
 part 'channel_daily_rank_model.g.dart';
 
 @freezed
-class ChannelDailyRank with _$ChannelDailyRank {
-  const factory ChannelDailyRank(
+class ChannelDailyRankModel with _$ChannelDailyRankModel {
+  factory ChannelDailyRankModel({
+    @JsonKey(name: '_id') String? id,
     String? status,
-    @JsonKey(name: "followers_amount") int? followersAmount,
-    Thumbnails? thumbnail,
+    @JsonKey(name: 'followers_amount') int? followersAmount,
+    Thumbnail? thumbnail,
     List<List<Banner>?>? banner,
     String? description,
     String? name,
-    bool? isLive,
+    @JsonKey(name: 'is_live') bool? isLive,
     String? code,
-    int? dailyRank,
-    StoreBanner? storeBanner,
+    @JsonKey(name: 'daily_rank') int? dailyRank,
+    @JsonKey(name: 'store_banner') StoreBanner? storeBanner,
     bool? isAutoFollowed,
-  ) = _ChannelDailyRank;
-  factory ChannelDailyRank.fromJson(Map<String, dynamic> json) =>
-      _$ChannelDailyRankFromJson(json);
+  }) = _ChannelDailyRankModel;
+
+  factory ChannelDailyRankModel.fromJson(Map<String, dynamic> json) =>
+      _$ChannelDailyRankModelFromJson(json);
 }

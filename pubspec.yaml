@@ -91,6 +91,7 @@ dependencies:
   observer: ^0.0.1
   go_router: ^5.1.6
   freezed: ^2.3.2
+  freezed_annotation: ^2.2.0
   build_runner: ^2.3.3
   json_serializable: ^6.5.4
   easy_localization: ^3.0.1

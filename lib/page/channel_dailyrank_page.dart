@@ -34,7 +34,8 @@ class _ChannelDailyRankPageState extends State<ChannelDailyRankPage> {
                 );
               }
               if (state is ChannelDailyRankLoadedState) {
-                List<ChannelDailyRank> dailyrankList = state.channeldailyrank;
+                List<ChannelDailyRankModel> dailyrankList =
+                    state.channeldailyrank;
 
                 return ListView.builder(
                   itemCount: dailyrankList.length,
