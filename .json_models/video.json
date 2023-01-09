@@ -1,6 +1,6 @@
 {
-    "__className": "video_model",
-    "__path": "/packages/video_repository/lib/src/video_page/model",
+    "__className": "video.model",
+    "__path": "/packages/video_repository/lib/src/video_page/models",
     "status": "active",
     "type": "video",
     "player_type": null,
@@ -26,111 +26,7 @@
     "max_screen": 1,
     "is_schedule_notified": true,
     "latency_mode": null,
-    "thumbnail": {
-        "size": 129.88,
-        "ext": ".jpeg",
-        "width": 500,
-        "caption": "",
-        "height": 235,
-        "related": [
-
-        ],
-        "name": "e7538505c6",
-        "hash": "e7538505c6_e2a5de4a7b",
-        "updatedAt": "2022-08-24T10:30:13.932Z",
-        "url": "https://dev.static.smo.live/dev/media/2022-08-24/e7538505c6_e2a5de4a7b.jpeg",
-        "provider": "google-cloud-storage",
-        "mime": "image/png",
-        "__v": 0,
-        "_id": "6305fdb51990c30021046446",
-        "alternativeText": "",
-        "createdAt": "2022-08-24T10:30:13.932Z",
-        "formats": {
-            "thumbnail": {
-                "size": 52.17,
-                "ext": ".jpeg",
-                "path": "media/2022-08-24",
-                "width": 245,
-                "height": 115,
-                "name": "thumbnail_e7538505c6",
-                "hash": "thumbnail_e7538505c6_e2a5de4a7b",
-                "url": "https://dev.static.smo.live/dev/media/2022-08-24/thumbnail_e7538505c6_e2a5de4a7b.jpeg",
-                "mime": "image/png"
-            }
-        }
-    },
     "title": "RTC Live testing 1/5/2023, 5:22:03 PM",
-    "channel": {
-        "_id": "61482e760247b50022352ad7",
-        "is_live": false,
-        "name": "teerapon",
-        "thumbnail": {
-            "size": 533.58,
-            "ext": ".jpeg",
-            "width": 500,
-            "caption": "",
-            "height": 500,
-            "related": [
-
-            ],
-            "name": "8ca8e0c165",
-            "hash": "8ca8e0c165_9a9fca4e68",
-            "updatedAt": "2022-08-24T08:22:28.549Z",
-            "url": "https://dev.static.smo.live/dev/media/2022-08-24/8ca8e0c165_9a9fca4e68.jpeg",
-            "provider": "google-cloud-storage",
-            "mime": "image/png",
-            "__v": 0,
-            "_id": "6305dfc4a2e86d0021ce8eec",
-            "alternativeText": "",
-            "createdAt": "2022-08-24T08:22:28.549Z",
-            "formats": {
-                "thumbnail": {
-                    "size": 73.31,
-                    "ext": ".jpeg",
-                    "path": "media/2022-08-24",
-                    "width": 156,
-                    "height": 156,
-                    "name": "thumbnail_8ca8e0c165",
-                    "hash": "thumbnail_8ca8e0c165_9a9fca4e68",
-                    "url": "https://dev.static.smo.live/dev/media/2022-08-24/thumbnail_8ca8e0c165_9a9fca4e68.jpeg",
-                    "mime": "image/png"
-                }
-            }
-        },
-        "banner": {
-            "size": 129.88,
-            "ext": ".jpeg",
-            "width": 500,
-            "caption": "",
-            "height": 235,
-            "related": [
-
-            ],
-            "name": "e7538505c6",
-            "hash": "e7538505c6_e2a5de4a7b",
-            "updatedAt": "2022-08-24T10:30:13.932Z",
-            "url": "https://dev.static.smo.live/dev/media/2022-08-24/e7538505c6_e2a5de4a7b.jpeg",
-            "provider": "google-cloud-storage",
-            "mime": "image/png",
-            "__v": 0,
-            "_id": "6305fdb51990c30021046446",
-            "alternativeText": "",
-            "createdAt": "2022-08-24T10:30:13.932Z",
-            "formats": {
-                "thumbnail": {
-                    "size": 52.17,
-                    "ext": ".jpeg",
-                    "path": "media/2022-08-24",
-                    "width": 245,
-                    "height": 115,
-                    "name": "thumbnail_e7538505c6",
-                    "hash": "thumbnail_e7538505c6_e2a5de4a7b",
-                    "url": "https://dev.static.smo.live/dev/media/2022-08-24/thumbnail_e7538505c6_e2a5de4a7b.jpeg",
-                    "mime": "image/png"
-                }
-            }
-        }
-    },
     "author": "61482df8397a7a0022581fdd",
     "stream_provider_settings": "61d6c553d3631f00225c757d",
     "description": "Stream record from agora",

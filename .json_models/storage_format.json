@@ -1,6 +1,6 @@
 {
-    "__className": "formats_thumbnail",
-    "__path": "/packages/video_repository/lib/src/video_page/model",
+    "__className": "storage_format.model",
+    "__path": "/packages/video_repository/lib/src/video_page/models",
     "size": 73.31,
     "ext": ".jpeg",
     "path": "media/2022-08-24",

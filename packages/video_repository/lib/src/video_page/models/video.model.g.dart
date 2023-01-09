@@ -1,18 +1,17 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'video_page.mode.dart';
+part of 'video.model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_VideoPageModel _$$_VideoPageModelFromJson(Map<String, dynamic> json) =>
-    _$_VideoPageModel(
+_$_Video _$$_VideoFromJson(Map<String, dynamic> json) => _$_Video(
       status: json['status'] as String?,
       type: json['type'] as String?,
-      playerType: json['player_type'] as String?,
-      isPremium: json['is_premium'] as bool? ?? false,
-      isAdsEnabled: json['is_ads_enabled'] as bool? ?? false,
+      playerType: json['player_type'],
+      isPremium: json['is_premium'] as bool?,
+      isAdsEnabled: json['is_ads_enabled'] as bool?,
       likesAmount: json['likes_amount'] as int?,
       dailyLikesAmount: json['daily_likes_amount'] as int?,
       commentsAmount: json['comments_amount'] as int?,
@@ -23,35 +22,40 @@ _$_VideoPageModel _$$_VideoPageModelFromJson(Map<String, dynamic> json) =>
       chatMessagesAmount: json['chat_messages_amount'] as int?,
       uniqueViewersAmount: json['unique_viewers_amount'] as int?,
       maxViewersAmount: json['max_viewers_amount'] as int?,
-      isCommentsEnabled: json['is_comments_enabled'] as bool? ?? false,
-      onlyFanclubMembers: json['only_fanclub_members'] as bool? ?? false,
+      isCommentsEnabled: json['is_comments_enabled'] as bool?,
+      onlyFanclubMembers: json['only_fanclub_members'] as bool?,
       dailyRank: json['daily_rank'] as int?,
-      autoRecordConcert: json['auto_record_concert'] as bool? ?? false,
-      autoPublish: json['auto_publish'] as bool? ?? false,
-      isApproved: json['is_approved'] as bool? ?? false,
+      autoRecordConcert: json['auto_record_concert'] as bool?,
+      autoPublish: json['auto_publish'] as bool?,
+      orientation: json['orientation'],
+      isApproved: json['is_approved'] as bool?,
       maxScreen: json['max_screen'] as int?,
-      isScheduleNotified: json['is_schedule_notified'] as bool? ?? false,
-      latencyMode: json['latency_mode'] as String?,
-      gcorelabsStreamId: json['gcorelabs_stream_id'] as String?,
-      sourceStreamId: json['source_stream_id'] as String?,
-      playbackId: json['playback_id'] as String?,
-      hlsUrl: json['hls_url'] as String?,
-      duration: json['duration'] as int?,
-      description: json['description'] as String?,
+      isScheduleNotified: json['is_schedule_notified'] as bool?,
+      latencyMode: json['latency_mode'],
       title: json['title'] as String?,
-      streamProviderSettings: json['stream_provider_settings'] as String?,
+      channel: json['channel'] == null
+          ? null
+          : Channel.fromJson(json['channel'] as Map<String, dynamic>),
+      thumbnail: json['thumbnail'] == null
+          ? null
+          : FileStorage.fromJson(json['thumbnail'] as Map<String, dynamic>),
       author: json['author'] as String?,
+      streamProviderSettings: json['stream_provider_settings'] as String?,
+      description: json['description'] as String?,
+      sourceStreamId: json['source_stream_id'] as String?,
       createdAt: json['createdAt'] == null
           ? null
           : DateTime.parse(json['createdAt'] as String),
       updatedAt: json['updatedAt'] == null
           ? null
           : DateTime.parse(json['updatedAt'] as String),
-      orientation: json['orientation'] as String?,
+      gcorelabsStreamId: json['gcorelabs_stream_id'] as String?,
+      duration: json['duration'] as int?,
+      hlsUrl: json['hls_url'] as String?,
+      playbackId: json['playback_id'] as String?,
     );
 
-Map<String, dynamic> _$$_VideoPageModelToJson(_$_VideoPageModel instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$_VideoToJson(_$_Video instance) => <String, dynamic>{
       'status': instance.status,
       'type': instance.type,
       'player_type': instance.playerType,
@@ -72,20 +76,22 @@ Map<String, dynamic> _$$_VideoPageModelToJson(_$_VideoPageModel instance) =>
       'daily_rank': instance.dailyRank,
       'auto_record_concert': instance.autoRecordConcert,
       'auto_publish': instance.autoPublish,
+      'orientation': instance.orientation,
       'is_approved': instance.isApproved,
       'max_screen': instance.maxScreen,
       'is_schedule_notified': instance.isScheduleNotified,
       'latency_mode': instance.latencyMode,
-      'gcorelabs_stream_id': instance.gcorelabsStreamId,
-      'source_stream_id': instance.sourceStreamId,
-      'playback_id': instance.playbackId,
-      'hls_url': instance.hlsUrl,
-      'duration': instance.duration,
-      'description': instance.description,
       'title': instance.title,
-      'stream_provider_settings': instance.streamProviderSettings,
+      'channel': instance.channel,
+      'thumbnail': instance.thumbnail,
       'author': instance.author,
+      'stream_provider_settings': instance.streamProviderSettings,
+      'description': instance.description,
+      'source_stream_id': instance.sourceStreamId,
       'createdAt': instance.createdAt?.toIso8601String(),
       'updatedAt': instance.updatedAt?.toIso8601String(),
-      'orientation': instance.orientation,
+      'gcorelabs_stream_id': instance.gcorelabsStreamId,
+      'duration': instance.duration,
+      'hls_url': instance.hlsUrl,
+      'playback_id': instance.playbackId,
     };

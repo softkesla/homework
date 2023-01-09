@@ -1,0 +1,21 @@
+{
+    "__className": "file_storage.model",
+    "__path": "/packages/video_repository/lib/src/video_page/models",
+    "size": 129.88,
+    "ext": ".jpeg",
+    "width": 500,
+    "caption": "",
+    "height": 235,
+    "related": [
+        ""
+    ],
+    "name": "e7538505c6",
+    "hash": "e7538505c6_e2a5de4a7b",
+    "updatedAt": "2022-08-24T10:30:13.932Z",
+    "url": "https://dev.static.smo.live/dev/media/2022-08-24/e7538505c6_e2a5de4a7b.jpeg",
+    "provider": "google-cloud-storage",
+    "mime": "image/png",
+    "alternativeText": "",
+    "createdAt": "2022-08-24T10:30:13.932Z",
+    "formats": {}
+}

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'thumbnail.dart';
+part of 'file_storage.model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,42 +14,39 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Thumbnail _$ThumbnailFromJson(Map<String, dynamic> json) {
-  return _Thumbnail.fromJson(json);
+FileStorage _$FileStorageFromJson(Map<String, dynamic> json) {
+  return _FileStorage.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Thumbnail {
+mixin _$FileStorage {
   double? get size => throw _privateConstructorUsedError;
   String? get ext => throw _privateConstructorUsedError;
   int? get width => throw _privateConstructorUsedError;
   String? get caption => throw _privateConstructorUsedError;
   int? get height => throw _privateConstructorUsedError;
-  List<dynamic>? get related => throw _privateConstructorUsedError;
+  List<String>? get related => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get hash => throw _privateConstructorUsedError;
   DateTime? get updatedAt => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
   String? get provider => throw _privateConstructorUsedError;
   String? get mime => throw _privateConstructorUsedError;
-  @JsonKey(name: '__v')
-  int? get v => throw _privateConstructorUsedError;
-  @JsonKey(name: '_id')
-  String? get id => throw _privateConstructorUsedError;
   String? get alternativeText => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
-  FormatsThumbnail? get formats => throw _privateConstructorUsedError;
+  Map<String, StorageFormat>? get formats => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ThumbnailCopyWith<Thumbnail> get copyWith =>
+  $FileStorageCopyWith<FileStorage> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ThumbnailCopyWith<$Res> {
-  factory $ThumbnailCopyWith(Thumbnail value, $Res Function(Thumbnail) then) =
-      _$ThumbnailCopyWithImpl<$Res, Thumbnail>;
+abstract class $FileStorageCopyWith<$Res> {
+  factory $FileStorageCopyWith(
+          FileStorage value, $Res Function(FileStorage) then) =
+      _$FileStorageCopyWithImpl<$Res, FileStorage>;
   @useResult
   $Res call(
       {double? size,
@@ -57,26 +54,22 @@ abstract class $ThumbnailCopyWith<$Res> {
       int? width,
       String? caption,
       int? height,
-      List<dynamic>? related,
+      List<String>? related,
       String? name,
       String? hash,
       DateTime? updatedAt,
       String? url,
       String? provider,
       String? mime,
-      @JsonKey(name: '__v') int? v,
-      @JsonKey(name: '_id') String? id,
       String? alternativeText,
       DateTime? createdAt,
-      FormatsThumbnail? formats});
-
-  $FormatsThumbnailCopyWith<$Res>? get formats;
+      Map<String, StorageFormat>? formats});
 }
 
 /// @nodoc
-class _$ThumbnailCopyWithImpl<$Res, $Val extends Thumbnail>
-    implements $ThumbnailCopyWith<$Res> {
-  _$ThumbnailCopyWithImpl(this._value, this._then);
+class _$FileStorageCopyWithImpl<$Res, $Val extends FileStorage>
+    implements $FileStorageCopyWith<$Res> {
+  _$FileStorageCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -98,8 +91,6 @@ class _$ThumbnailCopyWithImpl<$Res, $Val extends Thumbnail>
     Object? url = freezed,
     Object? provider = freezed,
     Object? mime = freezed,
-    Object? v = freezed,
-    Object? id = freezed,
     Object? alternativeText = freezed,
     Object? createdAt = freezed,
     Object? formats = freezed,
@@ -128,7 +119,7 @@ class _$ThumbnailCopyWithImpl<$Res, $Val extends Thumbnail>
       related: freezed == related
           ? _value.related
           : related // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
+              as List<String>?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -153,14 +144,6 @@ class _$ThumbnailCopyWithImpl<$Res, $Val extends Thumbnail>
           ? _value.mime
           : mime // ignore: cast_nullable_to_non_nullable
               as String?,
-      v: freezed == v
-          ? _value.v
-          : v // ignore: cast_nullable_to_non_nullable
-              as int?,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
       alternativeText: freezed == alternativeText
           ? _value.alternativeText
           : alternativeText // ignore: cast_nullable_to_non_nullable
@@ -172,28 +155,17 @@ class _$ThumbnailCopyWithImpl<$Res, $Val extends Thumbnail>
       formats: freezed == formats
           ? _value.formats
           : formats // ignore: cast_nullable_to_non_nullable
-              as FormatsThumbnail?,
+              as Map<String, StorageFormat>?,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $FormatsThumbnailCopyWith<$Res>? get formats {
-    if (_value.formats == null) {
-      return null;
-    }
-
-    return $FormatsThumbnailCopyWith<$Res>(_value.formats!, (value) {
-      return _then(_value.copyWith(formats: value) as $Val);
-    });
   }
 }
 
 /// @nodoc
-abstract class _$$_ThumbnailCopyWith<$Res> implements $ThumbnailCopyWith<$Res> {
-  factory _$$_ThumbnailCopyWith(
-          _$_Thumbnail value, $Res Function(_$_Thumbnail) then) =
-      __$$_ThumbnailCopyWithImpl<$Res>;
+abstract class _$$_FileStorageCopyWith<$Res>
+    implements $FileStorageCopyWith<$Res> {
+  factory _$$_FileStorageCopyWith(
+          _$_FileStorage value, $Res Function(_$_FileStorage) then) =
+      __$$_FileStorageCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -202,29 +174,24 @@ abstract class _$$_ThumbnailCopyWith<$Res> implements $ThumbnailCopyWith<$Res> {
       int? width,
       String? caption,
       int? height,
-      List<dynamic>? related,
+      List<String>? related,
       String? name,
       String? hash,
       DateTime? updatedAt,
       String? url,
       String? provider,
       String? mime,
-      @JsonKey(name: '__v') int? v,
-      @JsonKey(name: '_id') String? id,
       String? alternativeText,
       DateTime? createdAt,
-      FormatsThumbnail? formats});
-
-  @override
-  $FormatsThumbnailCopyWith<$Res>? get formats;
+      Map<String, StorageFormat>? formats});
 }
 
 /// @nodoc
-class __$$_ThumbnailCopyWithImpl<$Res>
-    extends _$ThumbnailCopyWithImpl<$Res, _$_Thumbnail>
-    implements _$$_ThumbnailCopyWith<$Res> {
-  __$$_ThumbnailCopyWithImpl(
-      _$_Thumbnail _value, $Res Function(_$_Thumbnail) _then)
+class __$$_FileStorageCopyWithImpl<$Res>
+    extends _$FileStorageCopyWithImpl<$Res, _$_FileStorage>
+    implements _$$_FileStorageCopyWith<$Res> {
+  __$$_FileStorageCopyWithImpl(
+      _$_FileStorage _value, $Res Function(_$_FileStorage) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -242,13 +209,11 @@ class __$$_ThumbnailCopyWithImpl<$Res>
     Object? url = freezed,
     Object? provider = freezed,
     Object? mime = freezed,
-    Object? v = freezed,
-    Object? id = freezed,
     Object? alternativeText = freezed,
     Object? createdAt = freezed,
     Object? formats = freezed,
   }) {
-    return _then(_$_Thumbnail(
+    return _then(_$_FileStorage(
       size: freezed == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
@@ -272,7 +237,7 @@ class __$$_ThumbnailCopyWithImpl<$Res>
       related: freezed == related
           ? _value._related
           : related // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
+              as List<String>?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -297,14 +262,6 @@ class __$$_ThumbnailCopyWithImpl<$Res>
           ? _value.mime
           : mime // ignore: cast_nullable_to_non_nullable
               as String?,
-      v: freezed == v
-          ? _value.v
-          : v // ignore: cast_nullable_to_non_nullable
-              as int?,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
       alternativeText: freezed == alternativeText
           ? _value.alternativeText
           : alternativeText // ignore: cast_nullable_to_non_nullable
@@ -314,38 +271,37 @@ class __$$_ThumbnailCopyWithImpl<$Res>
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
       formats: freezed == formats
-          ? _value.formats
+          ? _value._formats
           : formats // ignore: cast_nullable_to_non_nullable
-              as FormatsThumbnail?,
+              as Map<String, StorageFormat>?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_Thumbnail implements _Thumbnail {
-  _$_Thumbnail(
+class _$_FileStorage implements _FileStorage {
+  _$_FileStorage(
       {this.size,
       this.ext,
       this.width,
       this.caption,
       this.height,
-      final List<dynamic>? related,
+      final List<String>? related,
       this.name,
       this.hash,
       this.updatedAt,
       this.url,
       this.provider,
       this.mime,
-      @JsonKey(name: '__v') this.v,
-      @JsonKey(name: '_id') this.id,
       this.alternativeText,
       this.createdAt,
-      this.formats})
-      : _related = related;
+      final Map<String, StorageFormat>? formats})
+      : _related = related,
+        _formats = formats;
 
-  factory _$_Thumbnail.fromJson(Map<String, dynamic> json) =>
-      _$$_ThumbnailFromJson(json);
+  factory _$_FileStorage.fromJson(Map<String, dynamic> json) =>
+      _$$_FileStorageFromJson(json);
 
   @override
   final double? size;
@@ -357,9 +313,9 @@ class _$_Thumbnail implements _Thumbnail {
   final String? caption;
   @override
   final int? height;
-  final List<dynamic>? _related;
+  final List<String>? _related;
   @override
-  List<dynamic>? get related {
+  List<String>? get related {
     final value = _related;
     if (value == null) return null;
     if (_related is EqualUnmodifiableListView) return _related;
@@ -380,28 +336,29 @@ class _$_Thumbnail implements _Thumbnail {
   @override
   final String? mime;
   @override
-  @JsonKey(name: '__v')
-  final int? v;
-  @override
-  @JsonKey(name: '_id')
-  final String? id;
-  @override
   final String? alternativeText;
   @override
   final DateTime? createdAt;
+  final Map<String, StorageFormat>? _formats;
   @override
-  final FormatsThumbnail? formats;
+  Map<String, StorageFormat>? get formats {
+    final value = _formats;
+    if (value == null) return null;
+    if (_formats is EqualUnmodifiableMapView) return _formats;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
 
   @override
   String toString() {
-    return 'Thumbnail(size: $size, ext: $ext, width: $width, caption: $caption, height: $height, related: $related, name: $name, hash: $hash, updatedAt: $updatedAt, url: $url, provider: $provider, mime: $mime, v: $v, id: $id, alternativeText: $alternativeText, createdAt: $createdAt, formats: $formats)';
+    return 'FileStorage(size: $size, ext: $ext, width: $width, caption: $caption, height: $height, related: $related, name: $name, hash: $hash, updatedAt: $updatedAt, url: $url, provider: $provider, mime: $mime, alternativeText: $alternativeText, createdAt: $createdAt, formats: $formats)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Thumbnail &&
+            other is _$_FileStorage &&
             (identical(other.size, size) || other.size == size) &&
             (identical(other.ext, ext) || other.ext == ext) &&
             (identical(other.width, width) || other.width == width) &&
@@ -416,13 +373,11 @@ class _$_Thumbnail implements _Thumbnail {
             (identical(other.provider, provider) ||
                 other.provider == provider) &&
             (identical(other.mime, mime) || other.mime == mime) &&
-            (identical(other.v, v) || other.v == v) &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.alternativeText, alternativeText) ||
                 other.alternativeText == alternativeText) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
-            (identical(other.formats, formats) || other.formats == formats));
+            const DeepCollectionEquality().equals(other._formats, _formats));
   }
 
   @JsonKey(ignore: true)
@@ -441,48 +396,44 @@ class _$_Thumbnail implements _Thumbnail {
       url,
       provider,
       mime,
-      v,
-      id,
       alternativeText,
       createdAt,
-      formats);
+      const DeepCollectionEquality().hash(_formats));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ThumbnailCopyWith<_$_Thumbnail> get copyWith =>
-      __$$_ThumbnailCopyWithImpl<_$_Thumbnail>(this, _$identity);
+  _$$_FileStorageCopyWith<_$_FileStorage> get copyWith =>
+      __$$_FileStorageCopyWithImpl<_$_FileStorage>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ThumbnailToJson(
+    return _$$_FileStorageToJson(
       this,
     );
   }
 }
 
-abstract class _Thumbnail implements Thumbnail {
-  factory _Thumbnail(
+abstract class _FileStorage implements FileStorage {
+  factory _FileStorage(
       {final double? size,
       final String? ext,
       final int? width,
       final String? caption,
       final int? height,
-      final List<dynamic>? related,
+      final List<String>? related,
       final String? name,
       final String? hash,
       final DateTime? updatedAt,
       final String? url,
       final String? provider,
       final String? mime,
-      @JsonKey(name: '__v') final int? v,
-      @JsonKey(name: '_id') final String? id,
       final String? alternativeText,
       final DateTime? createdAt,
-      final FormatsThumbnail? formats}) = _$_Thumbnail;
+      final Map<String, StorageFormat>? formats}) = _$_FileStorage;
 
-  factory _Thumbnail.fromJson(Map<String, dynamic> json) =
-      _$_Thumbnail.fromJson;
+  factory _FileStorage.fromJson(Map<String, dynamic> json) =
+      _$_FileStorage.fromJson;
 
   @override
   double? get size;
@@ -495,7 +446,7 @@ abstract class _Thumbnail implements Thumbnail {
   @override
   int? get height;
   @override
-  List<dynamic>? get related;
+  List<String>? get related;
   @override
   String? get name;
   @override
@@ -509,19 +460,13 @@ abstract class _Thumbnail implements Thumbnail {
   @override
   String? get mime;
   @override
-  @JsonKey(name: '__v')
-  int? get v;
-  @override
-  @JsonKey(name: '_id')
-  String? get id;
-  @override
   String? get alternativeText;
   @override
   DateTime? get createdAt;
   @override
-  FormatsThumbnail? get formats;
+  Map<String, StorageFormat>? get formats;
   @override
   @JsonKey(ignore: true)
-  _$$_ThumbnailCopyWith<_$_Thumbnail> get copyWith =>
+  _$$_FileStorageCopyWith<_$_FileStorage> get copyWith =>
       throw _privateConstructorUsedError;
 }

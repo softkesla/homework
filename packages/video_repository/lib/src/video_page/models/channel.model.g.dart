@@ -1,26 +1,24 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'channel.dart';
+part of 'channel.model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
 _$_Channel _$$_ChannelFromJson(Map<String, dynamic> json) => _$_Channel(
-      id: json['_id'] as String?,
       isLive: json['is_live'] as bool?,
       name: json['name'] as String?,
       thumbnail: json['thumbnail'] == null
           ? null
-          : Thumbnail.fromJson(json['thumbnail'] as Map<String, dynamic>),
+          : FileStorage.fromJson(json['thumbnail'] as Map<String, dynamic>),
       banner: json['banner'] == null
           ? null
-          : Banner.fromJson(json['banner'] as Map<String, dynamic>),
+          : FileStorage.fromJson(json['banner'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_ChannelToJson(_$_Channel instance) =>
     <String, dynamic>{
-      '_id': instance.id,
       'is_live': instance.isLive,
       'name': instance.name,
       'thumbnail': instance.thumbnail,

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'video_model.dart';
+part of 'video.model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-VideoModel _$VideoModelFromJson(Map<String, dynamic> json) {
-  return _VideoModel.fromJson(json);
+Video _$VideoFromJson(Map<String, dynamic> json) {
+  return _Video.fromJson(json);
 }
 
 /// @nodoc
-mixin _$VideoModel {
+mixin _$Video {
   String? get status => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
   @JsonKey(name: 'player_type')
@@ -67,9 +67,9 @@ mixin _$VideoModel {
   bool? get isScheduleNotified => throw _privateConstructorUsedError;
   @JsonKey(name: 'latency_mode')
   dynamic get latencyMode => throw _privateConstructorUsedError;
-  Thumbnail? get thumbnail => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
   Channel? get channel => throw _privateConstructorUsedError;
+  FileStorage? get thumbnail => throw _privateConstructorUsedError;
   String? get author => throw _privateConstructorUsedError;
   @JsonKey(name: 'stream_provider_settings')
   String? get streamProviderSettings => throw _privateConstructorUsedError;
@@ -88,15 +88,13 @@ mixin _$VideoModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $VideoModelCopyWith<VideoModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $VideoCopyWith<Video> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $VideoModelCopyWith<$Res> {
-  factory $VideoModelCopyWith(
-          VideoModel value, $Res Function(VideoModel) then) =
-      _$VideoModelCopyWithImpl<$Res, VideoModel>;
+abstract class $VideoCopyWith<$Res> {
+  factory $VideoCopyWith(Video value, $Res Function(Video) then) =
+      _$VideoCopyWithImpl<$Res, Video>;
   @useResult
   $Res call(
       {String? status,
@@ -124,9 +122,9 @@ abstract class $VideoModelCopyWith<$Res> {
       @JsonKey(name: 'max_screen') int? maxScreen,
       @JsonKey(name: 'is_schedule_notified') bool? isScheduleNotified,
       @JsonKey(name: 'latency_mode') dynamic latencyMode,
-      Thumbnail? thumbnail,
       String? title,
       Channel? channel,
+      FileStorage? thumbnail,
       String? author,
       @JsonKey(name: 'stream_provider_settings') String? streamProviderSettings,
       String? description,
@@ -138,14 +136,14 @@ abstract class $VideoModelCopyWith<$Res> {
       @JsonKey(name: 'hls_url') String? hlsUrl,
       @JsonKey(name: 'playback_id') String? playbackId});
 
-  $ThumbnailCopyWith<$Res>? get thumbnail;
   $ChannelCopyWith<$Res>? get channel;
+  $FileStorageCopyWith<$Res>? get thumbnail;
 }
 
 /// @nodoc
-class _$VideoModelCopyWithImpl<$Res, $Val extends VideoModel>
-    implements $VideoModelCopyWith<$Res> {
-  _$VideoModelCopyWithImpl(this._value, this._then);
+class _$VideoCopyWithImpl<$Res, $Val extends Video>
+    implements $VideoCopyWith<$Res> {
+  _$VideoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -180,9 +178,9 @@ class _$VideoModelCopyWithImpl<$Res, $Val extends VideoModel>
     Object? maxScreen = freezed,
     Object? isScheduleNotified = freezed,
     Object? latencyMode = freezed,
-    Object? thumbnail = freezed,
     Object? title = freezed,
     Object? channel = freezed,
+    Object? thumbnail = freezed,
     Object? author = freezed,
     Object? streamProviderSettings = freezed,
     Object? description = freezed,
@@ -295,10 +293,6 @@ class _$VideoModelCopyWithImpl<$Res, $Val extends VideoModel>
           ? _value.latencyMode
           : latencyMode // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      thumbnail: freezed == thumbnail
-          ? _value.thumbnail
-          : thumbnail // ignore: cast_nullable_to_non_nullable
-              as Thumbnail?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -307,6 +301,10 @@ class _$VideoModelCopyWithImpl<$Res, $Val extends VideoModel>
           ? _value.channel
           : channel // ignore: cast_nullable_to_non_nullable
               as Channel?,
+      thumbnail: freezed == thumbnail
+          ? _value.thumbnail
+          : thumbnail // ignore: cast_nullable_to_non_nullable
+              as FileStorage?,
       author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -352,18 +350,6 @@ class _$VideoModelCopyWithImpl<$Res, $Val extends VideoModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $ThumbnailCopyWith<$Res>? get thumbnail {
-    if (_value.thumbnail == null) {
-      return null;
-    }
-
-    return $ThumbnailCopyWith<$Res>(_value.thumbnail!, (value) {
-      return _then(_value.copyWith(thumbnail: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
   $ChannelCopyWith<$Res>? get channel {
     if (_value.channel == null) {
       return null;
@@ -373,14 +359,24 @@ class _$VideoModelCopyWithImpl<$Res, $Val extends VideoModel>
       return _then(_value.copyWith(channel: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FileStorageCopyWith<$Res>? get thumbnail {
+    if (_value.thumbnail == null) {
+      return null;
+    }
+
+    return $FileStorageCopyWith<$Res>(_value.thumbnail!, (value) {
+      return _then(_value.copyWith(thumbnail: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
-abstract class _$$_VideoModelCopyWith<$Res>
-    implements $VideoModelCopyWith<$Res> {
-  factory _$$_VideoModelCopyWith(
-          _$_VideoModel value, $Res Function(_$_VideoModel) then) =
-      __$$_VideoModelCopyWithImpl<$Res>;
+abstract class _$$_VideoCopyWith<$Res> implements $VideoCopyWith<$Res> {
+  factory _$$_VideoCopyWith(_$_Video value, $Res Function(_$_Video) then) =
+      __$$_VideoCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -409,9 +405,9 @@ abstract class _$$_VideoModelCopyWith<$Res>
       @JsonKey(name: 'max_screen') int? maxScreen,
       @JsonKey(name: 'is_schedule_notified') bool? isScheduleNotified,
       @JsonKey(name: 'latency_mode') dynamic latencyMode,
-      Thumbnail? thumbnail,
       String? title,
       Channel? channel,
+      FileStorage? thumbnail,
       String? author,
       @JsonKey(name: 'stream_provider_settings') String? streamProviderSettings,
       String? description,
@@ -424,17 +420,15 @@ abstract class _$$_VideoModelCopyWith<$Res>
       @JsonKey(name: 'playback_id') String? playbackId});
 
   @override
-  $ThumbnailCopyWith<$Res>? get thumbnail;
-  @override
   $ChannelCopyWith<$Res>? get channel;
+  @override
+  $FileStorageCopyWith<$Res>? get thumbnail;
 }
 
 /// @nodoc
-class __$$_VideoModelCopyWithImpl<$Res>
-    extends _$VideoModelCopyWithImpl<$Res, _$_VideoModel>
-    implements _$$_VideoModelCopyWith<$Res> {
-  __$$_VideoModelCopyWithImpl(
-      _$_VideoModel _value, $Res Function(_$_VideoModel) _then)
+class __$$_VideoCopyWithImpl<$Res> extends _$VideoCopyWithImpl<$Res, _$_Video>
+    implements _$$_VideoCopyWith<$Res> {
+  __$$_VideoCopyWithImpl(_$_Video _value, $Res Function(_$_Video) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -465,9 +459,9 @@ class __$$_VideoModelCopyWithImpl<$Res>
     Object? maxScreen = freezed,
     Object? isScheduleNotified = freezed,
     Object? latencyMode = freezed,
-    Object? thumbnail = freezed,
     Object? title = freezed,
     Object? channel = freezed,
+    Object? thumbnail = freezed,
     Object? author = freezed,
     Object? streamProviderSettings = freezed,
     Object? description = freezed,
@@ -479,7 +473,7 @@ class __$$_VideoModelCopyWithImpl<$Res>
     Object? hlsUrl = freezed,
     Object? playbackId = freezed,
   }) {
-    return _then(_$_VideoModel(
+    return _then(_$_Video(
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -580,10 +574,6 @@ class __$$_VideoModelCopyWithImpl<$Res>
           ? _value.latencyMode
           : latencyMode // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      thumbnail: freezed == thumbnail
-          ? _value.thumbnail
-          : thumbnail // ignore: cast_nullable_to_non_nullable
-              as Thumbnail?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -592,6 +582,10 @@ class __$$_VideoModelCopyWithImpl<$Res>
           ? _value.channel
           : channel // ignore: cast_nullable_to_non_nullable
               as Channel?,
+      thumbnail: freezed == thumbnail
+          ? _value.thumbnail
+          : thumbnail // ignore: cast_nullable_to_non_nullable
+              as FileStorage?,
       author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -638,8 +632,8 @@ class __$$_VideoModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VideoModel implements _VideoModel {
-  _$_VideoModel(
+class _$_Video implements _Video {
+  _$_Video(
       {this.status,
       this.type,
       @JsonKey(name: 'player_type') this.playerType,
@@ -665,9 +659,9 @@ class _$_VideoModel implements _VideoModel {
       @JsonKey(name: 'max_screen') this.maxScreen,
       @JsonKey(name: 'is_schedule_notified') this.isScheduleNotified,
       @JsonKey(name: 'latency_mode') this.latencyMode,
-      this.thumbnail,
       this.title,
       this.channel,
+      this.thumbnail,
       this.author,
       @JsonKey(name: 'stream_provider_settings') this.streamProviderSettings,
       this.description,
@@ -679,8 +673,8 @@ class _$_VideoModel implements _VideoModel {
       @JsonKey(name: 'hls_url') this.hlsUrl,
       @JsonKey(name: 'playback_id') this.playbackId});
 
-  factory _$_VideoModel.fromJson(Map<String, dynamic> json) =>
-      _$$_VideoModelFromJson(json);
+  factory _$_Video.fromJson(Map<String, dynamic> json) =>
+      _$$_VideoFromJson(json);
 
   @override
   final String? status;
@@ -755,11 +749,11 @@ class _$_VideoModel implements _VideoModel {
   @JsonKey(name: 'latency_mode')
   final dynamic latencyMode;
   @override
-  final Thumbnail? thumbnail;
-  @override
   final String? title;
   @override
   final Channel? channel;
+  @override
+  final FileStorage? thumbnail;
   @override
   final String? author;
   @override
@@ -788,14 +782,14 @@ class _$_VideoModel implements _VideoModel {
 
   @override
   String toString() {
-    return 'VideoModel(status: $status, type: $type, playerType: $playerType, isPremium: $isPremium, isAdsEnabled: $isAdsEnabled, likesAmount: $likesAmount, dailyLikesAmount: $dailyLikesAmount, commentsAmount: $commentsAmount, dailyCommentsAmount: $dailyCommentsAmount, dailyViewsAmount: $dailyViewsAmount, viewsAmount: $viewsAmount, heartsAmount: $heartsAmount, chatMessagesAmount: $chatMessagesAmount, uniqueViewersAmount: $uniqueViewersAmount, maxViewersAmount: $maxViewersAmount, isCommentsEnabled: $isCommentsEnabled, onlyFanclubMembers: $onlyFanclubMembers, dailyRank: $dailyRank, autoRecordConcert: $autoRecordConcert, autoPublish: $autoPublish, orientation: $orientation, isApproved: $isApproved, maxScreen: $maxScreen, isScheduleNotified: $isScheduleNotified, latencyMode: $latencyMode, thumbnail: $thumbnail, title: $title, channel: $channel, author: $author, streamProviderSettings: $streamProviderSettings, description: $description, sourceStreamId: $sourceStreamId, createdAt: $createdAt, updatedAt: $updatedAt, gcorelabsStreamId: $gcorelabsStreamId, duration: $duration, hlsUrl: $hlsUrl, playbackId: $playbackId)';
+    return 'Video(status: $status, type: $type, playerType: $playerType, isPremium: $isPremium, isAdsEnabled: $isAdsEnabled, likesAmount: $likesAmount, dailyLikesAmount: $dailyLikesAmount, commentsAmount: $commentsAmount, dailyCommentsAmount: $dailyCommentsAmount, dailyViewsAmount: $dailyViewsAmount, viewsAmount: $viewsAmount, heartsAmount: $heartsAmount, chatMessagesAmount: $chatMessagesAmount, uniqueViewersAmount: $uniqueViewersAmount, maxViewersAmount: $maxViewersAmount, isCommentsEnabled: $isCommentsEnabled, onlyFanclubMembers: $onlyFanclubMembers, dailyRank: $dailyRank, autoRecordConcert: $autoRecordConcert, autoPublish: $autoPublish, orientation: $orientation, isApproved: $isApproved, maxScreen: $maxScreen, isScheduleNotified: $isScheduleNotified, latencyMode: $latencyMode, title: $title, channel: $channel, thumbnail: $thumbnail, author: $author, streamProviderSettings: $streamProviderSettings, description: $description, sourceStreamId: $sourceStreamId, createdAt: $createdAt, updatedAt: $updatedAt, gcorelabsStreamId: $gcorelabsStreamId, duration: $duration, hlsUrl: $hlsUrl, playbackId: $playbackId)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VideoModel &&
+            other is _$_Video &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality()
@@ -844,10 +838,10 @@ class _$_VideoModel implements _VideoModel {
                 other.isScheduleNotified == isScheduleNotified) &&
             const DeepCollectionEquality()
                 .equals(other.latencyMode, latencyMode) &&
-            (identical(other.thumbnail, thumbnail) ||
-                other.thumbnail == thumbnail) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.channel, channel) || other.channel == channel) &&
+            (identical(other.thumbnail, thumbnail) ||
+                other.thumbnail == thumbnail) &&
             (identical(other.author, author) || other.author == author) &&
             (identical(other.streamProviderSettings, streamProviderSettings) ||
                 other.streamProviderSettings == streamProviderSettings) &&
@@ -897,9 +891,9 @@ class _$_VideoModel implements _VideoModel {
         maxScreen,
         isScheduleNotified,
         const DeepCollectionEquality().hash(latencyMode),
-        thumbnail,
         title,
         channel,
+        thumbnail,
         author,
         streamProviderSettings,
         description,
@@ -915,19 +909,19 @@ class _$_VideoModel implements _VideoModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VideoModelCopyWith<_$_VideoModel> get copyWith =>
-      __$$_VideoModelCopyWithImpl<_$_VideoModel>(this, _$identity);
+  _$$_VideoCopyWith<_$_Video> get copyWith =>
+      __$$_VideoCopyWithImpl<_$_Video>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VideoModelToJson(
+    return _$$_VideoToJson(
       this,
     );
   }
 }
 
-abstract class _VideoModel implements VideoModel {
-  factory _VideoModel(
+abstract class _Video implements Video {
+  factory _Video(
       {final String? status,
       final String? type,
       @JsonKey(name: 'player_type')
@@ -975,9 +969,9 @@ abstract class _VideoModel implements VideoModel {
           final bool? isScheduleNotified,
       @JsonKey(name: 'latency_mode')
           final dynamic latencyMode,
-      final Thumbnail? thumbnail,
       final String? title,
       final Channel? channel,
+      final FileStorage? thumbnail,
       final String? author,
       @JsonKey(name: 'stream_provider_settings')
           final String? streamProviderSettings,
@@ -992,10 +986,9 @@ abstract class _VideoModel implements VideoModel {
       @JsonKey(name: 'hls_url')
           final String? hlsUrl,
       @JsonKey(name: 'playback_id')
-          final String? playbackId}) = _$_VideoModel;
+          final String? playbackId}) = _$_Video;
 
-  factory _VideoModel.fromJson(Map<String, dynamic> json) =
-      _$_VideoModel.fromJson;
+  factory _Video.fromJson(Map<String, dynamic> json) = _$_Video.fromJson;
 
   @override
   String? get status;
@@ -1070,11 +1063,11 @@ abstract class _VideoModel implements VideoModel {
   @JsonKey(name: 'latency_mode')
   dynamic get latencyMode;
   @override
-  Thumbnail? get thumbnail;
-  @override
   String? get title;
   @override
   Channel? get channel;
+  @override
+  FileStorage? get thumbnail;
   @override
   String? get author;
   @override
@@ -1102,6 +1095,6 @@ abstract class _VideoModel implements VideoModel {
   String? get playbackId;
   @override
   @JsonKey(ignore: true)
-  _$$_VideoModelCopyWith<_$_VideoModel> get copyWith =>
+  _$$_VideoCopyWith<_$_Video> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,15 +1,15 @@
 import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:video_repository/src/video_page/models/file_storage.model.dart';
 
-import 'channel.dart';
-import 'thumbnail.dart';
+import 'channel.model.dart';
 
-part 'video_model.freezed.dart';
-part 'video_model.g.dart';
+part 'video.model.freezed.dart';
+part 'video.model.g.dart';
 
 @freezed
-class VideoModel with _$VideoModel {
-  factory VideoModel({
+class Video with _$Video {
+  factory Video({
     String? status,
     String? type,
     @JsonKey(name: 'player_type') dynamic playerType,
@@ -35,9 +35,9 @@ class VideoModel with _$VideoModel {
     @JsonKey(name: 'max_screen') int? maxScreen,
     @JsonKey(name: 'is_schedule_notified') bool? isScheduleNotified,
     @JsonKey(name: 'latency_mode') dynamic latencyMode,
-    Thumbnail? thumbnail,
     String? title,
     Channel? channel,
+    FileStorage? thumbnail,
     String? author,
     @JsonKey(name: 'stream_provider_settings') String? streamProviderSettings,
     String? description,
@@ -48,8 +48,7 @@ class VideoModel with _$VideoModel {
     int? duration,
     @JsonKey(name: 'hls_url') String? hlsUrl,
     @JsonKey(name: 'playback_id') String? playbackId,
-  }) = _VideoModel;
+  }) = _Video;
 
-  factory VideoModel.fromJson(Map<String, dynamic> json) =>
-      _$VideoModelFromJson(json);
+  factory Video.fromJson(Map<String, dynamic> json) => _$VideoFromJson(json);
 }

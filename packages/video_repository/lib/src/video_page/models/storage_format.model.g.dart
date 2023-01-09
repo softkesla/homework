@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'formats_thumbnail.dart';
+part of 'storage_format.model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FormatsThumbnail _$$_FormatsThumbnailFromJson(Map<String, dynamic> json) =>
-    _$_FormatsThumbnail(
+_$_StorageFormat _$$_StorageFormatFromJson(Map<String, dynamic> json) =>
+    _$_StorageFormat(
       size: (json['size'] as num?)?.toDouble(),
       ext: json['ext'] as String?,
       path: json['path'] as String?,
@@ -19,7 +19,7 @@ _$_FormatsThumbnail _$$_FormatsThumbnailFromJson(Map<String, dynamic> json) =>
       mime: json['mime'] as String?,
     );
 
-Map<String, dynamic> _$$_FormatsThumbnailToJson(_$_FormatsThumbnail instance) =>
+Map<String, dynamic> _$$_StorageFormatToJson(_$_StorageFormat instance) =>
     <String, dynamic>{
       'size': instance.size,
       'ext': instance.ext,
