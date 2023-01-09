@@ -22,48 +22,58 @@ VideoDailyRank _$VideoDailyRankFromJson(Map<String, dynamic> json) {
 mixin _$VideoDailyRank {
   String? get status => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
-  String? get playerType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'player_type')
+  dynamic get playerType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_premium')
   bool? get isPremium => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_ads_enabled')
   bool? get isAdsEnabled => throw _privateConstructorUsedError;
-  @JsonKey(name: "likes_amount")
+  @JsonKey(name: 'likes_amount')
   int? get likesAmount => throw _privateConstructorUsedError;
-  @JsonKey(name: "comments_amount")
+  @JsonKey(name: 'comments_amount')
   int? get commentsAmount => throw _privateConstructorUsedError;
-  @JsonKey(name: "daily_comments_amount")
+  @JsonKey(name: 'daily_comments_amount')
   int? get dailyCommentsAmount => throw _privateConstructorUsedError;
-  @JsonKey(name: "daily_views_amount")
+  @JsonKey(name: 'daily_views_amount')
   int? get dailyViewsAmount => throw _privateConstructorUsedError;
-  @JsonKey(name: "views_amount")
+  @JsonKey(name: 'views_amount')
   int? get viewsAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_comments_enabled')
   bool? get isCommentsEnabled => throw _privateConstructorUsedError;
+  @JsonKey(name: 'only_fanclub_members')
   bool? get onlyFanclubMembers => throw _privateConstructorUsedError;
-  @JsonKey(name: "daily_rank")
+  @JsonKey(name: 'daily_rank')
   int? get dailyRank => throw _privateConstructorUsedError;
+  @JsonKey(name: 'auto_record_concert')
   bool? get autoRecordConcert => throw _privateConstructorUsedError;
-  String? get orientation => throw _privateConstructorUsedError;
+  dynamic get orientation => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_approved')
   bool? get isApproved => throw _privateConstructorUsedError;
-  @JsonKey(name: "max_screen")
+  @JsonKey(name: 'max_screen')
   int? get maxScreen => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_schedule_notified')
   bool? get isScheduleNotified => throw _privateConstructorUsedError;
-  Thumbnail? get thumbnail => throw _privateConstructorUsedError;
+  FileStorage? get thumbnail => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   List<String>? get tags => throw _privateConstructorUsedError;
+  @JsonKey(name: 'gcorelabs_stream_id')
   String? get gcorelabsStreamId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'hls_url')
   String? get hlsUrl => throw _privateConstructorUsedError;
-  VideoChannel? get channel => throw _privateConstructorUsedError;
+  FileStorage? get channel => throw _privateConstructorUsedError;
   String? get author => throw _privateConstructorUsedError;
+  @JsonKey(name: 'stream_provider_settings')
   String? get streamProviderSettings => throw _privateConstructorUsedError;
-  String? get createdAt => throw _privateConstructorUsedError;
-  String? get updatedAt => throw _privateConstructorUsedError;
-  @JsonKey(name: "comments_amount_by_language")
-  VideoCommentsLanguage? get CommentsAmountByLanguage =>
+  DateTime? get createdAt => throw _privateConstructorUsedError;
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
+  CommentsLanguage? get comments_amount_by_language =>
       throw _privateConstructorUsedError;
-  @JsonKey(name: "max_viewers_amount")
+  @JsonKey(name: 'max_viewers_amount')
   int? get maxViewersAmount => throw _privateConstructorUsedError;
-  @JsonKey(name: "unique_viewers_amount")
+  @JsonKey(name: 'unique_viewers_amount')
   int? get uniqueViewersAmount => throw _privateConstructorUsedError;
-  @JsonKey(name: "daily_likes_amount")
+  @JsonKey(name: 'daily_likes_amount')
   int? get dailyLikesAmount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -81,52 +91,41 @@ abstract class $VideoDailyRankCopyWith<$Res> {
   $Res call(
       {String? status,
       String? type,
-      String? playerType,
-      bool? isPremium,
-      bool? isAdsEnabled,
-      @JsonKey(name: "likes_amount")
-          int? likesAmount,
-      @JsonKey(name: "comments_amount")
-          int? commentsAmount,
-      @JsonKey(name: "daily_comments_amount")
-          int? dailyCommentsAmount,
-      @JsonKey(name: "daily_views_amount")
-          int? dailyViewsAmount,
-      @JsonKey(name: "views_amount")
-          int? viewsAmount,
-      bool? isCommentsEnabled,
-      bool? onlyFanclubMembers,
-      @JsonKey(name: "daily_rank")
-          int? dailyRank,
-      bool? autoRecordConcert,
-      String? orientation,
-      bool? isApproved,
-      @JsonKey(name: "max_screen")
-          int? maxScreen,
-      bool? isScheduleNotified,
-      Thumbnail? thumbnail,
+      @JsonKey(name: 'player_type') dynamic playerType,
+      @JsonKey(name: 'is_premium') bool? isPremium,
+      @JsonKey(name: 'is_ads_enabled') bool? isAdsEnabled,
+      @JsonKey(name: 'likes_amount') int? likesAmount,
+      @JsonKey(name: 'comments_amount') int? commentsAmount,
+      @JsonKey(name: 'daily_comments_amount') int? dailyCommentsAmount,
+      @JsonKey(name: 'daily_views_amount') int? dailyViewsAmount,
+      @JsonKey(name: 'views_amount') int? viewsAmount,
+      @JsonKey(name: 'is_comments_enabled') bool? isCommentsEnabled,
+      @JsonKey(name: 'only_fanclub_members') bool? onlyFanclubMembers,
+      @JsonKey(name: 'daily_rank') int? dailyRank,
+      @JsonKey(name: 'auto_record_concert') bool? autoRecordConcert,
+      dynamic orientation,
+      @JsonKey(name: 'is_approved') bool? isApproved,
+      @JsonKey(name: 'max_screen') int? maxScreen,
+      @JsonKey(name: 'is_schedule_notified') bool? isScheduleNotified,
+      FileStorage? thumbnail,
       String? title,
       String? description,
       List<String>? tags,
-      String? gcorelabsStreamId,
-      String? hlsUrl,
-      VideoChannel? channel,
+      @JsonKey(name: 'gcorelabs_stream_id') String? gcorelabsStreamId,
+      @JsonKey(name: 'hls_url') String? hlsUrl,
+      FileStorage? channel,
       String? author,
-      String? streamProviderSettings,
-      String? createdAt,
-      String? updatedAt,
-      @JsonKey(name: "comments_amount_by_language")
-          VideoCommentsLanguage? CommentsAmountByLanguage,
-      @JsonKey(name: "max_viewers_amount")
-          int? maxViewersAmount,
-      @JsonKey(name: "unique_viewers_amount")
-          int? uniqueViewersAmount,
-      @JsonKey(name: "daily_likes_amount")
-          int? dailyLikesAmount});
+      @JsonKey(name: 'stream_provider_settings') String? streamProviderSettings,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      CommentsLanguage? comments_amount_by_language,
+      @JsonKey(name: 'max_viewers_amount') int? maxViewersAmount,
+      @JsonKey(name: 'unique_viewers_amount') int? uniqueViewersAmount,
+      @JsonKey(name: 'daily_likes_amount') int? dailyLikesAmount});
 
-  $ThumbnailCopyWith<$Res>? get thumbnail;
-  $VideoChannelCopyWith<$Res>? get channel;
-  $VideoCommentsLanguageCopyWith<$Res>? get CommentsAmountByLanguage;
+  $FileStorageCopyWith<$Res>? get thumbnail;
+  $FileStorageCopyWith<$Res>? get channel;
+  $CommentsLanguageCopyWith<$Res>? get comments_amount_by_language;
 }
 
 /// @nodoc
@@ -171,7 +170,7 @@ class _$VideoDailyRankCopyWithImpl<$Res, $Val extends VideoDailyRank>
     Object? streamProviderSettings = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
-    Object? CommentsAmountByLanguage = freezed,
+    Object? comments_amount_by_language = freezed,
     Object? maxViewersAmount = freezed,
     Object? uniqueViewersAmount = freezed,
     Object? dailyLikesAmount = freezed,
@@ -188,7 +187,7 @@ class _$VideoDailyRankCopyWithImpl<$Res, $Val extends VideoDailyRank>
       playerType: freezed == playerType
           ? _value.playerType
           : playerType // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as dynamic,
       isPremium: freezed == isPremium
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
@@ -236,7 +235,7 @@ class _$VideoDailyRankCopyWithImpl<$Res, $Val extends VideoDailyRank>
       orientation: freezed == orientation
           ? _value.orientation
           : orientation // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as dynamic,
       isApproved: freezed == isApproved
           ? _value.isApproved
           : isApproved // ignore: cast_nullable_to_non_nullable
@@ -252,7 +251,7 @@ class _$VideoDailyRankCopyWithImpl<$Res, $Val extends VideoDailyRank>
       thumbnail: freezed == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as Thumbnail?,
+              as FileStorage?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -276,7 +275,7 @@ class _$VideoDailyRankCopyWithImpl<$Res, $Val extends VideoDailyRank>
       channel: freezed == channel
           ? _value.channel
           : channel // ignore: cast_nullable_to_non_nullable
-              as VideoChannel?,
+              as FileStorage?,
       author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -288,15 +287,15 @@ class _$VideoDailyRankCopyWithImpl<$Res, $Val extends VideoDailyRank>
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       updatedAt: freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
-      CommentsAmountByLanguage: freezed == CommentsAmountByLanguage
-          ? _value.CommentsAmountByLanguage
-          : CommentsAmountByLanguage // ignore: cast_nullable_to_non_nullable
-              as VideoCommentsLanguage?,
+              as DateTime?,
+      comments_amount_by_language: freezed == comments_amount_by_language
+          ? _value.comments_amount_by_language
+          : comments_amount_by_language // ignore: cast_nullable_to_non_nullable
+              as CommentsLanguage?,
       maxViewersAmount: freezed == maxViewersAmount
           ? _value.maxViewersAmount
           : maxViewersAmount // ignore: cast_nullable_to_non_nullable
@@ -314,38 +313,38 @@ class _$VideoDailyRankCopyWithImpl<$Res, $Val extends VideoDailyRank>
 
   @override
   @pragma('vm:prefer-inline')
-  $ThumbnailCopyWith<$Res>? get thumbnail {
+  $FileStorageCopyWith<$Res>? get thumbnail {
     if (_value.thumbnail == null) {
       return null;
     }
 
-    return $ThumbnailCopyWith<$Res>(_value.thumbnail!, (value) {
+    return $FileStorageCopyWith<$Res>(_value.thumbnail!, (value) {
       return _then(_value.copyWith(thumbnail: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $VideoChannelCopyWith<$Res>? get channel {
+  $FileStorageCopyWith<$Res>? get channel {
     if (_value.channel == null) {
       return null;
     }
 
-    return $VideoChannelCopyWith<$Res>(_value.channel!, (value) {
+    return $FileStorageCopyWith<$Res>(_value.channel!, (value) {
       return _then(_value.copyWith(channel: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $VideoCommentsLanguageCopyWith<$Res>? get CommentsAmountByLanguage {
-    if (_value.CommentsAmountByLanguage == null) {
+  $CommentsLanguageCopyWith<$Res>? get comments_amount_by_language {
+    if (_value.comments_amount_by_language == null) {
       return null;
     }
 
-    return $VideoCommentsLanguageCopyWith<$Res>(
-        _value.CommentsAmountByLanguage!, (value) {
-      return _then(_value.copyWith(CommentsAmountByLanguage: value) as $Val);
+    return $CommentsLanguageCopyWith<$Res>(_value.comments_amount_by_language!,
+        (value) {
+      return _then(_value.copyWith(comments_amount_by_language: value) as $Val);
     });
   }
 }
@@ -361,55 +360,44 @@ abstract class _$$_VideoDailyRankCopyWith<$Res>
   $Res call(
       {String? status,
       String? type,
-      String? playerType,
-      bool? isPremium,
-      bool? isAdsEnabled,
-      @JsonKey(name: "likes_amount")
-          int? likesAmount,
-      @JsonKey(name: "comments_amount")
-          int? commentsAmount,
-      @JsonKey(name: "daily_comments_amount")
-          int? dailyCommentsAmount,
-      @JsonKey(name: "daily_views_amount")
-          int? dailyViewsAmount,
-      @JsonKey(name: "views_amount")
-          int? viewsAmount,
-      bool? isCommentsEnabled,
-      bool? onlyFanclubMembers,
-      @JsonKey(name: "daily_rank")
-          int? dailyRank,
-      bool? autoRecordConcert,
-      String? orientation,
-      bool? isApproved,
-      @JsonKey(name: "max_screen")
-          int? maxScreen,
-      bool? isScheduleNotified,
-      Thumbnail? thumbnail,
+      @JsonKey(name: 'player_type') dynamic playerType,
+      @JsonKey(name: 'is_premium') bool? isPremium,
+      @JsonKey(name: 'is_ads_enabled') bool? isAdsEnabled,
+      @JsonKey(name: 'likes_amount') int? likesAmount,
+      @JsonKey(name: 'comments_amount') int? commentsAmount,
+      @JsonKey(name: 'daily_comments_amount') int? dailyCommentsAmount,
+      @JsonKey(name: 'daily_views_amount') int? dailyViewsAmount,
+      @JsonKey(name: 'views_amount') int? viewsAmount,
+      @JsonKey(name: 'is_comments_enabled') bool? isCommentsEnabled,
+      @JsonKey(name: 'only_fanclub_members') bool? onlyFanclubMembers,
+      @JsonKey(name: 'daily_rank') int? dailyRank,
+      @JsonKey(name: 'auto_record_concert') bool? autoRecordConcert,
+      dynamic orientation,
+      @JsonKey(name: 'is_approved') bool? isApproved,
+      @JsonKey(name: 'max_screen') int? maxScreen,
+      @JsonKey(name: 'is_schedule_notified') bool? isScheduleNotified,
+      FileStorage? thumbnail,
       String? title,
       String? description,
       List<String>? tags,
-      String? gcorelabsStreamId,
-      String? hlsUrl,
-      VideoChannel? channel,
+      @JsonKey(name: 'gcorelabs_stream_id') String? gcorelabsStreamId,
+      @JsonKey(name: 'hls_url') String? hlsUrl,
+      FileStorage? channel,
       String? author,
-      String? streamProviderSettings,
-      String? createdAt,
-      String? updatedAt,
-      @JsonKey(name: "comments_amount_by_language")
-          VideoCommentsLanguage? CommentsAmountByLanguage,
-      @JsonKey(name: "max_viewers_amount")
-          int? maxViewersAmount,
-      @JsonKey(name: "unique_viewers_amount")
-          int? uniqueViewersAmount,
-      @JsonKey(name: "daily_likes_amount")
-          int? dailyLikesAmount});
+      @JsonKey(name: 'stream_provider_settings') String? streamProviderSettings,
+      DateTime? createdAt,
+      DateTime? updatedAt,
+      CommentsLanguage? comments_amount_by_language,
+      @JsonKey(name: 'max_viewers_amount') int? maxViewersAmount,
+      @JsonKey(name: 'unique_viewers_amount') int? uniqueViewersAmount,
+      @JsonKey(name: 'daily_likes_amount') int? dailyLikesAmount});
 
   @override
-  $ThumbnailCopyWith<$Res>? get thumbnail;
+  $FileStorageCopyWith<$Res>? get thumbnail;
   @override
-  $VideoChannelCopyWith<$Res>? get channel;
+  $FileStorageCopyWith<$Res>? get channel;
   @override
-  $VideoCommentsLanguageCopyWith<$Res>? get CommentsAmountByLanguage;
+  $CommentsLanguageCopyWith<$Res>? get comments_amount_by_language;
 }
 
 /// @nodoc
@@ -452,7 +440,7 @@ class __$$_VideoDailyRankCopyWithImpl<$Res>
     Object? streamProviderSettings = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
-    Object? CommentsAmountByLanguage = freezed,
+    Object? comments_amount_by_language = freezed,
     Object? maxViewersAmount = freezed,
     Object? uniqueViewersAmount = freezed,
     Object? dailyLikesAmount = freezed,
@@ -469,7 +457,7 @@ class __$$_VideoDailyRankCopyWithImpl<$Res>
       playerType: freezed == playerType
           ? _value.playerType
           : playerType // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as dynamic,
       isPremium: freezed == isPremium
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
@@ -517,7 +505,7 @@ class __$$_VideoDailyRankCopyWithImpl<$Res>
       orientation: freezed == orientation
           ? _value.orientation
           : orientation // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as dynamic,
       isApproved: freezed == isApproved
           ? _value.isApproved
           : isApproved // ignore: cast_nullable_to_non_nullable
@@ -533,7 +521,7 @@ class __$$_VideoDailyRankCopyWithImpl<$Res>
       thumbnail: freezed == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as Thumbnail?,
+              as FileStorage?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -557,7 +545,7 @@ class __$$_VideoDailyRankCopyWithImpl<$Res>
       channel: freezed == channel
           ? _value.channel
           : channel // ignore: cast_nullable_to_non_nullable
-              as VideoChannel?,
+              as FileStorage?,
       author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -569,15 +557,15 @@ class __$$_VideoDailyRankCopyWithImpl<$Res>
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as DateTime?,
       updatedAt: freezed == updatedAt
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
-      CommentsAmountByLanguage: freezed == CommentsAmountByLanguage
-          ? _value.CommentsAmountByLanguage
-          : CommentsAmountByLanguage // ignore: cast_nullable_to_non_nullable
-              as VideoCommentsLanguage?,
+              as DateTime?,
+      comments_amount_by_language: freezed == comments_amount_by_language
+          ? _value.comments_amount_by_language
+          : comments_amount_by_language // ignore: cast_nullable_to_non_nullable
+              as CommentsLanguage?,
       maxViewersAmount: freezed == maxViewersAmount
           ? _value.maxViewersAmount
           : maxViewersAmount // ignore: cast_nullable_to_non_nullable
@@ -597,51 +585,40 @@ class __$$_VideoDailyRankCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_VideoDailyRank implements _VideoDailyRank {
-  const _$_VideoDailyRank(
+  _$_VideoDailyRank(
       {this.status,
       this.type,
-      this.playerType,
-      this.isPremium = false,
-      this.isAdsEnabled = false,
-      @JsonKey(name: "likes_amount")
-          this.likesAmount,
-      @JsonKey(name: "comments_amount")
-          this.commentsAmount,
-      @JsonKey(name: "daily_comments_amount")
-          this.dailyCommentsAmount,
-      @JsonKey(name: "daily_views_amount")
-          this.dailyViewsAmount,
-      @JsonKey(name: "views_amount")
-          this.viewsAmount,
-      this.isCommentsEnabled = false,
-      this.onlyFanclubMembers = false,
-      @JsonKey(name: "daily_rank")
-          this.dailyRank,
-      this.autoRecordConcert = false,
+      @JsonKey(name: 'player_type') this.playerType,
+      @JsonKey(name: 'is_premium') this.isPremium,
+      @JsonKey(name: 'is_ads_enabled') this.isAdsEnabled,
+      @JsonKey(name: 'likes_amount') this.likesAmount,
+      @JsonKey(name: 'comments_amount') this.commentsAmount,
+      @JsonKey(name: 'daily_comments_amount') this.dailyCommentsAmount,
+      @JsonKey(name: 'daily_views_amount') this.dailyViewsAmount,
+      @JsonKey(name: 'views_amount') this.viewsAmount,
+      @JsonKey(name: 'is_comments_enabled') this.isCommentsEnabled,
+      @JsonKey(name: 'only_fanclub_members') this.onlyFanclubMembers,
+      @JsonKey(name: 'daily_rank') this.dailyRank,
+      @JsonKey(name: 'auto_record_concert') this.autoRecordConcert,
       this.orientation,
-      this.isApproved = false,
-      @JsonKey(name: "max_screen")
-          this.maxScreen,
-      this.isScheduleNotified = false,
+      @JsonKey(name: 'is_approved') this.isApproved,
+      @JsonKey(name: 'max_screen') this.maxScreen,
+      @JsonKey(name: 'is_schedule_notified') this.isScheduleNotified,
       this.thumbnail,
       this.title,
       this.description,
       final List<String>? tags,
-      this.gcorelabsStreamId,
-      this.hlsUrl,
+      @JsonKey(name: 'gcorelabs_stream_id') this.gcorelabsStreamId,
+      @JsonKey(name: 'hls_url') this.hlsUrl,
       this.channel,
       this.author,
-      this.streamProviderSettings,
+      @JsonKey(name: 'stream_provider_settings') this.streamProviderSettings,
       this.createdAt,
       this.updatedAt,
-      @JsonKey(name: "comments_amount_by_language")
-          this.CommentsAmountByLanguage,
-      @JsonKey(name: "max_viewers_amount")
-          this.maxViewersAmount,
-      @JsonKey(name: "unique_viewers_amount")
-          this.uniqueViewersAmount,
-      @JsonKey(name: "daily_likes_amount")
-          this.dailyLikesAmount})
+      this.comments_amount_by_language,
+      @JsonKey(name: 'max_viewers_amount') this.maxViewersAmount,
+      @JsonKey(name: 'unique_viewers_amount') this.uniqueViewersAmount,
+      @JsonKey(name: 'daily_likes_amount') this.dailyLikesAmount})
       : _tags = tags;
 
   factory _$_VideoDailyRank.fromJson(Map<String, dynamic> json) =>
@@ -652,53 +629,54 @@ class _$_VideoDailyRank implements _VideoDailyRank {
   @override
   final String? type;
   @override
-  final String? playerType;
+  @JsonKey(name: 'player_type')
+  final dynamic playerType;
   @override
-  @JsonKey()
+  @JsonKey(name: 'is_premium')
   final bool? isPremium;
   @override
-  @JsonKey()
+  @JsonKey(name: 'is_ads_enabled')
   final bool? isAdsEnabled;
   @override
-  @JsonKey(name: "likes_amount")
+  @JsonKey(name: 'likes_amount')
   final int? likesAmount;
   @override
-  @JsonKey(name: "comments_amount")
+  @JsonKey(name: 'comments_amount')
   final int? commentsAmount;
   @override
-  @JsonKey(name: "daily_comments_amount")
+  @JsonKey(name: 'daily_comments_amount')
   final int? dailyCommentsAmount;
   @override
-  @JsonKey(name: "daily_views_amount")
+  @JsonKey(name: 'daily_views_amount')
   final int? dailyViewsAmount;
   @override
-  @JsonKey(name: "views_amount")
+  @JsonKey(name: 'views_amount')
   final int? viewsAmount;
   @override
-  @JsonKey()
+  @JsonKey(name: 'is_comments_enabled')
   final bool? isCommentsEnabled;
   @override
-  @JsonKey()
+  @JsonKey(name: 'only_fanclub_members')
   final bool? onlyFanclubMembers;
   @override
-  @JsonKey(name: "daily_rank")
+  @JsonKey(name: 'daily_rank')
   final int? dailyRank;
   @override
-  @JsonKey()
+  @JsonKey(name: 'auto_record_concert')
   final bool? autoRecordConcert;
   @override
-  final String? orientation;
+  final dynamic orientation;
   @override
-  @JsonKey()
+  @JsonKey(name: 'is_approved')
   final bool? isApproved;
   @override
-  @JsonKey(name: "max_screen")
+  @JsonKey(name: 'max_screen')
   final int? maxScreen;
   @override
-  @JsonKey()
+  @JsonKey(name: 'is_schedule_notified')
   final bool? isScheduleNotified;
   @override
-  final Thumbnail? thumbnail;
+  final FileStorage? thumbnail;
   @override
   final String? title;
   @override
@@ -714,35 +692,37 @@ class _$_VideoDailyRank implements _VideoDailyRank {
   }
 
   @override
+  @JsonKey(name: 'gcorelabs_stream_id')
   final String? gcorelabsStreamId;
   @override
+  @JsonKey(name: 'hls_url')
   final String? hlsUrl;
   @override
-  final VideoChannel? channel;
+  final FileStorage? channel;
   @override
   final String? author;
   @override
+  @JsonKey(name: 'stream_provider_settings')
   final String? streamProviderSettings;
   @override
-  final String? createdAt;
+  final DateTime? createdAt;
   @override
-  final String? updatedAt;
+  final DateTime? updatedAt;
   @override
-  @JsonKey(name: "comments_amount_by_language")
-  final VideoCommentsLanguage? CommentsAmountByLanguage;
+  final CommentsLanguage? comments_amount_by_language;
   @override
-  @JsonKey(name: "max_viewers_amount")
+  @JsonKey(name: 'max_viewers_amount')
   final int? maxViewersAmount;
   @override
-  @JsonKey(name: "unique_viewers_amount")
+  @JsonKey(name: 'unique_viewers_amount')
   final int? uniqueViewersAmount;
   @override
-  @JsonKey(name: "daily_likes_amount")
+  @JsonKey(name: 'daily_likes_amount')
   final int? dailyLikesAmount;
 
   @override
   String toString() {
-    return 'VideoDailyRank(status: $status, type: $type, playerType: $playerType, isPremium: $isPremium, isAdsEnabled: $isAdsEnabled, likesAmount: $likesAmount, commentsAmount: $commentsAmount, dailyCommentsAmount: $dailyCommentsAmount, dailyViewsAmount: $dailyViewsAmount, viewsAmount: $viewsAmount, isCommentsEnabled: $isCommentsEnabled, onlyFanclubMembers: $onlyFanclubMembers, dailyRank: $dailyRank, autoRecordConcert: $autoRecordConcert, orientation: $orientation, isApproved: $isApproved, maxScreen: $maxScreen, isScheduleNotified: $isScheduleNotified, thumbnail: $thumbnail, title: $title, description: $description, tags: $tags, gcorelabsStreamId: $gcorelabsStreamId, hlsUrl: $hlsUrl, channel: $channel, author: $author, streamProviderSettings: $streamProviderSettings, createdAt: $createdAt, updatedAt: $updatedAt, CommentsAmountByLanguage: $CommentsAmountByLanguage, maxViewersAmount: $maxViewersAmount, uniqueViewersAmount: $uniqueViewersAmount, dailyLikesAmount: $dailyLikesAmount)';
+    return 'VideoDailyRank(status: $status, type: $type, playerType: $playerType, isPremium: $isPremium, isAdsEnabled: $isAdsEnabled, likesAmount: $likesAmount, commentsAmount: $commentsAmount, dailyCommentsAmount: $dailyCommentsAmount, dailyViewsAmount: $dailyViewsAmount, viewsAmount: $viewsAmount, isCommentsEnabled: $isCommentsEnabled, onlyFanclubMembers: $onlyFanclubMembers, dailyRank: $dailyRank, autoRecordConcert: $autoRecordConcert, orientation: $orientation, isApproved: $isApproved, maxScreen: $maxScreen, isScheduleNotified: $isScheduleNotified, thumbnail: $thumbnail, title: $title, description: $description, tags: $tags, gcorelabsStreamId: $gcorelabsStreamId, hlsUrl: $hlsUrl, channel: $channel, author: $author, streamProviderSettings: $streamProviderSettings, createdAt: $createdAt, updatedAt: $updatedAt, comments_amount_by_language: $comments_amount_by_language, maxViewersAmount: $maxViewersAmount, uniqueViewersAmount: $uniqueViewersAmount, dailyLikesAmount: $dailyLikesAmount)';
   }
 
   @override
@@ -752,8 +732,8 @@ class _$_VideoDailyRank implements _VideoDailyRank {
             other is _$_VideoDailyRank &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.type, type) || other.type == type) &&
-            (identical(other.playerType, playerType) ||
-                other.playerType == playerType) &&
+            const DeepCollectionEquality()
+                .equals(other.playerType, playerType) &&
             (identical(other.isPremium, isPremium) ||
                 other.isPremium == isPremium) &&
             (identical(other.isAdsEnabled, isAdsEnabled) ||
@@ -776,8 +756,8 @@ class _$_VideoDailyRank implements _VideoDailyRank {
                 other.dailyRank == dailyRank) &&
             (identical(other.autoRecordConcert, autoRecordConcert) ||
                 other.autoRecordConcert == autoRecordConcert) &&
-            (identical(other.orientation, orientation) ||
-                other.orientation == orientation) &&
+            const DeepCollectionEquality()
+                .equals(other.orientation, orientation) &&
             (identical(other.isApproved, isApproved) ||
                 other.isApproved == isApproved) &&
             (identical(other.maxScreen, maxScreen) ||
@@ -801,9 +781,10 @@ class _$_VideoDailyRank implements _VideoDailyRank {
                 other.createdAt == createdAt) &&
             (identical(other.updatedAt, updatedAt) ||
                 other.updatedAt == updatedAt) &&
-            (identical(
-                    other.CommentsAmountByLanguage, CommentsAmountByLanguage) ||
-                other.CommentsAmountByLanguage == CommentsAmountByLanguage) &&
+            (identical(other.comments_amount_by_language,
+                    comments_amount_by_language) ||
+                other.comments_amount_by_language ==
+                    comments_amount_by_language) &&
             (identical(other.maxViewersAmount, maxViewersAmount) ||
                 other.maxViewersAmount == maxViewersAmount) &&
             (identical(other.uniqueViewersAmount, uniqueViewersAmount) ||
@@ -818,7 +799,7 @@ class _$_VideoDailyRank implements _VideoDailyRank {
         runtimeType,
         status,
         type,
-        playerType,
+        const DeepCollectionEquality().hash(playerType),
         isPremium,
         isAdsEnabled,
         likesAmount,
@@ -830,7 +811,7 @@ class _$_VideoDailyRank implements _VideoDailyRank {
         onlyFanclubMembers,
         dailyRank,
         autoRecordConcert,
-        orientation,
+        const DeepCollectionEquality().hash(orientation),
         isApproved,
         maxScreen,
         isScheduleNotified,
@@ -845,7 +826,7 @@ class _$_VideoDailyRank implements _VideoDailyRank {
         streamProviderSettings,
         createdAt,
         updatedAt,
-        CommentsAmountByLanguage,
+        comments_amount_by_language,
         maxViewersAmount,
         uniqueViewersAmount,
         dailyLikesAmount
@@ -866,50 +847,60 @@ class _$_VideoDailyRank implements _VideoDailyRank {
 }
 
 abstract class _VideoDailyRank implements VideoDailyRank {
-  const factory _VideoDailyRank(
+  factory _VideoDailyRank(
       {final String? status,
       final String? type,
-      final String? playerType,
-      final bool? isPremium,
-      final bool? isAdsEnabled,
-      @JsonKey(name: "likes_amount")
+      @JsonKey(name: 'player_type')
+          final dynamic playerType,
+      @JsonKey(name: 'is_premium')
+          final bool? isPremium,
+      @JsonKey(name: 'is_ads_enabled')
+          final bool? isAdsEnabled,
+      @JsonKey(name: 'likes_amount')
           final int? likesAmount,
-      @JsonKey(name: "comments_amount")
+      @JsonKey(name: 'comments_amount')
           final int? commentsAmount,
-      @JsonKey(name: "daily_comments_amount")
+      @JsonKey(name: 'daily_comments_amount')
           final int? dailyCommentsAmount,
-      @JsonKey(name: "daily_views_amount")
+      @JsonKey(name: 'daily_views_amount')
           final int? dailyViewsAmount,
-      @JsonKey(name: "views_amount")
+      @JsonKey(name: 'views_amount')
           final int? viewsAmount,
-      final bool? isCommentsEnabled,
-      final bool? onlyFanclubMembers,
-      @JsonKey(name: "daily_rank")
+      @JsonKey(name: 'is_comments_enabled')
+          final bool? isCommentsEnabled,
+      @JsonKey(name: 'only_fanclub_members')
+          final bool? onlyFanclubMembers,
+      @JsonKey(name: 'daily_rank')
           final int? dailyRank,
-      final bool? autoRecordConcert,
-      final String? orientation,
-      final bool? isApproved,
-      @JsonKey(name: "max_screen")
+      @JsonKey(name: 'auto_record_concert')
+          final bool? autoRecordConcert,
+      final dynamic orientation,
+      @JsonKey(name: 'is_approved')
+          final bool? isApproved,
+      @JsonKey(name: 'max_screen')
           final int? maxScreen,
-      final bool? isScheduleNotified,
-      final Thumbnail? thumbnail,
+      @JsonKey(name: 'is_schedule_notified')
+          final bool? isScheduleNotified,
+      final FileStorage? thumbnail,
       final String? title,
       final String? description,
       final List<String>? tags,
-      final String? gcorelabsStreamId,
-      final String? hlsUrl,
-      final VideoChannel? channel,
+      @JsonKey(name: 'gcorelabs_stream_id')
+          final String? gcorelabsStreamId,
+      @JsonKey(name: 'hls_url')
+          final String? hlsUrl,
+      final FileStorage? channel,
       final String? author,
-      final String? streamProviderSettings,
-      final String? createdAt,
-      final String? updatedAt,
-      @JsonKey(name: "comments_amount_by_language")
-          final VideoCommentsLanguage? CommentsAmountByLanguage,
-      @JsonKey(name: "max_viewers_amount")
+      @JsonKey(name: 'stream_provider_settings')
+          final String? streamProviderSettings,
+      final DateTime? createdAt,
+      final DateTime? updatedAt,
+      final CommentsLanguage? comments_amount_by_language,
+      @JsonKey(name: 'max_viewers_amount')
           final int? maxViewersAmount,
-      @JsonKey(name: "unique_viewers_amount")
+      @JsonKey(name: 'unique_viewers_amount')
           final int? uniqueViewersAmount,
-      @JsonKey(name: "daily_likes_amount")
+      @JsonKey(name: 'daily_likes_amount')
           final int? dailyLikesAmount}) = _$_VideoDailyRank;
 
   factory _VideoDailyRank.fromJson(Map<String, dynamic> json) =
@@ -920,46 +911,54 @@ abstract class _VideoDailyRank implements VideoDailyRank {
   @override
   String? get type;
   @override
-  String? get playerType;
+  @JsonKey(name: 'player_type')
+  dynamic get playerType;
   @override
+  @JsonKey(name: 'is_premium')
   bool? get isPremium;
   @override
+  @JsonKey(name: 'is_ads_enabled')
   bool? get isAdsEnabled;
   @override
-  @JsonKey(name: "likes_amount")
+  @JsonKey(name: 'likes_amount')
   int? get likesAmount;
   @override
-  @JsonKey(name: "comments_amount")
+  @JsonKey(name: 'comments_amount')
   int? get commentsAmount;
   @override
-  @JsonKey(name: "daily_comments_amount")
+  @JsonKey(name: 'daily_comments_amount')
   int? get dailyCommentsAmount;
   @override
-  @JsonKey(name: "daily_views_amount")
+  @JsonKey(name: 'daily_views_amount')
   int? get dailyViewsAmount;
   @override
-  @JsonKey(name: "views_amount")
+  @JsonKey(name: 'views_amount')
   int? get viewsAmount;
   @override
+  @JsonKey(name: 'is_comments_enabled')
   bool? get isCommentsEnabled;
   @override
+  @JsonKey(name: 'only_fanclub_members')
   bool? get onlyFanclubMembers;
   @override
-  @JsonKey(name: "daily_rank")
+  @JsonKey(name: 'daily_rank')
   int? get dailyRank;
   @override
+  @JsonKey(name: 'auto_record_concert')
   bool? get autoRecordConcert;
   @override
-  String? get orientation;
+  dynamic get orientation;
   @override
+  @JsonKey(name: 'is_approved')
   bool? get isApproved;
   @override
-  @JsonKey(name: "max_screen")
+  @JsonKey(name: 'max_screen')
   int? get maxScreen;
   @override
+  @JsonKey(name: 'is_schedule_notified')
   bool? get isScheduleNotified;
   @override
-  Thumbnail? get thumbnail;
+  FileStorage? get thumbnail;
   @override
   String? get title;
   @override
@@ -967,30 +966,32 @@ abstract class _VideoDailyRank implements VideoDailyRank {
   @override
   List<String>? get tags;
   @override
+  @JsonKey(name: 'gcorelabs_stream_id')
   String? get gcorelabsStreamId;
   @override
+  @JsonKey(name: 'hls_url')
   String? get hlsUrl;
   @override
-  VideoChannel? get channel;
+  FileStorage? get channel;
   @override
   String? get author;
   @override
+  @JsonKey(name: 'stream_provider_settings')
   String? get streamProviderSettings;
   @override
-  String? get createdAt;
+  DateTime? get createdAt;
   @override
-  String? get updatedAt;
+  DateTime? get updatedAt;
   @override
-  @JsonKey(name: "comments_amount_by_language")
-  VideoCommentsLanguage? get CommentsAmountByLanguage;
+  CommentsLanguage? get comments_amount_by_language;
   @override
-  @JsonKey(name: "max_viewers_amount")
+  @JsonKey(name: 'max_viewers_amount')
   int? get maxViewersAmount;
   @override
-  @JsonKey(name: "unique_viewers_amount")
+  @JsonKey(name: 'unique_viewers_amount')
   int? get uniqueViewersAmount;
   @override
-  @JsonKey(name: "daily_likes_amount")
+  @JsonKey(name: 'daily_likes_amount')
   int? get dailyLikesAmount;
   @override
   @JsonKey(ignore: true)
