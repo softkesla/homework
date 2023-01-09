@@ -1,6 +1,6 @@
 {
     "__className": "post.model",
-    "__path": "/packages/post_repository/lib/src/post_page/model",
+    "__path": "/packages/post_repository/lib/src/post_page/models",
     "status": "active",
     "is_comments_enabled": true,
     "is_premium": false,

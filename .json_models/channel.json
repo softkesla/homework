@@ -1,6 +1,6 @@
 {
     "__className": "channel.model",
-    "__path": "/packages/post_repository/lib/src/post_page/model",
+    "__path": "/packages/post_repository/lib/src/post_page/models",
     "followers_amount": 27,
     "is_live": false,
     "name": "teerapon"

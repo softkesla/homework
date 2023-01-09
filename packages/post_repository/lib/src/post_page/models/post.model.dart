@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:post_repository/src/post_page/model/channel.model.dart';
-import 'package:post_repository/src/post_page/model/model.dart';
+import 'package:post_repository/src/post_page/models/channel.model.dart';
+import 'package:post_repository/src/post_page/models/model.dart';
 import 'media.model.dart';
 
 part 'post.model.freezed.dart';
