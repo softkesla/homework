@@ -1,28 +1,27 @@
 import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:post_repository/src/post_page/model/channel.model.dart';
+import 'package:post_repository/src/post_page/model/model.dart';
+import 'media.model.dart';
 
-import 'channel.dart';
-import 'media.dart';
-
-part 'post_model.freezed.dart';
-part 'post_model.g.dart';
+part 'post.model.freezed.dart';
+part 'post.model.g.dart';
 
 @freezed
-class PostModel with _$PostModel {
-  factory PostModel({
+class Post with _$Post {
+  factory Post({
     String? status,
     @JsonKey(name: 'is_comments_enabled') bool? isCommentsEnabled,
     @JsonKey(name: 'is_premium') bool? isPremium,
     @JsonKey(name: 'likes_amount') int? likesAmount,
     @JsonKey(name: 'comments_amount') int? commentsAmount,
     String? title,
-    List<dynamic>? tags,
+    List<String>? tags,
     Channel? channel,
     DateTime? createdAt,
     List<Media>? media,
     String? id,
-  }) = _PostModel;
+  }) = _Post;
 
-  factory PostModel.fromJson(Map<String, dynamic> json) =>
-      _$PostModelFromJson(json);
+  factory Post.fromJson(Map<String, dynamic> json) => _$PostFromJson(json);
 }

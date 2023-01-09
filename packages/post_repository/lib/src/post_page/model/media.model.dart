@@ -1,16 +1,14 @@
 import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:post_repository/src/post_page/model/media_formats.dart';
 
-import 'formats.dart';
+import 'package:video_repository/src/video_page/models/file_storage.model.dart';
 
-part 'media.freezed.dart';
-part 'media.g.dart';
+part 'media.model.freezed.dart';
+part 'media.model.g.dart';
 
 @freezed
 class Media with _$Media {
   factory Media({
-    @JsonKey(name: '_id') String? id,
     String? name,
     String? alternativeText,
     String? caption,
@@ -19,14 +17,13 @@ class Media with _$Media {
     String? mime,
     double? size,
     String? url,
-    MediaFormats? formats,
+    Map<String, FileStorage>? formats,
     String? provider,
     int? width,
     int? height,
-    List<dynamic>? related,
+    List<String>? related,
     DateTime? createdAt,
     DateTime? updatedAt,
-    @JsonKey(name: '__v') int? v,
   }) = _Media;
 
   factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
