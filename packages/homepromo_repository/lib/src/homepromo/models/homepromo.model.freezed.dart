@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Homepromo _$HomepromoFromJson(Map<String, dynamic> json) {
-  return _Homepromo.fromJson(json);
+HomePromo _$HomePromoFromJson(Map<String, dynamic> json) {
+  return _HomePromo.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Homepromo {
+mixin _$HomePromo {
   String? get type => throw _privateConstructorUsedError;
   String? get section => throw _privateConstructorUsedError;
   String? get status => throw _privateConstructorUsedError;
@@ -32,14 +32,14 @@ mixin _$Homepromo {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $HomepromoCopyWith<Homepromo> get copyWith =>
+  $HomePromoCopyWith<HomePromo> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $HomepromoCopyWith<$Res> {
-  factory $HomepromoCopyWith(Homepromo value, $Res Function(Homepromo) then) =
-      _$HomepromoCopyWithImpl<$Res, Homepromo>;
+abstract class $HomePromoCopyWith<$Res> {
+  factory $HomePromoCopyWith(HomePromo value, $Res Function(HomePromo) then) =
+      _$HomePromoCopyWithImpl<$Res, HomePromo>;
   @useResult
   $Res call(
       {String? type,
@@ -56,9 +56,9 @@ abstract class $HomepromoCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$HomepromoCopyWithImpl<$Res, $Val extends Homepromo>
-    implements $HomepromoCopyWith<$Res> {
-  _$HomepromoCopyWithImpl(this._value, this._then);
+class _$HomePromoCopyWithImpl<$Res, $Val extends HomePromo>
+    implements $HomePromoCopyWith<$Res> {
+  _$HomePromoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -132,10 +132,10 @@ class _$HomepromoCopyWithImpl<$Res, $Val extends Homepromo>
 }
 
 /// @nodoc
-abstract class _$$_HomepromoCopyWith<$Res> implements $HomepromoCopyWith<$Res> {
-  factory _$$_HomepromoCopyWith(
-          _$_Homepromo value, $Res Function(_$_Homepromo) then) =
-      __$$_HomepromoCopyWithImpl<$Res>;
+abstract class _$$_HomePromoCopyWith<$Res> implements $HomePromoCopyWith<$Res> {
+  factory _$$_HomePromoCopyWith(
+          _$_HomePromo value, $Res Function(_$_HomePromo) then) =
+      __$$_HomePromoCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -154,11 +154,11 @@ abstract class _$$_HomepromoCopyWith<$Res> implements $HomepromoCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_HomepromoCopyWithImpl<$Res>
-    extends _$HomepromoCopyWithImpl<$Res, _$_Homepromo>
-    implements _$$_HomepromoCopyWith<$Res> {
-  __$$_HomepromoCopyWithImpl(
-      _$_Homepromo _value, $Res Function(_$_Homepromo) _then)
+class __$$_HomePromoCopyWithImpl<$Res>
+    extends _$HomePromoCopyWithImpl<$Res, _$_HomePromo>
+    implements _$$_HomePromoCopyWith<$Res> {
+  __$$_HomePromoCopyWithImpl(
+      _$_HomePromo _value, $Res Function(_$_HomePromo) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -174,7 +174,7 @@ class __$$_HomepromoCopyWithImpl<$Res>
     Object? image = freezed,
     Object? id = freezed,
   }) {
-    return _then(_$_Homepromo(
+    return _then(_$_HomePromo(
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -217,8 +217,8 @@ class __$$_HomepromoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Homepromo implements _Homepromo {
-  _$_Homepromo(
+class _$_HomePromo implements _HomePromo {
+  _$_HomePromo(
       {this.type,
       this.section,
       this.status,
@@ -229,8 +229,8 @@ class _$_Homepromo implements _Homepromo {
       this.image,
       this.id});
 
-  factory _$_Homepromo.fromJson(Map<String, dynamic> json) =>
-      _$$_HomepromoFromJson(json);
+  factory _$_HomePromo.fromJson(Map<String, dynamic> json) =>
+      _$$_HomePromoFromJson(json);
 
   @override
   final String? type;
@@ -253,14 +253,14 @@ class _$_Homepromo implements _Homepromo {
 
   @override
   String toString() {
-    return 'Homepromo(type: $type, section: $section, status: $status, url: $url, priority: $priority, createdAt: $createdAt, updatedAt: $updatedAt, image: $image, id: $id)';
+    return 'HomePromo(type: $type, section: $section, status: $status, url: $url, priority: $priority, createdAt: $createdAt, updatedAt: $updatedAt, image: $image, id: $id)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Homepromo &&
+            other is _$_HomePromo &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.section, section) || other.section == section) &&
             (identical(other.status, status) || other.status == status) &&
@@ -283,19 +283,19 @@ class _$_Homepromo implements _Homepromo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_HomepromoCopyWith<_$_Homepromo> get copyWith =>
-      __$$_HomepromoCopyWithImpl<_$_Homepromo>(this, _$identity);
+  _$$_HomePromoCopyWith<_$_HomePromo> get copyWith =>
+      __$$_HomePromoCopyWithImpl<_$_HomePromo>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HomepromoToJson(
+    return _$$_HomePromoToJson(
       this,
     );
   }
 }
 
-abstract class _Homepromo implements Homepromo {
-  factory _Homepromo(
+abstract class _HomePromo implements HomePromo {
+  factory _HomePromo(
       {final String? type,
       final String? section,
       final String? status,
@@ -304,10 +304,10 @@ abstract class _Homepromo implements Homepromo {
       final DateTime? createdAt,
       final DateTime? updatedAt,
       final FileStorage? image,
-      final String? id}) = _$_Homepromo;
+      final String? id}) = _$_HomePromo;
 
-  factory _Homepromo.fromJson(Map<String, dynamic> json) =
-      _$_Homepromo.fromJson;
+  factory _HomePromo.fromJson(Map<String, dynamic> json) =
+      _$_HomePromo.fromJson;
 
   @override
   String? get type;
@@ -329,6 +329,6 @@ abstract class _Homepromo implements Homepromo {
   String? get id;
   @override
   @JsonKey(ignore: true)
-  _$$_HomepromoCopyWith<_$_Homepromo> get copyWith =>
+  _$$_HomePromoCopyWith<_$_HomePromo> get copyWith =>
       throw _privateConstructorUsedError;
 }

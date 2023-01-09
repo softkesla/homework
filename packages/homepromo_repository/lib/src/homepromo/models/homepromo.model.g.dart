@@ -6,7 +6,7 @@ part of 'homepromo.model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Homepromo _$$_HomepromoFromJson(Map<String, dynamic> json) => _$_Homepromo(
+_$_HomePromo _$$_HomePromoFromJson(Map<String, dynamic> json) => _$_HomePromo(
       type: json['type'] as String?,
       section: json['section'] as String?,
       status: json['status'] as String?,
@@ -24,7 +24,7 @@ _$_Homepromo _$$_HomepromoFromJson(Map<String, dynamic> json) => _$_Homepromo(
       id: json['id'] as String?,
     );
 
-Map<String, dynamic> _$$_HomepromoToJson(_$_Homepromo instance) =>
+Map<String, dynamic> _$$_HomePromoToJson(_$_HomePromo instance) =>
     <String, dynamic>{
       'type': instance.type,
       'section': instance.section,

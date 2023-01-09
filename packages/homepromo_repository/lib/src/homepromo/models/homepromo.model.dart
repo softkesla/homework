@@ -6,8 +6,8 @@ part 'homepromo.model.freezed.dart';
 part 'homepromo.model.g.dart';
 
 @freezed
-class Homepromo with _$Homepromo {
-  factory Homepromo(
+class HomePromo with _$HomePromo {
+  factory HomePromo(
       {String? type,
       String? section,
       String? status,
@@ -16,8 +16,8 @@ class Homepromo with _$Homepromo {
       DateTime? createdAt,
       DateTime? updatedAt,
       FileStorage? image,
-      String? id}) = _Homepromo;
+      String? id}) = _HomePromo;
 
-  factory Homepromo.fromJson(Map<String, dynamic> json) =>
-      _$HomepromoFromJson(json);
+  factory HomePromo.fromJson(Map<String, dynamic> json) =>
+      _$HomePromoFromJson(json);
 }

@@ -33,7 +33,7 @@ class _HomePromoPageState extends State<HomePromoPage> {
                   );
                 }
                 if (state is HomePromoLoadedState) {
-                  List<Homepromo> homePromos = state.homepromos;
+                  List<HomePromo> homePromos = state.homepromos;
                   return ListView.builder(
                       itemCount: homePromos.length,
                       itemBuilder: (_, index) {
