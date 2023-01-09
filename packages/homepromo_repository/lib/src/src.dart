@@ -1,1 +1,1 @@
-export 'homepromo/home_page.dart';
+export 'homepromo/homepromo.dart';

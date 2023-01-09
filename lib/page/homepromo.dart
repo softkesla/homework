@@ -33,26 +33,14 @@ class _HomePromoPageState extends State<HomePromoPage> {
                   );
                 }
                 if (state is HomePromoLoadedState) {
-                  List<HomePromoModel> homePromos = state.homepromos;
+                  List<Homepromo> homePromos = state.homepromos;
                   return ListView.builder(
                       itemCount: homePromos.length,
                       itemBuilder: (_, index) {
-                        return Card(
-                          color: Colors.amber,
-                          elevation: 4,
-                          child: ListTile(
-                            title: Text(
-                              homePromos[index].type.toString(),
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            subtitle: Text(
-                              homePromos[index].section.toString(),
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            trailing: Text(
-                              homePromos[index].url.toString(),
-                              style: TextStyle(color: Colors.white),
-                            ),
+                        return Container(
+                          child: Image.network(
+                            homePromos[index].image?.url ?? '',
+                            fit: BoxFit.cover,
                           ),
                         );
                       });

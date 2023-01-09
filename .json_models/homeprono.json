@@ -1,0 +1,13 @@
+{
+    "__className": "homepromo.model",
+    "__path": "/packages/homepromo_repository/lib/src/homepromo/models",
+    "type": "image",
+    "section": "home_promo",
+    "status": "active",
+    "_id": "623184faacdb3a0022690436",
+    "url": "channels/61bc346efcbf2b00220de526",
+    "priority": 6,
+    "createdAt": "2022-03-16T06:34:34.212Z",
+    "updatedAt": "2022-06-24T07:16:48.392Z",
+    "id": "623184faacdb3a0022690436"
+}

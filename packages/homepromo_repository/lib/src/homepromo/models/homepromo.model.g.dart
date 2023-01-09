@@ -1,13 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'home_page.model.dart';
+part of 'homepromo.model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_HomePromoModel _$$_HomePromoModelFromJson(Map<String, dynamic> json) =>
-    _$_HomePromoModel(
+_$_Homepromo _$$_HomepromoFromJson(Map<String, dynamic> json) => _$_Homepromo(
       type: json['type'] as String?,
       section: json['section'] as String?,
       status: json['status'] as String?,
@@ -19,10 +18,13 @@ _$_HomePromoModel _$$_HomePromoModelFromJson(Map<String, dynamic> json) =>
       updatedAt: json['updatedAt'] == null
           ? null
           : DateTime.parse(json['updatedAt'] as String),
-      id: json['id'] as String,
+      image: json['image'] == null
+          ? null
+          : FileStorage.fromJson(json['image'] as Map<String, dynamic>),
+      id: json['id'] as String?,
     );
 
-Map<String, dynamic> _$$_HomePromoModelToJson(_$_HomePromoModel instance) =>
+Map<String, dynamic> _$$_HomepromoToJson(_$_Homepromo instance) =>
     <String, dynamic>{
       'type': instance.type,
       'section': instance.section,
@@ -31,5 +33,6 @@ Map<String, dynamic> _$$_HomePromoModelToJson(_$_HomePromoModel instance) =>
       'priority': instance.priority,
       'createdAt': instance.createdAt?.toIso8601String(),
       'updatedAt': instance.updatedAt?.toIso8601String(),
+      'image': instance.image,
       'id': instance.id,
     };

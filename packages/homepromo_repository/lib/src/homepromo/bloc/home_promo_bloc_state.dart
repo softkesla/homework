@@ -10,7 +10,7 @@ class HomePromoLoadingState extends HomePromoBlocState {
 
 class HomePromoLoadedState extends HomePromoBlocState {
   HomePromoLoadedState(this.homepromos);
-  final List<HomePromoModel> homepromos;
+  final List<Homepromo> homepromos;
 
   @override
   List<Object?> get props => [homepromos];
