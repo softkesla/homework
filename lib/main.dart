@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:homework_flutter/page/homepromo.dart';
 import 'package:homework_flutter/page/livenowpage.dart';
+import 'package:homework_flutter/page/loginpage.dart';
 import 'package:homework_flutter/page/postpage.dart';
+import 'package:homework_flutter/page/rivetest.dart';
 import 'package:homework_flutter/page/setting.dart';
 import 'package:homework_flutter/page/help.dart';
 import 'package:homework_flutter/page/homepage.dart';
@@ -64,6 +66,16 @@ class App extends StatelessWidget {
     routes: <GoRoute>[
       GoRoute(
         routes: <GoRoute>[
+          GoRoute(
+            path: 'loginpage',
+            builder: (BuildContext context, GoRouterState state) =>
+                const LoginPage(),
+          ),
+          GoRoute(
+            path: 'rivetest',
+            builder: (BuildContext context, GoRouterState state) =>
+                const RiveTest(),
+          ),
           GoRoute(
             path: 'videodailyrank',
             builder: (BuildContext context, GoRouterState state) =>

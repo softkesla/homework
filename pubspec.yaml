@@ -96,6 +96,7 @@ dependencies:
   easy_localization: ^3.0.1
   easy_localization_loader: ^1.0.1+1
   freezed_annotation: ^2.2.0
+  rive: ^0.10.0
 
   post_repository:
     path: 
@@ -120,6 +121,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/translations/
+    - assets/
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

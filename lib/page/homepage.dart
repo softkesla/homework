@@ -30,6 +30,44 @@ class HomePage extends StatelessWidget {
               children: [
                 MaterialBtn.primary(
                   context,
+                  labelText: LocaleKeys.Login,
+                  onPressed: () {
+                    context.go('/loginpage');
+                  },
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MaterialBtn.primary(
+                  context,
+                  labelText: LocaleKeys.VideoDailyRank,
+                  onPressed: () {
+                    context.go('/videodailyrank');
+                  },
+                ),
+                SizedBox(width: 20),
+                MaterialBtn.primary(
+                  context,
+                  labelText: LocaleKeys.ButtonRiveDemo,
+                  onPressed: () {
+                    context.go('/rivetest');
+                  },
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MaterialBtn.primary(
+                  context,
                   labelText: LocaleKeys.VideoPage,
                   onPressed: () {
                     context.go('/videopage');
