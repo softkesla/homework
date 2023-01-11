@@ -30,6 +30,14 @@ class HomePage extends StatelessWidget {
                     context.go('/loginpage');
                   },
                 ),
+                SizedBox(width: 20),
+                MaterialBtn.primary(
+                  context,
+                  labelText: LocaleKeys.ButtonRiveDemo,
+                  onPressed: () {
+                    context.go('/plant');
+                  },
+                ),
               ],
             ),
             SizedBox(
