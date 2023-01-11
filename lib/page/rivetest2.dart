@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rive/rive.dart';
 
-class RiveTest extends StatefulWidget {
-  const RiveTest({super.key});
+class RiveTestButton extends StatefulWidget {
+  const RiveTestButton({super.key});
 
   @override
-  State<RiveTest> createState() => _RiveTestState();
+  State<RiveTestButton> createState() => _RiveTestButtonState();
 }
 
-class _RiveTestState extends State<RiveTest> {
+class _RiveTestButtonState extends State<RiveTestButton> {
   List<SMIInput<bool>?> inputs = [];
   List<Artboard> artboards = [];
   List<String> assetPaths = [
-    "assets/new_file.riv",
+    "assets/buttonnew.riv",
   ];
 
   int currentActiveIndex = 0;
@@ -25,7 +25,7 @@ class _RiveTestState extends State<RiveTest> {
       final file = RiveFile.import(data);
       final artboard = file.mainArtboard;
       final controller =
-          StateMachineController.fromArtboard(artboard, "Button Aimation");
+          StateMachineController.fromArtboard(artboard, "Button Animation");
       SMIInput<bool>? input;
       if (controller != null) {
         artboard.addController(controller);

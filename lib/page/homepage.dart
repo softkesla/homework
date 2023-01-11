@@ -15,15 +15,10 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Icon(
-              Icons.headset_rounded,
-              color: Color.fromARGB(255, 26, 255, 232),
-              size: 50,
-            ),
             Text('Flutter',
                 style: TextStyle(fontSize: 60, fontFamily: 'Pacifico')),
             SizedBox(
-              height: 50,
+              height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -55,7 +50,7 @@ class HomePage extends StatelessWidget {
                   context,
                   labelText: LocaleKeys.ButtonRiveDemo,
                   onPressed: () {
-                    context.go('/rivetest');
+                    context.go('/rivetestbutton');
                   },
                 ),
               ],

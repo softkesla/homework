@@ -5,6 +5,7 @@ import 'package:homework_flutter/page/livenowpage.dart';
 import 'package:homework_flutter/page/loginpage.dart';
 import 'package:homework_flutter/page/postpage.dart';
 import 'package:homework_flutter/page/rivetest.dart';
+import 'package:homework_flutter/page/rivetest2.dart';
 import 'package:homework_flutter/page/setting.dart';
 import 'package:homework_flutter/page/help.dart';
 import 'package:homework_flutter/page/homepage.dart';
@@ -75,6 +76,11 @@ class App extends StatelessWidget {
             path: 'rivetest',
             builder: (BuildContext context, GoRouterState state) =>
                 const RiveTest(),
+          ),
+          GoRoute(
+            path: 'rivetestbutton',
+            builder: (BuildContext context, GoRouterState state) =>
+                const RiveTestButton(),
           ),
           GoRoute(
             path: 'videodailyrank',
