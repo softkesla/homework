@@ -1,6 +1,6 @@
 // DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
 
-abstract class LocaleKeys {
+abstract class  LocaleKeys {
   static const Locale = '@@Locale';
   static const DateFormat = '@@DateFormat';
   static const Home = '@@Home';
@@ -11,6 +11,7 @@ abstract class LocaleKeys {
   static const Password = '@@Password';
   static const VideoPage = '@@VideoPage';
   static const PostPage = '@@PostPage';
+  static const VideoDailyRank = '@@VideoDailyRank';
   static const LiveNowPage = '@@LiveNowPage';
   static const Promo = '@@Promo';
   static const TrendingTag = '@@TrendingTag';
@@ -26,15 +27,11 @@ abstract class LocaleKeys {
   static const LoginWithOTP = '@@LoginWithOTP';
   static const LoginWithPassword = '@@LoginWithPassword';
   static const OrLoginWith = '@@OrLoginWith';
-  static const CreateASMOAccountQuestionSymbol =
-      '@@CreateASMOAccountQuestionSymbol';
+  static const CreateASMOAccountQuestionSymbol = '@@CreateASMOAccountQuestionSymbol';
   static const SignUp = '@@SignUp';
-  static const PleaseContactCustomerServiceIfTheTransactionIsNotCompleteWithinXMinutesViaEmailAddressOrSmoFanPageUrl =
-      '@@PleaseContactCustomerServiceIfTheTransactionIsNotCompleteWithinXMinutesViaEmailAddressOrSmoFanPageUrl';
-  static const PleasePayWithinXMinutesYSecondsDotSymbol =
-      '@@PleasePayWithinXMinutesYSecondsDotSymbol';
-  static const InCaseYouOpenThisScreenWithAMobileDevicePaymentCanBeMadeByTheFollowingStepsDotDesc =
-      '@@InCaseYouOpenThisScreenWithAMobileDevicePaymentCanBeMadeByTheFollowingStepsDotDesc';
+  static const PleaseContactCustomerServiceIfTheTransactionIsNotCompleteWithinXMinutesViaEmailAddressOrSmoFanPageUrl = '@@PleaseContactCustomerServiceIfTheTransactionIsNotCompleteWithinXMinutesViaEmailAddressOrSmoFanPageUrl';
+  static const PleasePayWithinXMinutesYSecondsDotSymbol = '@@PleasePayWithinXMinutesYSecondsDotSymbol';
+  static const InCaseYouOpenThisScreenWithAMobileDevicePaymentCanBeMadeByTheFollowingStepsDotDesc = '@@InCaseYouOpenThisScreenWithAMobileDevicePaymentCanBeMadeByTheFollowingStepsDotDesc';
   static const CanReceiveMoneyFromAnyBank = '@@CanReceiveMoneyFromAnyBank';
   static const PaymentTimeOut = '@@PaymentTimeOut';
   static const PaymentAmountXBaht = '@@PaymentAmountXBaht';
@@ -63,27 +60,21 @@ abstract class LocaleKeys {
   static const ContactCustomerService = '@@ContactCustomerService';
   static const Back = '@@Back';
   static const TryAgain = '@@TryAgain';
-  static const YourPaymentHasBeenSuccessfullyProcessed =
-      '@@YourPaymentHasBeenSuccessfullyProcessed';
+  static const YourPaymentHasBeenSuccessfullyProcessed = '@@YourPaymentHasBeenSuccessfullyProcessed';
   static const Done = '@@Done';
   static const QRPayment = '@@QRPayment';
   static const YourCoinX = '@@YourCoinX';
   static const PleaseTryAgain = '@@PleaseTryAgain';
-  static const ForgotYouPasswordOrLoginWithOTP =
-      '@@ForgotYouPasswordOrLoginWithOTP';
+  static const ForgotYouPasswordOrLoginWithOTP = '@@ForgotYouPasswordOrLoginWithOTP';
   static const SwitchToLoginWithEmail = '@@SwitchToLoginWithEmail';
   static const TotalAmountWithCurrency = '@@TotalAmountWithCurrency';
   static const THB = '@@THB';
-  static const ChargeFailedTransactionIdXPleaseContactAdmin =
-      '@@ChargeFailedTransactionIdXPleaseContactAdmin';
+  static const ChargeFailedTransactionIdXPleaseContactAdmin = '@@ChargeFailedTransactionIdXPleaseContactAdmin';
   static const PaymentNotCompleted = '@@PaymentNotCompleted';
-  static const YourPaymentWasNotSuccessfullyProcessedPleaseContactCustomerService =
-      '@@YourPaymentWasNotSuccessfullyProcessedPleaseContactCustomerService';
-  static const ChargeExpiredTransactionIdXPleaseContactAdmin =
-      '@@ChargeExpiredTransactionIdXPleaseContactAdmin';
+  static const YourPaymentWasNotSuccessfullyProcessedPleaseContactCustomerService = '@@YourPaymentWasNotSuccessfullyProcessedPleaseContactCustomerService';
+  static const ChargeExpiredTransactionIdXPleaseContactAdmin = '@@ChargeExpiredTransactionIdXPleaseContactAdmin';
   static const QRCodeHasExpired = '@@QRCodeHasExpired';
-  static const YourTransactionIsNoLongerValidPleaseTryAgain =
-      '@@YourTransactionIsNoLongerValidPleaseTryAgain';
+  static const YourTransactionIsNoLongerValidPleaseTryAgain = '@@YourTransactionIsNoLongerValidPleaseTryAgain';
   static const ChargeCanceledTransactionIdX = '@@ChargeCanceledTransactionIdX';
   static const Cancel = '@@Cancel';
   static const SelectYourCoinPackage = '@@SelectYourCoinPackage';
@@ -103,4 +94,6 @@ abstract class LocaleKeys {
   static const AuthenticationFailure = '@@AuthenticationFailure';
   static const ProcessingDot = '@@ProcessingDot';
   static const HomePromo = '@@HomePromo';
+  static const ButtonRiveDemo = '@@ButtonRiveDemo';
+
 }
