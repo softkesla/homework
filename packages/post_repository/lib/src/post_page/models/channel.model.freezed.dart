@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'channel.dart';
+part of 'channel.model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -20,14 +20,12 @@ Channel _$ChannelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Channel {
-  @JsonKey(name: '_id')
-  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'followers_amount')
   int? get followersAmount => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_live')
   bool? get isLive => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
-  List<Thumbnail>? get thumbnail => throw _privateConstructorUsedError;
+  List<StorageFormat>? get thumbnail => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,11 +38,10 @@ abstract class $ChannelCopyWith<$Res> {
       _$ChannelCopyWithImpl<$Res, Channel>;
   @useResult
   $Res call(
-      {@JsonKey(name: '_id') String? id,
-      @JsonKey(name: 'followers_amount') int? followersAmount,
+      {@JsonKey(name: 'followers_amount') int? followersAmount,
       @JsonKey(name: 'is_live') bool? isLive,
       String? name,
-      List<Thumbnail>? thumbnail});
+      List<StorageFormat>? thumbnail});
 }
 
 /// @nodoc
@@ -60,17 +57,12 @@ class _$ChannelCopyWithImpl<$Res, $Val extends Channel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
     Object? followersAmount = freezed,
     Object? isLive = freezed,
     Object? name = freezed,
     Object? thumbnail = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
       followersAmount: freezed == followersAmount
           ? _value.followersAmount
           : followersAmount // ignore: cast_nullable_to_non_nullable
@@ -86,7 +78,7 @@ class _$ChannelCopyWithImpl<$Res, $Val extends Channel>
       thumbnail: freezed == thumbnail
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as List<Thumbnail>?,
+              as List<StorageFormat>?,
     ) as $Val);
   }
 }
@@ -99,11 +91,10 @@ abstract class _$$_ChannelCopyWith<$Res> implements $ChannelCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: '_id') String? id,
-      @JsonKey(name: 'followers_amount') int? followersAmount,
+      {@JsonKey(name: 'followers_amount') int? followersAmount,
       @JsonKey(name: 'is_live') bool? isLive,
       String? name,
-      List<Thumbnail>? thumbnail});
+      List<StorageFormat>? thumbnail});
 }
 
 /// @nodoc
@@ -116,17 +107,12 @@ class __$$_ChannelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
     Object? followersAmount = freezed,
     Object? isLive = freezed,
     Object? name = freezed,
     Object? thumbnail = freezed,
   }) {
     return _then(_$_Channel(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
       followersAmount: freezed == followersAmount
           ? _value.followersAmount
           : followersAmount // ignore: cast_nullable_to_non_nullable
@@ -142,7 +128,7 @@ class __$$_ChannelCopyWithImpl<$Res>
       thumbnail: freezed == thumbnail
           ? _value._thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
-              as List<Thumbnail>?,
+              as List<StorageFormat>?,
     ));
   }
 }
@@ -151,19 +137,15 @@ class __$$_ChannelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Channel implements _Channel {
   _$_Channel(
-      {@JsonKey(name: '_id') this.id,
-      @JsonKey(name: 'followers_amount') this.followersAmount,
+      {@JsonKey(name: 'followers_amount') this.followersAmount,
       @JsonKey(name: 'is_live') this.isLive,
       this.name,
-      final List<Thumbnail>? thumbnail})
+      final List<StorageFormat>? thumbnail})
       : _thumbnail = thumbnail;
 
   factory _$_Channel.fromJson(Map<String, dynamic> json) =>
       _$$_ChannelFromJson(json);
 
-  @override
-  @JsonKey(name: '_id')
-  final String? id;
   @override
   @JsonKey(name: 'followers_amount')
   final int? followersAmount;
@@ -172,9 +154,9 @@ class _$_Channel implements _Channel {
   final bool? isLive;
   @override
   final String? name;
-  final List<Thumbnail>? _thumbnail;
+  final List<StorageFormat>? _thumbnail;
   @override
-  List<Thumbnail>? get thumbnail {
+  List<StorageFormat>? get thumbnail {
     final value = _thumbnail;
     if (value == null) return null;
     if (_thumbnail is EqualUnmodifiableListView) return _thumbnail;
@@ -184,7 +166,7 @@ class _$_Channel implements _Channel {
 
   @override
   String toString() {
-    return 'Channel(id: $id, followersAmount: $followersAmount, isLive: $isLive, name: $name, thumbnail: $thumbnail)';
+    return 'Channel(followersAmount: $followersAmount, isLive: $isLive, name: $name, thumbnail: $thumbnail)';
   }
 
   @override
@@ -192,7 +174,6 @@ class _$_Channel implements _Channel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Channel &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.followersAmount, followersAmount) ||
                 other.followersAmount == followersAmount) &&
             (identical(other.isLive, isLive) || other.isLive == isLive) &&
@@ -203,8 +184,8 @@ class _$_Channel implements _Channel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, followersAmount, isLive,
-      name, const DeepCollectionEquality().hash(_thumbnail));
+  int get hashCode => Object.hash(runtimeType, followersAmount, isLive, name,
+      const DeepCollectionEquality().hash(_thumbnail));
 
   @JsonKey(ignore: true)
   @override
@@ -222,17 +203,13 @@ class _$_Channel implements _Channel {
 
 abstract class _Channel implements Channel {
   factory _Channel(
-      {@JsonKey(name: '_id') final String? id,
-      @JsonKey(name: 'followers_amount') final int? followersAmount,
+      {@JsonKey(name: 'followers_amount') final int? followersAmount,
       @JsonKey(name: 'is_live') final bool? isLive,
       final String? name,
-      final List<Thumbnail>? thumbnail}) = _$_Channel;
+      final List<StorageFormat>? thumbnail}) = _$_Channel;
 
   factory _Channel.fromJson(Map<String, dynamic> json) = _$_Channel.fromJson;
 
-  @override
-  @JsonKey(name: '_id')
-  String? get id;
   @override
   @JsonKey(name: 'followers_amount')
   int? get followersAmount;
@@ -242,7 +219,7 @@ abstract class _Channel implements Channel {
   @override
   String? get name;
   @override
-  List<Thumbnail>? get thumbnail;
+  List<StorageFormat>? get thumbnail;
   @override
   @JsonKey(ignore: true)
   _$$_ChannelCopyWith<_$_Channel> get copyWith =>

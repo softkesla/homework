@@ -1,0 +1,15 @@
+{
+    "__className": "post.model",
+    "__path": "/packages/post_repository/lib/src/post_page/models",
+    "status": "active",
+    "is_comments_enabled": true,
+    "is_premium": false,
+    "likes_amount": 0,
+    "comments_amount": 1,
+    "title": " 💕💕",
+    "tags": [
+        ""
+    ],
+    "createdAt": "2022-12-26T08:49:42.478Z",
+    "id": "63a960262d69f10020226332"
+}

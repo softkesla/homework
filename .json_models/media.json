@@ -1,0 +1,20 @@
+{
+    "__className": "media.model",
+    "__path": "/packages/post_repository/lib/src/post_page/models",
+    "name": "e727e0ba8e",
+    "alternativeText": "",
+    "caption": "",
+    "hash": "e727e0ba8e_dc7b2e59c2",
+    "ext": "",
+    "mime": "image/jpeg",
+    "size": 135.18,
+    "url": "https://dev.static.smo.live/dev/media/2022-12-26/e727e0ba8e_dc7b2e59c2",
+    "provider": "google-cloud-storage",
+    "width": 600,
+    "height": 800,
+    "related": [
+        ""
+    ],
+    "createdAt": "2022-12-26T08:49:43.043Z",
+    "updatedAt": "2022-12-26T08:49:43.043Z"
+}

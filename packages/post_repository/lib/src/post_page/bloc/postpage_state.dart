@@ -11,7 +11,7 @@ class PostPageLoadingState extends PostpageState {
 
 class PostPageLoadedState extends PostpageState {
   PostPageLoadedState(this.postpage);
-  final List<PostModel> postpage;
+  final List<Post> postpage;
 
   @override
   List<Object?> get props => [postpage];

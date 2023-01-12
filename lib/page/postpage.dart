@@ -34,7 +34,7 @@ class _PostPageState extends State<PostPage> {
                 );
               }
               if (state is PostPageLoadedState) {
-                List<PostModel> postlist = state.postpage;
+                List<Post> postlist = state.postpage;
                 return ListView.builder(
                   itemCount: postlist.length,
                   itemBuilder: (_, index) {
