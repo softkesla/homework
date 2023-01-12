@@ -80,6 +80,10 @@ dependencies:
       url: git@github.com:makeitgames/flutter-material.git
       ref: dev
 
+  travel_repository:
+    path:
+      packages/travel_repository
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -97,6 +101,7 @@ dependencies:
   easy_localization_loader: ^1.0.1+1
   freezed_annotation: ^2.2.0
   rive: ^0.10.0
+  font_awesome_flutter: ^10.3.0
 
   post_repository:
     path: 
@@ -121,6 +126,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/translations/
+    - assets/images/
     - assets/
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
