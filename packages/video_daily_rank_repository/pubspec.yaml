@@ -23,6 +23,10 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   build_runner: ^2.3.3
 
+dependency_overrides:
+  video_repository:
+    path: ../video_repository
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

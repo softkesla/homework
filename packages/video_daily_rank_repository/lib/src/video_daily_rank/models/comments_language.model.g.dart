@@ -1,20 +1,18 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'video_daily_rank_comments.model.dart';
+part of 'comments_language.model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_VideoCommentsLanguage _$$_VideoCommentsLanguageFromJson(
-        Map<String, dynamic> json) =>
-    _$_VideoCommentsLanguage(
+_$_CommentsLanguage _$$_CommentsLanguageFromJson(Map<String, dynamic> json) =>
+    _$_CommentsLanguage(
       en: json['en'] as int?,
       th: json['th'] as int?,
     );
 
-Map<String, dynamic> _$$_VideoCommentsLanguageToJson(
-        _$_VideoCommentsLanguage instance) =>
+Map<String, dynamic> _$$_CommentsLanguageToJson(_$_CommentsLanguage instance) =>
     <String, dynamic>{
       'en': instance.en,
       'th': instance.th,
