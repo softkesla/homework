@@ -73,16 +73,20 @@ class App extends StatelessWidget {
         routes: <GoRoute>[
           GoRoute(
             path: 'hometravel',
+            name: "travel",
             builder: (BuildContext context, GoRouterState state) =>
                 const HomeTravel(),
           ),
           GoRoute(
-            path: 'destinations_page',
-            builder: (BuildContext context, GoRouterState state) =>
-                const DestinationsPage(),
-          ),
+              path: 'destinations_page/:destinationId',
+              name: 'destination',
+              builder: (BuildContext context, GoRouterState state) {
+                return DestinationsPage(
+                    destinationId: int.parse(state.params["destinationId"]!));
+              }),
           GoRoute(
             path: 'loginpage',
+            name: 'login',
             builder: (BuildContext context, GoRouterState state) =>
                 const LoginPage(),
           ),

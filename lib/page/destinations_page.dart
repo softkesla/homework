@@ -4,16 +4,21 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travel_repository/lib.dart';
 
 class DestinationsPage extends StatefulWidget {
-  const DestinationsPage({super.key, this.destination});
-  final Destination? destination;
+  const DestinationsPage({super.key, required this.destinationId});
+  final int destinationId;
 
   // DestinationsPage({this.destination});
 
   @override
-  State<DestinationsPage> createState() => _DestinationsPageState();
+  State<DestinationsPage> createState() =>
+      _DestinationsPageState(destinationId);
 }
 
 class _DestinationsPageState extends State<DestinationsPage> {
+  final int destinationId;
+
+  _DestinationsPageState(this.destinationId);
+
   Row buildRatingStars(double rating) {
     List<Widget> stars = [];
     for (int i = 1; i <= 5; i++) {
@@ -32,7 +37,8 @@ class _DestinationsPageState extends State<DestinationsPage> {
 
   @override
   Widget build(BuildContext context) {
-    final Destination destination;
+    Destination destination =
+        destinations.firstWhere((element) => element.id == destinationId);
     return Scaffold(
       backgroundColor: Colors.grey[200],
       body: Column(
@@ -51,11 +57,11 @@ class _DestinationsPageState extends State<DestinationsPage> {
                   ],
                 ),
                 child: Hero(
-                  tag: widget.destination!.imageUrl.toString(),
+                  tag: destination.imageUrl.toString(),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(30),
                     child: Image(
-                      image: NetworkImage(widget.destination?.imageUrl ?? ""),
+                      image: NetworkImage(destination.imageUrl ?? ""),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -101,7 +107,7 @@ class _DestinationsPageState extends State<DestinationsPage> {
                   children: <Widget>[
                     MaterialText.headLine(
                       context,
-                      widget.destination!.city.toString(),
+                      destination.city.toString(),
                       color: ThemeColors.onBackground,
                       size: TextSize.large,
                     ),
@@ -117,7 +123,7 @@ class _DestinationsPageState extends State<DestinationsPage> {
                         ),
                         MaterialText.body(
                           context,
-                          widget.destination!.country.toString(),
+                          destination.country.toString(),
                           color: ThemeColors.onBackground,
                           size: TextSize.large,
                         ),
@@ -141,9 +147,9 @@ class _DestinationsPageState extends State<DestinationsPage> {
           ),
           Expanded(
             child: ListView.builder(
-              itemCount: widget.destination!.activities!.length,
+              itemCount: destination.activities!.length,
               itemBuilder: (BuildContext context, index) {
-                Activity activity = widget.destination!.activities![index];
+                Activity activity = destination.activities![index];
                 return Stack(
                   children: <Widget>[
                     Container(

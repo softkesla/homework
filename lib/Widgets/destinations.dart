@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_material/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:homework_flutter/page/destinations_page.dart';
 import 'package:travel_repository/lib.dart';
 
 class Destinations extends StatelessWidget {
+  // final int destinationId;
+
   const Destinations({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // Destination destination =
+    //     destinations.firstWhere((element) => element.id == destinationId);
     return Column(
       children: <Widget>[
         Padding(
@@ -43,14 +48,8 @@ class Destinations extends StatelessWidget {
               Destination destination = destinations[index];
               return GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => DestinationsPage(
-                        destination: destination,
-                      ),
-                    ),
-                  );
+                  context.goNamed('destination',
+                      params: {"destinationId": destination.id.toString()});
                 },
                 child: Container(
                   margin: PaddingSize.standard.toEdgeInsets(),

@@ -76,7 +76,7 @@ class _HomeTravelState extends State<HomeTravel> {
                   )
                   .toList(),
             ),
-            const Destinations(),
+            Destinations(),
             SizedBox(
               height: PaddingSize.large.toPaddingValue(),
             ),

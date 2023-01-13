@@ -1,6 +1,7 @@
 import 'package:travel_repository/src/travel_page/models/activity_model.dart';
 
 class Destination {
+  int? id;
   String? imageUrl;
   String? city;
   String? country;
@@ -8,6 +9,7 @@ class Destination {
   List<Activity>? activities;
 
   Destination({
+    this.id,
     this.imageUrl,
     this.city,
     this.country,
@@ -45,6 +47,7 @@ List<Activity> activities = [
 
 List<Destination> destinations = [
   Destination(
+    id: 1,
     imageUrl: 'assets/images/venice.jpg',
     city: 'Venice',
     country: 'Italy',
@@ -52,6 +55,7 @@ List<Destination> destinations = [
     activities: activities,
   ),
   Destination(
+    id: 2,
     imageUrl: 'assets/images/paris.jpg',
     city: 'Paris',
     country: 'France',
@@ -59,6 +63,7 @@ List<Destination> destinations = [
     activities: activities,
   ),
   Destination(
+    id: 3,
     imageUrl: 'assets/images/newdelhi.jpg',
     city: 'New Delhi',
     country: 'India',
@@ -66,6 +71,7 @@ List<Destination> destinations = [
     activities: activities,
   ),
   Destination(
+    id: 4,
     imageUrl: 'assets/images/saopaulo.jpg',
     city: 'Sao Paulo',
     country: 'Brazil',
@@ -73,6 +79,7 @@ List<Destination> destinations = [
     activities: activities,
   ),
   Destination(
+    id: 5,
     imageUrl: 'assets/images/newyork.jpg',
     city: 'New York City',
     country: 'United States',
