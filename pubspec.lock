@@ -422,6 +422,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  font_awesome_flutter:
+    dependency: "direct main"
+    description:
+      name: font_awesome_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "10.3.0"
   form_builder_validators:
     dependency: transitive
     description:
@@ -589,7 +596,7 @@ packages:
       name: material_color_utilities
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.1.5"
+    version: "0.2.0"
   meta:
     dependency: transitive
     description:
@@ -969,7 +976,7 @@ packages:
       name: source_span
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.9.0"
+    version: "1.9.1"
   sqflite:
     dependency: transitive
     description:
@@ -1032,7 +1039,7 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.12"
+    version: "0.4.13"
   timing:
     dependency: transitive
     description:
@@ -1040,6 +1047,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
+  travel_repository:
+    dependency: "direct main"
+    description:
+      path: "packages/travel_repository"
+      relative: true
+    source: path
+    version: "0.0.1"
   trending_tag:
     dependency: "direct main"
     description:
@@ -1123,7 +1137,7 @@ packages:
       name: vector_math
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.2"
+    version: "2.1.3"
   video_daily_rank_repository:
     dependency: "direct main"
     description:
@@ -1216,5 +1230,5 @@ packages:
     source: hosted
     version: "3.1.1"
 sdks:
-  dart: ">=2.18.6 <3.0.0"
+  dart: ">=2.19.0-146.2.beta <3.0.0"
   flutter: ">=3.3.0"

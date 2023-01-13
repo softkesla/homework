@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
                   context,
                   labelText: LocaleKeys.Login,
                   onPressed: () {
-                    context.go('/loginpage');
+                    context.goNamed('login');
                   },
                 ),
                 SizedBox(width: 20),
@@ -36,6 +36,14 @@ class HomePage extends StatelessWidget {
                   labelText: LocaleKeys.ButtonRiveDemo,
                   onPressed: () {
                     context.go('/plant');
+                  },
+                ),
+                SizedBox(width: 20),
+                MaterialBtn.primary(
+                  context,
+                  labelText: LocaleKeys.ButtonRiveDemo,
+                  onPressed: () {
+                    context.goNamed('travel');
                   },
                 ),
               ],

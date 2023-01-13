@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:homework_flutter/page/destinations_page.dart';
 import 'package:homework_flutter/page/homepromo.dart';
 import 'package:homework_flutter/page/livenowpage.dart';
 import 'package:homework_flutter/page/loginpage.dart';
@@ -16,7 +17,9 @@ import 'package:homework_flutter/page/trending_tag.dart';
 import 'package:homework_flutter/page/channel.dart';
 import 'package:homework_flutter/page/videodailyrank.dart';
 import 'package:homework_flutter/page/videopage.dart';
+import 'package:homework_flutter/page/home_travel.dart';
 import 'package:promo_repository/repositories.dart';
+import 'package:travel_repository/lib.dart';
 import 'page/channel_dailyrank_page.dart';
 import 'package:smo_localizations/localizations.dart';
 
@@ -69,7 +72,21 @@ class App extends StatelessWidget {
       GoRoute(
         routes: <GoRoute>[
           GoRoute(
+            path: 'hometravel',
+            name: "travel",
+            builder: (BuildContext context, GoRouterState state) =>
+                const HomeTravel(),
+          ),
+          GoRoute(
+              path: 'destinations_page/:destinationId',
+              name: 'destination',
+              builder: (BuildContext context, GoRouterState state) {
+                return DestinationsPage(
+                    destinationId: int.parse(state.params["destinationId"]!));
+              }),
+          GoRoute(
             path: 'loginpage',
+            name: 'login',
             builder: (BuildContext context, GoRouterState state) =>
                 const LoginPage(),
           ),
