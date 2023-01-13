@@ -406,7 +406,7 @@ packages:
     source: git
     version: "0.0.1"
   flutter_svg:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: flutter_svg
       url: "https://pub.dartlang.org"

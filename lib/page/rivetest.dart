@@ -13,7 +13,7 @@ class _RiveTestState extends State<RiveTest> {
   List<SMIInput<bool>?> inputs = [];
   List<Artboard> artboards = [];
   List<String> assetPaths = [
-    "assets/new_file.riv",
+    "anitmations/new_file.riv",
   ];
 
   int currentActiveIndex = 0;

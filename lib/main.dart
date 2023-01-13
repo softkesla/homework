@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:homework_flutter/page/destinations_page.dart';
-import 'package:homework_flutter/page/homepromo.dart';
+import 'package:homework_flutter/page/home_promo.dart';
 import 'package:homework_flutter/page/livenowpage.dart';
 import 'package:homework_flutter/page/loginpage.dart';
+import 'package:homework_flutter/page/onboarding_page.dart';
 import 'package:homework_flutter/page/plant_screen.dart';
 import 'package:homework_flutter/page/postpage.dart';
 import 'package:homework_flutter/page/rivetest.dart';
@@ -11,14 +12,11 @@ import 'package:homework_flutter/page/rivetest2.dart';
 import 'package:homework_flutter/page/setting.dart';
 import 'package:homework_flutter/page/help.dart';
 import 'package:homework_flutter/page/homepage.dart';
-import 'package:homework_flutter/page/promo.dart';
 import 'package:homework_flutter/page/error.dart';
-import 'package:homework_flutter/page/trending_tag.dart';
 import 'package:homework_flutter/page/channel.dart';
 import 'package:homework_flutter/page/videodailyrank.dart';
 import 'package:homework_flutter/page/videopage.dart';
 import 'package:homework_flutter/page/home_travel.dart';
-import 'package:promo_repository/repositories.dart';
 import 'package:travel_repository/lib.dart';
 import 'page/channel_dailyrank_page.dart';
 import 'package:smo_localizations/localizations.dart';
@@ -85,6 +83,12 @@ class App extends StatelessWidget {
                     destinationId: int.parse(state.params["destinationId"]!));
               }),
           GoRoute(
+            path: 'onboarding_page',
+            name: 'onboarding',
+            builder: (BuildContext context, GoRouterState state) =>
+                const OnboardingPage(),
+          ),
+          GoRoute(
             path: 'loginpage',
             name: 'login',
             builder: (BuildContext context, GoRouterState state) =>
@@ -144,16 +148,6 @@ class App extends StatelessWidget {
             path: 'help',
             builder: (BuildContext context, GoRouterState state) =>
                 const HelpPage(),
-          ),
-          GoRoute(
-            path: 'promo',
-            builder: (BuildContext context, GoRouterState state) =>
-                const PromoPage(),
-          ),
-          GoRoute(
-            path: 'trending',
-            builder: (BuildContext context, GoRouterState state) =>
-                const TrendingTagPage(),
           ),
           GoRoute(
             path: 'channeldailyrank',
