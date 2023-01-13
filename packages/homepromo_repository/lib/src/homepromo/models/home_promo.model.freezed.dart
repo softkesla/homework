@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'home_page.model.dart';
+part of 'home_promo.model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-HomePromoModel _$HomePromoModelFromJson(Map<String, dynamic> json) {
-  return _HomePromoModel.fromJson(json);
+HomePromo _$HomePromoFromJson(Map<String, dynamic> json) {
+  return _HomePromo.fromJson(json);
 }
 
 /// @nodoc
-mixin _$HomePromoModel {
+mixin _$HomePromo {
   String? get type => throw _privateConstructorUsedError;
   String? get section => throw _privateConstructorUsedError;
   String? get status => throw _privateConstructorUsedError;
@@ -27,19 +27,19 @@ mixin _$HomePromoModel {
   int? get priority => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
   DateTime? get updatedAt => throw _privateConstructorUsedError;
-  String get id => throw _privateConstructorUsedError;
+  FileStorage? get image => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $HomePromoModelCopyWith<HomePromoModel> get copyWith =>
+  $HomePromoCopyWith<HomePromo> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $HomePromoModelCopyWith<$Res> {
-  factory $HomePromoModelCopyWith(
-          HomePromoModel value, $Res Function(HomePromoModel) then) =
-      _$HomePromoModelCopyWithImpl<$Res, HomePromoModel>;
+abstract class $HomePromoCopyWith<$Res> {
+  factory $HomePromoCopyWith(HomePromo value, $Res Function(HomePromo) then) =
+      _$HomePromoCopyWithImpl<$Res, HomePromo>;
   @useResult
   $Res call(
       {String? type,
@@ -49,13 +49,16 @@ abstract class $HomePromoModelCopyWith<$Res> {
       int? priority,
       DateTime? createdAt,
       DateTime? updatedAt,
-      String id});
+      FileStorage? image,
+      String? id});
+
+  $FileStorageCopyWith<$Res>? get image;
 }
 
 /// @nodoc
-class _$HomePromoModelCopyWithImpl<$Res, $Val extends HomePromoModel>
-    implements $HomePromoModelCopyWith<$Res> {
-  _$HomePromoModelCopyWithImpl(this._value, this._then);
+class _$HomePromoCopyWithImpl<$Res, $Val extends HomePromo>
+    implements $HomePromoCopyWith<$Res> {
+  _$HomePromoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -72,7 +75,8 @@ class _$HomePromoModelCopyWithImpl<$Res, $Val extends HomePromoModel>
     Object? priority = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
-    Object? id = null,
+    Object? image = freezed,
+    Object? id = freezed,
   }) {
     return _then(_value.copyWith(
       type: freezed == type
@@ -103,20 +107,35 @@ class _$HomePromoModelCopyWithImpl<$Res, $Val extends HomePromoModel>
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      id: null == id
+      image: freezed == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as FileStorage?,
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FileStorageCopyWith<$Res>? get image {
+    if (_value.image == null) {
+      return null;
+    }
+
+    return $FileStorageCopyWith<$Res>(_value.image!, (value) {
+      return _then(_value.copyWith(image: value) as $Val);
+    });
   }
 }
 
 /// @nodoc
-abstract class _$$_HomePromoModelCopyWith<$Res>
-    implements $HomePromoModelCopyWith<$Res> {
-  factory _$$_HomePromoModelCopyWith(
-          _$_HomePromoModel value, $Res Function(_$_HomePromoModel) then) =
-      __$$_HomePromoModelCopyWithImpl<$Res>;
+abstract class _$$_HomePromoCopyWith<$Res> implements $HomePromoCopyWith<$Res> {
+  factory _$$_HomePromoCopyWith(
+          _$_HomePromo value, $Res Function(_$_HomePromo) then) =
+      __$$_HomePromoCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -127,15 +146,19 @@ abstract class _$$_HomePromoModelCopyWith<$Res>
       int? priority,
       DateTime? createdAt,
       DateTime? updatedAt,
-      String id});
+      FileStorage? image,
+      String? id});
+
+  @override
+  $FileStorageCopyWith<$Res>? get image;
 }
 
 /// @nodoc
-class __$$_HomePromoModelCopyWithImpl<$Res>
-    extends _$HomePromoModelCopyWithImpl<$Res, _$_HomePromoModel>
-    implements _$$_HomePromoModelCopyWith<$Res> {
-  __$$_HomePromoModelCopyWithImpl(
-      _$_HomePromoModel _value, $Res Function(_$_HomePromoModel) _then)
+class __$$_HomePromoCopyWithImpl<$Res>
+    extends _$HomePromoCopyWithImpl<$Res, _$_HomePromo>
+    implements _$$_HomePromoCopyWith<$Res> {
+  __$$_HomePromoCopyWithImpl(
+      _$_HomePromo _value, $Res Function(_$_HomePromo) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -148,9 +171,10 @@ class __$$_HomePromoModelCopyWithImpl<$Res>
     Object? priority = freezed,
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
-    Object? id = null,
+    Object? image = freezed,
+    Object? id = freezed,
   }) {
-    return _then(_$_HomePromoModel(
+    return _then(_$_HomePromo(
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -179,18 +203,22 @@ class __$$_HomePromoModelCopyWithImpl<$Res>
           ? _value.updatedAt
           : updatedAt // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      id: null == id
+      image: freezed == image
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as FileStorage?,
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_HomePromoModel implements _HomePromoModel {
-  const _$_HomePromoModel(
+class _$_HomePromo implements _HomePromo {
+  _$_HomePromo(
       {this.type,
       this.section,
       this.status,
@@ -198,10 +226,11 @@ class _$_HomePromoModel implements _HomePromoModel {
       this.priority,
       this.createdAt,
       this.updatedAt,
-      required this.id});
+      this.image,
+      this.id});
 
-  factory _$_HomePromoModel.fromJson(Map<String, dynamic> json) =>
-      _$$_HomePromoModelFromJson(json);
+  factory _$_HomePromo.fromJson(Map<String, dynamic> json) =>
+      _$$_HomePromoFromJson(json);
 
   @override
   final String? type;
@@ -218,18 +247,20 @@ class _$_HomePromoModel implements _HomePromoModel {
   @override
   final DateTime? updatedAt;
   @override
-  final String id;
+  final FileStorage? image;
+  @override
+  final String? id;
 
   @override
   String toString() {
-    return 'HomePromoModel(type: $type, section: $section, status: $status, url: $url, priority: $priority, createdAt: $createdAt, updatedAt: $updatedAt, id: $id)';
+    return 'HomePromo(type: $type, section: $section, status: $status, url: $url, priority: $priority, createdAt: $createdAt, updatedAt: $updatedAt, image: $image, id: $id)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_HomePromoModel &&
+            other is _$_HomePromo &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.section, section) || other.section == section) &&
             (identical(other.status, status) || other.status == status) &&
@@ -240,30 +271,31 @@ class _$_HomePromoModel implements _HomePromoModel {
                 other.createdAt == createdAt) &&
             (identical(other.updatedAt, updatedAt) ||
                 other.updatedAt == updatedAt) &&
+            (identical(other.image, image) || other.image == image) &&
             (identical(other.id, id) || other.id == id));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, type, section, status, url,
-      priority, createdAt, updatedAt, id);
+      priority, createdAt, updatedAt, image, id);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_HomePromoModelCopyWith<_$_HomePromoModel> get copyWith =>
-      __$$_HomePromoModelCopyWithImpl<_$_HomePromoModel>(this, _$identity);
+  _$$_HomePromoCopyWith<_$_HomePromo> get copyWith =>
+      __$$_HomePromoCopyWithImpl<_$_HomePromo>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HomePromoModelToJson(
+    return _$$_HomePromoToJson(
       this,
     );
   }
 }
 
-abstract class _HomePromoModel implements HomePromoModel {
-  const factory _HomePromoModel(
+abstract class _HomePromo implements HomePromo {
+  factory _HomePromo(
       {final String? type,
       final String? section,
       final String? status,
@@ -271,10 +303,11 @@ abstract class _HomePromoModel implements HomePromoModel {
       final int? priority,
       final DateTime? createdAt,
       final DateTime? updatedAt,
-      required final String id}) = _$_HomePromoModel;
+      final FileStorage? image,
+      final String? id}) = _$_HomePromo;
 
-  factory _HomePromoModel.fromJson(Map<String, dynamic> json) =
-      _$_HomePromoModel.fromJson;
+  factory _HomePromo.fromJson(Map<String, dynamic> json) =
+      _$_HomePromo.fromJson;
 
   @override
   String? get type;
@@ -291,9 +324,11 @@ abstract class _HomePromoModel implements HomePromoModel {
   @override
   DateTime? get updatedAt;
   @override
-  String get id;
+  FileStorage? get image;
+  @override
+  String? get id;
   @override
   @JsonKey(ignore: true)
-  _$$_HomePromoModelCopyWith<_$_HomePromoModel> get copyWith =>
+  _$$_HomePromoCopyWith<_$_HomePromo> get copyWith =>
       throw _privateConstructorUsedError;
 }
