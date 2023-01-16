@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:homework_flutter/page/destinations_page.dart';
-import 'package:homework_flutter/page/homepromo.dart';
+import 'package:homework_flutter/page/home_promo.dart';
 import 'package:homework_flutter/page/livenowpage.dart';
 import 'package:homework_flutter/page/loginpage.dart';
 import 'package:homework_flutter/page/plant_screen.dart';
