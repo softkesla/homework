@@ -5,6 +5,7 @@ import 'package:post_repository/repositories.dart';
 import 'package:post_repository/src/src.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:intl/intl.dart';
 
 class PostPage extends StatefulWidget {
   const PostPage({super.key});
@@ -33,12 +34,12 @@ class _PostPageState extends State<PostPage> {
                   child: CircularProgressIndicator(),
                 );
               }
-
               if (state is PostPageLoadedState) {
                 List<Post> postlist = state.postpage;
                 return ListView.builder(
                   itemCount: postlist.length,
                   itemBuilder: (_, index) {
+                    DateTime? monthAPI = postlist[index].createdAt;
                     return Column(
                       children: [
                         Stack(
@@ -48,47 +49,53 @@ class _PostPageState extends State<PostPage> {
                                 context,
                                 MediaCardItem(
                                   cardPrimaryItem: MediaCardPrimaryItem(
-                                    leading: Stack(
-                                      children: [
-                                        ClipOval(
-                                          child: SizedBox.fromSize(
-                                            size: Size.fromRadius(25),
-                                            child: MaterialImage.image(
-                                                context,
-                                                postlist[index]
-                                                        .channel
-                                                        ?.thumbnail?[0]
-                                                        .url ??
-                                                    '',
-                                                fit: BoxFit.cover),
-                                          ),
-                                        ),
-                                      ],
+                                    onActionTab: () {
+                                      MaterialNotification.alertDialog(context,
+                                          contentText: 'Card onTab');
+                                    },
+                                    leading: CircleAvatar(
+                                      radius: 20.0,
+                                      backgroundColor: Colors.orangeAccent,
+                                      child: CircleAvatar(
+                                          radius: 19.0,
+                                          backgroundImage: NetworkImage(
+                                              postlist[index]
+                                                      .channel
+                                                      ?.thumbnail?[0]
+                                                      .url ??
+                                                  "")),
                                     ),
                                     titleText: postlist[index]
                                             .channel
                                             ?.name
                                             ?.toString() ??
                                         "ไม่มีชื่อ",
-                                    subtitleText: "By " +
-                                        postlist[index]
-                                            .channel!
-                                            .name!
-                                            .toString(),
-                                    content: Column(
-                                      children: [
-                                        Row(
-                                          children: [
-                                            (MaterialText.body(
-                                                context,
-                                                postlist[index]
-                                                    .title
-                                                    .toString())),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
+                                    subtitleText:
+                                        "By ${postlist[index].channel?.name.toString()} \u2764️  | ${DateFormat.MMM().format(monthAPI!)} ${postlist[index].createdAt?.day.toString()}",
+                                    content: (MaterialText.body(context,
+                                        postlist[index].title.toString())),
                                   ),
+                                  cardSecondaryItem: MediaCardSecondaryItem(
+                                      content: Row(
+                                    children: [
+                                      MaterialBtn.iconButton(context,
+                                          icon: Icon(Icons.favorite),
+                                          onPressed: () {}),
+                                      MaterialText.body(
+                                          context,
+                                          postlist[index]
+                                              .likesAmount
+                                              .toString()),
+                                      MaterialBtn.iconButton(context,
+                                          icon: Icon(Icons.comment_rounded),
+                                          onPressed: () {}),
+                                      MaterialText.body(
+                                          context,
+                                          postlist[index]
+                                              .commentsAmount
+                                              .toString())
+                                    ],
+                                  )),
                                   src: postlist[index].media?[0].url ??
                                       "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/64px-HD_transparent_picture.png",
                                 ),
@@ -96,80 +103,6 @@ class _PostPageState extends State<PostPage> {
                           ],
                         ),
                       ],
-
-                      // child: Card(
-                      //   elevation: 4,
-                      //   child: Column(
-                      //     children: [
-                      //       ListTile(
-                      //         leading: SizedBox(
-                      //           width: 50,
-                      //           height: 50,
-                      //           child: ClipOval(
-                      //             child: SizedBox.fromSize(
-                      //               size: Size.fromRadius(48),
-                      //               child: MaterialImage.image(
-                      //                   context,
-                      //                   postlist[index]
-                      //                           .channel
-                      //                           ?.thumbnail?[0]
-                      //                           .url ??
-                      //                       '',
-                      //                   fit: BoxFit.cover),
-                      //             ),
-                      //           ),
-                      //         ),
-                      //         title: MaterialText.title(
-                      //             context,
-                      //             postlist[index].channel?.name?.toString() ??
-                      //                 'ไม่มีชื่อ',
-                      //             color: ThemeColors.primary),
-                      //         subtitle: Text(
-                      //           postlist[index].createdAt.toString(),
-                      //           style: TextStyle(color: Colors.white),
-                      //         ),
-                      //       ),
-                      //       ListTile(
-                      //         title: MaterialText.title(
-                      //           context,
-                      //           postlist[index].title.toString(),
-                      //         ),
-                      //       ),
-                      //       ListTile(
-                      //         title: MaterialImage.image(
-                      //             context,
-                      //             postlist[index].media?[0].url ??
-                      //                 'https://cdn.dribbble.com/userupload/4244376/file/original-e24da4de437467ef33eb46d733e78f11.png?compress=1&resize=752x'),
-                      //       ),
-                      //       ListTile(
-                      //         title: Row(
-                      //           children: [
-                      //             Icon(Icons.favorite),
-                      //             SizedBox(
-                      //               width: PaddingSize.smaller.toPaddingValue(),
-                      //             ),
-                      //             MaterialText.body(
-                      //               context,
-                      //               postlist[index].likesAmount.toString(),
-                      //             ),
-                      //             SizedBox(
-                      //               width:
-                      //                   PaddingSize.standard.toPaddingValue(),
-                      //             ),
-                      //             Icon(Icons.comment),
-                      //             SizedBox(
-                      //               width: PaddingSize.smaller.toPaddingValue(),
-                      //             ),
-                      //             MaterialText.body(
-                      //               context,
-                      //               postlist[index].commentsAmount.toString(),
-                      //             ),
-                      //           ],
-                      //         ),
-                      //       )
-                      //     ],
-                      //   ),
-                      // ),
                     );
                   },
                 );
@@ -187,3 +120,4 @@ class _PostPageState extends State<PostPage> {
     );
   }
 }
+// DateFormat.yMMMd().format(DateTime.now())
