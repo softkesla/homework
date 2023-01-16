@@ -7,14 +7,14 @@ import 'package:channels_repository/channels_repository.dart';
 import 'package:channels_repository/repositories.dart';
 import 'package:intl/intl.dart';
 
-class ChannelPage extends StatefulWidget {
-  const ChannelPage({super.key});
+class NewChannelPage extends StatefulWidget {
+  const NewChannelPage({super.key});
 
   @override
-  State<ChannelPage> createState() => _ChannelPageState();
+  State<NewChannelPage> createState() => _NewChannelPageState();
 }
 
-class _ChannelPageState extends State<ChannelPage> {
+class _NewChannelPageState extends State<NewChannelPage> {
   @override
   Widget build(BuildContext context) {
     return RepositoryProvider(
@@ -25,7 +25,10 @@ class _ChannelPageState extends State<ChannelPage> {
         )..add(LoadChannelEvent()),
         child: Scaffold(
           appBar: AppBar(
-            title: const Text('Channel'),
+            title: const Text(
+              'Channel',
+              textAlign: TextAlign.center,
+            ),
           ),
           body: BlocBuilder<ChannelBloc, ChannelState>(
             builder: (context, state) {
@@ -36,33 +39,31 @@ class _ChannelPageState extends State<ChannelPage> {
               }
               if (state is ChannelLoadedState) {
                 List<ChannelModel> channelList = state.channels;
-
                 return Column(
                   children: [
-                    ListTile(
-                      title: MaterialText.title(context, 'New Channels',
-                          color: ThemeColors.onPrimary),
-                      trailing: GestureDetector(
-                        onTap: () {
-                          context.goNamed("newChannel");
-                        },
-                        child: Wrap(children: [
-                          MaterialText.subTitle(context, "See All",
-                              color: ThemeColors.onPrimary),
-                          MaterialIcon.icon(
-                              context, Icons.arrow_forward_ios_outlined,
-                              size: WidgetSize.smaller)
-                        ]),
-                      ),
-                    ),
                     Container(
-                      height: 300.0,
-                      child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
+                        margin: EdgeInsets.all(20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            MaterialText.subTitle(context,
+                                channelList.length.toString() + " channels"),
+                            MaterialIcon.icon(context, Icons.list,
+                                size: WidgetSize.standard)
+                          ],
+                        )),
+                    Expanded(
+                      child: GridView.builder(
+                          gridDelegate:
+                              const SliverGridDelegateWithMaxCrossAxisExtent(
+                                  maxCrossAxisExtent: 200,
+                                  childAspectRatio: 70 / 60,
+                                  crossAxisSpacing: 20,
+                                  mainAxisSpacing: 5),
                           itemCount: channelList.length,
-                          itemBuilder: (BuildContext context, int index) {
+                          itemBuilder: (BuildContext context, index) {
                             return Stack(
-                              alignment: Alignment.topRight,
+                              alignment: Alignment.center,
                               children: [
                                 Container(
                                   width: 80,
@@ -91,6 +92,8 @@ class _ChannelPageState extends State<ChannelPage> {
                                   ),
                                 ),
                                 Positioned(
+                                  top: -1,
+                                  right: 25,
                                   child: MaterialBtn.iconButton(
                                     context,
                                     onPressed: () {},

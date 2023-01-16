@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:homework_flutter/page/destinations_page.dart';
-import 'package:homework_flutter/page/homepromo.dart';
+import 'package:homework_flutter/page/home_promo.dart';
 import 'package:homework_flutter/page/livenowpage.dart';
 import 'package:homework_flutter/page/loginpage.dart';
+import 'package:homework_flutter/page/new_channel.dart';
 import 'package:homework_flutter/page/plant_screen.dart';
 import 'package:homework_flutter/page/postpage.dart';
 import 'package:homework_flutter/page/rivetest.dart';
@@ -129,6 +130,12 @@ class App extends StatelessWidget {
             path: 'channel',
             builder: (BuildContext context, GoRouterState state) =>
                 const ChannelPage(),
+          ),
+          GoRoute(
+            path: 'newchannel',
+            name: 'newChannel',
+            builder: (BuildContext context, GoRouterState state) =>
+                const NewChannelPage(),
           ),
           GoRoute(
             path: 'homepromo',
