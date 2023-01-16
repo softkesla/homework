@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_material/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:homework_flutter/Widgets/hotel_carousel.dart';
+import 'package:homework_flutter/widgets/hotel_carousel.dart';
 
-import '../Widgets/destinations.dart';
+import '../widgets/destinations.dart';
 
 class HomeTravel extends StatefulWidget {
   const HomeTravel({super.key});
@@ -110,8 +110,7 @@ class _HomeTravelState extends State<HomeTravel> {
           BottomNavigationBarItem(
             icon: CircleAvatar(
               radius: 15,
-              backgroundImage: NetworkImage(
-                  "https://img.freepik.com/free-vector/cute-astronaut-riding-rocket-waving-hand-cartoon-icon-illustration-science-technology-icon-concept_138676-2130.jpg?w=826&t=st=1673509086~exp=1673509686~hmac=83ca353882524854a704ec1c4f278d8ca7d0e355d3319a84da913ecdb47b3f60"),
+              backgroundImage: AssetImage("images/newdelhi.jpg"),
             ),
             label: "",
           ),

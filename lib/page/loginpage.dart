@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_material/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:homework_flutter/Widgets/loading_dialog.dart';
 import 'package:rive/rive.dart';
 import 'package:go_router/go_router.dart';
 import 'package:smo_localizations/localizations.dart';
-
-import '../component/loading_dialog.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -34,10 +34,16 @@ class _LoginPageState extends State<LoginPage> {
   SMIInput<bool>? trigSuccess;
   SMIInput<bool>? trigFail;
 
+  late RiveAnimationController _btnAnimationController;
+
   @override
   void initState() {
     emailFocusNode.addListener(emailFocus);
     passwordFocusNode.addListener(passwordFocus);
+    _btnAnimationController = OneShotAnimation(
+      "Click",
+      autoplay: false,
+    );
     super.initState();
   }
 
@@ -58,137 +64,231 @@ class _LoginPageState extends State<LoginPage> {
 
   final inputStyle = OutlineInputBorder(
     borderRadius: BorderRadius.circular(8),
-    borderSide: BorderSide(width: 0),
+    borderSide: const BorderSide(width: 0),
   );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(214, 226, 234, 1),
-      body: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: Column(
-          children: [
-            SizedBox(
-              height: PaddingSize.largest.toPaddingValue(),
-            ),
-            MaterialText.title(
-              context,
-              "Welcome to Homework Flutter Project",
-              size: TextSize.large,
-              fontWeight: TextWeight.bold,
-              color: ThemeColors.background,
-            ),
-            SizedBox(
-              height: 250,
-              width: 250,
-              child: RiveAnimation.asset(
-                "assets/login-teddy.riv",
-                fit: BoxFit.fitHeight,
-                stateMachines: const ["Login Machine"],
-                onInit: (artboard) {
-                  controller = StateMachineController.fromArtboard(
-                    artboard,
-                    "Login Machine",
-                  );
-
-                  if (controller == null) return;
-
-                  artboard.addController(controller!);
-                  isChecking = controller?.findInput("isChecking");
-                  numLook = controller?.findInput("numLook");
-                  isHandsUp = controller?.findInput("isHandsUp");
-                  trigSuccess = controller?.findInput("trigSuccess");
-                  trigFail = controller?.findInput("trigFail");
-                },
+      body: Container(
+        decoration: const BoxDecoration(
+          color: Color.fromRGBO(214, 226, 234, 1),
+          borderRadius: BorderRadius.all(
+            Radius.circular(40),
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            children: [
+              SizedBox(
+                height: PaddingSize.largest.toPaddingValue(),
               ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: ThemeColors.onBackground.toColor(context),
-                borderRadius: BorderRadius.circular(16),
+              MaterialText.headLine(
+                context,
+                "Sign In",
+                size: TextSize.large,
+                fontWeight: TextWeight.bold,
+                color: ThemeColors.outline,
               ),
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                children: [
-                  TextField(
-                    maxLength: 20,
-                    focusNode: emailFocusNode,
-                    controller: emailController,
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.grey[200],
-                      border: inputStyle,
-                      hintText: "@@Email".translate(),
-                      hintStyle: TextStyle(
-                          color: ThemeColors.background.toColor(context)),
+              const SizedBox(
+                height: 10,
+              ),
+              MaterialText.body(
+                context,
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+                size: TextSize.small,
+                color: ThemeColors.outline,
+              ),
+              SizedBox(
+                height: 250,
+                width: 250,
+                child: RiveAnimation.asset(
+                  "anitmations/login-teddy.riv",
+                  fit: BoxFit.fitHeight,
+                  stateMachines: const ["Login Machine"],
+                  onInit: (artboard) {
+                    controller = StateMachineController.fromArtboard(
+                      artboard,
+                      "Login Machine",
+                    );
+
+                    if (controller == null) return;
+
+                    artboard.addController(controller!);
+                    isChecking = controller?.findInput("isChecking");
+                    numLook = controller?.findInput("numLook");
+                    isHandsUp = controller?.findInput("isHandsUp");
+                    trigSuccess = controller?.findInput("trigSuccess");
+                    trigFail = controller?.findInput("trigFail");
+                  },
+                ),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: ThemeColors.onBackground.toColor(context),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    MaterialText.label(
+                      context,
+                      "@@Email".translate(),
+                      color: ThemeColors.background,
+                      size: TextSize.standard,
                     ),
-                    style: TextStyle(
-                        color: ThemeColors.background.toColor(context)),
-                    onChanged: (value) {
-                      numLook?.change(value.length.toDouble() / 20 * 100);
-                    },
-                  ),
-                  SizedBox(
-                    height: PaddingSize.smallest.toPaddingValue(),
-                  ),
-                  TextField(
-                    focusNode: passwordFocusNode,
-                    controller: passwordController,
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.grey[200],
-                      border: inputStyle,
-                      hintText: "@@Password".translate(),
-                      hintStyle: TextStyle(
+                    TextField(
+                      maxLength: 20,
+                      focusNode: emailFocusNode,
+                      controller: emailController,
+                      decoration: InputDecoration(
+                        prefixIcon: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8),
+                          child: SvgPicture.asset(
+                            "images/Mail.svg",
+                            width: 36,
+                            height: 36,
+                          ),
+                        ),
+                        filled: true,
+                        border: inputStyle,
+                        hintStyle: TextStyle(
+                            color: ThemeColors.background.toColor(context)),
+                      ),
+                      style: TextStyle(
                           color: ThemeColors.background.toColor(context)),
+                      onChanged: (value) {
+                        numLook?.change(value.length.toDouble() / 20 * 100);
+                      },
                     ),
-                    style: TextStyle(
-                        color: ThemeColors.background.toColor(context)),
-                    obscureText: true,
-                  ),
-                  SizedBox(
-                    height: PaddingSize.large.toPaddingValue(),
-                  ),
-                  MaterialBtn.primary(
-                    context,
-                    width: WidgetSize.larger,
-                    labelText: "@@Login",
-                    onPressed: () async {
-                      emailFocusNode.unfocus();
-                      passwordFocusNode.unfocus();
+                    MaterialText.label(
+                      context,
+                      "@@Password".translate(),
+                      color: ThemeColors.background,
+                      size: TextSize.standard,
+                    ),
+                    TextField(
+                      focusNode: passwordFocusNode,
+                      controller: passwordController,
+                      decoration: InputDecoration(
+                        prefixIcon: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8),
+                          child: SvgPicture.asset(
+                            "images/Password.svg",
+                            width: 36,
+                            height: 36,
+                          ),
+                        ),
+                        filled: true,
+                        border: inputStyle,
+                        hintStyle: TextStyle(
+                            color: ThemeColors.background.toColor(context)),
+                      ),
+                      style: TextStyle(
+                          color: ThemeColors.background.toColor(context)),
+                      obscureText: true,
+                    ),
+                    SizedBox(
+                      height: PaddingSize.large.toPaddingValue(),
+                    ),
+                    MaterialBtn.primary(
+                      context,
+                      width: WidgetSize.larger,
+                      icon: const Icon(Icons.arrow_forward),
+                      labelText: "@@Login",
+                      onPressed: () async {
+                        emailFocusNode.unfocus();
+                        passwordFocusNode.unfocus();
 
-                      final email = emailController.text;
-                      final password = passwordController.text;
+                        final email = emailController.text;
+                        final password = passwordController.text;
 
-                      showLoadinDialog(context);
-                      // MaterialNotification.showLoading(context);
-                      await Future.delayed(
-                        const Duration(seconds: 2),
-                      );
-                      // if (mounted) MaterialNotification.hideLoading(context);
-                      if (mounted) Navigator.pop(context);
-
-                      if (email == validEmail && password == validPassword) {
-                        trigSuccess?.change(true);
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Success')),
-                        );
+                        showLoadinDialog(context);
+                        // MaterialNotification.showLoading(context);
                         await Future.delayed(
-                          const Duration(seconds: 3),
+                          const Duration(seconds: 2),
                         );
-                        context.go("/");
-                      } else {
-                        trigFail?.change(true);
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Fail')),
-                        );
-                      }
-                    },
-                  ),
-                ],
+                        // if (mounted) MaterialNotification.hideLoading(context);
+                        if (mounted) Navigator.pop(context);
+
+                        if (email == validEmail && password == validPassword) {
+                          trigSuccess?.change(true);
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(content: Text('Success')),
+                          );
+                          await Future.delayed(
+                            const Duration(seconds: 3),
+                          );
+                          context.go("/");
+                        } else {
+                          trigFail?.change(true);
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(content: Text('Fail')),
+                          );
+                        }
+                      },
+                    ),
+                    SizedBox(
+                      height: PaddingSize.large.toPaddingValue(),
+                    ),
+                    Row(
+                      children: [
+                        const Expanded(
+                          child: Divider(),
+                        ),
+                        Padding(
+                          padding: PaddingSize.standard
+                              .toEdgeInsets(type: PaddingType.horizontal),
+                          child: MaterialText.label(
+                            context,
+                            "OR",
+                            color: ThemeColors.background,
+                            size: TextSize.standard,
+                          ),
+                        ),
+                        const Expanded(
+                          child: Divider(),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        MaterialBtn.iconButton(
+                          context,
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.g_mobiledata,
+                            size: WidgetSize.large.toIconSize(),
+                            color: ThemeColors.background.toColor(context),
+                          ),
+                        ),
+                        MaterialBtn.iconButton(
+                          context,
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.apple,
+                            size: WidgetSize.standard.toIconSize(),
+                            color: ThemeColors.background.toColor(context),
+                          ),
+                        ),
+                        MaterialBtn.iconButton(
+                          context,
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.mail,
+                            size: WidgetSize.standard.toIconSize(),
+                            color: ThemeColors.background.toColor(context),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

@@ -114,8 +114,8 @@ class Destinations extends StatelessWidget {
                               child: Image(
                                 height: 180,
                                 width: 180,
-                                image: NetworkImage(
-                                    destination.imageUrl.toString()),
+                                image:
+                                    AssetImage(destination.imageUrl.toString()),
                                 fit: BoxFit.cover,
                               ),
                             ),

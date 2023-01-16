@@ -15,10 +15,35 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Flutter',
+            const Text('Flutter',
                 style: TextStyle(fontSize: 60, fontFamily: 'Pacifico')),
             SizedBox(
-              height: 20,
+              height: PaddingSize.standard.toPaddingValue(),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                MaterialBtn.primary(
+                  context,
+                  labelText: "Onboarding",
+                  onPressed: () {
+                    context.goNamed('onboarding');
+                  },
+                ),
+                SizedBox(
+                  width: PaddingSize.standard.toPaddingValue(),
+                ),
+                MaterialBtn.primary(
+                  context,
+                  labelText: "Travel",
+                  onPressed: () {
+                    context.goNamed('travel');
+                  },
+                ),
+              ],
+            ),
+            SizedBox(
+              height: PaddingSize.standard.toPaddingValue(),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -30,26 +55,20 @@ class HomePage extends StatelessWidget {
                     context.goNamed('login');
                   },
                 ),
-                SizedBox(width: 20),
+                SizedBox(
+                  width: PaddingSize.standard.toPaddingValue(),
+                ),
                 MaterialBtn.primary(
                   context,
-                  labelText: LocaleKeys.ButtonRiveDemo,
+                  labelText: "Plant Stay Focus",
                   onPressed: () {
                     context.go('/plant');
-                  },
-                ),
-                SizedBox(width: 20),
-                MaterialBtn.primary(
-                  context,
-                  labelText: LocaleKeys.ButtonRiveDemo,
-                  onPressed: () {
-                    context.goNamed('travel');
                   },
                 ),
               ],
             ),
             SizedBox(
-              height: 20,
+              height: PaddingSize.standard.toPaddingValue(),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -61,7 +80,9 @@ class HomePage extends StatelessWidget {
                     context.go('/videodailyrank');
                   },
                 ),
-                SizedBox(width: 20),
+                SizedBox(
+                  width: PaddingSize.standard.toPaddingValue(),
+                ),
                 MaterialBtn.primary(
                   context,
                   labelText: LocaleKeys.ButtonRiveDemo,
@@ -72,7 +93,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 20,
+              height: PaddingSize.standard.toPaddingValue(),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -84,7 +105,9 @@ class HomePage extends StatelessWidget {
                     context.go('/videopage');
                   },
                 ),
-                SizedBox(width: 20),
+                SizedBox(
+                  width: PaddingSize.standard.toPaddingValue(),
+                ),
                 MaterialBtn.primary(
                   context,
                   labelText: LocaleKeys.PostPage,
@@ -95,7 +118,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 20,
+              height: PaddingSize.standard.toPaddingValue(),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -107,7 +130,9 @@ class HomePage extends StatelessWidget {
                     context.go('/livenowpage');
                   },
                 ),
-                SizedBox(width: 20),
+                SizedBox(
+                  width: PaddingSize.standard.toPaddingValue(),
+                ),
                 MaterialBtn.primary(
                   context,
                   labelText: LocaleKeys.HomePromo,
@@ -118,7 +143,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 20,
+              height: PaddingSize.standard.toPaddingValue(),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -128,40 +153,29 @@ class HomePage extends StatelessWidget {
                   labelText: LocaleKeys.Settings,
                   onPressed: () => context.go('/setting'),
                 ),
-                SizedBox(width: 20),
+                SizedBox(
+                  width: PaddingSize.standard.toPaddingValue(),
+                ),
                 MaterialBtn.primary(context,
                     onPressed: () => context.go('/help'),
                     labelText: LocaleKeys.Help),
               ],
             ),
             SizedBox(
-              height: 20,
+              height: PaddingSize.standard.toPaddingValue(),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                MaterialBtn.primary(context,
-                    onPressed: () => context.go('/promo'),
-                    labelText: LocaleKeys.Promo),
-                SizedBox(width: 20),
-                MaterialBtn.primary(context,
-                    onPressed: () => context.go('/channel'),
-                    labelText: LocaleKeys.Channel),
-              ],
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MaterialBtn.primary(context,
-                    onPressed: () => context.go('/trending'),
-                    labelText: LocaleKeys.TrendingTag),
-                SizedBox(width: 20),
                 MaterialBtn.primary(context,
                     onPressed: () => context.go('/channeldailyrank'),
                     labelText: LocaleKeys.ChannelDailyRank),
+                SizedBox(
+                  width: PaddingSize.standard.toPaddingValue(),
+                ),
+                MaterialBtn.primary(context,
+                    onPressed: () => context.go('/channel'),
+                    labelText: LocaleKeys.Channel),
               ],
             ),
           ],

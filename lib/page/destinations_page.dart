@@ -61,7 +61,7 @@ class _DestinationsPageState extends State<DestinationsPage> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(30),
                     child: Image(
-                      image: NetworkImage(destination.imageUrl ?? ""),
+                      image: AssetImage(destination.imageUrl ?? ""),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -252,7 +252,7 @@ class _DestinationsPageState extends State<DestinationsPage> {
                         borderRadius: BorderRadius.circular(20),
                         child: Image(
                           width: 110,
-                          image: NetworkImage(
+                          image: AssetImage(
                             activity.imageUrl.toString(),
                           ),
                           fit: BoxFit.cover,

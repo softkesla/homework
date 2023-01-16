@@ -20,7 +20,7 @@ class Destination {
 
 List<Activity> activities = [
   Activity(
-    imageUrl: 'assets/images/stmarksbasilica.jpg',
+    imageUrl: 'images/stmarksbasilica.jpg',
     name: 'St. Mark\'s Basilica',
     type: 'Sightseeing Tour',
     startTimes: ['9:00 am', '11:00 am'],
@@ -28,7 +28,7 @@ List<Activity> activities = [
     price: 30,
   ),
   Activity(
-    imageUrl: 'assets/images/gondola.jpg',
+    imageUrl: 'images/gondola.jpg',
     name: 'Walking Tour and Gonadola Ride',
     type: 'Sightseeing Tour',
     startTimes: ['11:00 pm', '1:00 pm'],
@@ -36,7 +36,7 @@ List<Activity> activities = [
     price: 210,
   ),
   Activity(
-    imageUrl: 'assets/images/murano.jpg',
+    imageUrl: 'images/murano.jpg',
     name: 'Murano and Burano Tour',
     type: 'Sightseeing Tour',
     startTimes: ['12:30 pm', '2:00 pm'],
@@ -48,7 +48,7 @@ List<Activity> activities = [
 List<Destination> destinations = [
   Destination(
     id: 1,
-    imageUrl: 'assets/images/venice.jpg',
+    imageUrl: 'images/venice.jpg',
     city: 'Venice',
     country: 'Italy',
     description: 'Visit Venice for an amazing and unforgettable adventure.',
@@ -56,7 +56,7 @@ List<Destination> destinations = [
   ),
   Destination(
     id: 2,
-    imageUrl: 'assets/images/paris.jpg',
+    imageUrl: 'images/paris.jpg',
     city: 'Paris',
     country: 'France',
     description: 'Visit Paris for an amazing and unforgettable adventure.',
@@ -64,7 +64,7 @@ List<Destination> destinations = [
   ),
   Destination(
     id: 3,
-    imageUrl: 'assets/images/newdelhi.jpg',
+    imageUrl: 'images/newdelhi.jpg',
     city: 'New Delhi',
     country: 'India',
     description: 'Visit New Delhi for an amazing and unforgettable adventure.',
@@ -72,7 +72,7 @@ List<Destination> destinations = [
   ),
   Destination(
     id: 4,
-    imageUrl: 'assets/images/saopaulo.jpg',
+    imageUrl: 'images/saopaulo.jpg',
     city: 'Sao Paulo',
     country: 'Brazil',
     description: 'Visit Sao Paulo for an amazing and unforgettable adventure.',
@@ -80,7 +80,7 @@ List<Destination> destinations = [
   ),
   Destination(
     id: 5,
-    imageUrl: 'assets/images/newyork.jpg',
+    imageUrl: 'images/newyork.jpg',
     city: 'New York City',
     country: 'United States',
     description: 'Visit New York for an amazing and unforgettable adventure.',

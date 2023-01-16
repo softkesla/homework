@@ -50,7 +50,7 @@ class _PlantScreenState extends State<PlantScreen> {
   void initState() {
     super.initState();
     plantButtonText = "Plant";
-    rootBundle.load('assets/tree_demo.riv').then(
+    rootBundle.load('anitmations/tree_demo.riv').then(
       (data) async {
         final file = RiveFile.import(data);
 
