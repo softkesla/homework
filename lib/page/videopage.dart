@@ -37,14 +37,14 @@ class _VideoPageState extends State<VideoPage> {
                 );
               }
               if (state is VideoLoadedState) {
-                List<Video> LiveNowList = state.video;
+                List<Video> liveNowList = state.video;
                 return ListView.builder(
-                    itemCount: LiveNowList.length,
+                    itemCount: liveNowList.length,
                     itemBuilder: (_, index) {
-                      DateTime? monthfromAPI = LiveNowList[index].createdAt;
-                      // Duration durationVideo = Duration(hours: LiveNowList[index].duration?? 0);
+                      DateTime? monthfromAPI = liveNowList[index].createdAt;
+                      // Duration durationVideo = Duration(hours: liveNowList[index].duration?? 0);
                       Duration duration = Duration(
-                        seconds: LiveNowList[index].duration ?? 0,
+                        seconds: liveNowList[index].duration ?? 0,
                       );
                       String formattedDuration =
                           duration.toString().substring(0, 7);
@@ -55,30 +55,45 @@ class _VideoPageState extends State<VideoPage> {
                               MaterialCard.mediaInfoCard(
                                 context,
                                 MediaCardItem(
-                                  src: LiveNowList[index].thumbnail?.url ?? '',
+                                  src: liveNowList[index].thumbnail?.url ?? '',
                                   cardPrimaryItem: MediaCardPrimaryItem(
-                                    leading: CircleAvatar(
-                                      radius: 20.0,
-                                      backgroundColor:
-                                          ThemeColors.primary.toColor(context),
-                                      child: CircleAvatar(
-                                        backgroundImage: NetworkImage(
-                                          LiveNowList[index]
-                                                  .channel
-                                                  ?.thumbnail
-                                                  ?.url ??
-                                              '',
+                                    leading: GestureDetector(
+                                      onTap: () {
+                                        context.goNamed('profile', params: {
+                                          "channelId":
+                                              "${liveNowList[index].channel?.id}"
+                                        });
+                                      },
+                                      child: Hero(
+                                        tag: liveNowList[index]
+                                                .channel
+                                                ?.thumbnail
+                                                ?.url ??
+                                            '',
+                                        child: CircleAvatar(
+                                          radius: 20.0,
+                                          backgroundColor: ThemeColors.primary
+                                              .toColor(context),
+                                          child: CircleAvatar(
+                                            backgroundImage: NetworkImage(
+                                              liveNowList[index]
+                                                      .channel
+                                                      ?.thumbnail
+                                                      ?.url ??
+                                                  '',
+                                            ),
+                                            radius: 19.0,
+                                          ),
                                         ),
-                                        radius: 19.0,
                                       ),
                                     ),
                                     titleText:
-                                        LiveNowList[index].channel?.name ?? "",
+                                        liveNowList[index].channel?.name ?? "",
                                     subtitleText:
-                                        "By ${LiveNowList[index].channel?.name ?? ""} | ${DateFormat.MMM().format(monthfromAPI!)} ${LiveNowList[index].createdAt?.day.toString() ?? ""}",
+                                        "By ${liveNowList[index].channel?.name ?? ""} | ${DateFormat.MMM().format(monthfromAPI!)} ${liveNowList[index].createdAt?.day.toString() ?? ""}",
                                     content: MaterialText.body(
                                       context,
-                                      LiveNowList[index].title ?? "",
+                                      liveNowList[index].title ?? "",
                                     ),
                                     onActionTab: () {
                                       MaterialNotification.alertDialog(context,
@@ -106,7 +121,7 @@ class _VideoPageState extends State<VideoPage> {
                                         ),
                                         MaterialText.label(
                                           context,
-                                          LiveNowList[index]
+                                          liveNowList[index]
                                               .viewsAmount
                                               .toString(),
                                           size: TextSize.small,
@@ -122,7 +137,7 @@ class _VideoPageState extends State<VideoPage> {
                                         ),
                                         MaterialText.label(
                                           context,
-                                          LiveNowList[index]
+                                          liveNowList[index]
                                               .likesAmount
                                               .toString(),
                                           size: TextSize.small,
@@ -138,7 +153,7 @@ class _VideoPageState extends State<VideoPage> {
                                         ),
                                         MaterialText.label(
                                           context,
-                                          LiveNowList[index]
+                                          liveNowList[index]
                                               .commentsAmount
                                               .toString(),
                                           size: TextSize.small,
@@ -198,7 +213,7 @@ class _VideoPageState extends State<VideoPage> {
                                   child: MaterialText.label(
                                     context,
                                     formattedDuration,
-                                    // LiveNowList[index].duration.toString(),
+                                    // liveNowList[index].duration.toString(),
                                     size: TextSize.large,
                                   ),
                                 ),

@@ -7,6 +7,7 @@ part of 'channel.model.dart';
 // **************************************************************************
 
 _$_Channel _$$_ChannelFromJson(Map<String, dynamic> json) => _$_Channel(
+      id: json['_id'] as String?,
       isLive: json['is_live'] as bool?,
       name: json['name'] as String?,
       thumbnail: json['thumbnail'] == null
@@ -19,6 +20,7 @@ _$_Channel _$$_ChannelFromJson(Map<String, dynamic> json) => _$_Channel(
 
 Map<String, dynamic> _$$_ChannelToJson(_$_Channel instance) =>
     <String, dynamic>{
+      '_id': instance.id,
       'is_live': instance.isLive,
       'name': instance.name,
       'thumbnail': instance.thumbnail,

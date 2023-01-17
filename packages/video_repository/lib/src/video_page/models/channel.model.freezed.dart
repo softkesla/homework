@@ -20,6 +20,8 @@ Channel _$ChannelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Channel {
+  @JsonKey(name: '_id')
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_live')
   bool? get isLive => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
@@ -37,7 +39,8 @@ abstract class $ChannelCopyWith<$Res> {
       _$ChannelCopyWithImpl<$Res, Channel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'is_live') bool? isLive,
+      {@JsonKey(name: '_id') String? id,
+      @JsonKey(name: 'is_live') bool? isLive,
       String? name,
       FileStorage? thumbnail,
       FileStorage? banner});
@@ -59,12 +62,17 @@ class _$ChannelCopyWithImpl<$Res, $Val extends Channel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
     Object? isLive = freezed,
     Object? name = freezed,
     Object? thumbnail = freezed,
     Object? banner = freezed,
   }) {
     return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       isLive: freezed == isLive
           ? _value.isLive
           : isLive // ignore: cast_nullable_to_non_nullable
@@ -117,7 +125,8 @@ abstract class _$$_ChannelCopyWith<$Res> implements $ChannelCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'is_live') bool? isLive,
+      {@JsonKey(name: '_id') String? id,
+      @JsonKey(name: 'is_live') bool? isLive,
       String? name,
       FileStorage? thumbnail,
       FileStorage? banner});
@@ -138,12 +147,17 @@ class __$$_ChannelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
     Object? isLive = freezed,
     Object? name = freezed,
     Object? thumbnail = freezed,
     Object? banner = freezed,
   }) {
     return _then(_$_Channel(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       isLive: freezed == isLive
           ? _value.isLive
           : isLive // ignore: cast_nullable_to_non_nullable
@@ -168,7 +182,8 @@ class __$$_ChannelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Channel implements _Channel {
   _$_Channel(
-      {@JsonKey(name: 'is_live') this.isLive,
+      {@JsonKey(name: '_id') this.id,
+      @JsonKey(name: 'is_live') this.isLive,
       this.name,
       this.thumbnail,
       this.banner});
@@ -176,6 +191,9 @@ class _$_Channel implements _Channel {
   factory _$_Channel.fromJson(Map<String, dynamic> json) =>
       _$$_ChannelFromJson(json);
 
+  @override
+  @JsonKey(name: '_id')
+  final String? id;
   @override
   @JsonKey(name: 'is_live')
   final bool? isLive;
@@ -188,7 +206,7 @@ class _$_Channel implements _Channel {
 
   @override
   String toString() {
-    return 'Channel(isLive: $isLive, name: $name, thumbnail: $thumbnail, banner: $banner)';
+    return 'Channel(id: $id, isLive: $isLive, name: $name, thumbnail: $thumbnail, banner: $banner)';
   }
 
   @override
@@ -196,6 +214,7 @@ class _$_Channel implements _Channel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Channel &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.isLive, isLive) || other.isLive == isLive) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.thumbnail, thumbnail) ||
@@ -205,7 +224,8 @@ class _$_Channel implements _Channel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, isLive, name, thumbnail, banner);
+  int get hashCode =>
+      Object.hash(runtimeType, id, isLive, name, thumbnail, banner);
 
   @JsonKey(ignore: true)
   @override
@@ -223,13 +243,17 @@ class _$_Channel implements _Channel {
 
 abstract class _Channel implements Channel {
   factory _Channel(
-      {@JsonKey(name: 'is_live') final bool? isLive,
+      {@JsonKey(name: '_id') final String? id,
+      @JsonKey(name: 'is_live') final bool? isLive,
       final String? name,
       final FileStorage? thumbnail,
       final FileStorage? banner}) = _$_Channel;
 
   factory _Channel.fromJson(Map<String, dynamic> json) = _$_Channel.fromJson;
 
+  @override
+  @JsonKey(name: '_id')
+  String? get id;
   @override
   @JsonKey(name: 'is_live')
   bool? get isLive;
