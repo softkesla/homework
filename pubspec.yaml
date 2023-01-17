@@ -103,6 +103,7 @@ dependencies:
   rive: ^0.10.0
   flutter_svg: ^1.1.6
   font_awesome_flutter: ^10.3.0
+  intl: ^0.17.0
 
   post_repository:
     path: 

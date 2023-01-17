@@ -8,7 +8,8 @@ part 'channel.model.g.dart';
 @freezed
 class Channel with _$Channel {
   factory Channel(
-      {@JsonKey(name: 'is_live') bool? isLive,
+      {@JsonKey(name: '_id') String? id,
+      @JsonKey(name: 'is_live') bool? isLive,
       String? name,
       FileStorage? thumbnail,
       FileStorage? banner}) = _Channel;

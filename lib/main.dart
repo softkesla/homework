@@ -7,6 +7,7 @@ import 'package:homework_flutter/page/loginpage.dart';
 import 'package:homework_flutter/page/onboarding_page.dart';
 import 'package:homework_flutter/page/plant_screen.dart';
 import 'package:homework_flutter/page/postpage.dart';
+import 'package:homework_flutter/page/profile_channel.dart';
 import 'package:homework_flutter/page/rivetest.dart';
 import 'package:homework_flutter/page/rivetest2.dart';
 import 'package:homework_flutter/page/setting.dart';
@@ -69,6 +70,12 @@ class App extends StatelessWidget {
     routes: <GoRoute>[
       GoRoute(
         routes: <GoRoute>[
+          GoRoute(
+              path: 'profile_channel/:channelId',
+              name: 'profile',
+              builder: (BuildContext context, GoRouterState state) {
+                return ProfileChannel(channelId: state.params["channelId"]!);
+              }),
           GoRoute(
             path: 'hometravel',
             name: "travel",
