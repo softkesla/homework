@@ -35,12 +35,23 @@ class _ProfileChannelState extends State<ProfileChannel> {
                   children: [
                     Stack(
                       children: <Widget>[
-                        SizedBox(
-                          height: 300,
-                          child: MaterialImage.network(
-                            context,
-                            liveNowList.channel?.banner?.url ?? "",
-                            fit: BoxFit.cover,
+                        ShaderMask(
+                          shaderCallback: (rect) => const LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              Colors.white,
+                              Colors.white,
+                              Colors.transparent,
+                            ],
+                          ).createShader(rect),
+                          child: SizedBox(
+                            height: 300,
+                            child: MaterialImage.network(
+                              context,
+                              liveNowList.channel?.banner?.url ?? "",
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                         Positioned(
