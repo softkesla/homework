@@ -48,7 +48,8 @@ class _DestinationsPageState extends State<DestinationsPage> {
               Container(
                 height: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius:
+                      BorderRadius.vertical(bottom: Radius.circular(30)),
                   boxShadow: const [
                     BoxShadow(
                         color: Colors.black26,
@@ -59,7 +60,8 @@ class _DestinationsPageState extends State<DestinationsPage> {
                 child: Hero(
                   tag: destination.imageUrl.toString(),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius:
+                        BorderRadius.vertical(bottom: Radius.circular(30)),
                     child: Image(
                       image: AssetImage(destination.imageUrl ?? ""),
                       fit: BoxFit.cover,
@@ -76,7 +78,10 @@ class _DestinationsPageState extends State<DestinationsPage> {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      icon: const Icon(Icons.arrow_back),
+                      icon: const Icon(
+                        Icons.arrow_back,
+                        color: Colors.white,
+                      ),
                       iconSize: 30,
                       color: Colors.black,
                     ),
@@ -84,13 +89,19 @@ class _DestinationsPageState extends State<DestinationsPage> {
                       children: <Widget>[
                         IconButton(
                           onPressed: () {},
-                          icon: const Icon(Icons.search),
+                          icon: const Icon(
+                            Icons.search,
+                            color: Colors.white,
+                          ),
                           iconSize: 30,
                           color: Colors.black,
                         ),
                         IconButton(
                           onPressed: () {},
-                          icon: const Icon(FontAwesomeIcons.sortAmountDown),
+                          icon: const Icon(
+                            FontAwesomeIcons.arrowDownShortWide,
+                            color: Colors.white,
+                          ),
                           iconSize: 25,
                           color: Colors.black,
                         ),
@@ -119,13 +130,13 @@ class _DestinationsPageState extends State<DestinationsPage> {
                           color: ThemeColors.onBackground.toColor(context),
                         ),
                         SizedBox(
-                          width: PaddingSize.small.toPaddingValue(),
+                          width: PaddingSize.standard.toPaddingValue(),
                         ),
-                        MaterialText.body(
+                        MaterialText.label(
                           context,
                           destination.country.toString(),
                           color: ThemeColors.onBackground,
-                          size: TextSize.large,
+                          size: TextSize.standard,
                         ),
                       ],
                     ),
@@ -133,13 +144,13 @@ class _DestinationsPageState extends State<DestinationsPage> {
                 ),
               ),
               Positioned(
-                right: 20,
-                bottom: 20,
+                right: 32,
+                bottom: 48,
                 child: IconButton(
                   onPressed: () {},
                   icon: const Icon(
                     Icons.location_on,
-                    size: 25,
+                    size: 48,
                   ),
                 ),
               ),
@@ -170,7 +181,7 @@ class _DestinationsPageState extends State<DestinationsPage> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Container(
+                                SizedBox(
                                   width: 120,
                                   child: MaterialText.title(
                                     context,

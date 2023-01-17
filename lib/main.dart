@@ -33,20 +33,7 @@ void main() async {
       ],
       path: 'assets/translations',
       fallbackLocale: const Locale('en', 'US'),
-      child: const MyApp()));
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    context.setLocale(const Locale('th'));
-    return MaterialApp(
-      title: 'Flutter App',
-      home: App(),
-    );
-  }
+      child: App()));
 }
 
 class App extends StatelessWidget {
@@ -55,6 +42,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       title: title,
       localizationsDelegates: context.localizationDelegates,
       theme: ThemeData.dark(),
