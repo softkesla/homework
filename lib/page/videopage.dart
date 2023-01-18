@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_material/material.dart';
+import 'package:homework_flutter/page/buttonLike.dart';
 import 'package:homework_flutter/widgets/card_stat_action.dart';
 import 'package:smo_localizations/localizations.dart';
 import 'package:video_repository/repositories.dart';
@@ -126,14 +127,17 @@ class _VideoPageState extends State<VideoPage> {
                                               .toString(),
                                           size: TextSize.small,
                                         ),
-                                        MaterialBtn.icon(
-                                          context,
-                                          onPressed: () {},
-                                          icon: MaterialIcon.icon(
-                                            context,
-                                            Icons.favorite,
-                                            size: WidgetSize.small,
-                                          ),
+                                        // MaterialBtn.icon(
+                                        //   context,
+                                        //   onPressed: () {},
+                                        //   icon: MaterialIcon.icon(
+                                        //     context,
+                                        //     Icons.favorite,
+                                        //     size: WidgetSize.small,
+                                        //   ),
+                                        // ),
+                                        ButtonLike(
+                                          onChanged: (value) {},
                                         ),
                                         MaterialText.label(
                                           context,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:homework_flutter/page/buttonLike.dart';
 import 'package:homework_flutter/page/destinations_page.dart';
 import 'package:homework_flutter/page/home_promo.dart';
 import 'package:homework_flutter/page/livenowpage.dart';
@@ -76,6 +77,12 @@ class App extends StatelessWidget {
               builder: (BuildContext context, GoRouterState state) {
                 return ProfileChannel(channelId: state.params["channelId"]!);
               }),
+          GoRoute(
+            path: 'buttonLike',
+            name: "like",
+            builder: (BuildContext context, GoRouterState state) =>
+                const ButtonLike(),
+          ),
           GoRoute(
             path: 'hometravel',
             name: "travel",

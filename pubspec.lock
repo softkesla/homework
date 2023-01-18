@@ -800,13 +800,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.4"
-  promo_repository:
-    dependency: "direct main"
-    description:
-      path: "packages/promo_repository"
-      relative: true
-    source: path
-    version: "0.0.1"
   provider:
     dependency: transitive
     description:
@@ -1051,13 +1044,6 @@ packages:
     dependency: "direct main"
     description:
       path: "packages/travel_repository"
-      relative: true
-    source: path
-    version: "0.0.1"
-  trending_tag:
-    dependency: "direct main"
-    description:
-      path: "packages/trending_tag"
       relative: true
     source: path
     version: "0.0.1"

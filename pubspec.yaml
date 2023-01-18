@@ -42,17 +42,11 @@ dependencies:
     path: 
       packages/homepromo_repository
 
-  promo_repository:
-    path:
-      packages/promo_repository
   
   channels_repository:
     path:
       packages/channels_repository
 
-  trending_tag:
-    path:
-      packages/trending_tag
 
   video_daily_rank_repository:
     path: 
